@@ -4,8 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+            
+            <div class="card" style="margin-top: 50px;">
+                <h1 style="text-align: center; padding-top: 15px; padding-left: 15px; padding-right: 15px;">Entre em contato com o suporte</h1>
+                <h4 style="text-align: center; padding-top: 5px; padding-left: 15px; padding-right: 15px;">leonardo@agenciabrawn.com.br</h4>
+                <h4 style="text-align: center; padding-top: 5px; padding-bottom: 15px;">(91) 9 9826-0317</h4>
+
+                <!-- <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -39,7 +44,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
