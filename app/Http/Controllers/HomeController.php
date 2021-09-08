@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Usuarios;
+
 class HomeController extends Controller
 {
     /**
@@ -13,6 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        // date_default_timezone_set('America/Fortaleza');
         $this->middleware('auth');
     }
 
@@ -23,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $usuarios = Usuarios::all();
+        return view('home', ['usuarios'=>$usuarios]);
     }
 }

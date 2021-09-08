@@ -17,3 +17,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('usuarios/')->group(function () {
+    Route::get('novo', 'Usuarios\UsuariosController@novo')->name('cadastro.usuarios');
+    Route::post('novo', 'Usuarios\UsuariosController@create')->name('formulario.usuarios');
+});
