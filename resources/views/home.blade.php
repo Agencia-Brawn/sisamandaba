@@ -4,7 +4,7 @@
 
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- VERSÃO MENOR QUE 767px -->
+    <!-- MENU VERSÃO MENOR QUE 767px -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -142,10 +142,11 @@
 
                 </div>
     </div>
-    <!-- FIM -->
+    <!-- FIM MENU -->
 
     <div class="row">
 
+        <!-- MENU MAIOR QUE 767PX -->
         <div  class="col-md-3 col-lg-2 col-xl-2 menu-web" >
 
             <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 ps ps--active-y" id="sidenav-main">
@@ -281,7 +282,8 @@
 
             </aside>
 
-        </div>   
+        </div> 
+        <!-- FIM MENU -->  
             
 
         <div class="col-md-9 col-lg-10 col-xl-10 col-12">
