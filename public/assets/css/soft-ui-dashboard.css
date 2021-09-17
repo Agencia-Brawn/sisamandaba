@@ -3587,8 +3587,8 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .show>.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #a20a7f;
-  border-color: #980977;
+  background-color: black;
+  border-color: black;
 }
 
 .btn-check:checked+.btn-primary:focus,
@@ -3596,7 +3596,7 @@ fieldset:disabled .btn {
 .btn-primary:active:focus,
 .btn-primary.active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(211, 48, 173, 0.5);
+  box-shadow: 0 0 0 0.2rem black;
 }
 
 .btn-primary:disabled,
@@ -25178,4 +25178,17 @@ pre[class*="language-"] {
   }
   
 
+}
+
+
+
+/* FORMULÁRIOS */
+
+
+#form1 fieldset legend{
+  margin-top: 50px;
+}
+
+#form3 fieldset legend{
+  margin-top: 50px;
 }

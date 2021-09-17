@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- VERSÃO MENOR QUE 767px -->
+    <!-- MENU VERSÃO MENOR QUE 767px -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -19,7 +20,9 @@
                             <ul class="navbar-nav" style="margin-top: 30px;">
 
                                 <li class="nav-item">
-                                    <a class="nav-link  " href="{{route('home')}}">
+
+                                    <a class="nav-link" href="{{route('home')}}">
+
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                 <title>shop </title>
@@ -41,7 +44,9 @@
                                 </li>
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link  active" href="{{route('cadastro.usuarios')}}">
+
+                                    <a class="nav-link " href="{{route('cadastro.usuarios')}}">
+
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                         <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <title>office</title>
@@ -57,74 +62,36 @@
                                             </g>
                                         </svg>
                                         </div>
+
                                         <span class="nav-link-text ms-1">Cadastros</span>
                                     </a>
                                 </li>
 
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link  " href="">
-                                        <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <title>credit-card</title>
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                                                <g transform="translate(1716.000000, 291.000000)">
-                                                <g transform="translate(453.000000, 454.000000)">
-                                                    <path class="color-background opacity-6" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"></path>
-                                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
-                                                </g>
-                                                </g>
-                                            </g>
-                                            </g>
-                                        </svg>
-                                        </div>
-                                        <span class="nav-link-text ms-1">Em Breve</span>
-                                    </a>
-                                </li>
+                                <li class="nav-item active">
 
-                                <li class="nav-item">
-                                    <a class="nav-link  " href="">
+                                    <a class="nav-link " href="{{route('form.laboratorio',['usuario'=>$usuario->id])}}">
+
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                         <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <title>box-3d-50</title>
+                                            <title>office</title>
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                            <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                                 <g transform="translate(1716.000000, 291.000000)">
-                                                <g transform="translate(603.000000, 0.000000)">
-                                                    <path class="color-background" d="M22.7597136,19.3090182 L38.8987031,11.2395234 C39.3926816,10.9925342 39.592906,10.3918611 39.3459167,9.89788265 C39.249157,9.70436312 39.0922432,9.5474453 38.8987261,9.45068056 L20.2741875,0.1378125 L20.2741875,0.1378125 C19.905375,-0.04725 19.469625,-0.04725 19.0995,0.1378125 L3.1011696,8.13815822 C2.60720568,8.38517662 2.40701679,8.98586148 2.6540352,9.4798254 C2.75080129,9.67332903 2.90771305,9.83023153 3.10122239,9.9269862 L21.8652864,19.3090182 C22.1468139,19.4497819 22.4781861,19.4497819 22.7597136,19.3090182 Z"></path>
-                                                    <path class="color-background opacity-6" d="M23.625,22.429159 L23.625,39.8805372 C23.625,40.4328219 24.0727153,40.8805372 24.625,40.8805372 C24.7802551,40.8805372 24.9333778,40.8443874 25.0722402,40.7749511 L41.2741875,32.673375 L41.2741875,32.673375 C41.719125,32.4515625 42,31.9974375 42,31.5 L42,14.241659 C42,13.6893742 41.5522847,13.241659 41,13.241659 C40.8447549,13.241659 40.6916418,13.2778041 40.5527864,13.3472318 L24.1777864,21.5347318 C23.8390024,21.7041238 23.625,22.0503869 23.625,22.429159 Z"></path>
-                                                    <path class="color-background opacity-6" d="M20.4472136,21.5347318 L1.4472136,12.0347318 C0.953235098,11.7877425 0.352562058,11.9879669 0.105572809,12.4819454 C0.0361450918,12.6208008 6.47121774e-16,12.7739139 0,12.929159 L0,30.1875 L0,30.1875 C0,30.6849375 0.280875,31.1390625 0.7258125,31.3621875 L19.5528096,40.7750766 C20.0467945,41.0220531 20.6474623,40.8218132 20.8944388,40.3278283 C20.963859,40.1889789 21,40.0358742 21,39.8806379 L21,22.429159 C21,22.0503869 20.7859976,21.7041238 20.4472136,21.5347318 Z"></path>
+                                                <g id="office" transform="translate(153.000000, 2.000000)">
+                                                    <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
+                                                    <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
                                                 </g>
                                                 </g>
                                             </g>
                                             </g>
                                         </svg>
                                         </div>
-                                        <span class="nav-link-text ms-1">Em Breve</span>
+
+                                        <span class="nav-link-text ms-1">Cadastros</span>
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link  " href="">
-                                        <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                                        <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <title>settings</title>
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                                                <g transform="translate(1716.000000, 291.000000)">
-                                                <g transform="translate(304.000000, 151.000000)">
-                                                    <polygon class="color-background opacity-6" points="18.0883333 15.7316667 11.1783333 8.82166667 13.3333333 6.66666667 6.66666667 0 0 6.66666667 6.66666667 13.3333333 8.82166667 11.1783333 15.315 17.6716667"></polygon>
-                                                    <path class="color-background opacity-6" d="M31.5666667,23.2333333 C31.0516667,23.2933333 30.53,23.3333333 30,23.3333333 C29.4916667,23.3333333 28.9866667,23.3033333 28.48,23.245 L22.4116667,30.7433333 L29.9416667,38.2733333 C32.2433333,40.575 35.9733333,40.575 38.275,38.2733333 L38.275,38.2733333 C40.5766667,35.9716667 40.5766667,32.2416667 38.275,29.94 L31.5666667,23.2333333 Z"></path>
-                                                    <path class="color-background" d="M33.785,11.285 L28.715,6.215 L34.0616667,0.868333333 C32.82,0.315 31.4483333,0 30,0 C24.4766667,0 20,4.47666667 20,10 C20,10.99 20.1483333,11.9433333 20.4166667,12.8466667 L2.435,27.3966667 C0.95,28.7083333 0.0633333333,30.595 0.00333333333,32.5733333 C-0.0583333333,34.5533333 0.71,36.4916667 2.11,37.89 C3.47,39.2516667 5.27833333,40 7.20166667,40 C9.26666667,40 11.2366667,39.1133333 12.6033333,37.565 L27.1533333,19.5833333 C28.0566667,19.8516667 29.01,20 30,20 C35.5233333,20 40,15.5233333 40,10 C40,8.55166667 39.685,7.18 39.1316667,5.93666667 L33.785,11.285 Z"></path>
-                                                </g>
-                                                </g>
-                                            </g>
-                                            </g>
-                                        </svg>
-                                        </div>
-                                        <span class="nav-link-text ms-1">Em Breve</span>
-                                    </a>
-                                </li> -->
+
 
                             </ul>
                         
@@ -134,26 +101,18 @@
 
                 </div>
     </div>
-    <!-- FIM -->
+    <!-- FIM MENU -->
 
     <div class="row">
 
         <!-- MENU MAIOR QUE 767PX -->
-        <div  class="col-md-3 col-lg-2 col-xl-2 menu-web" >
-                <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 ps ps--active-y" id="sidenav-main">
-                            <!-- <div class="sidenav-header">
-                                    <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-                                    <a class="navbar-brand m-0" href="https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html" target="_blank">
-                                        <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-                                        <span class="ms-1 font-weight-bold">Soft UI Dashboard</span>
-                                    </a>
-                            </div> -->
+        <div  class=" col-md-3 col-lg-2 col-xl-2 menu-web" >
+                <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  ps--active-y" id="sidenav-main">
 
-                            <!-- <hr class="horizontal dark mt-0"> -->
-                            <div class="mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
-                                <ul class="navbar-nav navbar-menu-web" >
+                            <div  class=" mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
+                                <ul class=" navbar-nav navbar-menu-web" >
 
-                                <li class="nav-item">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="{{route('home')}}">
                                             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                                 <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -172,6 +131,29 @@
                                             </div>
 
                                             <span class="nav-link-text ms-1">Dashboard</span>
+                                        </a>
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                                                <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>box-3d-50</title>
+                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                                        <g transform="translate(1716.000000, 291.000000)">
+                                                        <g transform="translate(603.000000, 0.000000)">
+                                                            <path class="color-background" d="M22.7597136,19.3090182 L38.8987031,11.2395234 C39.3926816,10.9925342 39.592906,10.3918611 39.3459167,9.89788265 C39.249157,9.70436312 39.0922432,9.5474453 38.8987261,9.45068056 L20.2741875,0.1378125 L20.2741875,0.1378125 C19.905375,-0.04725 19.469625,-0.04725 19.0995,0.1378125 L3.1011696,8.13815822 C2.60720568,8.38517662 2.40701679,8.98586148 2.6540352,9.4798254 C2.75080129,9.67332903 2.90771305,9.83023153 3.10122239,9.9269862 L21.8652864,19.3090182 C22.1468139,19.4497819 22.4781861,19.4497819 22.7597136,19.3090182 Z"></path>
+                                                            <path class="color-background opacity-6" d="M23.625,22.429159 L23.625,39.8805372 C23.625,40.4328219 24.0727153,40.8805372 24.625,40.8805372 C24.7802551,40.8805372 24.9333778,40.8443874 25.0722402,40.7749511 L41.2741875,32.673375 L41.2741875,32.673375 C41.719125,32.4515625 42,31.9974375 42,31.5 L42,14.241659 C42,13.6893742 41.5522847,13.241659 41,13.241659 C40.8447549,13.241659 40.6916418,13.2778041 40.5527864,13.3472318 L24.1777864,21.5347318 C23.8390024,21.7041238 23.625,22.0503869 23.625,22.429159 Z"></path>
+                                                            <path class="color-background opacity-6" d="M20.4472136,21.5347318 L1.4472136,12.0347318 C0.953235098,11.7877425 0.352562058,11.9879669 0.105572809,12.4819454 C0.0361450918,12.6208008 6.47121774e-16,12.7739139 0,12.929159 L0,30.1875 L0,30.1875 C0,30.6849375 0.280875,31.1390625 0.7258125,31.3621875 L19.5528096,40.7750766 C20.0467945,41.0220531 20.6474623,40.8218132 20.8944388,40.3278283 C20.963859,40.1889789 21,40.0358742 21,39.8806379 L21,22.429159 C21,22.0503869 20.7859976,21.7041238 20.4472136,21.5347318 Z"></path>
+                                                        </g>
+                                                        </g>
+                                                    </g>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="nav-link-text ms-1">Perfil</span>
                                         </a>
                                     </li>
                                     
@@ -242,7 +224,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="{{route('form.familiar',['usuario'=>$usuario->id])}}">
+                                        <a class="nav-link " href="{{route('form.familiar',['usuario'=>$usuario->id])}}">
                                             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                                 <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                     <title>box-3d-50</title>
@@ -307,8 +289,8 @@
                                         </a>
                                     </li>
 
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{route('form.pressao',['usuario'=>$usuario->id])}}">
+                                    <li class="nav-item ">
+                                        <a class="nav-link active" href="{{route('form.pressao',['usuario'=>$usuario->id])}}">
                                             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                                 <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                     <title>box-3d-50</title>
@@ -335,17 +317,17 @@
 
                 </aside>
             </div>  
-        <!-- FIM MENU --> 
+        <!-- FIM MENU -->  
             
-            
-            <div class="col-md-9 col-lg-10 col-xl-10 col-12">
 
-                    <!-- MODELO DE FORMULÁRIO -->
+        <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+                <div class="container painel-controle" >
+
                     <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12 pt-5" >
+                        <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header text-center"> 
-                                    <h2>Formulário Básico do Paciente</h2>
+                                <div class="card-header"> 
+                                    <h2>{{$usuario->name}}</h2>
                                 </div>
 
                                 <div class="card-body">
@@ -355,116 +337,234 @@
                                         </div>
                                     @endif
 
-                                    <div class="container" style="padding: 0px;">
-
-                                        <div class="row">
-
-                                            <div class="col-xl-12 col-sm-12 mb-xl-0 mb-4">
-                                                @if ($errors->any())
-                                                    <div class="alert alert-danger" style="background-image: none;">
-                                                       
-                                                            @foreach ($errors->all() as $error)
-                                                                <h5>{{ $error }}</h5>
-                                                            @endforeach
-                                     
-                                                    </div>
-                                                @endif
-
-
-                                                <form action="{{route('formulario.usuarios')}}" method="post">
+                                         
+                                                <!-- QUEST. PRESSÃO ARTERIAL (names ok) -->
+                                                <form action="" id="form7" method="POST">
                                                     @csrf
-                                                        <div class="form-group">
-                                                            <label for="example-text-input" class="form-control-label">Nome Completo</label>
-                                                            <input class="form-control" required  type="text" name="name" id="example-text-input">
-                                                        </div>
+                                                    <fieldset>
+                                                        <h2>Questionário Pressão Arterial<br><small></small></h2>
+                                                    </fieldset>
 
-                                                        <div class="form-group">
-                                                            <label for="example-number-input" class="form-control-label">CPF</label>
-                                                            <input class="form-control" required type="number" name="cpf" id="example-number-input">
-                                                        </div>
 
+                                                    <!-- <fieldset>
+                                                        <legend>ID NÚMERO</legend>
                                                         <div class="form-group">
-                                                            <label for="example-date-input" class="form-control-label">Data de Nascimento</label>
-                                                            <input class="form-control" required type="date" name="datanasc"  id="example-date-input">
+                                                            <input type="text" name="pergunta1" class="form-control" required>
                                                         </div>
+                                                    </fieldset> -->
 
-                                                        <div class="form-group">
-                                                            <label for="example-email-input" class="form-control-label">E-mail</label>
-                                                            <input class="form-control" required type="email" name="email"  id="example-email-input">
-                                                        </div>
 
+                                                    <fieldset>
+                                                        <legend>Equipe</legend>
                                                         <div class="form-group">
-                                                            <label for="example-number-input" class="form-control-label">Telefone</label>
-                                                            <input class="form-control" required type="number" name="telefone" id="example-number-input">
+                                                            <input id="2066062532" type="text" name="pergunta2" class="form-control" required>
                                                         </div>
+                                                    </fieldset>
 
+
+                                                    <fieldset>
+                                                        <legend>Microárea</legend>
                                                         <div class="form-group">
-                                                            <label for="example-number-input" class="form-control-label">Altura</label>
-                                                            <input class="form-control" required min="0" type="number" name="altura" id="example-number-input">
+                                                            <input id="1578044623" type="text" name="pergunta3" class="form-control" required>
                                                         </div>
-                                                        
-                                                        <div class="text-center">
-                                                            <button class="btn btn-primary" type="submit">Enviar</button>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>Família:</legend>
+                                                        <div class="form-group">
+                                                            <input id="384524265" type="text" name="pergunta4" class="form-control" required>
                                                         </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>Individual: </legend>
+                                                        <div class="form-group">
+                                                            <input id="1691254307" type="text" name="pergunta5" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>Participante</legend>
+                                                        <div class="form-group">
+                                                            <input id="307926517" type="text" name="pergunta6" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>Data do exame</legend>
+                                                        <div class="form-group">
+                                                            <input type="date" name="pergunta7" placeholder="14/09/2021" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <!-- <fieldset>
+                                                        <legend>Data de nascimento</legend>
+                                                        <div class="form-group">
+                                                            <input type="date" name="pergunta8" placeholder="14/09/2021" class="form-control" required>
+                                                        </div>
+                                                    </fieldset> -->
+
+
+                                                    <!-- <fieldset>
+                                                        <legend>Gênero</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta9" value="Masculino" required>
+                                                                    Masculino
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta9" value="Feminino" required>
+                                                                    Feminino
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset> -->
+
+
+                                                    <fieldset>
+                                                        <legend>Nome do aferidor</legend>
+                                                        <div class="form-group">
+                                                            <input id="301818559" type="text" name="pergunta10" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>Comprimento do Braço Direito (EM CENTÍMETROS)</legend>
+                                                        <div class="form-group">
+                                                            <input id="1187845133" type="text" name="pergunta11" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>Circunferência do braço direito (EM CENTÍMETROS)</legend>
+                                                        <div class="form-group">
+                                                            <input id="1229024946" type="text" name="pergunta12" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <br>
+                                                        <div class="form-group">
+                                                            <h4>Pressão arterial sentada no braço direito</h4>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>1. Tipo de manguito?</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta13" value="1. Adulto pequeno – (Circunferência braço &lt;27cm)" required>
+                                                                    1. Adulto pequeno – (Circunferência braço &lt;27cm)
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta13" value="2. Adulto – (Circunferência braço 27-33cm)" required>
+                                                                    2. Adulto – (Circunferência braço 27-33cm)
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta13" value="3. Adulto grande – (Circunferência braço &gt;33cm)" required>
+                                                                    3. Adulto grande – (Circunferência braço &gt;33cm)
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>2. Marca manguito</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta14" value="Omron" required>
+                                                                    Omron
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta14" value="Aneróide" required>
+                                                                    Aneróide
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>3. Pressão arterial sistólica 1:</legend>
+                                                        <div class="form-group">
+                                                            <input id="584293479" type="text" name="pergunta18" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>4. Pressão arterial diastólica 1:</legend>
+                                                        <div class="form-group">
+                                                            <input id="1004267518" type="text" name="pergunta19" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>5. Pressão arterial sistólica 2: </legend>
+                                                        <div class="form-group">
+                                                            <input id="70645267" type="text" name="pergunta20" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>6. Pressão arterial diastólica 2:</legend>
+                                                        <div class="form-group">
+                                                            <input id="709884190" type="text" name="pergunta21" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>7. Pressão arterial sistólica 3:</legend>
+                                                        <div class="form-group">
+                                                            <input id="164095868" type="text" name="pergunta22" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>8. Pressão arterial diastólica 3:</legend>
+                                                        <div class="form-group">
+                                                            <input id="163968770" type="text" name="pergunta23" class="form-control" required>
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <div class="text-center">
+                                                        <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
+                                                    </div>                                            
                                                 </form>
-                                                
-                                            </div>
+                                                <!-- FIM -->
 
-                                        </div>          
-
-                                    </div>
 
                                 </div>
-
                             </div>
                         </div>
                     </div>
 
 
-                    <!-- FORMULÁRIOS -->
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12 pt-5" >
-                            <div class="card">
-
-                                <div class="card-header text-center"> 
-                                    <h2>Questionários</h2>
-                                </div>
-
-                                <div class="card-body">
-                                    @if (session('status'))
-                                        <div class="alert alert-success" role="alert">
-                                            {{ session('status') }}
-                                        </div>
-                                    @endif
-
-                                    <div class="container" style="padding: 0px;">
-
-                                        <div class="row">
-
-                                            <div class="col-xl-12 col-sm-12 mb-xl-0 mb-4">
-                                                @if ($errors->any())
-                                                    <div class="alert alert-danger" style="background-image: none;">
-                                                       
-                                                            @foreach ($errors->all() as $error)
-                                                                <h5>{{ $error }}</h5>
-                                                            @endforeach
-                                     
-                                                    </div>
-                                                @endif
-
-                                                
-                                            </div>
-
-                                        </div>          
-
-                                    </div>
-                                    
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FIM FORMULÁRIO -->
 
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
@@ -480,7 +580,8 @@
                         </div>
                     </footer>   
 
-            </div>
+
+                </div>
         </div>
 
     </div>

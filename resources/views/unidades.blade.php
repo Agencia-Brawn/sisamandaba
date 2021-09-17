@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- MENU VERSÃO MENOR QUE 767px -->
+    <!-- VERSÃO MENOR QUE 767px -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -20,9 +19,7 @@
                             <ul class="navbar-nav" style="margin-top: 30px;">
 
                                 <li class="nav-item">
-
-                                    <a class="nav-link  active" href="{{route('home')}}">
-
+                                    <a class="nav-link  " href="{{route('home')}}">
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                 <title>shop </title>
@@ -44,9 +41,7 @@
                                 </li>
                                 
                                 <li class="nav-item">
-
-                                    <a class="nav-link  " href="{{route('cadastro.usuarios')}}">
-
+                                    <a class="nav-link  active" href="{{route('cadastro.usuarios')}}">
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                         <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <title>office</title>
@@ -62,13 +57,11 @@
                                             </g>
                                         </svg>
                                         </div>
-
                                         <span class="nav-link-text ms-1">Cadastros</span>
                                     </a>
                                 </li>
 
                                 <!-- <li class="nav-item">
-
                                     <a class="nav-link  " href="">
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                         <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -131,7 +124,6 @@
                                         </div>
                                         <span class="nav-link-text ms-1">Em Breve</span>
                                     </a>
-
                                 </li> -->
 
                             </ul>
@@ -142,7 +134,7 @@
 
                 </div>
     </div>
-    <!-- FIM MENU -->
+    <!-- FIM -->
 
     <div class="row">
 
@@ -164,7 +156,7 @@
 
                                 <li class="nav-item">
 
-                                    <a class="nav-link  active" href="{{route('home')}}">
+                                    <a class="nav-link  " href="{{route('home')}}">
 
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -189,7 +181,7 @@
                                 
                                 <li class="nav-item">
 
-                                    <a class="nav-link" href="{{route('unidades')}}">
+                                    <a class="nav-link active" href="{{route('unidades')}}">
 
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -243,18 +235,17 @@
             </aside>
 
         </div> 
-        <!-- FIM MENU -->  
+        <!-- FIM MENU --> 
             
+            
+            <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
 
-        <div class="col-md-9 col-lg-10 col-xl-10 col-12">
-                <div class="container painel-controle" >
-
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12">
+                    <div class="row justify-content-center row-painel-controle ps-5">
+                        <div class="col-md-12 pt-5" >
                             <div class="card">
-                                <div class="card-header"> 
-                                    <h2>Painel de Controle</h2>
-                                </div>
+                                <!-- <div class="card-header text-center"> 
+                                    <h2>Unidades </h2>
+                                </div> -->
 
                                 <div class="card-body">
                                     @if (session('status'))
@@ -267,115 +258,100 @@
 
                                         <div class="row">
 
+                                            <div class="col-xl-12 col-sm-12 mb-xl-0 mb-4">
+                                                @if ($errors->any())
+                                                    <div class="alert alert-danger" style="background-image: none;">
+                                                       
+                                                            @foreach ($errors->all() as $error)
+                                                                <h5>{{ $error }}</h5>
+                                                            @endforeach
+                                     
+                                                    </div>
+                                                @endif
 
-                                            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 mx-auto">
 
-                                                <div class="card">
-                                                    <div class="card-body p-3">
+                                                <div class="row justify-content-center row-painel-controle">
+                                                    <div class="container-fluid py-4">
                                                         <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="numbers">
-                                                                    <p class=" text-sm mb-0 text-capitalize font-weight-bold">Usuários</p>
-                                                                    <h5 class="font-weight-bolder mb-0">
+                                                            <div class="col-12">
+                                                            <div class="card mb-4">
+                                                                <div class="card-header text-center pb-0">
+                                                                    <h4>Unidades Cadastradas</h4>
+                                                                </div>
+                                                                <div class="card-body px-0 pt-0 pb-2">
+                                                                    <div class="table-responsive p-0">
+                                                                        <table class="table align-items-center mb-0">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                <th style="text-align: center;" class="text-secondary ">#ID</th>
+                                                                                <th style="text-align: center;" class="text-secondary ">Nome</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                @foreach($unidades as $unidade)
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div class="d-flex px-2 py-1">
+                                                                                                <div class="d-flex flex-column justify-content-center">
+                                                                                                    <a href="{{route('registro.unidade',['unidades'=>$unidade->id])}}">
+                                                                                                        <h6 class="mb-0 text-sm">{{$unidade->id}}</h6>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td style="text-align: center;">
+                                                                                            <p class="text-xs font-weight-bold mb-0">{{$unidade->nome}}</p>
+                                                                                        </td>
 
-                                                                        {{$usuarios->count()}}
+                        
+                                                                                        
+                                                                                    </tr>
+                                                                                @endforeach
+                                                                            
+                                                                            </tbody>
+                                                                        </table>
 
-                                                                        <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
-                                                                    </h5>
+                                                                        
+                                                                    </div>
+                                                                    <div class="card-header text-center pb-0">
+                                                                        <h4>Cadastrar Nova Unidade</h4>
+                                                                    </div>
+                                                                    <form action="{{route('post.registro.unidades')}}" class="ps-5 pe-5" method="post">
+                                                                        @csrf
+
+                                                                            <div class="form-group">
+                                                                                <legend>Qual nome da nova unidade ? </legend>
+                                                                                <input class="form-control" required  type="text" name="nome" id="example-text-input">
+                                                                            </div>
+                                                                            
+                                                                            <div class="text-center">
+                                                                                <button class="btn btn-primary" type="submit">Enviar</button>
+                                                                            </div>
+                                                                    </form>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-4 text-end">
-                                                                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-
-                                                                    <i style="font-size: 30px;" class='bx bxs-user'></i>
-
-                                                                </div>
                                                             </div>
                                                         </div>
+                            
                                                     </div>
-                                                </div>
+                                                </div>            
+                                                                            
 
-                                            </div>                                            
+                                                
+                                            </div>
 
                                         </div>          
 
                                     </div>
 
                                 </div>
+
                             </div>
                         </div>
                     </div>
 
-                    <!-- USUÁRIOS CADASTRADOS -->
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="container-fluid py-4">
-                            <div class="row">
-                                <div class="col-12">
-                                <div class="card mb-4">
-                                    <div class="card-header text-center pb-0">
-                                    <h4>Usuários Cadastrados</h4>
-                                    </div>
-                                    <div class="card-body px-0 pt-0 pb-2">
-                                    <div class="table-responsive p-0">
-                                        <table class="table align-items-center mb-0">
-                                        <thead>
-                                            <tr>
-                                            <th style="text-align: center;" class="text-secondary ">Nome</th>
-                                            <th style="text-align: center;" class="text-secondary ">E-mail</th>
-                                            <th style="text-align: center;" class="text-secondary ">Telefone</th>
-                                            <th style="text-align: center;" class="text-secondary ">CPF</th> 
-                                            <th style="text-align: center;" class="text-secondary ">Altura</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach($usuarios as $usuario)
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex px-2 py-1">
-                                                            <div class="d-flex flex-column justify-content-center">
-                                                                <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
-                                                                    <h6 class="mb-0 text-sm">{{$usuario->name}}</h6>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td style="text-align: center;">
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->email}}</p>
-                                                    </td>
 
-                                                    <td style="text-align: center;" >
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->telefone}}</p>
-                                                    </td>
-
-                                                    <td style="text-align: center;" class="align-middle text-center text-sm">
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->cpf}}</p>
-                                                    </td>
-
-                                                    <td style="text-align: center;" class="align-middle text-center text-sm">
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->altura}}</p>
-                                                    </td>
-
-                                                    <!-- <td class="align-middle text-center">
-                                                        <span class="text-secondary text-xs font-weight-bold">{{date("d/m/Y", strtotime($usuario->datanasc))}}</span>
-                                                    </td> -->
-                                                    <td class="align-middle">
-                                                        <!-- <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                        </a> -->
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                           
-                                        </tbody>
-                                        </table>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-  
-                        </div>
-                    </div>
+                    <!-- FIM FORMULÁRIO -->
 
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
@@ -391,8 +367,7 @@
                         </div>
                     </footer>   
 
-
-                </div>
+            </div>
         </div>
 
     </div>

@@ -8,5 +8,6 @@ class Usuarios extends Model
 {
     protected $connection = 'app';
     protected $table = 'users';
+
     
 }
