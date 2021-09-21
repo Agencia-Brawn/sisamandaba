@@ -354,7 +354,7 @@
                                                     </fieldset> -->
 
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Equipe</legend>
                                                         <div class="form-group">
                                                             <input id="2066062532" type="text" name="pergunta2" class="form-control" required>
@@ -375,7 +375,7 @@
                                                         <div class="form-group">
                                                             <input id="384524265" type="text" name="pergunta4" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
 
                                                     <fieldset>

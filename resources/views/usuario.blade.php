@@ -390,20 +390,27 @@
                                         <br><br>
 
                                     <ul class="ps-5 list-group ficha-usuario" >
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">Nome de sua mãe:</strong> &nbsp; </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">ID Número:</strong> &nbsp; </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Nome de sua mãe:</strong> &nbsp; </li>
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Gênero:</strong> &nbsp; </li>
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Cidade: </strong> &nbsp; </li>
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Estado: </strong> &nbsp; </li>
+
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Celular: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Telefone de Familiar: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Telefone Fixo: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">Unidade da Estratégia de Saúde da Família:</strong> &nbsp;   </li>
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">Distrito:</strong> &nbsp; </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Telefone de Familiar: </strong> </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Telefone Fixo: </strong> </li>
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Número da Equipe: </strong> </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Número da Microárea: </strong> </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Número da Familía/Casa: </strong> </li>                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Unidade da Estratégia de Saúde da Família:</strong> </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Distrito:</strong> </li>
+                                        
                                     </ul>
 
                                     
                                     <div class="ps-5 text-left">
-                                        <a href=""><button class="btn btn-primary mt-5"> Editar Usuário </button></a>
+                                        <a href="{{route('editar.perfil',['usuario'=>$usuario->id])}}"><button class="btn btn-primary mt-5"> Editar Usuário </button></a>
                                     </div>
                                 </div>
 

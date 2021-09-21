@@ -275,67 +275,33 @@
                                                         <div class="row">
                                                             <div class="col-12">
                                                             <div class="card-header text-center pb-0">
-                                                                            <h4>Cadastrar Nova Unidade</h4>
+                                                                            <h4> {{$unidade->nome}}</h4>
                                                                         </div>
-                                                                        <form action="{{route('post.registro.unidades')}}" class="ps-5 pe-5" method="post">
+                                                                        <form action="{{route('post.reuniao', ['unidade'=>$unidade->id])}}" class="ps-5 pe-5" method="post">
                                                                             @csrf
 
                                                                                 <div class="form-group">
-                                                                                    <legend>Qual nome da nova unidade ? </legend>
-                                                                                    <input class="form-control" required  type="text" name="nome" id="example-text-input">
+                                                                                    <br>
+                                                                                    <h5 class="text-center">Registrar reunião do circulo de cultura</5>
+                                                                                    <br>    
+
+                                                                                    <legend>Título da Reunião</legend>
+                                                                                    <input class="form-control" required  type="text" name="titulo" id="example-text-input">
+                                                                                    <legend>Data</legend>
+                                                                                    <input class="form-control" required  type="text" name="data" id="example-text-input">
+                                                                                    <legend>Hora</legend>
+                                                                                    <input class="form-control" required  type="text" name="hora" id="example-text-input">
+                                                                                    <legend>Local</legend>
+                                                                                    <input class="form-control" required  type="text" name="local" id="example-text-input">
+                                                                                    
+                                                                                    <input class="form-control" hidden type="text" name="unidade_id" value="{{$unidade->id}}" id="example-text-input">
                                                                                 </div>
                                                                                 
                                                                                 <div class="text-center">
                                                                                     <button class="btn btn-primary" type="submit">Enviar</button>
                                                                                 </div>
                                                                         </form>
-                                                                <div class="card mb-4">
-                                                                    <div class="card-header text-center pb-0">
-                                                                        <h4>Unidades Cadastradas</h4>
-                                                                    </div>
-                                                                    <div class="card-body px-0 pt-0 pb-2">
-                                                                        <div class="table-responsive p-0">
-                                                                            <table class="table align-items-center mb-0">
-                                                                                <thead>
-                                                                                    <tr>
-                                                                                    <th style="text-align: center;" class="text-secondary ">#ID</th>
-                                                                                    <th style="text-align: center;" class="text-secondary ">Nome</th>
-                                                                                    </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                    @foreach($unidades as $unidade)
-                                                                                        <tr>
-                                                                                            <td>
-                                                                                                <div class="d-flex px-2 py-1">
-                                                                                                    <div class="d-flex flex-column justify-content-center">
-                                                                                                        <a href="{{route('unidade',['unidades'=>$unidade->id])}}">
-                                                                                                            <h6 class="mb-0 text-sm">{{$unidade->id}}</h6>
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </td>
-                                                                                            <td style="text-align: center;">
-                                                                                           
-                                                                                                <p class="text-xs font-weight-bold mb-0">
-                                                                                                    <a href="{{route('unidade',['unidades'=>$unidade->id])}}">
-                                                                                                    {{$unidade->nome}}
-                                                                                                    </a>
-                                                                                                </p>
-                                                                                            </td>
 
-                            
-                                                                                            
-                                                                                        </tr>
-                                                                                    @endforeach
-                                                                                
-                                                                                </tbody>
-                                                                            </table>
-
-                                                                            
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </div>
                             

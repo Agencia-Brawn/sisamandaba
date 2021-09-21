@@ -154,12 +154,6 @@ class UsuariosController extends Controller
     }
 
 
-    // REGISTRO DE UNIDADE CIRCULO DE CULTURA
-    public function unidades(Request $request, Usuarios $usuario)
-    {
-        dd($usuario);
-        // return view ('unidades',['usuario'=>$usuario]);
-    }
 
 
 }

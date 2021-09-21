@@ -674,7 +674,10 @@
                                                         <br>
                                                         <h3>Questionário 14 - ITEMS HEALTH LITERACY SCALE (HLS-14)</h3>
                                                         <div class="form-group">
-                                                            <h4>Nesse bloco as questões estão relacionadas a sua capacidade acessar e utilizar informações de saúde. Não existem respostas certas ou erradas, você deve escolher apenas uma das alternativas de resposta.</h4>
+                                                            <h4>Nesse bloco as questões estão relacionadas a sua capacidade acessar 
+                                                                e utilizar informações de saúde. Não existem respostas certas ou erradas, 
+                                                                você deve escolher apenas uma das alternativas de resposta. (MOSTRE O CARTÃO RESPOSTA)
+                                                            </h4>
                                                         </div>
                                                     </fieldset>
 
@@ -682,9 +685,10 @@
                                                     <fieldset>
                                                         <br><br>
                                                         <div class="form-group">
-                                                            <h3>
-                                                                Quando você lê receitas médicas ou bulas de remédio, o quanto você concorda ou discorda com as seguintes afirmações (MOSTRE O CARTÃO):
-                                                            </h3>
+                                                            <h4>
+                                                                Quando você lê receitas médicas ou bulas de remédio, o quanto você concorda ou discorda 
+                                                                com as seguintes afirmações:
+                                                            </h4>
                                                         </div>
                                                     </fieldset>
 
@@ -880,14 +884,16 @@
                                                         <h4>
                                                             Se você foi diagnosticado com uma doença, 
                                                             e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda 
-                                                            ou discorda com as seguintes perguntas:
+                                                            ou discorda com as seguintes afirmações:
                                                         </h4>
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>27. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU PROCURO INFORMAÇÕES EM VÁRIOS LUGARES&quot;.</legend>
+                                                        <legend>27. Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença 
+                                                            e seu tratamento, de que maneira você concorda com a afirmação &quot;EU PROCURO INFORMAÇÕES 
+                                                            EM VÁRIOS LUGARES&quot;.</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1080,7 +1086,8 @@
 
 
                                                     <fieldset>
-                                                        <legend class="mt-0">32. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU SEI QUANDO AS INFORMAÇÕES SÃO BOAS PARA O MEU CASO&quot;</legend>
+                                                        <legend class="mt-0">32. Se você for diagnosticado com uma doença e você pode conseguir mais informações 
+                                                            sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação &quot;EU SEI QUANDO AS INFORMAÇÕES SÃO BOAS PARA O MEU CASO&quot;</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>

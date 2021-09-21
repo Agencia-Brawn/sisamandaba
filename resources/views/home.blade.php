@@ -329,41 +329,46 @@
                                         </thead>
                                         <tbody>
                                             @foreach($usuarios as $usuario)
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-flex px-2 py-1">
-                                                            <div class="d-flex flex-column justify-content-center">
-                                                                <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
-                                                                    <h6 class="mb-0 text-sm">{{$usuario->name}}</h6>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td style="text-align: center;">
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->email}}</p>
-                                                    </td>
+                                            
+                                                    <tr>
+                                                        <td>
+                                                            <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                                                <div class="d-flex px-2 py-1">
+                                                                    <div class="d-flex flex-column justify-content-center">
+                                                                        
+                                                                            <h6 class="mb-0 text-sm">{{$usuario->name}}</h6>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </td>
 
-                                                    <td style="text-align: center;" >
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->telefone}}</p>
-                                                    </td>
+                                                        <td style="text-align: center;">
+                                                            <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                                                <p class="text-xs font-weight-bold mb-0">{{$usuario->email}}</p>
+                                                            </a>
+                                                        </td>
+                                                        
 
-                                                    <td style="text-align: center;" class="align-middle text-center text-sm">
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->cpf}}</p>
-                                                    </td>
+                                                        <td style="text-align: center;" >
+                                                            <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                                                <p class="text-xs font-weight-bold mb-0">{{$usuario->telefone}}</p>
+                                                            </a>
+                                                        </td>
 
-                                                    <td style="text-align: center;" class="align-middle text-center text-sm">
-                                                        <p class="text-xs font-weight-bold mb-0">{{$usuario->altura}}</p>
-                                                    </td>
+                                                        <td style="text-align: center;" class="align-middle text-center text-sm">
+                                                            <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                                                <p class="text-xs font-weight-bold mb-0">{{$usuario->cpf}}</p>
+                                                            </a>
+                                                        </td>
 
-                                                    <!-- <td class="align-middle text-center">
-                                                        <span class="text-secondary text-xs font-weight-bold">{{date("d/m/Y", strtotime($usuario->datanasc))}}</span>
-                                                    </td> -->
-                                                    <td class="align-middle">
-                                                        <!-- <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                                        Edit
-                                                        </a> -->
-                                                    </td>
-                                                </tr>
+                                                        <td style="text-align: center;" class="align-middle text-center text-sm">
+                                                            <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                                                <p class="text-xs font-weight-bold mb-0">{{$usuario->altura}}</p>
+                                                            </a>
+                                                        </td>
+
+                                                    </tr>
                                             @endforeach
                                            
                                         </tbody>

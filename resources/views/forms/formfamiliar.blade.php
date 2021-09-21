@@ -501,28 +501,28 @@
                                                     </fieldset> -->
 
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>N. equipe:</legend>
                                                         <div class="form-group">
                                                             <input type="text" name="pergunta5" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>N. microárea:</legend>
                                                         <div class="form-group">
                                                             <input id="1311005911" type="text" name="pergunta6" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
 
-                                                    <fieldset>
-                                                        <legend>N. Família/Casa:</legend>
-                                                        <div class="form-group">
-                                                            <input id="1048028346" type="text" name="pergunta7" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
+                                                        <!-- <fieldset>
+                                                            <legend>N. Família/Casa:</legend>
+                                                            <div class="form-group">
+                                                                <input id="1048028346" type="text" name="pergunta7" class="form-control" required>
+                                                            </div>
+                                                        </fieldset> -->
 
 
                                                     <fieldset>
@@ -676,7 +676,7 @@
                                                     </fieldset>
 
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <h4>Agora vou lhe fazer algumas perguntas sobre sua família atual. </4>
                                                         <div class="form-group">
                                                             <h5>Qual o endereço atual? (SOLICITE UM COMPROVANTE DE ENDEREÇO)</h5>
@@ -721,7 +721,7 @@
                                                         <div class="form-group">
                                                             <input type="text" name="pergunta21" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
 
                                                     <fieldset>

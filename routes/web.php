@@ -54,7 +54,7 @@ Route::group(['prefix' => 'usuarios/','namespace'=>'Usuarios'], function () {
     // EDITAR FORMULÁRIOS
     Route::get('{usuario}/editarperfil', 'UsuariosController@editarperfil')->name('editar.perfil');
 
-
+ 
 
     Route::get('novo', 'UsuariosController@novo')->name('cadastro.usuarios');
     Route::post('novo', 'UsuariosController@create')->name('formulario.usuarios');
@@ -69,8 +69,12 @@ Route::group(['prefix' => 'unidades','namespace'=>'Unidades'], function () {
     Route::post('/', 'UnidadesController@postunidade')->name('post.registro.unidades');
 
     // EXIBI UNIDADE
-    Route::get('/{unidade}', 'UnidadesController@unidade')->name('registro.unidade');
+    Route::get('/{unidade}', 'UnidadesController@detalhes')->name('unidade');
 
+    // RECEBER UNIDADE
+    Route::post('/{unidade}/reuniao', 'UnidadesController@postreuniao')->name('post.reuniao');
+
+ 
 
  
 

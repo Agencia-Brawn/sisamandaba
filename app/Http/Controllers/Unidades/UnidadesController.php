@@ -23,6 +23,20 @@ class UnidadesController extends Controller
         dd($unidade);
     }
 
+    public function detalhes(Request $request, Unidade $unidade)
+    {
+        // dd($unidade);
+        return view ('unidaderegistro', ['unidade'=>$unidade]);
+    }
+
+    // CADASTRAR REUNIÃO DO CIRCULO DE CULTURA
+    public function postreuniao(Request $request, Unidade $unidade)
+    {
+        // dd($request->all());
+        $unidade->novareuniao($request->all());
+        
+    }
+
     public function postunidade(Request $request)
     {
         // dd($request);

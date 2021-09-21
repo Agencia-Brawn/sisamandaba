@@ -380,7 +380,7 @@
                                                     </fieldset> -->
   
                                                     <fieldset>
-                                                        <legend>Equipe</legend>
+                                                        <!-- <legend>Equipe</legend>
                                                         <div class="form-group">
                                                             <input id="" type="text" name="pergunta4" class="form-control" required>
                                                         </div>
@@ -398,7 +398,7 @@
                                                         <div class="form-group">
                                                             <input id="" type="text" name="pergunta6" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
                                                     <fieldset>
                                                         <legend>Individual</legend>
@@ -469,6 +469,25 @@
                                                     </fieldset>
 
                                                     <fieldset>
+                                                        <legend>Circunferência abdominal ?</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta15" value="FEMININO" >
+                                                                    Não
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta15" value="MASCULINO" >
+                                                                    Sim
+                                                                </label>
+                                                            </div>
+                            
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
                                                         <legend>Abdome em avental?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
@@ -486,6 +505,11 @@
                             
                                                         </div>
                                                     </fieldset>
+
+
+
+
+
                                             
 
                                                     <div class="text-center">

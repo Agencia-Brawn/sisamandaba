@@ -400,7 +400,7 @@
                                                     </fieldset> -->
 
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Em que Município você Nasceu</legend>
                                                         <div class="form-group">
                                                             <input id="709603456" type="text" name="pergunta7" class="form-control" required>
@@ -413,7 +413,7 @@
                                                         <div class="form-group">
                                                             <input id="1374048736" type="text" name="pergunta8" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
 
                                                     <fieldset>
@@ -528,6 +528,12 @@
                                                     <fieldset>
                                                         <legend>4. Quando você perde urina? (Por favor assinale todas as alternativas que se aplicam a você)</legend>
                                                         <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="pergunta13" value="Perco antes de chegar ao banheiro" >
+                                                                    Nunca
+                                                                </label>
+                                                            </div>
                                                             <div class="checkbox">
                                                                 <label>
                                                                     <input type="checkbox" name="pergunta13" value="Perco antes de chegar ao banheiro" >

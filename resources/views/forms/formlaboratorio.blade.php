@@ -386,167 +386,27 @@
                                                         </div>
                                                     </fieldset> -->
   
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Equipe</legend>
                                                         <div class="form-group">
                                                             <input type="text" name="pergunta5" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
-                                                    
-                                                    <!-- EXTRA 2
-                                                    <fieldset>
-                                                        <legend>Distrito:</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra2" value="Guamá" required>
-                                                                    Guamá
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra2" value="Bengui" required>
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    EXTRA 1
-                                                    <fieldset>
-                                                        <legend>Unidade da Estratégia de Saúde da Família</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Condor" required>
-                                                                    Condor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Combú" required>
-                                                                    Combú
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pq. Amazônia I" required>
-                                                                    Pq. Amazônia I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pq. Amazônia II" required>
-                                                                    Pq. Amazônia II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Portal da Amazônia" required>
-                                                                    Portal da Amazônia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Radional" required>
-                                                                    Radional
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Riacho Doce" required>
-                                                                    Riacho Doce
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Terra Firme" required>
-                                                                    Terra Firme
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Bengui" required>
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Carmelândia" required>
-                                                                    Carmelândia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Cristo Redentor" required>
-                                                                    Cristo Redentor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Mangueirão" required>
-                                                                    Mangueirão
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Panorama XXI" required>
-                                                                    Panorama XXI
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Parque Verde" required>
-                                                                    Parque Verde
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pratinha I" required>
-                                                                    Pratinha I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pratinha II" required>
-                                                                    Pratinha II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Tapanã I" required>
-                                                                    Tapanã I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Tapanã II" required>
-                                                                    Tapanã II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Una" required>
-                                                                    Una
-                                                                </label>
-                                                            </div>
-                                                        </div>
                                                     </fieldset> -->
 
-                                                    <fieldset>
+
+                                                    <!-- <fieldset>
                                                         <legend>Microárea</legend>
                                                         <div class="form-group">
                                                             <input type="text" name="pergunta6" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Família</legend>
                                                         <div class="form-group">
                                                             <input type="text" name="pergunta7" class="form-control" required>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
                                                     <fieldset>
                                                         <legend>Individual</legend>
@@ -676,21 +536,21 @@
                                                     <fieldset>
                                                         <legend>9. Impressão do resultado, data:</legend>
                                                         <div class="form-group">
-                                                            <input id="" type="text" name="pergunta20" class="form-control" required>
+                                                            <input id="" type="text" name="pergunta20" class="form-control">
                                                         </div>
                                                     </fieldset>
 
                                                     <fieldset>
                                                         <legend>10. Entrega do resultado ao participante, data: </legend>
                                                         <div class="form-group">
-                                                            <input id="" type="text" name="pergunta21" class="form-control" required>
+                                                            <input id="" type="text" name="pergunta21" class="form-control">
                                                         </div>
                                                     </fieldset>
 
                                                     <fieldset>
                                                         <legend>11. Entrega do resultado na ESF, data: </legend>
                                                         <div class="form-group">
-                                                            <input id="" type="text" name="pergunta22" class="form-control" required>
+                                                            <input id="" type="text" name="pergunta22" class="form-control">
                                                         </div>
                                                     </fieldset>
 
