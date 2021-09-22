@@ -274,33 +274,30 @@
                                                     <div class="container-fluid py-4">
                                                         <div class="row">
                                                             <div class="col-12">
-                                                            <div class="card-header text-center pb-0">
-                                                                            <h4> {{$unidade->nome}}</h4>
+                                                                <div class="card-header text-center pb-0">
+                                                                    <h3> {{$unidade->nome}}</h3>
+                                                                </div>
+                                                                    <form action="{{route('post.reuniao', ['unidade'=>$unidade->id])}}" class="ps-5 pe-5" method="post">
+                                                                    @csrf
+                                                                        <div class="form-group">
+                                                                            <h5 class="text-center mt-4 mb-5">Registrar informações para o <br> Círculo de Cultura</h5>
+
+                                                                            <legend>Título da Reunião</legend>
+                                                                            <input class="form-control" required  type="text" name="titulo" id="example-text-input">
+                                                                            <legend>Data</legend>
+                                                                            <input class="form-control" required  type="date" name="data" id="example-text-input">
+                                                                            <legend>Hora</legend>
+                                                                            <input class="form-control" required  type="time" name="hora" id="example-text-input">
+                                                                            <legend>Local</legend>
+                                                                            <input class="form-control" required  type="text" name="local" id="example-text-input">
+                                                                            <!-- OCULTADO -->
+                                                                            <input class="form-control" hidden type="text" name="unidade_id" value="{{$unidade->id}}" id="example-text-input">
                                                                         </div>
-                                                                        <form action="{{route('post.reuniao', ['unidade'=>$unidade->id])}}" class="ps-5 pe-5" method="post">
-                                                                            @csrf
 
-                                                                                <div class="form-group">
-                                                                                    <br>
-                                                                                    <h5 class="text-center">Registrar reunião do circulo de cultura</5>
-                                                                                    <br>    
-
-                                                                                    <legend>Título da Reunião</legend>
-                                                                                    <input class="form-control" required  type="text" name="titulo" id="example-text-input">
-                                                                                    <legend>Data</legend>
-                                                                                    <input class="form-control" required  type="text" name="data" id="example-text-input">
-                                                                                    <legend>Hora</legend>
-                                                                                    <input class="form-control" required  type="text" name="hora" id="example-text-input">
-                                                                                    <legend>Local</legend>
-                                                                                    <input class="form-control" required  type="text" name="local" id="example-text-input">
-                                                                                    
-                                                                                    <input class="form-control" hidden type="text" name="unidade_id" value="{{$unidade->id}}" id="example-text-input">
-                                                                                </div>
-                                                                                
-                                                                                <div class="text-center">
-                                                                                    <button class="btn btn-primary" type="submit">Enviar</button>
-                                                                                </div>
-                                                                        </form>
+                                                                        <div class="text-center">
+                                                                            <button class="btn btn-primary" type="submit">Enviar</button>
+                                                                        </div>    
+                                                                    </form>                                                                        
 
                                                             </div>
                                                         </div>

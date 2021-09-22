@@ -3,7 +3,7 @@
 @section('content')
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- VERSÃO MENOR QUE 767px -->
+    <!-- MENU MOBILE (767PX) -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -11,12 +11,10 @@
                 </label>
 
                 <div class="barra">
-
-                    <nav>
-                        <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  ps--active-y" id="sidenav-main">
-
-                            <div  class=" mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
-                                <ul class=" navbar-nav navbar-menu-web" >
+                    <div>
+                        <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 ps ps--active-y" id="sidenav-main">
+                            <div class="collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
+                                <ul class="navbar-nav" style="margin-top: 30px;">
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{route('home')}}">
@@ -220,13 +218,12 @@
 
                                 </ul>
                             </div>
-
                         </aside>
-                    </nav>
+                    </div>
 
                 </div>
     </div>
-    <!-- FIM -->
+    <!-- FIM MENU MOBILE -->
 
     <div class="row">
 
@@ -261,7 +258,7 @@
 
 
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                        <a class="nav-link  active" href="{{route('usuario',['usuario'=>$usuario->id])}}">
                                             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                                 <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                     <title>box-3d-50</title>
@@ -484,17 +481,17 @@
                                                     <h3 class="text-left">Dados Pessoais</h3>
                                                         <div class="form-group">
                                                             <legend>Qual o seu nome completo (nome do entrevistado - responsável pela família)? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
-                                                            <input class="form-control" required  type="text" name="name" id="example-text-input">
+                                                            <input class="form-control" required  type="text" name="perfilnome" id="example-text-input">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Qual o seu CPF ? (SOLICITE O CPF OU OUTRO DOCUMENTO COM O CPF)</legend>
-                                                            <input class="form-control" required type="number" name="cpf" >
+                                                            <input class="form-control" required type="number" name="perfilcpf" >
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Qual a data do seu nascimento? (SOLICITE O RG OU OUTRO DOCUMENTO COM A DATA DO NASCIMENTO)</legend>
-                                                            <input class="form-control" required type="date" name="datanasc"  id="example-date-input">
+                                                            <input class="form-control" required type="date" name="perfilnasc"  id="example-date-input">
                                                         </div>
 
                                                         <fieldset>
@@ -502,13 +499,13 @@
                                                             <div class="form-group">
                                                                     <div class="radio">
                                                                         <label>
-                                                                            <input type="radio" name="genero" value="FEMININO" >
+                                                                            <input required type="radio" name="perfilgenero" value="FEMININO" >
                                                                             Feminino
                                                                         </label>
                                                                     </div>
                                                                     <div class="radio">
                                                                         <label>
-                                                                            <input type="radio" name="genero" value="MASCULINO" >
+                                                                            <input type="radio" name="perfilgenero" value="MASCULINO" >
                                                                             Masculino
                                                                         </label>
                                                                     </div>
@@ -519,7 +516,7 @@
                                                         <fieldset>
                                                             <legend>Qual o nome da sua mãe? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
                                                             <div class="form-group">
-                                                                <input class="form-control" required type="date" name="mae"  id="example-date-input">
+                                                                <input class="form-control" required type="date" name="perfilmae"  id="example-date-input">
                                                             </div>
                                                         </fieldset>
 
@@ -528,17 +525,17 @@
 
                                                         <div class="form-group">
                                                             <legend>E-mail</legend>
-                                                            <input class="form-control" required type="email" name="email"  id="example-email-input">
+                                                            <input class="form-control" required type="perfilemail" name="email"  id="example-email-input">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Telefone</legend>
-                                                            <input class="form-control" required maxlength="15"  type="text" name="telefone" id="telefone" >
+                                                            <input class="form-control" required maxlength="15"  type="text" name="perfiltelefone" id="telefone" >
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Telefone Familiar</legend>
-                                                            <input class="form-control" required maxlength="15"  type="text" name="telefonefamiliar" id="telefone" >
+                                                            <input class="form-control" required maxlength="15"  type="text" name="perfiltelefonefamiliar" id="telefone" >
                                                         </div>
 
                                                         
@@ -548,42 +545,42 @@
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Estado </legend>
-                                                                <input class="form-control" required min="0" type="text" name="idnumero" id="example-text-input">
+                                                                <input class="form-control" required min="0" type="text" name="perfilestado" id="example-text-input">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Cidade </legend>
-                                                                <input class="form-control" required min="0" type="text" name="idnumero" id="example-text-input">
+                                                                <input class="form-control" required min="0" type="text" name="perfilcidade" id="example-text-input">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Bairro </legend>
-                                                                <input class="form-control" required min="0" type="text" name="idnumero" id="example-text-input">
+                                                                <input class="form-control" required min="0" type="text" name="perfilbairro" id="example-text-input">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>CEP </legend>
-                                                                <input class="form-control" required min="0" type="text" name="idnumero" id="example-text-input">
+                                                                <input class="form-control" required min="0" type="text" name="perfilcep" id="example-text-input">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Nome da Rua </legend>
-                                                                <input class="form-control" required min="0" type="text" name="idnumero" id="example-text-input">
+                                                                <input class="form-control" required min="0" type="text" name="perfilrua" id="example-text-input">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Número da Casa </legend>
-                                                                <input class="form-control" required min="0" type="text" name="idnumero" id="example-text-input">
+                                                                <input class="form-control" required min="0" type="text" name="perfilcasa" id="example-text-input">
                                                             </div>
                                                         </fieldset>
                                                         
@@ -595,22 +592,22 @@
 
                                                         <div class="form-group">
                                                             <legend>ID Número</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="idnumero" id="example-text-input">
+                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilid" id="example-text-input">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Número da Equipe</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="idnumero" id="example-text-input">
+                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilequipe" id="example-text-input">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Número da Microárea</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="idnumero" id="example-text-input">
+                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilmircoarea" id="example-text-input">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Número da Familía/Casa</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="idnumero" id="example-text-input">
+                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilfamilia" id="example-text-input">
                                                         </div>
 
                                                         <fieldset>
@@ -618,14 +615,14 @@
                                                             <div class="form-group">
                                                                 <div class="radio">
                                                                     <label>
-                                                                        <input type="radio" name="pergunta3" value="Guamá" required>
+                                                                        <input type="radio" name="perfildistrito" value="Guamá" required>
                                                                         Guamá
                                                                     </label>
                                                                 </div>
 
                                                                 <div class="radio">
                                                                     <label>
-                                                                        <input type="radio" name="pergunta3" value="Bengui" required>
+                                                                        <input type="radio" name="perfildistrito" value="Bengui">
                                                                         Bengui
                                                                     </label>
                                                                 </div>
@@ -638,115 +635,115 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Condor" required>
+                                                                    <input type="radio" name="perfilunidade" value="Condor" required>
                                                                     Condor
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Combú" required>
+                                                                    <input type="radio" name="perfilunidade" value="Combú" required>
                                                                     Combú
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia I" required>
+                                                                    <input type="radio" name="perfilunidade" value="Pq. Amazônia I" required>
                                                                     Pq. Amazônia I
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia II" required>
+                                                                    <input type="radio" name="perfilunidade" value="Pq. Amazônia II" required>
                                                                     Pq. Amazônia II
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Portal da Amazônia" required>
+                                                                    <input type="radio" name="perfilunidade" value="Portal da Amazônia" required>
                                                                     Portal da Amazônia
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Radional" required>
+                                                                    <input type="radio" name="perfilunidade" value="Radional" required>
                                                                     Radional
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Riacho Doce" required>
+                                                                    <input type="radio" name="perfilunidade" value="Riacho Doce" required>
                                                                     Riacho Doce
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Terra Firme" required>
+                                                                    <input type="radio" name="perfilunidade" value="Terra Firme" required>
                                                                     Terra Firme
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Bengui" required>
+                                                                    <input type="radio" name="perfilunidade" value="Bengui" required>
                                                                     Bengui
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Carmelândia" required>
+                                                                    <input type="radio" name="perfilunidade" value="Carmelândia" required>
                                                                     Carmelândia
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Cristo Redentor" required>
+                                                                    <input type="radio" name="perfilunidade" value="Cristo Redentor" required>
                                                                     Cristo Redentor
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Mangueirão" required>
+                                                                    <input type="radio" name="perfilunidade" value="Mangueirão" required>
                                                                     Mangueirão
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Panorama XXI" required>
+                                                                    <input type="radio" name="perfilunidade" value="Panorama XXI" required>
                                                                     Panorama XXI
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Parque Verde" required>
+                                                                    <input type="radio" name="perfilunidade" value="Parque Verde" required>
                                                                     Parque Verde
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Pratinha I" required>
+                                                                    <input type="radio" name="perfilunidade" value="Pratinha I" required>
                                                                     Pratinha I
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Pratinha II" required>
+                                                                    <input type="radio" name="perfilunidade" value="Pratinha II" required>
                                                                     Pratinha II
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Tapanã I" required>
+                                                                    <input type="radio" name="perfilunidade" value="Tapanã I" required>
                                                                     Tapanã I
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Tapanã II" required>
+                                                                    <input type="radio" name="perfilunidade" value="Tapanã II" required>
                                                                     Tapanã II
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Una" required>
+                                                                    <input type="radio" name="perfilunidade" value="Una" required>
                                                                     Una
                                                                 </label>
                                                             </div>
