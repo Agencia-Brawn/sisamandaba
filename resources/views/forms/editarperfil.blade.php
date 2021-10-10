@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- MENU MOBILE (767PX) -->
     <div class="menu-lateral">
@@ -443,8 +444,6 @@
             
             
             <div class="col-md-9 col-lg-10 col-xl-10 col-12">
-
-                    <!-- MODELO DE FORMULÁRIO -->
                     <div class="row justify-content-center row-painel-controle ps-5">
                         <div class="col-md-12 pt-5" >
                             <div class="card">
@@ -475,23 +474,23 @@
                                                 @endif
  
 
-                                                <form action="{{route('formulario.usuarios')}}" method="post">
+                                                <form action="{{route('post.editar.perfil', ['usuario'=>$usuario->id])}}" method="post">
                                                     @csrf
 
                                                     <h3 class="text-left">Dados Pessoais</h3>
                                                         <div class="form-group">
                                                             <legend>Qual o seu nome completo (nome do entrevistado - responsável pela família)? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
-                                                            <input class="form-control" required  type="text" name="perfilnome" id="example-text-input">
+                                                            <input class="form-control"   type="text" name="perfilnome" value="{{$usuario->name?$usuario->name:''}}" >
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Qual o seu CPF ? (SOLICITE O CPF OU OUTRO DOCUMENTO COM O CPF)</legend>
-                                                            <input class="form-control" required type="number" name="perfilcpf" >
+                                                            <input class="form-control"  type="text"  id="cpf" name="perfilcpf" value="{{$usuario->cpf}}">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Qual a data do seu nascimento? (SOLICITE O RG OU OUTRO DOCUMENTO COM A DATA DO NASCIMENTO)</legend>
-                                                            <input class="form-control" required type="date" name="perfilnasc"  id="example-date-input">
+                                                            <input type="date" name="perfilnasc" value="{{date('Y-m-d', strtotime($usuario->datanasc))}}" class="form-control"  >
                                                         </div>
 
                                                         <fieldset>
@@ -499,13 +498,13 @@
                                                             <div class="form-group">
                                                                     <div class="radio">
                                                                         <label>
-                                                                            <input required type="radio" name="perfilgenero" value="FEMININO" >
+                                                                            <input {{$usuario->genero==1?'checked':''}} type="radio" name="perfilgenero" value="1" >
                                                                             Feminino
                                                                         </label>
                                                                     </div>
                                                                     <div class="radio">
                                                                         <label>
-                                                                            <input type="radio" name="perfilgenero" value="MASCULINO" >
+                                                                            <input {{$usuario->genero==2?'checked':''}} type="radio" name="perfilgenero" value="2" >
                                                                             Masculino
                                                                         </label>
                                                                     </div>
@@ -516,26 +515,37 @@
                                                         <fieldset>
                                                             <legend>Qual o nome da sua mãe? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
                                                             <div class="form-group">
-                                                                <input class="form-control" required type="date" name="perfilmae"  id="example-date-input">
+                                                                <input class="form-control" value="{{$usuario->mae}}"  type="text" name="perfilmae"  id="example-date-input">
                                                             </div>
                                                         </fieldset>
 
                                                         <h3 class="text-left mt-5">Dados de Contato</h3>
 
-
                                                         <div class="form-group">
                                                             <legend>E-mail</legend>
-                                                            <input class="form-control" required type="perfilemail" name="email"  id="example-email-input">
+                                                            <input class="form-control"  type="text" name="perfilemail" value="{{$usuario->email}}"  id="example-email-input">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Telefone</legend>
-                                                            <input class="form-control" required maxlength="15"  type="text" name="perfiltelefone" id="telefone" >
+                                                            <input class="form-control"  maxlength="15"  type="text" name="perfiltelefone" id="telefone" value="{{$usuario->telefone}}" >
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Telefone Fixo</legend>
+                                                            <input class="form-control"  maxlength="15"  type="text" name="perfiltelefonefixo" id="telefonefixo" value="{{$usuario->telefonefixo}}" >
+                                                        </div>
+
+
+
+                                                        <div class="form-group">
+                                                            <legend>Nome Familiar</legend>
+                                                            <input class="form-control" value="{{$usuario->perfilnomefamiliar}}"  type="text" name="perfilnomefamiliar">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Telefone Familiar</legend>
-                                                            <input class="form-control" required maxlength="15"  type="text" name="perfiltelefonefamiliar" id="telefone" >
+                                                            <input class="form-control" value="{{$usuario->telfamiliar}}"  type="text" name="perfiltelefonefamiliar" id="telefonefamiliar" >
                                                         </div>
 
                                                         
@@ -545,42 +555,42 @@
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Estado </legend>
-                                                                <input class="form-control" required min="0" type="text" name="perfilestado" id="example-text-input">
+                                                                <input class="form-control"  min="0" type="text" name="perfilestado" value="{{$usuario->estado}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Cidade </legend>
-                                                                <input class="form-control" required min="0" type="text" name="perfilcidade" id="example-text-input">
+                                                                <input class="form-control"  min="t0" type="ext" name="perfilcidade" value="{{$usuario->cidade}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Bairro </legend>
-                                                                <input class="form-control" required min="0" type="text" name="perfilbairro" id="example-text-input">
+                                                                <input class="form-control"  min="0" type="text" name="perfilbairro" value="{{$usuario->bairro}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>CEP </legend>
-                                                                <input class="form-control" required min="0" type="text" name="perfilcep" id="example-text-input">
+                                                                <input class="form-control" id="cep" type="text" name="perfilcep" value="{{$usuario->cep}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Nome da Rua </legend>
-                                                                <input class="form-control" required min="0" type="text" name="perfilrua" id="example-text-input">
+                                                                <input class="form-control"  min="0" type="text" name="perfilrua" value="{{$usuario->rua}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Número da Casa </legend>
-                                                                <input class="form-control" required min="0" type="text" name="perfilcasa" id="example-text-input">
+                                                                <input class="form-control"  min="0" type="text" name="perfilcasa" value="{{$usuario->numcasa}}">
                                                             </div>
                                                         </fieldset>
                                                         
@@ -592,50 +602,64 @@
 
                                                         <div class="form-group">
                                                             <legend>ID Número</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilid" id="example-text-input">
+                                                            <input class="form-control"  min="0" type="number" name="perfilid" value="{{$usuario->idnumero}}">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Número da Equipe</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilequipe" id="example-text-input">
+                                                            <input class="form-control"  min="0" type="number" name="perfilequipe" value="{{$usuario->numequipe}}">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Número da Microárea</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilmircoarea" id="example-text-input">
+                                                            <input class="form-control"  min="0" type="number" name="perfilmircoarea" value="{{$usuario->microarea}}">
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <legend>Número da Familía/Casa</legend>
-                                                            <input class="form-control" required min="0" onkeypress="return numeros();" type="number" name="perfilfamilia" id="example-text-input">
+                                                            <legend>Número da Família/Casa</legend>
+                                                            <input class="form-control"  min="0" type="number" name="perfilfamilia" value="{{$usuario->numfamilia}}">
                                                         </div>
-
+                                                        
                                                         <fieldset>
-                                                            <legend>Distrito:</legend>
+                                                            <legend>Distrito</legend>
                                                             <div class="form-group">
-                                                                <div class="radio">
-                                                                    <label>
-                                                                        <input type="radio" name="perfildistrito" value="Guamá" required>
-                                                                        Guamá
-                                                                    </label>
-                                                                </div>
-
-                                                                <div class="radio">
-                                                                    <label>
-                                                                        <input type="radio" name="perfildistrito" value="Bengui">
-                                                                        Bengui
-                                                                    </label>
-                                                                </div>
+                                                                    <div class="radio">
+                                                                        <label>
+                                                                            <input type="radio" name="perfildistrito"  value="Guamá" {{$usuario->perfildistrito=='Guamá'?'checked':''}} >
+                                                                            Guamá
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio">
+                                                                        <label>
+                                                                            <input type="radio" name="perfildistrito" value="Bengui" {{$usuario->perfildistrito=='Bengui'?'checked':''}}>
+                                                                            Bengui
+                                                                        </label>
+                                                                    </div>
+                                    
                                                             </div>
                                                         </fieldset>
 
 
-                                                    <fieldset>
+
+
+                                                        <fieldset>
+                                                            <div class="form-group">
+                                                            <legend>Unidade:</legend>
+                                                                <select class="form-control" name="perfilunidade" id="exampleFormControlSelect2">
+                                                                    <option >Selecionar Unidade</option>
+                                                                    @foreach($unidades as $unidade)
+                                                                        <option {{$unidade->id==$usuario->unidade?'selected':''}} value="{{$unidade->id}}">{{$unidade->nome}}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>                                                            
+                                                        </fieldset>
+
+                                                    <!-- <fieldset>
                                                         <legend>Unidade da Estratégia de Saúde da Família</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="perfilunidade" value="Condor" required>
+                                                                    <input type="radio" name="perfilunidade" value="Condor" >
                                                                     Condor
                                                                 </label>
                                                             </div>
@@ -748,7 +772,7 @@
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
                                                         
                                                         <div class="text-center">
                                                             <button class="btn btn-primary" type="submit">EDITAR PERFIL</button>
@@ -782,53 +806,31 @@
                                         </div>
                                     </div>
                         </div>
-                    </footer>   
+                    </footer>
+                    
+                    <script>
+                        $(document).ready(function($){
+                            $('#cpf').mask('000.000.000-00', {reverse: true});
+                            $('#datanasc').mask('00/00/0000');
+                            $('#altura').mask('0.00');
+
+
+                            $('#telefone').mask('(00) 00000-0000');
+                            $('#telefonefamiliar').mask('(00) 00000-0000');
+                            $('#telefonefixo').mask('(00) 0000-0000');
+
+                            $('#cep').mask('00000-000');
+                        });
+                    </script>
 
             </div>
         </div>
 
     </div>
 
-    <script>
-        /* Máscaras ER */
-        function mascara(o,f){
-            v_obj=o
-            v_fun=f
-            setTimeout("execmascara()",1)
-        }
-        function execmascara(){
-            v_obj.value=v_fun(v_obj.value)
-        }
-        function mtel(v){
-            v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
-            v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-            v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
-            return v;
-        }
-        function id( el ){
-            return document.getElementById( el );
-        }
-        window.onload = function(){
-            id('telefone').onkeyup = function(){
-                mascara( this, mtel );
-            }
-        }
 
-        function numeros(evt) {
-            var theEvent = evt || window.event;
-            var key = theEvent.keyCode || theEvent.which;
-            key = String.fromCharCode( key );
-            //var regex = /^[0-9.,]+$/;
-            var regex = /^[0-9.]+$/;
-            if( !regex.test(key) ) {
-                theEvent.returnValue = false;
-                if(theEvent.preventDefault) theEvent.preventDefault();
-            }
-        }
+ 
 
-        $(document).ready(function(){
-		    $("#cpf").mask("999.999.999-99");
-	    });
 
-    </script>
+
 @endsection

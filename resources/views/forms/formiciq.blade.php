@@ -461,25 +461,17 @@
                                     @endif
 
                                             <!-- Questionários ICIQ-KHQ (names ok) -->
-                                            <form action="" id="form5" method="POST">
+                                            <form action="{{route('post.form.iciq',['usuario'=>$usuario->id])}}" id="form5" method="POST">
                                                 @csrf
                                                     <fieldset>
                                                         <h2>Questionários ICIQ-KHQ<br><small></small></h2>
                                                     </fieldset>
 
-
-                                                    <!-- <fieldset>
-                                                        <legend>ID NÚMERO</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta1" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
                                                     <fieldset>
                                                         <legend>Nome do Entrevistador</legend>
                                                         <div class="form-group">
-                                                            <input type="text" name="pergunta2" class="form-control" required>
+                                                            <input hidden name="perguntaiciq1" type="text" value="Nome do Entrevistador">
+                                                            <input type="text" name="respostaiciq1" value="{{$usuario->formiciq()?$usuario->formiciq()->respostaiciq1:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -487,61 +479,21 @@
                                                     <fieldset>
                                                         <legend>Data da Entrevista</legend>
                                                         <div class="form-group">
-                                                            <input type="date" name="pergunta3" placeholder="11/09/2021" class="form-control" required>
+                                                            <input hidden name="perguntaiciq2" type="text" value="Data da Entrevista">
+                                                            <input type="date" name="respostaiciq2" value="{{$usuario->formiciq()?$usuario->formiciq()->respostaiciq2:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
 
-                                                    <fieldset>
-                                                        <legend>Vamos começar com alguns dados pessoais</legend>
-                                                        <div class="form-group">
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Qual o seu Nome</legend>
-                                                        <div class="form-group">
-                                                            <input id="1793359625" type="text" name="pergunta4" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Qual o Nome da sua Mãe</legend>
-                                                        <div class="form-group">
-                                                            <input id="578030694" type="text" name="pergunta5" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Qual a data de seu Nascimento</legend>
-                                                        <div class="form-group">
-                                                            <input type="date" name="pergunta6" placeholder="11/09/2021" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Em que Município você Nasceu</legend>
-                                                        <div class="form-group">
-                                                            <input id="709603456" type="text" name="pergunta7" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
 
                                                     <fieldset>
-                                                        <legend>Em que Estado você Nasceu</legend>
                                                         <div class="form-group">
-                                                            <input id="1374048736" type="text" name="pergunta8" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <fieldset>
-                                                        <legend>ICIQ -SF. Muitas pessoas perdem urina alguma vez. Estamos tentando descobrir quantas pessoas perdem urina e o quanto isso as aborrece. Ficaríamos agradecidos se você pudesse nos responder às seguintes perguntas, pensando em como você tem passado, em média, nas ÚLTIMAS QUATRO SEMANAS.</legend>
-                                                        <div class="form-group">
+                                                            <h4>ICIQ -SF. Muitas pessoas perdem urina alguma vez. Estamos
+                                                                tentando descobrir quantas pessoas perdem urina e o quanto
+                                                                isso as aborrece. Ficaríamos agradecidos se você pudesse 
+                                                                nos responder às seguintes perguntas, pensando em como você
+                                                                tem passado, em média, nas ÚLTIMAS QUATRO SEMANAS.
+                                                            </h4>
                                                         </div>
                                                     </fieldset>
 
@@ -551,37 +503,38 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="Nunca 0" required>
+                                                                    <input hidden name="perguntaiciq3" type="text" value="Com que frequência você perde urina? (assinale uma resposta)">
+                                                                    <input type="radio" name="respostaiciq3" value="Nunca 0" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq3=='Nunca 0'?'checked':'':''}}>
                                                                     Nunca 0
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="Uma vez por semana ou menos 1" required>
+                                                                    <input type="radio" name="respostaiciq3" value="Uma vez por semana ou menos 1" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq3=='Uma vez por semana ou menos 1'?'checked':'':''}} >
                                                                     Uma vez por semana ou menos 1
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="Duas ou três vezes por semana 2" required>
+                                                                    <input type="radio" name="respostaiciq3" value="Duas ou três vezes por semana 2" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq3=='Duas ou três vezes por semana 2'?'checked':'':''}} >
                                                                     Duas ou três vezes por semana 2
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="Uma vez ao dia 3" required>
+                                                                    <input type="radio" name="respostaiciq3" value="Uma vez ao dia 3" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq3=='Uma vez ao dia 3'?'checked':'':''}}>
                                                                     Uma vez ao dia 3
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="Diversas vezes ao dia 4" required>
+                                                                    <input type="radio" name="respostaiciq3" value="Diversas vezes ao dia 4" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq3=='Diversas vezes ao dia 4'?'checked':'':''}} >
                                                                     Diversas vezes ao dia 4
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="O tempo todo 5" required>
+                                                                    <input type="radio" name="respostaiciq3" value="O tempo todo 5" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq3=='O tempo todo 5'?'checked':'':''}}>
                                                                     O tempo todo 5
                                                                 </label>
                                                             </div>
@@ -594,25 +547,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta10" value="Nenhuma 0" required>
+                                                                    <input hidden name="perguntaiciq4" type="text" value="Gostaríamos de saber a quantidade de urina que você pensa que perde(assinale uma resposta)">
+                                                                    <input type="radio" name="respostaiciq4" value="Nenhuma 0" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq4=='Nenhuma 0'?'checked':'':''}}>
                                                                     Nenhuma 0
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta10" value="Uma pequena quantidade 2" required>
+                                                                    <input type="radio" name="respostaiciq4" value="Uma pequena quantidade 2" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq4=='Uma pequena quantidade 2'?'checked':'':''}} >
                                                                     Uma pequena quantidade 2
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta10" value="Uma moderada quantidade 4" required>
+                                                                    <input type="radio" name="respostaiciq4" value="Uma moderada quantidade 4" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq4=='Uma pequena quantidade 4'?'checked':'':''}}>
                                                                     Uma moderada quantidade 4
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta10" value="Uma grande quantidade 6" required>
+                                                                    <input type="radio" name="respostaiciq4" value="Uma grande quantidade 6" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq4=='Uma pequena quantidade 6'?'checked':'':''}}>
                                                                     Uma grande quantidade 6
                                                                 </label>
                                                             </div>
@@ -623,18 +577,19 @@
                                                     <fieldset>
                                                         <legend>Em geral, quanto que perder urina interfere em sua vida diária? Por favor, circuleum número entre 0 (não interfere) e 10 (interfere muito)</legend>
                                                         <div class="form-group">
-                                                            <select id="703164669" name="pergunta11" class="form-control">
-                                                                <option value="0">0</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
-                                                                <option value="6">6</option>
-                                                                <option value="7">7</option>
-                                                                <option value="8">8</option>
-                                                                <option value="9">9</option>
-                                                                <option value="10">10</option>
+                                                        <input hidden name="perguntaiciq5" type="text" value="Em geral, quanto que perder urina interfere em sua vida diária? Por favor, circuleum número entre 0 (não interfere) e 10 (interfere muito)">
+                                                            <select name="respostaiciq5" class="form-control">
+                                                                <option value="0" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==0?'selected':'':''}}>0</option>
+                                                                <option value="1" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==1?'selected':'':''}}>1</option>
+                                                                <option value="2" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==2?'selected':'':''}} >2</option>
+                                                                <option value="3" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==3?'selected':'':''}} >3</option>
+                                                                <option value="4" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==4?'selected':'':''}} >4</option>
+                                                                <option value="5" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==5?'selected':'':''}} >5</option>
+                                                                <option value="6" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==6?'selected':'':''}} >6</option>
+                                                                <option value="7" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==7?'selected':'':''}} >7</option>
+                                                                <option value="8" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==8?'selected':'':''}} >8</option>
+                                                                <option value="9" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==9?'selected':'':''}} >9</option>
+                                                                <option value="10" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq5==10?'selected':'':''}} >10</option>
                                                             </select>
                                                         </div>
                                                     </fieldset>
@@ -643,59 +598,61 @@
                                                     <fieldset>
                                                         <legend>ICIQ Escore: soma dos resultados 1 + 2 + 3 &#x3D;</legend>
                                                         <div class="form-group">
-                                                            <input  type="text" name="pergunta12" class="form-control" >
+                                                            <input hidden name="perguntaiciq6" type="text" value="ICIQ Escore: soma dos resultados 1 + 2 + 3">
+                                                            <input  type="text" name="respostaiciq6" value="{{$usuario->formiciq()?$usuario->formiciq()->respostaiciq6:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>4. Quando você perde urina? (Por favor assinale todas as alternativas que se aplicam a você)</legend>
+                                                        <legend>Quando você perde urina? (Por favor assinale todas as alternativas que se aplicam a você)</legend>
                                                         <div class="form-group">
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco antes de chegar ao banheiro" >
+                                                                    <input hidden name="perguntaiciq7" type="text" value="Quando você perde urina? (Por favor assinale todas as alternativas que se aplicam a você)">
+                                                                    <input type="checkbox" name="respostaiciq7" value="Nunca" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7=='Nunca'?'checked':'':''}}>
                                                                     Nunca
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco antes de chegar ao banheiro" >
+                                                                    <input type="checkbox" name="respostaiciq7a" value="Perco antes de chegar ao banheiro" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7a=='Perco antes de chegar ao banheiro'?'checked':'':''}}>
                                                                     Perco antes de chegar ao banheiro
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco quando tusso ou espirro" >
+                                                                    <input type="checkbox" name="respostaiciq7b" value="Perco quando tusso ou espirro" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7b=='Perco quando tusso ou espirro'?'checked':'':''}}>
                                                                     Perco quando tusso ou espirro
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco quando estou dormindo" >
+                                                                    <input type="checkbox" name="respostaiciq7c" value="Perco quando estou dormindo" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7c=='Perco quando estou dormindo'?'checked':'':''}}>
                                                                     Perco quando estou dormindo
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco quando estou fazendo atividades físicas" >
+                                                                    <input type="checkbox" name="respostaiciq7d" value="Perco quando estou fazendo atividades físicas" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7d=='Perco quando estou fazendo atividades físicas'?'checked':'':''}}>
                                                                     Perco quando estou fazendo atividades físicas
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco quando terminei de urinar e estou me vestindo" >
+                                                                    <input type="checkbox" name="respostaiciq7e" value="Perco quando terminei de urinar e estou me vestindo" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7e=='Perco quando terminei de urinar e estou me vestindo'?'checked':'':''}}>
                                                                     Perco quando terminei de urinar e estou me vestindo
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco sem razão óbvia" >
+                                                                    <input type="checkbox" name="respostaiciq7f" value="Perco sem razão óbvia" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7f=='Perco sem razão óbvia'?'checked':'':''}}>
                                                                     Perco sem razão óbvia
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="checkbox" name="pergunta13" value="Perco o tempo todo" >
+                                                                    <input type="checkbox" name="respostaiciq7g" value="Perco o tempo todo" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq7g=='Perco o tempo todo'?'checked':'':''}}>
                                                                     Perco o tempo todo
                                                                 </label>
                                                             </div>
@@ -704,8 +661,8 @@
 
 
                                                    <fieldset>
-                                                        <legend>KHQ/Questionário de qualidade de vida em incontinência urinária após validação</legend>
                                                         <div class="form-group">
+                                                            <h4>KHQ/Questionário de qualidade de vida em incontinência urinária após validação</h4>
                                                         </div>
                                                     </fieldset>
 
@@ -715,31 +672,32 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Muito boa" required>
+                                                                    <input hidden name="perguntaiciq8" type="text" value="Como você avaliaria sua saúde hoje:">
+                                                                    <input type="radio" name="respostaiciq8" value="Muito boa" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq8=='Muito boa'?'checked':'':''}}>
                                                                     Muito boa
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Boa" required>
+                                                                    <input type="radio" name="respostaiciq8" value="Boa" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq8=='Boa'?'checked':'':''}}>
                                                                     Boa
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Normal" required>
+                                                                    <input type="radio" name="respostaiciq8" value="Normal" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq8=='Normal'?'checked':'':''}}>
                                                                     Normal
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Ruim" required>
+                                                                    <input type="radio" name="respostaiciq8" value="Ruim" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq8=='Ruim'?'checked':'':''}}>
                                                                     Ruim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Muito ruim" required>
+                                                                    <input type="radio" name="respostaiciq8" value="Muito ruim" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq8=='Muito ruim'?'checked':'':''}}>
                                                                     Muito ruim
                                                                 </label>
                                                             </div>
@@ -752,25 +710,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Não" required>
+                                                                    <input hidden name="perguntaiciq9" type="text" value="Quanto você acha que seu problema de bexiga atrapalha sua vida:">
+                                                                    <input type="radio" name="respostaiciq9" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq9=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq9" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq9=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq9" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq9=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq9" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq9=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -802,25 +761,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="nenhuma" required>
+                                                                    <input hidden name="perguntaiciq10" type="text" value="Com que intensidade seu problema de bexiga atrapalha suas tarefas de casa (ex., limpar, lavar, cozinhar, etc.)">
+                                                                    <input type="radio" name="respostaiciq10" value="nenhuma" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq10=='nenhuma'?'checked':'':''}}>
                                                                     nenhuma
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="um pouco" required>
+                                                                    <input type="radio" name="respostaiciq10" value="um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq10=='um pouco'?'checked':'':''}}>
                                                                     um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq10" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq10=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq10" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq10=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -833,25 +793,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta17" value="Nenhuma" required>
+                                                                    <input hidden name="perguntaiciq11" type="text" value="Com que intensidade seu problema de bexiga atrapalha seu trabalho, ou suas atividades diárias normais fora de casa como: fazer compra, levar filho à escola, etc.">
+                                                                    <input type="radio" name="respostaiciq11" value="Nenhuma" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq11=='Nenhuma'?'checked':'':''}}>
                                                                     Nenhuma
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta17" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq11" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq11=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta17" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq11" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq11=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta17" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq11" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq11=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -860,8 +821,8 @@
 
 
                                                     <fieldset>
-                                                        <legend>Limitação Física/Social</legend>
                                                         <div class="form-group">
+                                                            <h4>Limitação Física/Social</h4>
                                                         </div>
                                                     </fieldset>
 
@@ -871,25 +832,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta18" value="Não" required>
+                                                                    <input hidden name="perguntaiciq12" type="text" value="Seu problema de bexiga atrapalha suas atividades físicas como: fazer caminhada, correr, fazer algum esporte, etc.">
+                                                                    <input type="radio" name="respostaiciq12" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq12=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta18" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq12" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq12=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta18" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq12" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq12=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta18" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq12" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq12=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -902,25 +864,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta19" value="Não" required>
+                                                                    <input hidden name="perguntaiciq13" type="text" value="Seu problema de bexiga atrapalha quando você quer fazer uma viagem">
+                                                                    <input type="radio" name="respostaiciq13" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq13=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta19" value="Um pouco" required>
-                                                                    Um pouco
+                                                                    <input type="radio" name="respostaiciq13" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq13=='Um pouco'?'checked':'':''}}>
+                                                                    Um pouco 
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta19" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq13" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq13=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta19" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq13" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq13=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -933,25 +896,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta20" value="Não" required>
+                                                                    <input hidden name="perguntaiciq14" type="text" value="Seu problema de bexiga atrapalha quando você vai a igreja, reunião, festa">
+                                                                    <input type="radio" name="respostaiciq14" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq14=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta20" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq14" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq14=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta20" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq14" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq14=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta20" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq14" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq14=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -964,25 +928,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta21" value="Não" required>
+                                                                    <input hidden name="perguntaiciq15" type="text" value="Você deixa de visitar seus amigos por causa do problema de bexiga">
+                                                                    <input type="radio" name="respostaiciq15" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq15=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta21" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq15" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq15=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta21" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq15" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq15=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta21" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq15" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq15=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1004,31 +969,32 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta22" value="Não se aplica" required>
+                                                                    <input hidden name="perguntaiciq16" type="text" value="Seu problema de bexiga atrapalha sua vida sexual">
+                                                                    <input type="radio" name="respostaiciq16" value="Não se aplica" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq16=='Não se aplica'?'checked':'':''}}>
                                                                     Não se aplica
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta22" value="Não" required>
+                                                                    <input type="radio" name="respostaiciq16" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq16=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta22" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq16" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq16=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta22" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq16" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq16=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta22" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq16" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq16=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1041,31 +1007,32 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta23" value="Não se aplica" required>
+                                                                    <input hidden name="perguntaiciq17" type="text" value="Seu problema de bexiga atrapalha sua vida com seu companheiro">
+                                                                    <input type="radio" name="respostaiciq17" value="Não se aplica" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq17=='Não se aplica'?'checked':'':''}}>
                                                                     Não se aplica
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta23" value="Não" required>
+                                                                    <input type="radio" name="respostaiciq17" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq17=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta23" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq17" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq17=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta23" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq17" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq17=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta23" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq17" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq17=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1078,31 +1045,32 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta24" value="Não se aplica" required>
+                                                                    <input hidden name="perguntaiciq18" type="text" value="Seu problema de bexiga incomoda seus familiares">
+                                                                    <input type="radio" name="respostaiciq18" value="Não se aplica" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq18=='Não se aplica'?'checked':'':''}}>
                                                                     Não se aplica
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta24" value="Não" required>
+                                                                    <input type="radio" name="respostaiciq18" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq18=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta24" value="Um pouco" required>
+                                                                    <input type="radio" name="respostaiciq18" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq18=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta24" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq18" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq18=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta24" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq18" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq18=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1131,19 +1099,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta25" value="Um pouco" required>
+                                                                    <input hidden name="perguntaiciq19" type="text" value="Frequência: Você vai muitas vezes ao banheiro: ">
+                                                                    <input type="radio" name="respostaiciq19" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq19=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta25" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq19" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq19=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta25" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq19" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq19=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1156,19 +1125,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta26" value="Um pouco" required>
+                                                                    <input hidden name="perguntaiciq20" type="text" value="Noctúria: Você levanta a noite para urinar: ">
+                                                                    <input type="radio" name="respostaiciq20" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq20=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta26" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq20" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq20=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta26" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq20" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq20=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1181,19 +1151,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Um pouco" required>
+                                                                    <input hidden name="perguntaiciq21" type="text" value="Urgência: Você tem vontade forte de urinar e muito difícil de controlar: ">
+                                                                    <input type="radio" name="respostaiciq21" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq21=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq21" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq21=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq21" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq21=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1206,19 +1177,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta28" value="Um pouco" required>
+                                                                    <input hidden name="perguntaiciq22" type="text" value="Bexiga hiperativa: Você perde urina quando você tem muita vontade de urinar: ">
+                                                                    <input type="radio" name="respostaiciq22" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq22=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta28" value="Mais ou menos" required>
+                                                                    <input type="radio" name="respostaiciq22" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq22=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta28" value="Muito" required>
+                                                                    <input type="radio" name="respostaiciq22" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq22=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1231,19 +1203,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Um pouco" >
+                                                                    <input hidden name="perguntaiciq23" type="text" value="Incontinência urinária de esforço: Você perde urina com atividades físicas como: tossir, espirrar, correr: ">
+                                                                    <input type="radio" name="respostaiciq23" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq23=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Mais ou menos" >
+                                                                    <input type="radio" name="respostaiciq23" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq23=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq23" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq23=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1256,19 +1229,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta30" value="Um pouco" >
+                                                                    <input hidden name="perguntaiciq24" type="text" value="Enurese noturna: Você molha a cama à noite: ">
+                                                                    <input type="radio" name="respostaiciq24" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq24=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta30" value="Mais ou menos" >
+                                                                    <input type="radio" name="respostaiciq24" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq24=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta30" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq24" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq24=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1281,19 +1255,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta31" value="Um pouco" >
+                                                                    <input hidden name="perguntaiciq25" type="text" value="Incontinência no intercurso sexual: Você perde urina durante a relação sexual: ">
+                                                                    <input type="radio" name="respostaiciq25" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq25=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta31" value="Mais ou menos" >
+                                                                    <input type="radio" name="respostaiciq25" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq25=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta31" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq25" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq25=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1306,19 +1281,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta32" value="Um pouco" >
+                                                                    <input hidden name="perguntaiciq26" type="text" value="Infecções frequentes: Você tem muitas infecções urinárias: ">
+                                                                    <input type="radio" name="respostaiciq26" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq26=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta32" value="Mais ou menos" >
+                                                                    <input type="radio" name="respostaiciq26" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq26=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta32" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq26" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq26=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1331,19 +1307,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Um pouco" >
+                                                                    <input hidden name="perguntaiciq27" type="text" value="Dor na bexiga: Você tem dor na bexiga: ">
+                                                                    <input type="radio" name="respostaiciq27" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq27=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Mais ou menos" >
+                                                                    <input type="radio" name="respostaiciq27" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq27=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq27" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq27=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1356,19 +1333,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta34" value="Um pouco" >
+                                                                    <input hidden name="perguntaiciq28" type="text" value="Outros: Você tem algum outro problema relacionado a sua bexiga: ">
+                                                                    <input type="radio" name="respostaiciq28" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq28=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta34" value="Mais ou menos" >
+                                                                    <input type="radio" name="respostaiciq28" value="Mais ou menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq28=='Mais ou menos'?'checked':'':''}}>
                                                                     Mais ou menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta34" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq28" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq28=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1381,25 +1359,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta35" value="Não" >
+                                                                    <input hidden name="perguntaiciq29" type="text" value="Emoções Você fica deprimida com seu problema de bexiga: ">
+                                                                    <input type="radio" name="respostaiciq29" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq29=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta35" value="Um pouco" >
+                                                                    <input type="radio" name="respostaiciq29" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq29=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta35" value="Mais ou Menos" >
+                                                                    <input type="radio" name="respostaiciq29" value="Mais ou Menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq29=='Mais ou Menos'?'checked':'':''}}>
                                                                     Mais ou Menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta35" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq29" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq29=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1412,25 +1391,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta36" value="Não" >
+                                                                    <input hidden name="perguntaiciq30" type="text" value="Você fica ansiosa ou nervosa com seu problema de bexiga: ">
+                                                                    <input type="radio" name="respostaiciq30" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq30=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta36" value="Um pouco" >
+                                                                    <input type="radio" name="respostaiciq30" value="Um pouco" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq30=='Um pouco'?'checked':'':''}}>
                                                                     Um pouco
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta36" value="Mais ou Menos" >
+                                                                    <input type="radio" name="respostaiciq30" value="Mais ou Menos" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq30=='Mais ou Menos'?'checked':'':''}}>
                                                                     Mais ou Menos
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta36" value="Muito" >
+                                                                    <input type="radio" name="respostaiciq30" value="Muito" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq30=='Muito'?'checked':'':''}}>
                                                                     Muito
                                                                 </label>
                                                             </div>
@@ -1443,25 +1423,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta37" value="Não" >
+                                                                    <input hidden name="perguntaiciq31" type="text" value="Você fica mal com você mesma por causa do seu problema de bexiga: ">
+                                                                    <input type="radio" name="respostaiciq31" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq31=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta37" value="Às vezes" >
+                                                                    <input type="radio" name="respostaiciq31" value="Às vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq31=='Às vezes'?'checked':'':''}}>
                                                                     Às vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta37" value="Várias vezes" >
+                                                                    <input type="radio" name="respostaiciq31" value="Várias vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq31=='Várias vezes'?'checked':'':''}}>
                                                                     Várias vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta37" value="Sempre" >
+                                                                    <input type="radio" name="respostaiciq31" value="Sempre" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq31=='Sempre'?'checked':'':''}}>
                                                                     Sempre
                                                                 </label>
                                                             </div>
@@ -1474,25 +1455,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta38" value="Não" >
+                                                                <input hidden name="perguntaiciq32" type="text" value="Sono/Energia Seu problema de bexiga atrapalha seu sono: ">
+                                                                    <input type="radio" name="respostaiciq32" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq32=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta38" value="Às vezes" >
+                                                                    <input type="radio" name="respostaiciq32" value="Às vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq32=='Às vezes'?'checked':'':''}}>
                                                                     Às vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta38" value="Várias vezes" >
+                                                                    <input type="radio" name="respostaiciq32" value="Várias vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq32=='Várias vezes'?'checked':'':''}}>
                                                                     Várias vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta38" value="Sempre" >
+                                                                    <input type="radio" name="respostaiciq32" value="Sempre" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq32=='Sempre'?'checked':'':''}}>
                                                                     Sempre
                                                                 </label>
                                                             </div>
@@ -1505,25 +1487,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta39" value="Não" >
+                                                                <input hidden name="perguntaiciq33" type="text" value="Você se sente desgastada ou cansada: ">
+                                                                    <input type="radio" name="respostaiciq33" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq33=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta39" value="Às vezes" >
+                                                                    <input type="radio" name="respostaiciq33" value="Às vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq33=='Às vezes'?'checked':'':''}}>
                                                                     Às vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta39" value="Várias vezes" >
+                                                                    <input type="radio" name="respostaiciq33" value="Várias vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq33=='Várias vezes'?'checked':'':''}}>
                                                                     Várias vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta39" value="Sempre" >
+                                                                    <input type="radio" name="respostaiciq33" value="Sempre" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq33=='Sempre'?'checked':'':''}}>
                                                                     Sempre
                                                                 </label>
                                                             </div>
@@ -1546,25 +1529,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta40" value="Não" >
+                                                                <input hidden name="perguntaiciq34" type="text" value="Você usa algum tipo de protetor higiênico como: fralda, forro, absorvente tipo Modess para manter-se seca: ">
+                                                                    <input type="radio" name="respostaiciq34" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq34=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta40" value="Às vezes" >
+                                                                    <input type="radio" name="respostaiciq34" value="Às vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq34=='Às vezes'?'checked':'':''}}>
                                                                     Às vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta40" value="Várias vezes" >
+                                                                    <input type="radio" name="respostaiciq34" value="Várias vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq34=='Várias vezes'?'checked':'':''}}>
                                                                     Várias vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta40" value="Sempre" >
+                                                                    <input type="radio" name="respostaiciq34" value="Sempre" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq34=='Sempre'?'checked':'':''}}>
                                                                     Sempre
                                                                 </label>
                                                             </div>
@@ -1577,25 +1561,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta41" value="Não" >
+                                                                    <input hidden name="perguntaiciq35" type="text" value="Você controla a quantidade de líquido que bebe: ">
+                                                                    <input type="radio" name="respostaiciq35" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq35=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta41" value="Às vezes" >
+                                                                    <input type="radio" name="respostaiciq35" value="Às vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq35=='Às vezes'?'checked':'':''}}>
                                                                     Às vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta41" value="Várias vezes" >
+                                                                    <input type="radio" name="respostaiciq35" value="Várias vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq35=='Várias vezes'?'checked':'':''}}>
                                                                     Várias vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta41" value="Sempre" >
+                                                                    <input type="radio" name="respostaiciq35" value="Sempre" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq35=='Sempre'?'checked':'':''}}>
                                                                     Sempre
                                                                 </label>
                                                             </div>
@@ -1608,25 +1593,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta42" value="Não" >
+                                                                    <input hidden name="perguntaiciq36" type="text" value="Você precisa trocar sua roupa íntima (calcinha), quando fica molhadas: ">
+                                                                    <input type="radio" name="respostaiciq36" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq36=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta42" value="Às vezes" >
+                                                                    <input type="radio" name="respostaiciq36" value="Às vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq36=='Às vezes'?'checked':'':''}}>
                                                                     Às vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta42" value="Várias vezes" >
+                                                                    <input type="radio" name="respostaiciq36" value="Várias vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq36=='Várias vezes'?'checked':'':''}}>
                                                                     Várias vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta42" value="Sempre" >
+                                                                    <input type="radio" name="respostaiciq36" value="Sempre" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq36=='Sempre'?'checked':'':''}}>
                                                                     Sempre
                                                                 </label>
                                                             </div>
@@ -1639,25 +1625,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta43" value="Não" >
+                                                                    <input hidden name="perguntaiciq37" type="text" value="Você se preocupa em estar cheirando urina: ">
+                                                                    <input type="radio" name="respostaiciq37" value="Não" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq37=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta43" value="Às vezes" >
+                                                                    <input type="radio" name="respostaiciq37" value="Às vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq37=='Às vezes'?'checked':'':''}}>
                                                                     Às vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta43" value="Várias vezes" >
+                                                                    <input type="radio" name="respostaiciq37" value="Várias vezes" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq37=='Várias vezes'?'checked':'':''}}>
                                                                     Várias vezes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta43" value="Sempre" >
+                                                                    <input type="radio" name="respostaiciq37" value="Sempre" {{$usuario->formiciq()?$usuario->formiciq()->respostaiciq37=='Sempre'?'checked':'':''}}>
                                                                     Sempre
                                                                 </label>
                                                             </div>

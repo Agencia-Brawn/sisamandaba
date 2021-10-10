@@ -462,100 +462,26 @@
 
                                          
                                                 <!-- QUEST. PRESSÃO ARTERIAL (names ok) -->
-                                                <form action="" id="form7" method="POST">
+                                                <form action="{{route('post.form.pressao',['usuario'=>$usuario->id])}}" id="form7" method="POST">
                                                     @csrf
                                                     <fieldset>
                                                         <h2>Questionário Pressão Arterial<br><small></small></h2>
                                                     </fieldset>
 
-
-                                                    <!-- <fieldset>
-                                                        <legend>ID NÚMERO</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta1" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Equipe</legend>
-                                                        <div class="form-group">
-                                                            <input id="2066062532" type="text" name="pergunta2" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>Microárea</legend>
-                                                        <div class="form-group">
-                                                            <input id="1578044623" type="text" name="pergunta3" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>Família:</legend>
-                                                        <div class="form-group">
-                                                            <input id="384524265" type="text" name="pergunta4" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <fieldset>
-                                                        <legend>Individual: </legend>
-                                                        <div class="form-group">
-                                                            <input id="1691254307" type="text" name="pergunta5" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>Participante</legend>
-                                                        <div class="form-group">
-                                                            <input id="307926517" type="text" name="pergunta6" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
                                                     <fieldset>
                                                         <legend>Data do exame</legend>
                                                         <div class="form-group">
-                                                            <input type="date" name="pergunta7" placeholder="14/09/2021" class="form-control" required>
+                                                            <input hidden name="perguntapressao2" type="text" value="Data do exame: ">
+                                                            <input type="date" name="respostapressao2" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao2:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Data de nascimento</legend>
-                                                        <div class="form-group">
-                                                            <input type="date" name="pergunta8" placeholder="14/09/2021" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Gênero</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta9" value="Masculino" required>
-                                                                    Masculino
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta9" value="Feminino" required>
-                                                                    Feminino
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset> -->
 
 
                                                     <fieldset>
                                                         <legend>Nome do aferidor</legend>
                                                         <div class="form-group">
-                                                            <input id="301818559" type="text" name="pergunta10" class="form-control" required>
+                                                            <input hidden name="perguntapressao3" type="text" value="Nome do aferidor: ">
+                                                            <input type="text" name="respostapressao3" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao3:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -563,7 +489,9 @@
                                                     <fieldset>
                                                         <legend>Comprimento do Braço Direito (EM CENTÍMETROS)</legend>
                                                         <div class="form-group">
-                                                            <input id="1187845133" type="text" name="pergunta11" class="form-control" required>
+                                                        <input hidden name="perguntapressao4" type="text" value="Comprimento do Braço Direito (EM CENTÍMETROS): ">
+
+                                                            <input type="text" name="respostapressao4" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao4:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -571,7 +499,9 @@
                                                     <fieldset>
                                                         <legend>Circunferência do braço direito (EM CENTÍMETROS)</legend>
                                                         <div class="form-group">
-                                                            <input id="1229024946" type="text" name="pergunta12" class="form-control" required>
+                                                        <input hidden name="perguntapressao5" type="text" value="Circunferência do braço direito (EM CENTÍMETROS): ">
+
+                                                            <input type="text" name="respostapressao5" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao5:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -589,19 +519,20 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta13" value="1. Adulto pequeno – (Circunferência braço &lt;27cm)" required>
+                                                                <input hidden name="perguntapressao6" type="text" value="1. Tipo de manguito: ">
+                                                                    <input type="radio" name="respostapressao6" value="1. Adulto pequeno – (Circunferência braço menor que 27cm)" {{$usuario->formpressao()?$usuario->formpressao()->respostapressao6=='1. Adulto pequeno – (Circunferência braço menor que 27cm)'?'checked':'':''}}>
                                                                     1. Adulto pequeno – (Circunferência braço &lt;27cm)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta13" value="2. Adulto – (Circunferência braço 27-33cm)" required>
+                                                                    <input type="radio" name="respostapressao6" value="2. Adulto – (Circunferência braço 27-33cm)" {{$usuario->formpressao()?$usuario->formpressao()->respostapressao6=='2. Adulto – (Circunferência braço 27-33cm)'?'checked':'':''}}>
                                                                     2. Adulto – (Circunferência braço 27-33cm)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta13" value="3. Adulto grande – (Circunferência braço &gt;33cm)" required>
+                                                                    <input type="radio" name="respostapressao6" value="3. Adulto grande – (Circunferência braço maior que 33cm)" {{$usuario->formpressao()?$usuario->formpressao()->respostapressao6=='3. Adulto grande – (Circunferência braço maior que 33cm)'?'checked':'':''}}>
                                                                     3. Adulto grande – (Circunferência braço &gt;33cm)
                                                                 </label>
                                                             </div>
@@ -614,13 +545,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Omron" required>
+                                                                <input hidden name="perguntapressao7" type="text" value="2. Marca manguito: " >
+                                                                    <input type="radio" name="respostapressao7" value="Omron" {{$usuario->formpressao()?$usuario->formpressao()->respostapressao7=='Omron'?'checked':'':''}}>
                                                                     Omron
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Aneróide" required>
+                                                                    <input type="radio" name="respostapressao7" value="Aneróide" {{$usuario->formpressao()?$usuario->formpressao()->respostapressao7=='Aneróide'?'checked':'':''}}>
                                                                     Aneróide
                                                                 </label>
                                                             </div>
@@ -631,7 +563,8 @@
                                                     <fieldset>
                                                         <legend>3. Pressão arterial sistólica 1:</legend>
                                                         <div class="form-group">
-                                                            <input id="584293479" type="text" name="pergunta18" class="form-control" required>
+                                                        <input hidden name="perguntapressao8" type="text" value="3. Pressão arterial sistólica 1: ">
+                                                            <input type="text" name="respostapressao8" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao8:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -639,7 +572,8 @@
                                                     <fieldset>
                                                         <legend>4. Pressão arterial diastólica 1:</legend>
                                                         <div class="form-group">
-                                                            <input id="1004267518" type="text" name="pergunta19" class="form-control" required>
+                                                        <input hidden name="perguntapressao9" type="text" value="4. Pressão arterial diastólica 1: ">
+                                                            <input type="text" name="respostapressao9" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao9:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -647,7 +581,8 @@
                                                     <fieldset>
                                                         <legend>5. Pressão arterial sistólica 2: </legend>
                                                         <div class="form-group">
-                                                            <input id="70645267" type="text" name="pergunta20" class="form-control" required>
+                                                        <input hidden name="perguntapressao10" type="text" value="5. Pressão arterial sistólica 2: ">
+                                                            <input type="text" name="respostapressao10" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao10:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -655,7 +590,8 @@
                                                     <fieldset>
                                                         <legend>6. Pressão arterial diastólica 2:</legend>
                                                         <div class="form-group">
-                                                            <input id="709884190" type="text" name="pergunta21" class="form-control" required>
+                                                        <input hidden name="perguntapressao11" type="text" value="6. Pressão arterial diastólica 2: ">
+                                                            <input type="text" name="respostapressao11" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao11:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -663,7 +599,8 @@
                                                     <fieldset>
                                                         <legend>7. Pressão arterial sistólica 3:</legend>
                                                         <div class="form-group">
-                                                            <input id="164095868" type="text" name="pergunta22" class="form-control" required>
+                                                        <input hidden name="perguntapressao12" type="text" value="7. Pressão arterial sistólica 3: ">
+                                                            <input type="text" name="respostapressao12" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao12:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -671,13 +608,16 @@
                                                     <fieldset>
                                                         <legend>8. Pressão arterial diastólica 3:</legend>
                                                         <div class="form-group">
-                                                            <input id="163968770" type="text" name="pergunta23" class="form-control" required>
+                                                        <input hidden name="perguntapressao13" type="text" value="8. Pressão arterial diastólica 3:">
+                                                            <input type="text" name="respostapressao13" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao13:''}}" class="form-control" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
                                                     <div class="text-center">
                                                         <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
-                                                    </div>                                            
+                                                    </div>                 
+
+
                                                 </form>
                                                 <!-- FIM -->
 
@@ -702,6 +642,13 @@
                                     </div>
                         </div>
                     </footer>   
+
+                    <script>
+                        $(document).ready(function($){
+                            $('#data').mask('00/00/0000');
+                            $('#pressao').mask('0.00');
+                        });
+                    </script>
 
 
                 </div>

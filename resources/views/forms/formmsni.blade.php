@@ -461,7 +461,6 @@
                                     @endif
 
                                                 
-                                         
                                                 <!-- MSNI - Avaliação dos pés (names ok) -->
                                                 <form action="{{route('post.form.msni',['usuario'=>$usuario->id])}}" id="form4" method="POST">
                                                     @csrf
@@ -473,166 +472,20 @@
                                                     </fieldset>
 
 
-                                                    <!-- <fieldset>
-                                                        <legend>ID NÚMERO</legend>
-                                                        <div class="form-group">
-                                                            <input id="187318786" type="text" name="pergunta1" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
                                                     <fieldset>
                                                         <legend>Nome do avaliador</legend>
                                                         <div class="form-group">
-                                                            <input id="1262833190" type="text" name="pergunta2" class="form-control" required>
+                                                            <input hidden name="perguntamsni1" type="text" value="Nome do avaliador:">
+                                                            <input type="text" name="respostamsni1" class="form-control" value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni1:''}}">
                                                         </div>
                                                     </fieldset>
-
-                                                    <!-- Extra1
-                                                    <fieldset>
-                                                        <legend>Distrito:</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra2" value="Guamá" required>
-                                                                    Guamá
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra2" value="Bengui" required>
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-                                                    Extra2
-                                                    <fieldset>
-                                                        <legend>Unidade da Estratégia de Saúde da Família</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Condor" required>
-                                                                    Condor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Combú" required>
-                                                                    Combú
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pq. Amazônia I" required>
-                                                                    Pq. Amazônia I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pq. Amazônia II" required>
-                                                                    Pq. Amazônia II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Portal da Amazônia" required>
-                                                                    Portal da Amazônia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Radional" required>
-                                                                    Radional
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Riacho Doce" required>
-                                                                    Riacho Doce
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Terra Firme" required>
-                                                                    Terra Firme
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Bengui" required>
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Carmelândia" required>
-                                                                    Carmelândia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Cristo Redentor" required>
-                                                                    Cristo Redentor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Mangueirão" required>
-                                                                    Mangueirão
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Panorama XXI" required>
-                                                                    Panorama XXI
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Parque Verde" required>
-                                                                    Parque Verde
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pratinha I" required>
-                                                                    Pratinha I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Pratinha II" required>
-                                                                    Pratinha II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Tapanã I" required>
-                                                                    Tapanã I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Tapanã II" required>
-                                                                    Tapanã II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="extra1" value="Una" required>
-                                                                    Una
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset> -->
 
 
                                                     <fieldset>
                                                         <legend>Data da entrevista</legend>
                                                         <div class="form-group">
-                                                            <input type="date" name="pergunta3" placeholder="11/09/2021" class="form-control" required>
+                                                            <input hidden name="perguntamsni2" type="text" value="Data da entrevista:">
+                                                            <input type="date" name="respostamsni2" class="form-control" value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni2:''}}">
                                                         </div>
                                                     </fieldset>
 
@@ -654,13 +507,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Sim" required>
+                                                                    <input hidden name="perguntamsni3" type="text" value="Você sente que suas pernas e/ou pés estão dormentes:">
+                                                                    <input type="radio" name="respostamsni3" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni3=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta4" value="Não" required>
+                                                                    <input type="radio" name="respostamsni3" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni3=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -673,13 +527,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta5" value="Sim" required>
+                                                                    <input hidden name="perguntamsni4" type="text" value="Você já sentiu alguma dor em queimação em suas pernas e/ou pés:">
+                                                                    <input type="radio" name="respostamsni4" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni4=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta5" value="Não" required>
+                                                                    <input type="radio" name="respostamsni4" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni4=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -692,13 +547,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta6" value="Sim" required>
+                                                                    <input hidden name="perguntamsni5" type="text" value="Os seus pés estão muito sensíveis ao toque:">
+                                                                    <input type="radio" name="respostamsni5" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni5=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta6" value="Não" required>
+                                                                    <input type="radio" name="respostamsni5" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni5=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -711,13 +567,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta7" value="Sim" required>
+                                                                    <input hidden name="perguntamsni6" type="text" value="Você tem câimbras nos músculos de suas pernas e/ou pés:">
+                                                                    <input type="radio" name="respostamsni6" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni6=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta7" value="Não" required>
+                                                                    <input type="radio" name="respostamsni6" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni6=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -730,13 +587,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta8" value="Sim" required>
+                                                                    <input hidden name="perguntamsni7" type="text" value="Você já teve sensações de formigamento em suas pernas e/ou pés:">
+                                                                    <input type="radio" name="respostamsni7" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni7=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta8" value="Não" required>
+                                                                    <input type="radio" name="respostamsni7" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni7=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -749,13 +607,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="Sim" required>
+                                                                    <input hidden name="perguntamsni8" type="text" value="Suas pernas e/ou pés doem quando o cobertor toca sua pele:">
+                                                                    <input type="radio" name="respostamsni8" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni8=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta9" value="Não" required>
+                                                                    <input type="radio" name="respostamsni8" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni8=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -768,13 +627,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta10" value="Sim" required>
+                                                                    <input hidden name="perguntamsni9" type="text" value="Quando você entra na banheira ou no chuveiro, você é capaz de dizer se a água está quente ou fria:">
+                                                                    <input type="radio" name="respostamsni9" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni9=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta10" value="Não" required>
+                                                                    <input type="radio" name="respostamsni9" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni9=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -787,13 +647,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta11" value="Sim" required>
+                                                                    <input hidden name="perguntamsni10" type="text" value="Você já teve uma ferida aberta em seu pé:">
+                                                                    <input type="radio" name="respostamsni10" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni10=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta11" value="Não" required>
+                                                                    <input type="radio" name="respostamsni10" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni10=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -806,13 +667,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta12" value="Sim" required>
+                                                                    <input hidden name="perguntamsni11" type="text" value="Seu médico já te disse que você tem neuropatia diabética:">
+                                                                    <input type="radio" name="respostamsni11" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni11=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta12" value="Não" required>
+                                                                    <input type="radio" name="respostamsni11" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni11=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -825,13 +687,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta13" value="Sim" required>
+                                                                    <input hidden name="perguntamsni12" type="text" value="Você se sente fraco a maior parte do tempo:">
+                                                                    <input type="radio" name="respostamsni12" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni12=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta13" value="Não" required>
+                                                                    <input type="radio" name="respostamsni12" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni12=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -844,13 +707,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Sim" required>
+                                                                    <input hidden name="perguntamsni13" type="text" value="Seus sintomas pioram durante a noite:">
+                                                                    <input type="radio" name="respostamsni13" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni13=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta14" value="Não" required>
+                                                                    <input type="radio" name="respostamsni13" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni13=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -863,13 +727,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Sim" required>
+                                                                    <input hidden name="perguntamsni14" type="text" value="Suas pernas doem quando você caminha:">
+                                                                    <input type="radio" name="respostamsni14" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni14=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Não" required>
+                                                                    <input type="radio" name="respostamsni14" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni14=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -882,13 +747,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Sim" required>
+                                                                    <input hidden name="perguntamsni15" type="text" value="Você é capaz de sentir seus pés enquanto caminha:">
+                                                                    <input type="radio" name="respostamsni15" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni15=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Não" required>
+                                                                    <input type="radio" name="respostamsni15" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni15=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -901,13 +767,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta17" value="Sim" required>
+                                                                    <input hidden name="perguntamsni16" type="text" value="A pele de seu pé fica seca que chega a rachar-se:">
+                                                                    <input type="radio" name="respostamsni16" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni16=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta17" value="Não" required>
+                                                                    <input type="radio" name="respostamsni16" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni16=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -920,13 +787,14 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta18" value="Sim" required>
+                                                                    <input hidden name="perguntamsni17" type="text" value="Você já fez uma amputação:">
+                                                                    <input type="radio" name="respostamsni17" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni17=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta18" value="Não" required>
+                                                                    <input type="radio" name="respostamsni17" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni17=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -946,11 +814,13 @@
                                                             <div>
                                                                 <span>a. Normal: </span> <br>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta19" value="Sim" required>
+                                                                <input hidden name="perguntamsni18" type="text" value="Aparência do pé direito:">
+
+                                                                    <input type="radio" name="respostamsni18" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni18=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta19" value="Não" required>
+                                                                    <input type="radio" name="respostamsni18" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni18=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -964,40 +834,51 @@
                                                             <div>
                                                                 <span>Deformidades: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta20" value="Deformidades" >
+                                                                    <input hidden name="perguntamsni19" type="text" value="Se não, assinale todas que se aplicam:">
+                                                                    <input type="checkbox" name="respostamsni19" value="Deformidades"  {{$usuario->formmsni()?$usuario->formmsni()->respostamsni19=='Deformidades'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Pele seca, calosidades: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta20" value="Pele seca, calosidades" >
+                                                                    <input type="checkbox" name="respostamsni19a" value="Pele seca, calosidades"   {{$usuario->formmsni()?$usuario->formmsni()->respostamsni19a=='Pele seca, calosidades'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Infecção: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta20" value="Infecção" >
+                                                                    <input type="checkbox" name="respostamsni19b" value="Infecção" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni19b=='Infecção'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Fissuras: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta20" value="Fissuras" >
+                                                                    <input type="checkbox" name="respostamsni19c" value="Fissuras" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni19c=='Fissuras'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
-                                                                <span>Outras: </span>
+                                                                <span>Outras (*descrever na próxima pergunta): </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta20" value="Outras" >
+                                                                    <input type="checkbox" name="respostamsni19d" value="Outras (*descrever na próxima pergunta)" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni19d=='Outras (*descrever na próxima pergunta)'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </fieldset>
+
+                                                    <!-- PERGUNTA EXTRA -->
+                                                    <fieldset>
+                                                        <legend>Outras:</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntamsni31" type="text" value="Outras:">
+                                                            <input type="text" name="respostamsni31"  value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni31:''}}" class="form-control" >
+                                                        </div>
+                                                    </fieldset>
+                                                    <!-- FIM PERGUNTA EXTRA -->
 
 
                                                     <fieldset>
@@ -1006,11 +887,12 @@
                                                             <div>
                                                                 <span>a. normal: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta21" value="Sim" required>
+                                                                    <input hidden name="perguntamsni20" type="text" value="Aparência do pé esquerdo:">
+                                                                    <input type="radio" name="respostamsni20" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni20=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta21" value="Não" required>
+                                                                    <input type="radio" name="respostamsni20" value="Não" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni20=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
@@ -1024,35 +906,36 @@
                                                             <div>
                                                                 <span>Deformidades: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta22" value="Deformidades" >
+                                                                    <input hidden name="perguntamsni21" type="text" value="Se não, assinale todas que se aplicam:">
+                                                                    <input type="checkbox" name="respostamsni21" value="Deformidades" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni21=='Deformidades'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Pele seca, calosidades: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta22" value="Pele seca, calosidades" >
+                                                                    <input type="checkbox" name="respostamsni21a" value="Pele seca, calosidades" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni21a=='Pele seca, calosidades'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Infecção: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta22" value="Infecção" >
+                                                                    <input type="checkbox" name="respostamsni21b" value="Infecção" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni21b=='Infecção'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Fissuras: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="checkbox" name="pergunta22" value="Fissuras" >
+                                                                    <input type="checkbox" name="respostamsni21c" value="Fissuras" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni21c=='Fissuras'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Outras (*descrever na próxima pergunta): </span>
                                                                 <label >
-                                                                    <input type="checkbox" name="pergunta22" value="Outras" >
+                                                                    <input type="checkbox" name="respostamsni21d" value="Outras (*descrever na próxima pergunta)" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni21d=='Outras (*descrever na próxima pergunta)'?'checked':'':''}}>
                                                                     Assinale
                                                                 </label>
                                                             </div>
@@ -1063,23 +946,27 @@
                                                     <fieldset>
                                                         <legend>Outras:</legend>
                                                         <div class="form-group">
-                                                            <input type="text" name="pergunta23" class="form-control" >
+                                                            <input hidden name="perguntamsni22" type="text" value="Outras:">
+                                                            <input type="text" name="respostamsni22" value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni22:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>2. Ulceração</legend>
+                                                        <legend>Ulceração</legend>
+                                                        
                                                         <div class="form-group">
+                                                            <input hidden name="perguntamsni23a" type="text" value="Ulceração:">
 
                                                             <div>
                                                                 <span>Pé direito: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta24" value="Ausente" required>
+                                                                    <input hidden name="perguntamsni23" type="text" value="Pé direito:">
+                                                                    <input type="radio" name="respostamsni23" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni23=='Ausente'?'checked':'':''}}>
                                                                     Ausente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta24" value="Presente" required>
+                                                                    <input type="radio" name="respostamsni23" value="Presente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni23=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                             </div>
@@ -1087,11 +974,12 @@
                                                             <div>
                                                                 <span>Pé esquerdo: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta25" value="Ausente" required>
+                                                                    <input hidden name="perguntamsni24" type="text" value="Pé esquerdo:">
+                                                                    <input type="radio" name="respostamsni24" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni24=='Ausente'?'checked':'':''}}>
                                                                     Ausente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta25" value="Presente" required>
+                                                                    <input type="radio" name="respostamsni24" value="Presente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni24=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                             </div>
@@ -1100,35 +988,38 @@
 
 
                                                     <fieldset>
-                                                        <legend>3. Reflexos do tornozelo</legend>
+                                                        <legend>Reflexos do tornozelo</legend>
                                                         <div class="form-group">
+                                                            <input hidden name="perguntamsni25a" type="text" value="Reflexos do tornozelo:">
                                                             <div>
                                                                 <span>Pé direito: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta26" value="Presente" required>
+                                                                    <input hidden name="perguntamsni25" type="text" value="Pé direito:">
+                                                                    <input type="radio" name="respostamsni25" value="Presente"  {{$usuario->formmsni()?$usuario->formmsni()->respostamsni25=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta26" value="Presente/Reforço" required>
+                                                                    <input type="radio" name="respostamsni25" value="Presente/Reforço" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni25=='Presente/Reforço'?'checked':'':''}}>
                                                                     Presente/Reforço
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta26" value="Ausente" required>
+                                                                    <input type="radio" name="respostamsni25" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni25=='Ausente'?'checked':'':''}}>
                                                                     Ausente
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Pé esquerdo: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta27" value="Presente" required>
+                                                                    <input hidden name="perguntamsni26" type="text" value="1. Data do Exame:">
+                                                                    <input type="radio" name="respostamsni26" value="Presente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni26=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta27" value="Presente/Reforço" required>
+                                                                    <input type="radio" name="respostamsni26" value="Presente/Reforço" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni26=='Presente/Reforço'?'checked':'':''}}>
                                                                     Presente/Reforço
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta27" value="Ausente" required>
+                                                                    <input type="radio" name="respostamsni26" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni26=='Ausente'?'checked':'':''}}>
                                                                     Ausente
                                                                 </label>
                                                             </div>
@@ -1137,35 +1028,38 @@
 
 
                                                     <fieldset>
-                                                        <legend>4. Percepção de vibração no hálux</legend>
+                                                        <legend>Percepção de vibração no hálux</legend>
                                                         <div class="form-group">
+                                                            <input hidden name="perguntamsni27a" type="text" value="Percepção de vibração no hálux:">
                                                             <div>
                                                                 <span>Pé direito: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta28" value="Presente" required>
+                                                                    <input hidden name="perguntamsni27" type="text" value="Pé direito:">
+                                                                    <input type="radio" name="respostamsni27" value="Presente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni27=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta28" value="Diminuída" required>
+                                                                    <input type="radio" name="respostamsni27" value="Diminuída" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni27=='Diminuída'?'checked':'':''}}>
                                                                     Diminuída
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta28" value="Ausente" required>
+                                                                    <input type="radio" name="respostamsni27" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni27=='Ausente'?'checked':'':''}}>
                                                                     Ausente
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Pé esquerdo: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta29" value="Presente" required>
+                                                                    <input hidden name="perguntamsni28" type="text" value="Pé esquerdo:">
+                                                                    <input type="radio" name="respostamsni28" value="Presente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni28=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta29" value="Diminuída" required>
+                                                                    <input type="radio" name="respostamsni28" value="Diminuída" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni28=='Diminuída'?'checked':'':''}}>
                                                                     Diminuída
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta29" value="Ausente" required>
+                                                                    <input type="radio" name="respostamsni28" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni28=='Ausente'?'checked':'':''}}>
                                                                     Ausente
                                                                 </label>
                                                             </div>
@@ -1174,35 +1068,38 @@
 
 
                                                     <fieldset>
-                                                        <legend>5. Monofilamentos</legend>
+                                                        <legend>Monofilamentos</legend>
                                                         <div class="form-group">
+                                                            <input hidden name="perguntamsni29a" type="text" value="Monofilamentos:">
                                                             <div>
                                                                 <span>Pé direito: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta30" value="Presente" required>
+                                                                    <input hidden name="perguntamsni29" type="text" value="Pé direito:">
+                                                                    <input type="radio" name="respostamsni29" value="Presente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni29=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta30" value="Reduzido" required>
+                                                                    <input type="radio" name="respostamsni29" value="Reduzido" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni29=='Reduzido'?'checked':'':''}}>
                                                                     Reduzido
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta30" value="Ausente" required>
-                                                                    Ausente
+                                                                    <input type="radio" name="respostamsni29" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni29=='Ausente'?'checked':'':''}}>
+                                                                    Ausent
                                                                 </label>
                                                             </div>
                                                             <div>
                                                                 <span>Pé esquerdo: </span>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta31" value="Presente" required>
+                                                                    <input hidden name="perguntamsni30" type="text" value="Pé esquerdo:">
+                                                                    <input type="radio" name="respostamsni30" value="Presente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni30=='Presente'?'checked':'':''}}>
                                                                     Presente
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta31" value="Reduzido" required>
+                                                                    <input type="radio" name="respostamsni30" value="Reduzido" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni30=='Reduzido'?'checked':'':''}}>
                                                                     Reduzido
                                                                 </label>
                                                                 <label class="radio-inline">
-                                                                    <input type="radio" name="pergunta31" value="Ausente" required>
+                                                                    <input type="radio" name="respostamsni30" value="Ausente" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni30=='Ausente'?'checked':'':''}}>
                                                                     Ausente
                                                                 </label>
                                                             </div>
@@ -1214,9 +1111,7 @@
                                                         <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
                                                     </div>
                                                 </form>
-                                                <!-- FIM -->
-
-
+                                                <!-- FIM -->                                        
                                 </div>
                             </div>
                         </div>
@@ -1236,7 +1131,13 @@
                                         </div>
                                     </div>
                         </div>
-                    </footer>   
+                    </footer>  
+                    
+                    <script>
+                        $(document).ready(function($){
+                            $('#data').mask('00/00/0000');
+                        });
+                    </script>
 
 
                 </div>

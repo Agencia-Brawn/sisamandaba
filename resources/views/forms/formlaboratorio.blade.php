@@ -9,7 +9,7 @@
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
                     <i style="font-size: 25px;" aria-hidden="true" class="fas fa-bars"></i>
-                </label>
+                </label>required 
 
                 <div class="barra">
                     <div>
@@ -465,21 +465,187 @@
                                             <form action="{{route('post.form.laboratorio',['usuario'=>$usuario->id])}}" id="form6" method="POST">
                                                 @csrf
                                                     <fieldset>
-                                                        <h2>Questionários Laboratório<br><small></small></h2>
+                                                        <h2>Questionário Laboratório<br><small></small></h2>
                                                     </fieldset>                                                    
 
+                                                    <!-- EXTRA 1 -->
                                                     <fieldset>
-                                                        <legend >Data do Exame</legend>
+                                                        <legend >Nome do Entrevistador</legend>
                                                         <div class="form-group">
-                                                            <input type="date" name="pergunta1"  class="form-control" required>
+                                                            <input hidden name="perguntalaboratorio16" type="text" value="Nome do Entrevistador:">
+                                                            <input name="respostalaboratorio16" type="text" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio16:''}}"  class="form-control" >
                                                         </div>
                                                     </fieldset>
 
+                                                    <fieldset>
+                                                        <legend >1. Data do Exame</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio1" type="text" value="1. Data do Exame:">
+                                                            <input name="respostalaboratorio1" type="date" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio1:''}}"  class="form-control" >
+                                                        </div>
+                                                    </fieldset>
 
+                                                    <!-- SUB-TITULO -->
+                                                    <fieldset>
+                                                        <h3>Critérios para coleta:</h3>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>2. O participante está ou esteve doente com febre ou vômitos nos últimos 7 dias? (SE SIM, REAGENDAR A COLETA)</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input hidden name="perguntalaboratorio2" type="text" value="2. O participante está ou esteve doente com febre ou vômitos nos últimos 7 dias? (SE SIM, REAGENDAR A COLETA):">
+                                                                    <input required name="respostalaboratorio2" type="radio" value="Não" {{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio2=='Não'?'checked':'':''}}>
+                                                                    Não
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="respostalaboratorio2" type="radio" value="Sim" {{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio2=='Sim'?'checked':'':''}}>
+                                                                    Sim
+                                                                </label>
+                                                            </div>
+                            
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>3. Fez atividade física moderada ou pesada durante as últimas 12 horas?</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input hidden name="perguntalaboratorio3" type="text" value="3. Fez atividade física moderada ou pesada durante as últimas 12 horas:">
+                                                                    <input type="radio" name="respostalaboratorio3" value="Não" {{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio3=='Não'?'checked':'':''}}>
+                                                                    Não
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="respostalaboratorio3" value="Sim" {{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio3=='Sim'?'checked':'':''}}>
+                                                                    Sim
+                                                                </label>
+                                                            </div>
+                            
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>4. Qual o horário da última ingestão de alimentos? (SE MENOS DO QUE 12 HORAS, AGUARDAR COMPLETAR O TEMPO PARA A COLETA, SE MAIS DE 14 HORAS, INFORMAR COORDENAÇÃO) </legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio4" type="text" value="4. Qual o horário da última ingestão de alimentos? (SE MENOS DO QUE 12 HORAS, AGUARDAR COMPLETAR O TEMPO PARA A COLETA, SE MAIS DE 14 HORAS, INFORMAR COORDENAÇÃO):">
+                                                            <input required type="time" name="respostalaboratorio4" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio4:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>5. Qual o horário da ingestão de líquidos, incluindo café?</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio5" type="text" value="5. Qual o horário da ingestão de líquidos, incluindo café:">
+                                                            <input required type="time" name="respostalaboratorio5" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio5:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>6. Qual o horário do último cigarro? (SE MENOS DO QUE 1 HORA, AGUARDAR COMPLETAR 1 HORA PARA INICIAR COLETA)</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio6" type="text" value="6. Qual o horário do último cigarro? (SE MENOS DO QUE 1 HORA, AGUARDAR COMPLETAR 1 HORA PARA INICIAR COLETA):">
+                                                            <input required type="time" name="respostalaboratorio6" id="" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio6:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>7. Qual o horário da primeira urina da manhã?</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio7" type="text" value="7. Qual o horário da primeira urina da manhã:">
+                                                            <input required type="time" name="respostalaboratorio7" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio7:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>8. Qual o horário da coleta de urina para o projeto?</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio8" type="text" value="8. Qual o horário da coleta de urina para o projeto:">
+                                                            <input required type="time" name="respostalaboratorio8" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio8:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>9. INÍCIO DA COLETA ÀS:</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio9" type="text" value="9. INÍCIO DA COLETA ÀS:">
+                                                            <input required type="time" name="respostalaboratorio9" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio9:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>10. FIM DA COLETA ÀS:</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio10" type="text" value="10. FIM DA COLETA ÀS:">
+                                                            <input required type="time" name="respostalaboratorio10" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio10:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>11. Colheu as amostras em jejum? </legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio11" type="text" value="11. Colheu as amostras em jejum:">
+                                                            <div clrequired ass="radio">
+                                                                <label>
+                                                                    <input type="radio" name="respostalaboratorio11" value="Não" {{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio11=='Não'?'checked':'':''}}>
+                                                                    Não
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="respostalaboratorio11" value="Sim" {{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio11=='Sim'?'checked':'':''}}>
+                                                                    Sim
+                                                                </label>
+                                                            </div>
+                            
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>12. Nome do técnico que coletou:</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio12" type="text" value="12. Nome do técnico que coletou:">
+                                                            <input required type="text" name="respostalaboratorio12" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio12:''}}" class="form-control" >
+                                                        </div>
+                                                    </fieldset>
+                                                    
+                                                    <fieldset>
+                                                        <legend>13. Impressão do resultado, data:</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio13" type="text" value="13. Impressão do resultado, data:">
+                                                            <input type="date" name="respostalaboratorio13" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio13:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>14. Entrega do resultado ao participante, data: </legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio14" type="text" value="14. Entrega do resultado ao participante, data:">
+                                                            <input required type="date" name="respostalaboratorio14" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio14:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <fieldset>
+                                                        <legend>15. Entrega do resultado na ESF, data: </legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntalaboratorio15" type="text" value="15. Entrega do resultado na ESF, data:">
+                                                            <input required type="date" name="respostalaboratorio15" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio15:''}}" class="form-control">
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <div class="text-center">
+                                                        <button id="formlaboratorio" class="btn btn-primary mt-5" type="submit" > ENVIAR FORMULÁRIO </button>
+                                                    </div>
+                                                    
                                                     <!-- <fieldset>
                                                         <legend>Data de Nascimento</legend>
                                                         <div class="form-group">
-                                                            <input type="date" name="pergunta2" class="form-control" required>
+                                                            <input type="date" name="pergunta2" class="form-control" >
                                                         </div>
                                                     </fieldset> -->
 
@@ -505,181 +671,39 @@
                                                     <!-- <fieldset>
                                                         <legend>ID Número</legend>
                                                         <div class="form-group">
-                                                            <input type="number" name="pergunta4" class="form-control" required>
+                                                            <input type="number" name="pergunta4" class="form-control" >
                                                         </div>
                                                     </fieldset> -->
   
                                                     <!-- <fieldset>
                                                         <legend>Equipe</legend>
                                                         <div class="form-group">
-                                                            <input type="text" name="pergunta5" class="form-control" required>
+                                                            <input type="text" name="pergunta5" class="form-control" >
                                                         </div>
                                                     </fieldset> -->
-
 
                                                     <!-- <fieldset>
                                                         <legend>Microárea</legend>
                                                         <div class="form-group">
-                                                            <input type="text" name="pergunta6" class="form-control" required>
+                                                            <input type="text" name="pergunta6" class="form-control" >
                                                         </div>
                                                     </fieldset> -->
 
                                                     <!-- <fieldset>
                                                         <legend>Família</legend>
                                                         <div class="form-group">
-                                                            <input type="text" name="pergunta7" class="form-control" required>
+                                                            <input type="text" name="pergunta7" class="form-control" >
                                                         </div>
                                                     </fieldset> -->
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Individual</legend>
                                                         <div class="form-group">
-                                                            <input id="" type="text" name="pergunta8" class="form-control" required>
+                                                            <input id="" type="text" name="laboratorio2" class="form-control" >
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
-                                                    <!-- SUB-TITULO -->
-                                                    <fieldset>
-                                                        <h3>Critérios para coleta:</h3>
-                                                    </fieldset>
 
-                                                    <fieldset>
-                                                        <legend>1. O participante está ou esteve doente com febre ou vômitos nos últimos 7 dias? (SE SIM, REAGENDAR A COLETA) *</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta9" value="NÃO" required>
-                                                                    Não
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta9" value="SIM" >
-                                                                    Sim
-                                                                </label>
-                                                            </div>
-                            
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>2. Fez atividade física moderada ou pesada durante as últimas 12 horas?</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta10" value="NÃO" >
-                                                                    Não
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta10" value="SIM" >
-                                                                    Sim
-                                                                </label>
-                                                            </div>
-                            
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>3. Qual o horário da última ingestão de alimentos? (SE MENOS DO QUE 12 HORAS, AGUARDAR COMPLETAR O TEMPO PARA A COLETA, SE MAIS DE 14 HORAS, INFORMAR COORDENAÇÃO) </legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta11" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>4. Qual o horário da ingestão de líquidos, incluindo café?</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta12" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>5. Qual o horário do último cigarro? (SE MENOS DO QUE 1 HORA, AGUARDAR COMPLETAR 1 HORA PARA INICIAR COLETA)</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta13" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>6. Qual o horário da primeira urina da manhã?</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta14" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>7. Qual o horário da coleta de urina para o projeto?</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta15" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>INÍCIO DA COLETA ÀS:</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="time" name="pergunta16" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>FIM DA COLETA ÀS:</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="time" name="pergunta17" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>8. Colheu as amostras em jejum? </legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta18" value="NÃO" >
-                                                                    Não
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta18" value="SIM" >
-                                                                    Sim
-                                                                </label>
-                                                            </div>
-                            
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>Nome do técnico que coletou:</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta19" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-                                                    
-                                                    <fieldset>
-                                                        <legend>9. Impressão do resultado, data:</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta20" class="form-control">
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>10. Entrega do resultado ao participante, data: </legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta21" class="form-control">
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>11. Entrega do resultado na ESF, data: </legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta22" class="form-control">
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <div class="text-center">
-                                                        <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
-                                                    </div>                                                
                                             </form>        
                                             <!-- FIM --> 
 
@@ -702,6 +726,22 @@
                                     </div>
                         </div>
                     </footer>   
+
+                    <script>
+                        $(document).ready(function($){
+                            $('#data').mask('00/00/0000');
+                            $('#data2').mask('00/00/0000');
+                            $('#data3').mask('00/00/0000');
+                            $('#data4').mask('00/00/0000');
+                            $('#data5').mask('00/00/0000');
+                            $('#data6').mask('00/00/0000');
+                            $('#data7').mask('00/00/0000');
+
+
+
+                            $('#hora').mask('00:00:00');
+                        });
+                    </script>
 
 
                 </div>

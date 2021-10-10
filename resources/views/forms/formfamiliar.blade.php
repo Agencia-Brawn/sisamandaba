@@ -467,237 +467,21 @@
                                                         <h2>Questionário Familiar<br></h2>
                                                     </fieldset>   
 
-                                                    <!-- <fieldset>
-                                                        <legend>ID NÚMERO</legend>
-                                                        <div class="form-group"> 
-                                                            <input type="text" name="pergunta1" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
                                                     <fieldset>
                                                         <legend>Nome do entrevistador</legend>
                                                         <div class="form-group">
-                                                            <input id="533275677" type="text" name="pergunta2" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar1" type="text" value="Nome do entrevistador:">
+                                                            <input type="text" name="respostafamiliar1" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar1:''}}">
                                                         </div>
                                                     </fieldset>
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>Distrito:</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta3" value="Guamá" required>
-                                                                    Guamá
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta3" value="Bengui" required>
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>Unidade da Estratégia de Saúde da Família</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Condor" required>
-                                                                    Condor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Combú" required>
-                                                                    Combú
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia I" required>
-                                                                    Pq. Amazônia I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia II" required>
-                                                                    Pq. Amazônia II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Portal da Amazônia" required>
-                                                                    Portal da Amazônia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Radional" required>
-                                                                    Radional
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Riacho Doce" required>
-                                                                    Riacho Doce
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Terra Firme" required>
-                                                                    Terra Firme
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Bengui" required>
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Carmelândia" required>
-                                                                    Carmelândia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Cristo Redentor" required>
-                                                                    Cristo Redentor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Mangueirão" required>
-                                                                    Mangueirão
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Panorama XXI" required>
-                                                                    Panorama XXI
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Parque Verde" required>
-                                                                    Parque Verde
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pratinha I" required>
-                                                                    Pratinha I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pratinha II" required>
-                                                                    Pratinha II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Tapanã I" required>
-                                                                    Tapanã I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Tapanã II" required>
-                                                                    Tapanã II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Una" required>
-                                                                    Una
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>N. equipe:</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta5" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>N. microárea:</legend>
-                                                        <div class="form-group">
-                                                            <input id="1311005911" type="text" name="pergunta6" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                        <!-- <fieldset>
-                                                            <legend>N. Família/Casa:</legend>
-                                                            <div class="form-group">
-                                                                <input id="1048028346" type="text" name="pergunta7" class="form-control" required>
-                                                            </div>
-                                                        </fieldset> -->
-
 
                                                     <fieldset>
                                                         <legend>Data da entrevista</legend>
                                                         <div class="form-group">
-                                                            <input type="date" name="pergunta8" placeholder="11/09/2021" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar2" type="text" value="Data da entrevista:">
+                                                            <input type="date" name="respostafamiliar2" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar2:''}}">
                                                         </div>
                                                     </fieldset>
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>8. Qual o seu nome completo (nome do entrevistado - responsável pela família)? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
-                                                        <div class="form-group">
-                                                            <textarea name="pergunta9" class="form-control" required></textarea>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>9. Qual o nome da sua mãe? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
-                                                        <div class="form-group">
-                                                            <textarea name="pergunta10" class="form-control" required></textarea>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>10. Qual a data do seu nascimento? (SOLICITE O RG OU OUTRO DOCUMENTO COM A DATA DO NASCIMENTO)</legend>
-                                                        <div class="form-group">
-                                                            <input type="date" name="pergunta11" placeholder="11/09/2021" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>11. Gênero: </legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta12" value="Homem" required>
-                                                                    Homem
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta12" value="Mulher" required>
-                                                                    Mulher
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset> -->
-
 
                                                     <fieldset>
                                                         <br>
@@ -711,17 +495,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>12. Além de você, alguém mais mora em sua casa (inclua cônjuge/companheiro(a), filhos(as) e enteados, pais,irmãos (as), cunhado(a), sogro(a), outros parentes, amigos, agregados, pessoas ausentes temporariamente e empregados que durmam na casa)?</legend>
+                                                        <legend>Além de você, alguém mais mora em sua casa (inclua cônjuge/companheiro(a), filhos(as) e enteados, pais,irmãos (as), cunhado(a), sogro(a), outros parentes, amigos, agregados, pessoas ausentes temporariamente e empregados que durmam na casa)?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta13" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar3" type="text" value="Além de você, alguém mais mora em sua casa (inclua cônjuge/companheiro(a), filhos(as) e enteados, pais,irmãos (as), cunhado(a), sogro(a), outros parentes, amigos, agregados, pessoas ausentes temporariamente e empregados que durmam na casa):">
+                                                                    <input type="radio" name="respostafamiliar3" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar3=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta13" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar3" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar3=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -730,9 +515,10 @@
 
 
                                                     <fieldset>
-                                                        <legend>13. Quantas pessoas ao todo moram em sua casa?</legend>
+                                                        <legend>Quantas pessoas ao todo moram em sua casa?</legend>
                                                         <div class="form-group">
-                                                            <input type="text" name="pergunta14" class="form-control" >
+                                                        <input hidden name="perguntafamiliar4" type="text" value="Quantas pessoas ao todo moram em sua casa:">
+                                                            <input type="text" name="respostafamiliar4" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar4:''}}">
                                                         </div>
                                                     </fieldset>
 
@@ -742,25 +528,26 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Não" >
+                                                                    <input hidden name="perguntafamiliar5" type="text" value="Alguma pessoa da sua família, que mora com você adoeceu de COVID-19 (SE INFORMAR SIM, PERGUNTE QUANTAS):">
+                                                                    <input type="radio" name="respostafamiliar5" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar5=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Sim, uma" >
+                                                                    <input type="radio" name="respostafamiliar5" value="Sim, uma" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar5=='Sim, uma'?'checked':'':''}}>
                                                                     Sim, uma
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Sim, duas" >
+                                                                    <input type="radio" name="respostafamiliar5" value="Sim, duas" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar5=='Sim, duas'?'checked':'':''}}>
                                                                     Sim, duas
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="Sim, mais de três." >
+                                                                    <input type="radio" name="respostafamiliar5" value="Sim, mais de três" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar5=='Sim, mais de três'?'checked':'':''}}>
                                                                     Sim, mais de três.
                                                                 </label>
                                                             </div>
@@ -769,112 +556,63 @@
 
 
                                                     <fieldset>
-                                                        <legend>15. Alguma pessoa da sua família, que morava com você faleceu de COVID-19? (SE INFORMAR SIM, PERGUNTE QUANTAS)</legend>
+                                                        <legend>Alguma pessoa da sua família, que morava com você faleceu de COVID-19? (SE INFORMAR SIM, PERGUNTE QUANTAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Não" >
+                                                                    <input hidden name="perguntafamiliar6" type="text" value="Alguma pessoa da sua família, que morava com você faleceu de COVID-19 (SE INFORMAR SIM, PERGUNTE QUANTAS):">
+                                                                    <input type="radio" name="respostafamiliar6" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar6=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Sim, uma" >
+                                                                    <input type="radio" name="respostafamiliar6" value="Sim, uma" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar6=='Sim, uma'?'checked':'':''}}>
                                                                     Sim, uma
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Sim, duas" >
+                                                                    <input type="radio" name="respostafamiliar6" value="Sim, duas" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar6=='Sim, duas'?'checked':'':''}}>
                                                                     Sim, duas
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta16" value="Sim, mais de três" >
+                                                                    <input type="radio" name="respostafamiliar6" value="Sim, mais de três" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar6=='Sim, mais de três'?'checked':'':''}}>
                                                                     Sim, mais de três
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </fieldset>
 
+                                                    <fieldset>
+                                                        <legend>Localização: (DESCREVER DE MANEIRA MAIS COMPLETA POSSÍVEL A LOCALIZAÇÃO DA CASA,PARA PERMITIR ENCONTRAR A RESIDÊNCIA NOVAMENTE, PEÇA AJUDA PARA O PARTICIPANTE E INCLUA PONTOS DE REFERÊNCIA)</legend>
+                                                    </fieldset>
 
-                                                    <!-- <fieldset>
-                                                        <h4>Agora vou lhe fazer algumas perguntas sobre sua família atual. </4>
+
+                                                    <fieldset>
+                                                        <legend>Há quantos anos você mora neste endereço? (SE MENOR DO QUE 01 MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <h5>Qual o endereço atual? (SOLICITE UM COMPROVANTE DE ENDEREÇO)</h5>
+                                                            <input hidden name="perguntafamiliar7" type="text" value="Há quantos anos você mora neste endereço? (SE MENOR DO QUE 01 MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar7" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar7:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend >16. Nome da rua</legend>
-                                                        <div class="form-group">
-                                                            <input id="937218968" type="text" name="pergunta17" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend >17. Número da casa</legend>
-                                                        <div class="form-group">
-                                                            <input id="1744361163" type="text" name="pergunta18" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>18. Bairro</legend>
-                                                        <div class="form-group">
-                                                            <input id="1754504620" type="text" name="pergunta19" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>19. CEP (INFORME SEM TRAÇO)</legend>
-                                                        <div class="form-group">
-                                                            <input id="1125587065" type="text" name="pergunta20" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>20. Município</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta21" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <fieldset>
-                                                        <legend>21. Localização: (DESCREVER DE MANEIRA MAIS COMPLETA POSSÍVEL A LOCALIZAÇÃO DA CASA,PARA PERMITIR ENCONTRAR A RESIDÊNCIA NOVAMENTE, PEÇA AJUDA PARA O PARTICIPANTE E INCLUA PONTOS DE REFERÊNCIA)</legend>
-                                                        <div class="form-group">
-                                                            <textarea id="224510010" name="pergunta22" class="form-control" required></textarea>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>22. Há quantos anos você mora neste endereço? (SE MENOR DO QUE 01 MARQUE 00)</legend>
-                                                        <div class="form-group">
-                                                            <input id="1896532602" type="text" name="pergunta23" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>23. Morou sempre no mesmo município? </legend>
+                                                        <legend>Morou sempre no mesmo município? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta24" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar8" type="text" value="Morou sempre no mesmo município:">
+                                                                    <input type="radio" name="respostafamiliar8" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar8=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta24" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar8" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar8=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -883,9 +621,10 @@
 
 
                                                     <fieldset>
-                                                        <legend>24. Qual o município onde você morou antes?</legend>
+                                                        <legend>Qual o município onde você morou antes?</legend>
                                                         <div class="form-group">
-                                                            <input id="170091377" type="text" name="pergunta25" class="form-control" >
+                                                            <input hidden name="perguntafamiliar9" type="text" value="Qual o município onde você morou antes:">
+                                                            <input type="text" name="respostafamiliar9" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar9:''}}">
                                                         </div>
                                                     </fieldset>
 
@@ -901,239 +640,291 @@
 
 
                                                     <fieldset>
-                                                        <legend>25. Em sua casa trabalha alguma empregada doméstica mensalista ou caseiro para o qual vocêpague salário? (SE NÃO TIVER MARQUE 00 SE TIVER INFORME A QUANTIDADE)</legend>
+                                                        <legend>Em sua casa trabalha alguma empregada doméstica mensalista ou caseiro para o qual vocêpague salário? (SE NÃO TIVER MARQUE 00 SE TIVER INFORME A QUANTIDADE)</legend>
                                                         <div class="form-group">
-                                                            <input id="461598676" type="text" name="pergunta26" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar10" type="text" value="Em sua casa trabalha alguma empregada doméstica mensalista ou caseiro para o qual vocêpague salário? (SE NÃO TIVER MARQUE 00 SE TIVER INFORME A QUANTIDADE):">
+                                                            <input type="text" name="respostafamiliar10" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar10:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>26. Qual a situação do imóvel em que você mora? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>Qual a situação do imóvel em que você mora? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Alugado" required>
+                                                                    <input hidden name="perguntafamiliar11" type="text" value="Qual a situação do imóvel em que você mora? (LER AS ALTERNATIVAS):">
+                                                                    <input type="radio" name="respostafamiliar11" value="Alugado"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar11=='Alugado'?'checked':'':''}}>
                                                                     Alugado
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Próprio - já pago" required>
+                                                                    <input type="radio" name="respostafamiliar11" value="Próprio - já pago"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar11=='Próprio - já pago'?'checked':'':''}}>
                                                                     Próprio - já pago
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Próprio - ainda pagando" required>
+                                                                    <input type="radio" name="respostafamiliar11" value="Próprio - ainda pagando"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar11=='Próprio - ainda pagando'?'checked':'':''}}>
                                                                     Próprio - ainda pagando
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Próprio - área de ocupação" required>
+                                                                    <input type="radio" name="respostafamiliar11" value="Próprio - área de ocupação"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar11=='Próprio - área de ocupação'?'checked':'':''}}>
                                                                     Próprio - área de ocupação
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Próprio - propriedade rural" required>
+                                                                    <input type="radio" name="respostafamiliar11" value="Próprio - propriedade rural"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar11=='Próprio - propriedade rural'?'checked':'':''}}>
                                                                     Próprio - propriedade rural
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="Cedido por pessoa/empresa" required>
+                                                                    <input type="radio" name="respostafamiliar11" value="Cedido por pessoa/empresa" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar11=='Cedido por pessoa/empresa'?'checked':'':''}}>
                                                                     Cedido por pessoa/empresa
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta27" value="__other_option__" required>
+                                                                    <input type="radio" name="respostafamiliar11" value="Outros (Especifique na proxíma pergunta)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar11=='Outros (Especifique na proxíma pergunta)'?'checked':'':''}}>
+                                                                    Outros (Especifique na proxíma pergunta)
                                                                 </label>
 
-                                                                <input type="text" name="pergunta27" placeholder="Outros">
                                                             </div>
                                                         </div>
                                                     </fieldset>
 
+                                                    <!-- EXTRA -->
+                                                    <fieldset>
+                                                        <legend>Especifique qual a situação do imóvel em que você mora (caso tenha marcado outros)</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntafamiliar39" type="text" value="Quantos cômodos têm a casa:">
+                                                            <input type="text" name="respostafamiliar39" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar39:''}}">
+                                                        </div>
+                                                    </fieldset>
+                                                    <!-- FIM EXTRA -->
 
                                                     <fieldset>
-                                                        <legend>27. Quantos cômodos têm a casa?</legend>
+                                                        <legend>Quantos cômodos têm a casa?</legend>
                                                         <div class="form-group">
-                                                            <input type="text" name="pergunta28" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar12" type="text" value="Quantos cômodos têm a casa:">
+                                                            <input type="text" name="respostafamiliar12" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar12:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>28. A casa é feita de que material? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>A casa é feita de que material? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Tijolo ou bloco (alvenaria)" required>
+                                                                    <input hidden name="perguntafamiliar13" type="text" value="A casa é feita de que material? (LER AS ALTERNATIVAS):">
+                                                                    <input type="radio" name="respostafamiliar13" value="Tijolo ou bloco (alvenaria)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar13=='Tijolo ou bloco (alvenaria)'?'checked':'':''}}>
                                                                     Tijolo ou bloco (alvenaria)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Madeira" required>
+                                                                    <input type="radio" name="respostafamiliar13" value="Madeira" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar13=='Madeira'?'checked':'':''}}>
                                                                     Madeira
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Mista de alvenaria e madeira" required>
+                                                                    <input type="radio" name="respostafamiliar13" value="Mista de alvenaria e madeira" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar13=='Mista de alvenaria e madeira'?'checked':'':''}}>
                                                                     Mista de alvenaria e madeira
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Barro ou mista com barro" required>
+                                                                    <input type="radio" name="respostafamiliar13" value="Barro ou mista com barro" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar13=='Barro ou mista com barro'?'checked':'':''}}>
                                                                     Barro ou mista com barro
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="Materiais reciclados" required>
+                                                                    <input type="radio" name="respostafamiliar13" value="Materiais reciclados" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar13=='Materiais reciclados (Especifique na proxíma pergunta)'?'checked':'':''}}>
                                                                     Materiais reciclados
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta29" value="__other_option__" required>
+                                                                    <input type="radio" name="respostafamiliar13" value="Outros (Especifique na proxíma pergunta)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar13=='Outros (Especifique na proxíma pergunta)'?'checked':'':''}}>
+                                                                    Outros (Especifique na proxíma pergunta)
                                                                 </label>
-                                                                <input type="text" name="pergunta29" placeholder="Outros">
                                                             </div>
                                                         </div>
                                                     </fieldset>
+                                                    
+                                                    <!-- PERGUNTA EXTRA -->
+                                                    <fieldset>
+                                                        <legend>Especifique o material utilizado </legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntafamiliar40" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
+                                                            <input type="text" name="respostafamiliar40" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar40:''}}">
+                                                        </div>
+                                                    </fieldset>
+                                                    <!-- FIM PERGUNTA EXTRA -->
 
 
                                                     <fieldset>
-                                                        <legend>29. A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO)</legend>
+                                                        <legend>A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO)</legend>
                                                         <div class="form-group">
-                                                            <input id="1127331479" type="text" name="pergunta30" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar14" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
+                                                            <input type="text" name="respostafamiliar14" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar14:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>30. O sanitário é de uso apenas da sua família, ou seja, dos moradores da casa?</legend>
+                                                        <legend>O sanitário é de uso apenas da sua família, ou seja, dos moradores da casa?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta31" value="Não" >
+                                                                    <input hidden name="perguntafamiliar15" type="text" value="O sanitário é de uso apenas da sua família, ou seja, dos moradores da casa:">
+                                                                    <input type="radio" name="respostafamiliar15" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar15=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta31" value="Sim" >
+                                                                    <input type="radio" name="respostafamiliar15" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar15=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </fieldset>
 
-
                                                     <fieldset>
-                                                        <legend>31. De onde vem a água utilizada na casa? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>De onde vem a água utilizada na casa? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta32" value="Poço aberto" required>
+                                                                    <input hidden name="perguntafamiliar16" type="text" value="De onde vem a água utilizada na casa? (LER AS ALTERNATIVAS):">
+                                                                    <input type="radio" name="respostafamiliar16" value="Poço aberto" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar16=='Poço aberto'?'checked':'':''}}>
                                                                     Poço aberto
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta32" value="Poço fechado com bomba" required>
+                                                                    <input type="radio" name="respostafamiliar16" value="Poço fechado com bomba" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar16=='Poço fechado com bomba'?'checked':'':''}}>
                                                                     Poço fechado com bomba
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta32" value="Rede geral de distribuição" required>
+                                                                    <input type="radio" name="respostafamiliar16" value="Rede geral de distribuição" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar16=='Rede geral de distribuição'?'checked':'':''}}>
                                                                     Rede geral de distribuição
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta32" value="__other_option__" required>
+                                                                    <input type="radio" name="respostafamiliar16" value="Outros (Especifique na proxíma pergunta)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar16=='Outros (Especifique na proxíma pergunta)'?'checked':'':''}}>
+                                                                    Outros (Especifique na proxíma pergunta)
                                                                 </label>
-                                                                <input type="text" name="pergunta32" placeholder="Outros">
                                                             </div>
                                                         </div>
                                                     </fieldset>
 
+                                                    <!-- PERGUNTA EXTRA -->
+                                                    <fieldset>
+                                                        <legend>Especifique de onde vem a água utilizada na casa</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntafamiliar41" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
+                                                            <input type="text" name="respostafamiliar41" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar41:''}}">
+                                                        </div>
+                                                    </fieldset>
+                                                    <!-- FIM PERGUNTA EXTRA -->
+
 
                                                     <fieldset>
-                                                        <legend>32. A água de beber recebe algum tratamento? (SE INFORMAR SIM, LER AS ALTERNATIVAS)</legend>
+                                                        <h4> Vou lhe apresentar um conjunto de itens e gostaria de saber quais você tem em sua casa. 
+                                                            Para cada item que você responder sim, vou lhe perguntar a quantidade. </h4>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>A água de beber recebe algum tratamento? (SE INFORMAR SIM, LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar17" type="text" value="A água de beber recebe algum tratamento? (SE INFORMAR SIM, LER AS ALTERNATIVAS):">
+                                                                    <input type="radio" name="respostafamiliar17" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar17=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Sim, com hipoclorito" required>
+                                                                    <input type="radio" name="respostafamiliar17" value="Sim, com hipoclorito"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar17=='Sim, com hipoclorito'?'checked':'':''}}>
                                                                     Sim, com hipoclorito
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Sim, com fervura" required>
+                                                                    <input type="radio" name="respostafamiliar17" value="Sim, com fervura"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar17=='Sim, com fervura'?'checked':'':''}}>
                                                                     Sim, com fervura
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Sim, com filtro" required>
+                                                                    <input type="radio" name="respostafamiliar17" value="Sim, com filtro"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar17=='Sim, com filtro'?'checked':'':''}}>
                                                                     Sim, com filtro
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="Sim, água mineral" required>
+                                                                    <input type="radio" name="respostafamiliar17" value="Sim, água mineral"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar17=='Sim, água mineral'?'checked':'':''}}>
                                                                     Sim, água mineral
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta33" value="__other_option__" required>
+                                                                    <input type="radio" name="respostafamiliar17" value="Outros (Especifique na proxíma pergunta)"  {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar17=='Outros (Especifique na proxíma pergunta)'?'checked':'':''}}>
+                                                                    Outros (Especifique na proxíma pergunta)
                                                                 </label>
-                                                                <input type="text" name="pergunta33" placeholder="Outros">
                                                             </div>
                                                         </div>
                                                     </fieldset>
 
+                                                    <!-- PERGUNTA EXTRA -->
+                                                    <fieldset>
+                                                        <legend>Especifique qaul tipo de tratamento é realizado</legend>
+                                                        <div class="form-group">
+                                                            <input hidden name="perguntafamiliar42" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
+                                                            <input type="text" name="respostafamiliar42" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar42:''}}">
+                                                        </div>
+                                                    </fieldset>
+                                                    <!-- FIM PERGUNTA EXTRA -->
 
                                                     <fieldset>
-                                                        <legend>33. Qual o destino do esgoto da casa? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>Qual o destino do esgoto da casa? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta34" value="Rio ou igarapé" required>
+                                                                    <input hidden name="perguntafamiliar18" type="text" value="Qual o destino do esgoto da casa? (LER AS ALTERNATIVAS):">
+                                                                    <input type="radio" name="respostafamiliar18" value="Rio ou igarapé" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar18=='Rio ou igarapé'?'checked':'':''}}>
                                                                     Rio ou igarapé
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta34" value="Céu aberto" required>
+                                                                    <input type="radio" name="respostafamiliar18" value="Céu aberto" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar18=='Céu aberto'?'checked':'':''}}>
                                                                     Céu aberto
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta34" value="Fossa" required>
+                                                                    <input type="radio" name="respostafamiliar18" value="Fossa" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar18=='Fossa'?'checked':'':''}}>
                                                                     Fossa
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta34" value="Rede de esgoto" required>
+                                                                    <input type="radio" name="respostafamiliar18" value="Rede de esgoto" >
                                                                     Rede de esgoto
                                                                 </label>
                                                             </div>
@@ -1142,17 +933,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>34.O trecho da rua de sua casa é: (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>O trecho da rua de sua casa é: (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta35" value="Asfaltado ou pavimentado" required>
+                                                                    <input hidden name="perguntafamiliar19" type="text" value="O trecho da rua de sua casa é: (LER AS ALTERNATIVAS):">
+                                                                    <input type="radio" name="respostafamiliar19" value="Asfaltado ou pavimentado" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar19=='Asfaltado ou pavimentado'?'checked':'':''}}>
                                                                     Asfaltado ou pavimentado
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta35" value="De terra ou cascalho" required>
+                                                                    <input type="radio" name="respostafamiliar19" value="De terra ou cascalho" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar19=='De terra ou cascalho'?'checked':'':''}}>
                                                                     De terra ou cascalho
                                                                 </label>
                                                             </div>
@@ -1169,105 +961,117 @@
 
 
                                                     <fieldset>
-                                                        <legend>35. Vídeo-cassete/ DVD? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Vídeo-cassete/ DVD? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="738809694" type="text" name="pergunta36" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar20" type="text" value="Vídeo-cassete/ DVD? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar20" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar20:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>36. Automóvel? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Automóvel? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="109055362" type="text" name="pergunta37" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar20" type="text" value="Automóvel? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar20" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar20:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>37. Máquina de lavar louça? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Máquina de lavar louça? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="652243712" type="text" name="pergunta38" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar21" type="text" value="Máquina de lavar louça? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar21" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar21:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>38. Microondas? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Microondas? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="162190331" type="text" name="pergunta39" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar22" type="text" value="Microondas? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar22" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar22:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>39. Secadora de roupa? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Secadora de roupa? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="132565852" type="text" name="pergunta40" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar23" type="text" value="Secadora de roupa? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar23" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar23:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>40. Moto? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Moto? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="771665851" type="text" name="pergunta41" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar24" type="text" value="Moto? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar24" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar24:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>41. Máquina de lavar roupa (exceto tanquinho)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Máquina de lavar roupa (exceto tanquinho)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="225074547" type="text" name="pergunta42" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar25" type="text" value="Máquina de lavar roupa (exceto tanquinho)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
+                                                            <input type="text" name="respostafamiliar25" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar25:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>42. Geladeira simples? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Geladeira simples? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="196641527" type="text" name="pergunta43" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar26" type="text" value="Geladeira simples? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
+                                                            <input type="text" name="respostafamiliar26" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar26:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>43. Geladeira duplex (com freezer)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Geladeira duplex (com freezer)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="1570044145" type="text" name="pergunta44" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar27" type="text" value="Geladeira duplex (com freezer)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
+                                                            <input type="text" name="respostafamiliar27" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar27:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>44. Freezer?  (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Freezer?  (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="327175582" type="text" name="pergunta45" class="form-control" required>
+                                                        <input hidden name="perguntafamiliar28" type="text" value="Freezer?  (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
+                                                            <input type="text" name="respostafamiliar28" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar28:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>45. Computador (incluindo notebook)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>Computador (incluindo notebook)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
-                                                            <input id="971140866" type="text" name="pergunta46" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar29" type="text" value="Computador (incluindo notebook)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
+                                                            <input type="text" name="respostafamiliar29" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar29:''}}">
                                                         </div>
                                                     </fieldset>
 
 
                                                     <fieldset>
-                                                        <legend>46. A família recebe Bolsa-Família? </legend>
+                                                        <legend>A família recebe Bolsa-Família? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta47" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar30" type="text" value="A família recebe Bolsa-Família:"> 
+                                                                    <input type="radio" name="respostafamiliar30" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar30=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta47" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar30" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar30=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -1276,17 +1080,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>47. A família recebe aposentadoria?</legend>
+                                                        <legend>A família recebe aposentadoria?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta48" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar31" type="text" value="A família recebe aposentadoria:"> 
+                                                                    <input type="radio" name="respostafamiliar31" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar31=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta48" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar31" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar31=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -1295,17 +1100,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>48. A família recebe pensão?</legend>
+                                                        <legend>A família recebe pensão?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta49" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar32" type="text" value="A família recebe pensão:"> 
+                                                                    <input type="radio" name="respostafamiliar32" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar32=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta49" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar32" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar32=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -1314,17 +1120,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>49. A família recebe auxílio defeso? </legend>
+                                                        <legend>A família recebe auxílio defeso? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta50" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar33" type="text" value="A família recebe auxílio defeso:"> 
+                                                                    <input type="radio" name="respostafamiliar33" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar33=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta50" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar33" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar33=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -1333,17 +1140,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>50. A família recebe auxílio-doença?</legend>
+                                                        <legend>A família recebe auxílio-doença?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta51" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar34" type="text" value="A família recebe auxílio-doença:"> 
+                                                                    <input type="radio" name="respostafamiliar34" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar34=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta51" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar34" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar34=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -1352,17 +1160,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>51. A família recebeu auxílio emergencial no início da epidemia de COVID-19?</legend>
+                                                        <legend>A família recebeu auxílio emergencial no início da epidemia de COVID-19?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta52" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar35" type="text" value="A família recebeu auxílio emergencial no início da epidemia de COVID-19:"> 
+                                                                    <input type="radio" name="respostafamiliar35" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar35=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta52" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar35" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar35=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -1371,17 +1180,18 @@
 
 
                                                     <fieldset>
-                                                        <legend>52. A família está recebendo auxílio emergencial atualmente devido à COVID-19?</legend>
+                                                        <legend>A família está recebendo auxílio emergencial atualmente devido à COVID-19?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta53" value="Não" required>
+                                                                    <input hidden name="perguntafamiliar36" type="text" value="A família está recebendo auxílio emergencial atualmente devido à COVID-19:"> 
+                                                                    <input type="radio" name="respostafamiliar36" value="Não" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar36=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta53" value="Sim" required>
+                                                                    <input type="radio" name="respostafamiliar36" value="Sim" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar36=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
@@ -1390,71 +1200,72 @@
 
 
                                                     <fieldset>
-                                                        <legend>53. No MÊS PASSADO, qual foi aproximadamente sua renda familiar LÍQUIDA, isto é, a soma de rendimentos, já com descontos(por ex., INSS, Imposto de Renda etc.), de todas as pessoas que contribuem regularmente para as despesas de sua casa?(MOSTRAR A LISTA COM AS CATEGORIAS DE RENDA NO CELULAR)</legend>
+                                                        <legend>No MÊS PASSADO, qual foi aproximadamente sua renda familiar LÍQUIDA, isto é, a soma de rendimentos, já com descontos(por ex., INSS, Imposto de Renda etc.), de todas as pessoas que contribuem regularmente para as despesas de sua casa?(MOSTRAR A LISTA COM AS CATEGORIAS DE RENDA NO CELULAR)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Sem renda familiar" required>
+                                                                    <input hidden name="perguntafamiliar37" type="text" value="No MÊS PASSADO, qual foi aproximadamente sua renda familiar LÍQUIDA, isto é, a soma de rendimentos, já com descontos(por ex., INSS, Imposto de Renda etc.), de todas as pessoas que contribuem regularmente para as despesas de sua casa?(MOSTRAR A LISTA COM AS CATEGORIAS DE RENDA NO CELULAR):"> 
+                                                                    <input type="radio" name="respostafamiliar37" value="Sem renda familiar" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Sem renda familiar'?'checked':'':''}}>
                                                                     Sem renda familiar
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Menos do que 250,00 reais" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Menos do que 250,00 reais" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Menos do que 250,00 reais'?'checked':'':''}}>
                                                                     Menos do que 250,00 reais
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Menos do que 550,00 reais" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Menos do que 550,00 reais" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Menos do que 550,00 reais'?'checked':'':''}}>
                                                                     Menos do que 550,00 reais
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Menos de 1100,00 reais" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Menos de 1100,00 reais" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Menos de 1100,00 reais'?'checked':'':''}}>
                                                                     Menos de 1100,00 reais
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="1100 reais (até um salário mínimo)" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="1100 reais (até um salário mínimo)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='1100 reais (até um salário mínimo)'?'checked':'':''}}>
                                                                     1100 reais (até um salário mínimo)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Entre 1100,00 e 1650, reais ( até 1,5 SM)" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Entre 1100,00 e 1650, reais ( até 1,5 SM)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Entre 1100,00 e 1650, reais ( até 1,5 SM)'?'checked':'':''}}>
                                                                     Entre 1100,00 e 1650, reais ( até 1,5 SM)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Entre 1651,00 e 2200,00 reais (até 2,0 SM)" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Entre 1651,00 e 2200,00 reais (até 2,0 SM)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Entre 1651,00 e 2200,00 reais (até 2,0 SM)'?'checked':'':''}}>
                                                                     Entre 1651,00 e 2200,00 reais (até 2,0 SM)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Entre 2201 e 3300,00 reais (até 3 SM)" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Entre 2201 e 3300,00 reais (até 3 SM)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Entre 2201 e 3300,00 reais (até 3 SM)'?'checked':'':''}}>
                                                                     Entre 2201 e 3300,00 reais (até 3 SM)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Entre 3301,00 e 4400,00 reais (até 4 SM)" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Entre 3301,00 e 4400,00 reais (até 4 SM)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Entre 3301,00 e 4400,00 reais (até 4 SM)'?'checked':'':''}}>
                                                                     Entre 3301,00 e 4400,00 reais (até 4 SM)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Entre 4401,00 e 5500,00 reais (até 5 SM)" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Entre 4401,00 e 5500,00 reais (até 5 SM)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Entre 4401,00 e 5500,00 reais (até 5 SM)'?'checked':'':''}}>
                                                                     Entre 4401,00 e 5500,00 reais (até 5 SM)
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta54" value="Acima de 5500,00 reais ou mais (&gt;5 SM)" required>
+                                                                    <input type="radio" name="respostafamiliar37" value="Acima de 5500,00 reais ou mais (mais que 5 SM)" {{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar37=='Acima de 5500,00 reais ou mais (mais que 5 SM)'?'checked':'':''}}>
                                                                     Acima de 5500,00 reais ou mais (&gt;5 SM)
                                                                 </label>
                                                             </div>
@@ -1463,15 +1274,279 @@
 
 
                                                     <fieldset>
-                                                        <legend>54. Quantas pessoas (adultos e crianças), INCLUINDO O(A) SR.(A), dependem dessa renda para viver?</legend>
+                                                        <legend>Quantas pessoas (adultos e crianças), INCLUINDO O(A) SR.(A), dependem dessa renda para viver?</legend>
                                                         <div class="form-group">
-                                                            <input id="1008217533" type="text" name="pergunta55" class="form-control" required>
+                                                            <input hidden name="perguntafamiliar38" type="text" value="Quantas pessoas (adultos e crianças), INCLUINDO O(A) SR.(A), dependem dessa renda para viver:"> 
+                                                            <input type="text" name="respostafamiliar38" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar38:''}}">
                                                         </div>
                                                     </fieldset>
 
                                                     <div class="text-center">
                                                         <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
                                                     </div>
+
+                                                    <!-- <fieldset>
+                                                        <legend>ID NÚMERO</legend>
+                                                        <div class="form-group"> 
+                                                            <input type="text" name="pergunta1" class="form-control" >
+                                                        </div>
+                                                    </fieldset> -->
+
+                                                    <!-- <fieldset>
+                                                        <legend>Distrito:</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta3" value="Guamá" >
+                                                                    Guamá
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta3" value="Bengui" >
+                                                                    Bengui
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>Unidade da Estratégia de Saúde da Família</legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Condor" >
+                                                                    Condor
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Combú" >
+                                                                    Combú
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia I" >
+                                                                    Pq. Amazônia I
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia II" >
+                                                                    Pq. Amazônia II
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Portal da Amazônia" >
+                                                                    Portal da Amazônia
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Radional" >
+                                                                    Radional
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Riacho Doce" >
+                                                                    Riacho Doce
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Terra Firme" >
+                                                                    Terra Firme
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Bengui" >
+                                                                    Bengui
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Carmelândia" >
+                                                                    Carmelândia
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Cristo Redentor" >
+                                                                    Cristo Redentor
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Mangueirão" >
+                                                                    Mangueirão
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Panorama XXI" >
+                                                                    Panorama XXI
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Parque Verde" >
+                                                                    Parque Verde
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Pratinha I" >
+                                                                    Pratinha I
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Pratinha II" >
+                                                                    Pratinha II
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Tapanã I" >
+                                                                    Tapanã I
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Tapanã II" >
+                                                                    Tapanã II
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta4" value="Una" >
+                                                                    Una
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset> -->
+
+
+                                                    <!-- <fieldset>
+                                                        <legend>N. equipe:</legend>
+                                                        <div class="form-group">
+                                                            <input type="text" name="pergunta5" class="form-control" >
+                                                        </div>
+                                                    </fieldset> -->
+
+
+                                                    <!-- <fieldset>
+                                                        <legend>N. microárea:</legend>
+                                                        <div class="form-group">
+                                                            <input id="1311005911" type="text" name="pergunta6" class="form-control" >
+                                                        </div>
+                                                    </fieldset> -->
+
+
+                                                    <!-- <fieldset>
+                                                            <legend>N. Família/Casa:</legend>
+                                                            <div class="form-group">
+                                                                <input id="1048028346" type="text" name="pergunta7" class="form-control" >
+                                                            </div>
+                                                    </fieldset> -->
+
+
+
+                                                    <!-- <fieldset>
+                                                        <legend>8. Qual o seu nome completo (nome do entrevistado - responsável pela família)? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
+                                                        <div class="form-group">
+                                                            <textarea name="pergunta9" class="form-control" ></textarea>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>9. Qual o nome da sua mãe? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
+                                                        <div class="form-group">
+                                                            <textarea name="pergunta10" class="form-control" ></textarea>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>10. Qual a data do seu nascimento? (SOLICITE O RG OU OUTRO DOCUMENTO COM A DATA DO NASCIMENTO)</legend>
+                                                        <div class="form-group">
+                                                            <input type="date" name="pergunta11" placeholder="11/09/2021" class="form-control" >
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>11. Gênero: </legend>
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta12" value="Homem" >
+                                                                    Homem
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" name="pergunta12" value="Mulher" >
+                                                                    Mulher
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset> -->
+
+
+                                                    <!-- <fieldset>
+                                                        <h4>Agora vou lhe fazer algumas perguntas sobre sua família atual. </4>
+                                                        <div class="form-group">
+                                                            <h5>Qual o endereço atual? (SOLICITE UM COMPROVANTE DE ENDEREÇO)</h5>
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend >16. Nome da rua</legend>
+                                                        <div class="form-group">
+                                                            <input id="937218968" type="text" name="pergunta17" class="form-control" >
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend >17. Número da casa</legend>
+                                                        <div class="form-group">
+                                                            <input id="1744361163" type="text" name="pergunta18" class="form-control" >
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>18. Bairro</legend>
+                                                        <div class="form-group">
+                                                            <input id="1754504620" type="text" name="pergunta19" class="form-control" >
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>19. CEP (INFORME SEM TRAÇO)</legend>
+                                                        <div class="form-group">
+                                                            <input id="1125587065" type="text" name="pergunta20" class="form-control" >
+                                                        </div>
+                                                    </fieldset>
+
+
+                                                    <fieldset>
+                                                        <legend>20. Município</legend>
+                                                        <div class="form-group">
+                                                            <input type="text" name="pergunta21" class="form-control" >
+                                                        </div>
+                                                    </fieldset> -->
                                                 </form>
                                                 <!-- FIM -->                                            
 
@@ -1497,6 +1572,13 @@
                                     </div>
                         </div>
                     </footer>   
+
+                    <script>
+                        $(document).ready(function($){
+                            $('#data').mask('00/00/0000');
+
+                        });
+                    </script>
 
 
                 </div>

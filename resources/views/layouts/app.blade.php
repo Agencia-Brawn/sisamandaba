@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Sistema Amandaba</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -37,6 +37,12 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" />
 
+    <!-- LIB JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+
+
     <!-- =============== FIM BOOTSTRAP TEMPLATE  =============== -->
 
 
@@ -46,9 +52,9 @@
 <body>
     <div id="app">
         <nav style="z-index: 1000;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 17px; font-weigth: 500;">
-                    {{ config('app.name', 'Laravel') }}
+            <div class="container" >
+                <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 15px; font-weigth: 500;">
+                    <img src="img/logo-menu.png" style="margin-left: -70px;" alt="Sistema Amandaba" class="img-fluid logo-menu" >
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <!-- <span class="navbar-toggler-icon"></span> -->
@@ -115,4 +121,6 @@
         </main>
     </div>
 </body>
+    <!-- MASK JQUERY -->
+    <script src="/js/jquery.mask.js"></script>
 </html>

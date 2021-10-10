@@ -467,145 +467,60 @@
                                                         <h2>Questionários Antropometria<br></h2>
                                                     </fieldset>                                                    
 
-
-                                                    <!-- <fieldset>
-                                                        <legend class="mt-0">Data de Nascimento</legend>
-                                                        <div class="form-group">
-                                                            <input type="date" name="pergunta1" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>Gênero</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta2" value="FEMININO" >
-                                                                    Feminino
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta2" value="MASCULINO" >
-                                                                    Masculino
-                                                                </label>
-                                                            </div>
-                            
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>ID Número</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="number" name="pergunta3" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-  
-                                                    <fieldset>
-                                                        <!-- <legend>Equipe</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta4" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>Microárea</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta5" class="form-control" required>
-                                                        </div>
-                                                    </fieldset>
-
-                                                    <fieldset>
-                                                        <legend>Família</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="pergunta6" class="form-control" required>
-                                                        </div>
-                                                    </fieldset> -->
-
                                                     <fieldset>
                                                         <legend>Individual</legend>
                                                         <div class="form-group">
-                                                            <input id="" type="text" name="pergunta7" class="form-control" required>
+                                                            <input hidden name="perguntaantropometria1" type="text" value="Individual:">
+                                                            <input type="text" name="respostaantropometria1" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria1:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
                                                     <fieldset>
                                                         <legend>Aferidor</legend>
                                                         <div class="form-group">
-                                                            <input id="" type="text" name="pergunta8" class="form-control" required>
+                                                            <input hidden name="perguntaantropometria2" type="text" value="Aferidor:">
+                                                            <input  type="text" name="respostaantropometria2" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria2:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
                                                     <fieldset>
                                                         <legend>Participante</legend>
                                                         <div class="form-group">
-                                                            <input id="" type="text" name="pergunta9" class="form-control" required>
+                                                            <input hidden name="perguntaantropometria3" type="text" value="Participante:">
+                                                            <input  type="text" name="respostaantropometria3" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria3:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
                                                     <fieldset>
                                                         <legend>Data do Exame</legend>
                                                         <div class="form-group">
-                                                            <input type="date" name="pergunta10"  class="form-control" required>
+                                                            <input hidden name="perguntaantropometria4" type="text" value="Data do Exame:">
+                                                            <input required type="date" name="respostaantropometria4"  value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria4:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
-
-                                                    <!-- <fieldset>
-                                                        <legend for="">Data de Nascimento</legend>
-                                                        <div class="form-group">
-                                                            <input type="date" name="pergunta11"  class="form-control" required>
-                                                        </div>
-                                                    </fieldset>  -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>Gênero</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta12" value="FEMININO" >
-                                                                    Feminino
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta12" value="MASCULINO" >
-                                                                    Masculino
-                                                                </label>
-                                                            </div>
-                            
-                                                        </div>
-                                                    </fieldset> -->
 
                                                     <fieldset>
                                                         <legend>Altura</legend>
                                                         <div class="form-group">
-                                                            <input type="number" min="0" name="pergunta13"  class="form-control" required>
+                                                            <input hidden name="perguntaantropometria8" type="text" value="Altura:">
+                                                            <input type="text" min="0" name="respostaantropometria8" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria8:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
+
 
                                                     <fieldset>
                                                         <legend>Peso</legend>
                                                         <div class="form-group">
-                                                            <input type="number" min="0" name="pergunta14"  class="form-control" required>
+                                                            <input hidden name="perguntaantropometria5" type="text" value="Peso:">
+                                                            <input type="text" min="0" name="respostaantropometria5" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria5:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Circunferência abdominal ?</legend>
+                                                        <legend>Circunferência abdominal</legend>
                                                         <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta15" value="FEMININO" >
-                                                                    Não
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta15" value="MASCULINO" >
-                                                                    Sim
-                                                                </label>
-                                                            </div>
-                            
+                                                            <input hidden name="perguntaantropometria6" type="text" value="Participante:">
+                                                            <input  type="text" name="respostaantropometria6" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria6:''}}" class="form-control" >
                                                         </div>
                                                     </fieldset>
 
@@ -614,29 +529,25 @@
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="FEMININO" >
+                                                                    <input hidden name="perguntaantropometria7" type="text" value="Abdome em avental:">
+                                                                    <input type="radio" name="respostaantropometria7" value="Não" {{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria7=='Não'?'checked':'':''}}>
                                                                     Não
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="pergunta15" value="MASCULINO" >
+                                                                    <input type="radio" name="respostaantropometria7" value="Sim" {{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria7=='Sim'?'checked':'':''}}>
                                                                     Sim
                                                                 </label>
                                                             </div>
                             
                                                         </div>
-                                                    </fieldset>
-
-
-
-
-
-                                            
+                                                    </fieldset>                                            
 
                                                     <div class="text-center">
-                                                        <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
+                                                        <button class="btn btn-primary " type="submit" >ENVIAR FORMULÁRIO </button>
                                                     </div>
+
                                                 </form>
                                                 <!-- FIM -->
 
@@ -662,6 +573,12 @@
                         </div>
                     </footer>   
 
+                    <script>
+                        $(document).ready(function($){
+                            $('#data').mask('00/00/0000');
+                            $('#peso').mask('00.00');
+                        });
+                    </script>
 
                 </div>
         </div>

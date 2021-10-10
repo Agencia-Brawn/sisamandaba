@@ -34,6 +34,8 @@ class UnidadesController extends Controller
     {
         // dd($request->all());
         $unidade->novareuniao($request->all());
+
+        return redirect()->back();
         
     }
 

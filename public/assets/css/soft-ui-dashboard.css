@@ -24963,6 +24963,12 @@ pre[class*="language-"] {
   padding-top: 25px;
 }
 
+.logo-menu{
+  max-width: 150px; 
+  margin: auto; 
+  margin-left: -70px;
+}
+
 .section-apoio {
   margin-top: 25px; 
   text-align: center;
@@ -25039,6 +25045,10 @@ pre[class*="language-"] {
   .col-img-login img{
     max-width: 350px;
     
+  }
+
+  .logo-menu{
+    margin-left: 0px;
   }
 
 }

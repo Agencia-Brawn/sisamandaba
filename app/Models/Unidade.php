@@ -22,8 +22,6 @@ class Unidade extends Model
         $rn->hora = $dados['hora'];
         $rn->local = $dados['local'];
 
-
-
         $rn->save();
     }
 }

@@ -144,7 +144,7 @@
                                     </a>
                                 </li>
                                 
-                                <!-- <li class="nav-item">
+                                <li class="nav-item">
 
                                     <a class="nav-link" href="{{route('cadastro.usuarios')}}">
 
@@ -166,7 +166,7 @@
 
                                         <span class="nav-link-text ms-1">Cadastro</span>
                                     </a>
-                                </li> -->
+                                </li>
 
 
 

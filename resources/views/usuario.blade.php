@@ -457,55 +457,146 @@
 
 
 
-                                    <h3 class="text-center">Ficha do Usuário</h3>
+                                    <h2 class="text-center">Ficha do Usuário: {{$usuario->name}} </h2>
 
-                                    <h4 class="ps-5 pb-2 text-left"><b>Dados Iniciais</b></h4>
+                                    <h4 class="ps-5 pt-5 text-left"><b>Informações Pessoais</b></h4>
                                     <ul class="ps-5 list-group ficha-usuario" >
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Nome Completo:</strong> &nbsp; {{$usuario->name}}</li>
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">Telefone:</strong> &nbsp; {{$usuario->telefone}}</li>
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">E-mail:</strong> &nbsp; {{$usuario->email}}</li>
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">CPF:</strong> &nbsp;   {{$usuario->cpf}}</li>
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">Altura:</strong> &nbsp;   {{$usuario->altura}}</li>
-                                        <li class="list-group-item border-0 ps-0 text-md"><strong class="text-dark">Data de Nascimento:</strong> &nbsp;   {{$usuario->datanasc}}</li>
-                                    </ul>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Nome Completo:</strong> 
+                                            <input type="text" value="{{$usuario->name?$usuario->name:''}}" class="form-control" disabled />
 
-                                        <br><br>
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 text-md">
+                                            <strong class="text-dark">E-mail:</strong>
+                                            <input type="text" value="{{$usuario->email?$usuario->email:''}}" class="form-control" disabled />
+                                        </li>
+                                        
+                                        <li class="list-group-item border-0 ps-0 text-md">
+                                            <strong class="text-dark">
+                                                CPF:
+                                                <input type="text" id="cpf" value="{{$usuario->cpf?$usuario->cpf:''}}" class="form-control" disabled />
+                                            </strong>
+                                        </li>
+                                       
+                                        <li class="list-group-item border-0 ps-0 text-md">
+                                            <strong class="text-dark">Data de Nascimento:</strong> 
+                                               <input type="text" id="data" value="{{$usuario->datanasc?$usuario->datanasc:''}}" class="form-control" disabled />
+
+                                        </li>
+                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Nome de sua mãe:</strong> 
+                                            <input type="text" value="{{$usuario->mae?$usuario->mae:''}}" class="form-control" disabled />
+                                        </li>
+                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Gênero:</strong> 
+                                            <input type="text" value="{{$usuario->genero==1?'Feminino':'Masculino'}}" class="form-control" disabled />
+                                        </li>
+                                    </ul>
 
                                     
                                     <ul class="ps-5 list-group ficha-usuario" >
-                                        <h4 class="pb-2 text-left"><b>Informações Pessoais</b></h4>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Nome de sua mãe:</strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Gênero:</strong> &nbsp; </li>
-
-
                                         <h4 class="pb-2 pt-5 text-left"><b>Informações de Contato</b></h4>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Celular: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Telefone de Familiar: </strong> </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Telefone Fixo: </strong> </li>
-  
+                                        <li class="list-group-item border-0 ps-0 text-md">
+                                            <strong class="text-dark">Telefone:</strong> 
+                                            
+                                            <input type="text" id="telefone" value="{{$usuario->telefone?$usuario->telefone:''}}" class="form-control" disabled />
 
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 text-md">
+                                            <strong class="text-dark">Telefone Fixo:</strong> 
+                                            <input type="text" id="telefone" value="{{$usuario->telefonefixo?$usuario->telefonefixo:''}}" class="form-control" disabled />
+
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Nome do Familiar:</strong> 
+                                            <input type="text" value="{{$usuario->perfilnomefamiliar?$usuario->perfilnomefamiliar:''}}" class="form-control" disabled />
+                                        </li>  
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Telefone de Familiar:</strong> 
+                                            <input type="text" id="telefone2" value="{{$usuario->telfamiliar}}" class="form-control" disabled />
+                                        </li>  
+                                    </ul>
+                                    
+                                    <ul class="ps-5 list-group ficha-usuario" >
                                         <h4 class="pb-2 pt-5 text-left"><b>Informações de Endereço</b></h4>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Estado: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Cidade: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Bairro: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">CEP: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Nome da Rua: </strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Nome da Casa: </strong> &nbsp; </li>
-                                        
-                                      
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Estado:</strong>
+                                            <input type="text" value="{{$usuario->estado?$usuario->estado:''}}" class="form-control" disabled />
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Cidade:</strong>
+                                            <input type="text" value="{{$usuario->cidade?$usuario->cidade:''}}" class="form-control" disabled />
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Bairro:</strong>
+                                            <input type="text" value="{{$usuario->bairro?$usuario->bairro:''}}" class="form-control" disabled />
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">CEP:</strong>
+                                            <input type="text" id="cep" value="{{$usuario->cep?$usuario->cep:''}}" class="form-control" disabled />
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Nome da Rua:</strong>
+                                            <input type="text" value="{{$usuario->rua?$usuario->rua:''}}" class="form-control" disabled />
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Nome da Casa:</strong>
+                                            <input type="text" value="{{$usuario->numcasa?$usuario->numcasa:''}}" class="form-control" disabled />
+                                        </li>
+                                    </ul>
+                                    
+                                    <ul class="ps-5 list-group ficha-usuario" >  
                                         <h4 class="pb-2 pt-5 text-left"><b>Outros Informações Para Localização</b></h4>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">ID Número:</strong> &nbsp; </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Número da Equipe: </strong> </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Número da Microárea: </strong> </li>
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Número da Familía/Casa: </strong> </li>      
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Distrito:</strong> </li>                                  
-                                        <li class="list-group-item border-0 ps-0 pt-0 text-md"><strong class="text-dark">Unidade da Estratégia de Saúde da Família:</strong> </li>
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">ID Número:</strong>
+                                            <input type="text" value="{{$usuario->idnumero?$usuario->idnumero:''}}" class="form-control" disabled />
+                                        </li>
                                         
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Número da Equipe:</strong>
+                                            <input type="text" value="{{$usuario->numequipe?$usuario->numequipe:''}}" class="form-control" disabled />
+                                        </li>
+                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Número da Microárea:</strong>
+                                            <input type="text" value="{{$usuario->microarea?$usuario->microarea:''}}" class="form-control" disabled />
+
+                                            
+                                        </li>
+                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Número da Familía/Casa:</strong>
+                                            <input type="text" value="{{$usuario->numfamilia?$usuario->numfamilia:''}}" class="form-control" disabled />
+                                        </li>   
+                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Distrito:</strong>
+                                            <input type="text" value="{{$usuario->perfildistrito?$usuario->perfildistrito:''}}" class="form-control" disabled />
+                                        </li>  
+                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Unidade da Estratégia de Saúde da Família:</strong>
+                                            <input type="text" value="{{$usuario->unidade?$usuario->unidade:''}}" class="form-control" disabled />
+                                        </li>
+                                        
+
                                     </ul>
 
                                     
                                     <div class="ps-5 text-left">
                                         <a href="{{route('editar.perfil',['usuario'=>$usuario->id])}}"><button class="btn btn-primary mt-5"> Editar Usuário </button></a>
+                                        
                                     </div>
                                 </div>
 
@@ -538,6 +629,16 @@
                                     </div>
                         </div>
                     </footer>   
+
+                    <script>
+                        $(document).ready(function($){
+                            $('#cpf').mask('000.000.000-00', {reverse: true});
+                            $('#data').mask('00/00/0000');
+                            $('#telefone').mask('(00) 00000-0000');
+                            $('#telefone2').mask('(00) 00000-0000');
+                            $('#cep').mask('00000-000');
+                        });
+                    </script>
 
 
                 </div>
