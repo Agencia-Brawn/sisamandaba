@@ -17,14 +17,15 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
 
     <!-- =============== BOOTSTRAP TEMPLATE  =============== -->
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"> -->
     <!-- <link rel="icon" type="image/png" href="/assets/img/favicon.png"> -->
 
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Nucleo Icons -->
     <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
@@ -35,7 +36,7 @@
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
 
     <!-- CSS Files -->
-    <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" />
+    <link  id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" />
 
     <!-- LIB JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

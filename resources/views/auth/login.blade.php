@@ -4,13 +4,13 @@
 <div class="container">
 
     <div class="row row-login" >
-        <div class="col-md-4 col-lg-6 col-img-login">
+        <div class="col-md-4 col-lg-6 col-sm-6 col-img-login">
             <img class="img-fluid" src="img/img_login_fundo.webp" alt="">       
         </div>
         
         <!-- div para afastar -->
 
-        <div class="col-md-6 col-lg-6 col-sm-12 col-form-login">
+        <div class="col-md-6 col-lg-6 col-sm-12 col-12 col-form-login">
             <div class="card" >
                 <!-- <div class="card-header">{{ __('Login') }}</div> -->
                 <img  class="img-fluid logo-login" src="img/logo_verde.png" alt="">
@@ -91,7 +91,7 @@
             APOIO
         </h1>
 
-        <div class="col-lg-12 col-apoio" >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 col-apoio" >
             <img class="apoio-login img-fluid" src="img/apoio.webp" alt="">
         </div>
 
