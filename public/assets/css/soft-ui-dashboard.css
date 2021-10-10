@@ -24964,7 +24964,7 @@ pre[class*="language-"] {
 }
 
 .logo-menu{
-  max-width: 150px; 
+  max-width: 175px;
   margin: auto; 
   margin-left: -70px;
 }
@@ -25048,6 +25048,7 @@ pre[class*="language-"] {
   }
 
   .logo-menu{
+    max-width: 175px;
     margin-left: 0px;
   }
 
