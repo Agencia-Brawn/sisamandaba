@@ -5,7 +5,7 @@
 
     <div class="row row-login" >
         <div class="col-md-4 col-lg-6 col-img-login">
-            <img class="img-fluid" src="img/img_login_fundo.png" alt="">       
+            <img class="img-fluid" src="img/img_login_fundo.webp" alt="">       
         </div>
         
         <!-- div para afastar -->
@@ -92,7 +92,7 @@
         </h1>
 
         <div class="col-lg-12 col-apoio" >
-            <img class="img-fluid" src="img/apoio.png" alt="">
+            <img class="apoio-login img-fluid" src="img/apoio.webp" alt="">
         </div>
 
     <!-- 
