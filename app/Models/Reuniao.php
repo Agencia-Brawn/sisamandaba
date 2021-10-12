@@ -8,7 +8,7 @@ class Reuniao extends Model
 {
     protected $fillable = ['unidade_id'];
     protected $connection = 'app';
-    protected $table = 'reuniao';
+    protected $table = 'reuniaos';
     public $timestamps = false;
 
 }
