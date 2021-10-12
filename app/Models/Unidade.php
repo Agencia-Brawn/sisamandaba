@@ -24,6 +24,16 @@ class Unidade extends Model
 
         $rn->save();
     }
+    public function reunioes()
+    {
+       $reunioes = Reuniao::where('unidade_id', $this->id)->get();
+       if($reunioes){
+        return $reunioes;
+       }else{
+           return [];
+       }
+    }
+
 }
 
 

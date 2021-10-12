@@ -39,7 +39,7 @@
                                         <span class="nav-link-text ms-1">Dashboard</span>
                                     </a>
                                 </li>
-                                
+
                                 <li class="nav-item">
                                     <a class="nav-link  active" href="{{route('cadastro.usuarios')}}">
                                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -127,7 +127,7 @@
                                 </li> -->
 
                             </ul>
-                        
+
                                 <!-- <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 583px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 365px;"></div></div> -->
                         </aside>
                     </nav>
@@ -178,7 +178,7 @@
                                     </a>
                                 </li>
 
-                                
+
                                 <li class="nav-item">
 
                                     <a class="nav-link active" href="{{route('unidades')}}">
@@ -202,7 +202,7 @@
                                         <span class="nav-link-text ms-1">Unidades</span>
                                     </a>
                                 </li>
-                                
+
                                 <!-- <li class="nav-item">
 
                                     <a class="nav-link" href="{{route('cadastro.usuarios')}}">
@@ -234,16 +234,16 @@
 
             </aside>
 
-        </div> 
-        <!-- FIM MENU --> 
-            
-            
+        </div>
+        <!-- FIM MENU -->
+
+
             <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
 
                     <div class="row justify-content-center row-painel-controle ps-5">
                         <div class="col-md-12 pt-5" >
                             <div class="card">
-                                <!-- <div class="card-header text-center"> 
+                                <!-- <div class="card-header text-center">
                                     <h2>Unidades </h2>
                                 </div> -->
 
@@ -261,11 +261,11 @@
                                             <div class="col-xl-12 col-sm-12 mb-xl-0 mb-4">
                                                 @if ($errors->any())
                                                     <div class="alert alert-danger" style="background-image: none;">
-                                                       
+
                                                             @foreach ($errors->all() as $error)
                                                                 <h5>{{ $error }}</h5>
                                                             @endforeach
-                                     
+
                                                     </div>
                                                 @endif
 
@@ -296,20 +296,20 @@
 
                                                                         <div class="text-center">
                                                                             <button class="btn btn-primary" type="submit">Enviar</button>
-                                                                        </div>    
-                                                                    </form>                                                                        
+                                                                        </div>
+                                                                    </form>
 
                                                             </div>
                                                         </div>
-                            
-                                                    </div>
-                                                </div>            
-                                                                            
 
-                                                
+                                                    </div>
+                                                </div>
+
+
+
                                             </div>
 
-                                        </div>          
+                                        </div>
 
                                     </div>
 
@@ -321,6 +321,38 @@
 
 
                     <!-- FIM FORMULÁRIO -->
+
+                    <h1>Reuniões</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Titulo</th>
+                                <th>Data</th>
+                                <th>Hora</th>
+                                <th>Local</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($unidade->reunioes() as $reuniao)
+                                <tr>
+                                    <td>
+                                        {{$reuniao->titulo}}
+                                    </td>
+                                    <td>
+                                        {{$reuniao->dia}}
+                                    </td>
+                                    <td>
+                                        {{$reuniao->hora}}
+                                    </td>
+                                    <td>
+                                        {{$reuniao->local}}
+                                    </td>
+                                </tr>
+                            @empty
+                                <h3>Sem registro de reuniões</h3>
+                            @endforelse
+                        </tbody>
+                    </table>
 
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
@@ -334,7 +366,7 @@
                                         </div>
                                     </div>
                         </div>
-                    </footer>   
+                    </footer>
 
             </div>
         </div>
