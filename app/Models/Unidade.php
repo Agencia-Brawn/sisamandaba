@@ -7,6 +7,7 @@ use App\Models\Reuniao;
 
 class Unidade extends Model
 {
+    protected $connection = 'app';
     protected $fillable = ['nome'];
     public $timestamps = false;
 
