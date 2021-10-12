@@ -3341,8 +3341,8 @@
                                                                                         </div>
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                                <input type="radio" name="respostaindividual95" value="4. Mias de 60 minutos" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual95=='4. Mias de 60 minutos'?'checked':'':''}}>
-                                                                                                4. Mias de 60 minutos
+                                                                                                <input type="radio" name="respostaindividual95" value="4. Mais de 60 minutos" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual95=='4. Mais de 60 minutos'?'checked':'':''}}>
+                                                                                                4. Mais de 60 minutos
                                                                                             </label>
                                                                                         </div>
                                                                                     </div>

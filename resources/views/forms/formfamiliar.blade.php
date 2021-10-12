@@ -587,7 +587,10 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Localização: (DESCREVER DE MANEIRA MAIS COMPLETA POSSÍVEL A LOCALIZAÇÃO DA CASA,PARA PERMITIR ENCONTRAR A RESIDÊNCIA NOVAMENTE, PEÇA AJUDA PARA O PARTICIPANTE E INCLUA PONTOS DE REFERÊNCIA)</legend>
+                                                        <h4>Localização: (DESCREVER DE MANEIRA MAIS COMPLETA POSSÍVEL A LOCALIZAÇÃO DA 
+                                                            CASA,PARA PERMITIR ENCONTRAR A RESIDÊNCIA NOVAMENTE, PEÇA AJUDA PARA O PARTICIPANTE 
+                                                            E INCLUA PONTOS DE REFERÊNCIA)
+                                                        </h4>
                                                     </fieldset>
 
 
@@ -842,12 +845,6 @@
 
 
                                                     <fieldset>
-                                                        <h4> Vou lhe apresentar um conjunto de itens e gostaria de saber quais você tem em sua casa. 
-                                                            Para cada item que você responder sim, vou lhe perguntar a quantidade. </h4>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
                                                         <legend>A água de beber recebe algum tratamento? (SE INFORMAR SIM, LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
@@ -892,7 +889,7 @@
 
                                                     <!-- PERGUNTA EXTRA -->
                                                     <fieldset>
-                                                        <legend>Especifique qaul tipo de tratamento é realizado</legend>
+                                                        <legend>Especifique qual tipo de tratamento é realizado</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar42" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
                                                             <input type="text" name="respostafamiliar42" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar42:''}}">
