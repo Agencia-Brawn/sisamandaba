@@ -626,7 +626,7 @@
                                                         <legend>14. Entrega do resultado ao participante, data: </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio14" type="text" value="14. Entrega do resultado ao participante, data:">
-                                                            <input required type="date" name="respostalaboratorio14" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio14:''}}" class="form-control">
+                                                            <input type="date" name="respostalaboratorio14" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio14:''}}" class="form-control">
                                                         </div>
                                                     </fieldset>
 
@@ -634,12 +634,13 @@
                                                         <legend>15. Entrega do resultado na ESF, data: </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio15" type="text" value="15. Entrega do resultado na ESF, data:">
-                                                            <input required type="date" name="respostalaboratorio15" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio15:''}}" class="form-control">
+                                                            <input type="date" name="respostalaboratorio15" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio15:''}}" class="form-control">
                                                         </div>
                                                     </fieldset>
 
                                                     <div class="text-center">
-                                                        <button id="formlaboratorio" class="btn btn-primary mt-5" type="submit" > ENVIAR FORMULÁRIO </button>                                                    </div>
+                                                        <button id="formlaboratorio" class="btn btn-primary mt-5" type="submit" > ENVIAR FORMULÁRIO </button>                                                    
+                                                    </div>
 
                                             </form>        
                                             <!-- FIM --> 
