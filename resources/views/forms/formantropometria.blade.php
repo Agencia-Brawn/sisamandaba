@@ -467,16 +467,16 @@
                                                         <h2>Questionários Antropometria<br></h2>
                                                     </fieldset>                                                    
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Individual</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria1" type="text" value="Individual:">
                                                             <input type="text" name="respostaantropometria1" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria1:''}}" class="form-control" >
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
                                                     <fieldset>
-                                                        <legend>Aferidor</legend>
+                                                        <legend>Nome do Aferidor</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria2" type="text" value="Aferidor:">
                                                             <input  type="text" name="respostaantropometria2" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria2:''}}" class="form-control" >
