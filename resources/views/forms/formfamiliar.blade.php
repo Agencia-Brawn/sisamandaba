@@ -514,7 +514,7 @@
                                                     </fieldset>
 
 
-                                                    <fieldset>
+                                                    <fieldset id="salto2">
                                                         <legend>Quantas pessoas ao todo moram em sua casa?</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntafamiliar4" type="text" value="Quantas pessoas ao todo moram em sua casa:">
@@ -623,7 +623,7 @@
                                                     </fieldset>
 
 
-                                                    <fieldset>
+                                                    <fieldset id="salto1">
                                                         <legend>Qual o município onde você morou antes?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar9" type="text" value="Qual o município onde você morou antes:">
@@ -1282,273 +1282,8 @@
                                                         <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
                                                     </div>
 
-                                                    <!-- <fieldset>
-                                                        <legend>ID NÚMERO</legend>
-                                                        <div class="form-group"> 
-                                                            <input type="text" name="pergunta1" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>Distrito:</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta3" value="Guamá" >
-                                                                    Guamá
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta3" value="Bengui" >
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>Unidade da Estratégia de Saúde da Família</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Condor" >
-                                                                    Condor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Combú" >
-                                                                    Combú
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia I" >
-                                                                    Pq. Amazônia I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pq. Amazônia II" >
-                                                                    Pq. Amazônia II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Portal da Amazônia" >
-                                                                    Portal da Amazônia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Radional" >
-                                                                    Radional
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Riacho Doce" >
-                                                                    Riacho Doce
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Terra Firme" >
-                                                                    Terra Firme
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Bengui" >
-                                                                    Bengui
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Carmelândia" >
-                                                                    Carmelândia
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Cristo Redentor" >
-                                                                    Cristo Redentor
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Mangueirão" >
-                                                                    Mangueirão
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Panorama XXI" >
-                                                                    Panorama XXI
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Parque Verde" >
-                                                                    Parque Verde
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pratinha I" >
-                                                                    Pratinha I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Pratinha II" >
-                                                                    Pratinha II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Tapanã I" >
-                                                                    Tapanã I
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Tapanã II" >
-                                                                    Tapanã II
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta4" value="Una" >
-                                                                    Una
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>N. equipe:</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta5" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>N. microárea:</legend>
-                                                        <div class="form-group">
-                                                            <input id="1311005911" type="text" name="pergunta6" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                            <legend>N. Família/Casa:</legend>
-                                                            <div class="form-group">
-                                                                <input id="1048028346" type="text" name="pergunta7" class="form-control" >
-                                                            </div>
-                                                    </fieldset> -->
-
-
-
-                                                    <!-- <fieldset>
-                                                        <legend>8. Qual o seu nome completo (nome do entrevistado - responsável pela família)? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
-                                                        <div class="form-group">
-                                                            <textarea name="pergunta9" class="form-control" ></textarea>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>9. Qual o nome da sua mãe? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
-                                                        <div class="form-group">
-                                                            <textarea name="pergunta10" class="form-control" ></textarea>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>10. Qual a data do seu nascimento? (SOLICITE O RG OU OUTRO DOCUMENTO COM A DATA DO NASCIMENTO)</legend>
-                                                        <div class="form-group">
-                                                            <input type="date" name="pergunta11" placeholder="11/09/2021" class="form-control" >
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>11. Gênero: </legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta12" value="Homem" >
-                                                                    Homem
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta12" value="Mulher" >
-                                                                    Mulher
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset> -->
-
-
-                                                    <!-- <fieldset>
-                                                        <h4>Agora vou lhe fazer algumas perguntas sobre sua família atual. </4>
-                                                        <div class="form-group">
-                                                            <h5>Qual o endereço atual? (SOLICITE UM COMPROVANTE DE ENDEREÇO)</h5>
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend >16. Nome da rua</legend>
-                                                        <div class="form-group">
-                                                            <input id="937218968" type="text" name="pergunta17" class="form-control" >
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend >17. Número da casa</legend>
-                                                        <div class="form-group">
-                                                            <input id="1744361163" type="text" name="pergunta18" class="form-control" >
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>18. Bairro</legend>
-                                                        <div class="form-group">
-                                                            <input id="1754504620" type="text" name="pergunta19" class="form-control" >
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>19. CEP (INFORME SEM TRAÇO)</legend>
-                                                        <div class="form-group">
-                                                            <input id="1125587065" type="text" name="pergunta20" class="form-control" >
-                                                        </div>
-                                                    </fieldset>
-
-
-                                                    <fieldset>
-                                                        <legend>20. Município</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta21" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
                                                 </form>
                                                 <!-- FIM -->                                            
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -1558,28 +1293,42 @@
 
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
-                                    <div class="row align-items-center justify-content-lg-between ">
-                                        <div class="col-lg-12 col-12 pb-4  text-center">
-                                            <div class="copyright mx-auto text-center text-sm text-muted text-lg-start">
-                                                © <script>
-                                                document.write(new Date().getFullYear())
-                                                </script>, desenvolvido pela equipe <a href="https://www.instagram.com/upceurg.ufpa/"> Upceurg - UFPA</a>
-                                            </div>
-                                        </div>
+                            <div class="row align-items-center justify-content-lg-between ">
+                                <div class="col-lg-12 col-12 pb-4  text-center">
+                                    <div class="copyright mx-auto text-center text-sm text-muted text-lg-start">
+                                        © 
+                                        <script>
+                                            document.write(new Date().getFullYear())
+                                        </script>, desenvolvido pela equipe <a href="https://www.instagram.com/upceurg.ufpa/"> Upceurg - UFPA</a>
                                     </div>
+                                </div>
+                            </div>                           
                         </div>
                     </footer>   
 
-                    <script>
-                        $(document).ready(function($){
-                            $('#data').mask('00/00/0000');
-
-                        });
-                    </script>
-
-
                 </div>
         </div>
-
     </div>
+
+    <script>
+        $(document).ready(function() {
+            // SALTO 1 
+            $('input:radio[name="respostafamiliar8"]').on("change", function() {
+                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
+                    $("#salto1").hide(); // OCULTAR
+                } else {
+                    $("#salto1").show(); // EXIBIR
+                }
+            });   
+            
+            // SALTO 2
+            $('input:radio[name="respostafamiliar3"]').on("change", function() {
+                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
+                    $("#salto2").hide(); // OCULTAR
+                } else {
+                    $("#salto2").show(); // EXIBIR
+                }
+            });  
+        });                     
+    </script>
 @endsection

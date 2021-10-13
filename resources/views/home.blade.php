@@ -2,7 +2,6 @@
 
 @section('content')
 
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- MENU VERSÃO MENOR QUE 767px -->
     <div class="menu-lateral">
@@ -268,67 +267,134 @@
                                 <div class="col-12">
                                 <div class="card mb-4">
                                     <div class="card-header text-center pb-0">
-                                    <h3>Usuários Cadastrados</h3>
+                                        <h3>Usuários Cadastrados</h3>
                                     </div>
                                     <div class="card-body px-0 pt-0 pb-2 ml-2 ">
-                                        <!-- PROCURAR USUARIO
-                                        <div class="col-6 ms-3" >
-                                            <div class="bg-white border-radius-lg d-flex">
-                                                <form action="/" method="GET"></form>
-                                                <input name="buscausuario" id="buscausuario" class="form-control" type="search" placeholder="Nome, CPF, E-mail ou Telefone">
-                                                <button class="btn bg-gradient-primary my-1 me-1">Procurar</button>
-                                            </div>
-                                        </div> -->
                                         <div class="table-responsive p-0">
-                                            <table class="table align-items-center mb-0">
-                                            <thead>
-                                                <tr>
-                                                <th style="text-align: center;" class="text-secondary ">Nome</th>
-                                                <th style="text-align: center;" class="text-secondary ">E-mail</th>
-                                                <th style="text-align: center;" class="text-secondary ">Telefone</th>
-                                                <th style="text-align: center;" class="text-secondary ">CPF</th> 
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach($usuarios as $usuario)
+                                            <table id="tabelausuarios" class="table align-items-center mb-0 table table-striped" class="table table-striped" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="text-align: center; width: 100px;" class="text-secondary">Nome</th>
+                                                        <th style="text-align: center;" class="text-secondary">CPF</th> 
+                                                        <th style="text-align: center;" class="text-secondary">Formulário <br> Laboratório</th> 
+                                                        <th style="text-align: center;" class="text-secondary">Formulário <br> ICIQ-KHQ</th> 
+                                                        <th style="text-align: center;" class="text-secondary">Formulário <br> Individual</th> 
+                                                        <th style="text-align: center;" class="text-secondary">Formulário <br> Familiar</th> 
+                                                        <th style="text-align: center;" class="text-secondary">Formulário <br> Antropometria</th> 
+                                                        <th style="text-align: center;" class="text-secondary">Formulário <br> MSNI</th> 
+                                                        <th style="text-align: center;" class="text-secondary">Formulário <br> Pressão</th> 
+                                                    </tr>
+                                                </thead>
                                                 
+                                                <tbody>
+                                                    @foreach($usuarios as $usuario)
                                                         <tr>
+                                                            <!-- NOME DO USUÁRIO -->
                                                             <td>
                                                                 <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
                                                                     <div class="d-flex px-2 py-1">
                                                                         <div class="d-flex flex-column justify-content-center">
-                                                                            
-                                                                                <h6 class="mb-0 text-sm">{{$usuario->name}}</h6>
-                                                                            
+                                                                            <h6 class="mb-0 text-sm">{{$usuario->name}}</h6>
                                                                         </div>
                                                                     </div>
-                                                                </a>
-                                                            </td>
+                                                                </a>                     
+                                                            </td>       
 
-                                                            <td style="text-align: center;">
-                                                                <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
-                                                                    <p class="text-xs font-weight-bold mb-0">{{$usuario->email}}</p>
-                                                                </a>
-                                                            </td>
-                                                            
+                                                                <!-- CPF -->
+                                                                <td style="text-align: center;" class="align-middle text-center text-sm">
+                                                                    <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
+                                                                        <p class="text-xs font-weight-bold mb-0 cpf">{{$usuario->cpf}}</p>
+                                                                    </a>
+                                                                </td>
 
-                                                            <td style="text-align: center;" >
-                                                                <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
-                                                                    <p class="text-xs font-weight-bold mb-0">{{$usuario->telefone}}</p>
-                                                                </a>
-                                                            </td>
+                                                                <!-- FORM LABORATORIO -->
+                                                                <td class="align-middle text-center text-sm">
+                                                                    <a href="{{route('post.form.laboratorio',['usuario'=>$usuario->id])}}">
+                                                                        <span class="badge badge-pill badge-lg bg-gradient-success">
+                                                                            {{$usuario->formlaboratorio()?'Prenchido':''}}
+                                                                        </span>
+                                                                        <span class="badge bg-gradient-danger">
+                                                                            {{$usuario->formlaboratorio()?'':'Não Prenchido'}}
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
 
-                                                            <td style="text-align: center;" class="align-middle text-center text-sm">
-                                                                <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
-                                                                    <p class="text-xs font-weight-bold mb-0">{{$usuario->cpf}}</p>
-                                                                </a>
-                                                            </td>
+                                                                <!-- FORM ICIQ -->
+                                                                <td class="align-middle text-center text-sm">
+                                                                    <a href="{{route('post.form.iciq',['usuario'=>$usuario->id])}}">
+                                                                        <span class="badge badge-pill badge-lg bg-gradient-success">
+                                                                            {{$usuario->formiciq()?'Prenchido':''}}
+                                                                        </span>
+                                                                        <span class="badge bg-gradient-danger">
+                                                                            {{$usuario->formiciq()?'':'Não Prenchido'}}
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
 
+                                                                <!-- FORM INDIVIDUAL -->
+                                                                <td class="align-middle text-center text-sm">
+                                                                    <a href="{{route('post.form.individual',['usuario'=>$usuario->id])}}">
+                                                                        <span class="badge badge-pill badge-lg bg-gradient-success">
+                                                                            {{$usuario->formindividual()?'Prenchido':''}}
+                                                                        </span>
+                                                                        <span class="badge bg-gradient-danger">
+                                                                            {{$usuario->formindividual()?'':'Não Prenchido'}}
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
 
-                                                        </tr>
-                                                @endforeach
-                                            
-                                            </tbody>
+                                                                <!-- FORM FAMILIAR -->
+                                                                <td class="align-middle text-center text-sm">
+                                                                    <a href="{{route('post.form.familiar',['usuario'=>$usuario->id])}}">
+                                                                        <span class="badge badge-pill badge-lg bg-gradient-success">
+                                                                            {{$usuario->formfamiliar()?'Prenchido':''}}
+                                                                        </span>
+                                                                        <span class="badge bg-gradient-danger">
+                                                                            {{$usuario->formfamiliar()?'':'Não Prenchido'}}
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+
+                                                                <!-- FORM ANTROPOMETRIA -->
+                                                                <td class="align-middle text-center text-sm">
+                                                                    <a href="{{route('post.form.antropometria',['usuario'=>$usuario->id])}}">
+                                                                        <span class="badge badge-pill badge-lg bg-gradient-success">
+                                                                            {{$usuario->formantropometria()?'Prenchido':''}}
+                                                                        </span>
+                                                                        <span class="badge bg-gradient-danger">
+                                                                            {{$usuario->formantropometria()?'':'Não Prenchido'}}
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+    
+                                                                <!-- FORM MSNI -->
+                                                                <td class="align-middle text-center text-sm">
+                                                                    <a href="{{route('post.form.msni',['usuario'=>$usuario->id])}}">
+                                                                        <span class="badge badge-pill badge-lg bg-gradient-success">
+                                                                            {{$usuario->formmsni()?'Prenchido':''}}
+                                                                        </span>
+                                                                        <span class="badge bg-gradient-danger">
+                                                                            {{$usuario->formmsni()?'':'Não Prenchido'}}
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+
+                                                                <!-- FORM PRESSAO -->
+                                                                <td class="align-middle text-center text-sm">
+                                                                    <a href="{{route('post.form.pressao',['usuario'=>$usuario->id])}}">
+                                                                        <span class="badge badge-pill badge-lg bg-gradient-success">
+                                                                            {{$usuario->formpressao()?'Prenchido':''}}
+                                                                        </span>
+                                                                        <span class="badge bg-gradient-danger">
+                                                                            {{$usuario->formpressao()?'':'Não Prenchido'}}
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+        
+                                                        </tr>      
+                                                    @endforeach
+                                                
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -354,8 +420,35 @@
                     </footer>   
 
 
+
+                    <script>
+                        $(document).ready(function() {
+                            // DATA TABLE
+                            $.noConflict();
+                            $('#tabelausuarios').DataTable({
+                                "language": {
+                                    "lengthMenu": "Mostrando _MENU_ registros por página",
+                                    "zeroRecords": "Nenhum resultado encontrado",
+                                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                                    "infoEmpty": "Nenhum registro disponível",
+                                    "infoFiltered": "(filtrado de _MAX_ registros no total)",
+                                    "search": "Procurar: ",
+                                    "Previous": "Anterior",
+                                    "Next": "Proxímo"
+                                }
+                            });
+
+                            // MASKARA
+                            $('.cpf').mask('000.000.000-00');
+                        } );
+                    </script> 
                 </div>
         </div>
 
     </div>
+
+
+
+
+
 @endsection

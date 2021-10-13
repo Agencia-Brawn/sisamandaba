@@ -30,3 +30,4 @@ class HomeController extends Controller
         return view('home', ['usuarios'=>$usuarios]);
     }
 }
+ 

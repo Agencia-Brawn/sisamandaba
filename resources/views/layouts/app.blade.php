@@ -38,18 +38,25 @@
     <!-- CSS Files -->
     <link  id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" />
 
+    <!-- DATATABLES -->
+    <link  id="pagestyle" href="/css/datatables.min.css" rel="stylesheet" />
+    
+
     <!-- LIB JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-
-
+    <!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet' >
 
     <!-- =============== FIM BOOTSTRAP TEMPLATE  =============== -->
 
 
+
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+
 </head>
+
 <body>
     <div id="app">
         <nav style="z-index: 1000;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -121,7 +128,31 @@
             @yield('content')
         </main>
     </div>
+
+    <script>
+        function limpaCampos() {
+            // LIMPAR CAMPOS
+                var campos = document.getElementsByClassName("form-control");
+            for(var x=0; x<campos.length; x++){
+                                campos[x].value= ' ';
+            }
+            // LIMPAR RADIOS
+            var inputs = document.querySelectorAll('input[type="radio"]');
+            for (var i = 0, l = inputs.length; i < l; i++){
+                inputs[i].checked = false;
+            }
+        }
+
+    </script>
+        
+         <!-- MASK JQUERY -->
+        <script src="/js/jquery.mask.js"></script>
+
+        <!-- DATATABLE -->
+        <script src="/css/datatables.min.js"></script>
+
+        
+
 </body>
-    <!-- MASK JQUERY -->
-    <script src="/js/jquery.mask.js"></script>
+   
 </html>

@@ -299,6 +299,58 @@
                                                                         </div>
                                                                     </form>
 
+
+                                                                <div class="card-header text-center pb-0">
+                                                                    <h3> Reuniões </h3>
+                                                                </div>
+                                                                <div class="card-body px-5 pt-0 pb-2 ml-2 ps-5">
+                                                                    <div class="table-responsive p-0">
+                                                                        <table class="table align-items-center mb-0 table table-striped ps-5" style="width:100%">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th style="text-align: center; width: 100px;" class="text-secondary">Título</th>
+                                                                                    <th style="text-align: center;" class="text-secondary">Data</th> 
+                                                                                    <th style="text-align: center;" class="text-secondary">Hora</th> 
+                                                                                    <th style="text-align: center;" class="text-secondary">Local</th> 
+                                                                                </tr>
+                                                                            </thead>
+                                                                            
+                                                                            <tbody>
+                                                                                @forelse ($unidade->reunioes() as $reuniao)
+                                                                                    <tr>                                                                                            
+                                                                                            <td style="text-align: center;" class="align-middle text-center text-sm">
+                                                                                                <a>
+                                                                                                    {{$reuniao->titulo}}
+                                                                                                </a>
+                                                                                            </td>
+
+                                                                                        
+                                                                                            <td class="align-middle text-center text-sm data">
+                                                                                                <a >
+                                                                                                {{date('d-m-Y', strtotime($reuniao->dia))}}
+                                                                                                </a>
+                                                                                            </td>
+                                                                                            
+                                                                                            <td class="align-middle text-center text-sm">
+                                                                                                <a>
+                                                                                                    {{$reuniao->hora}}
+                                                                                                </a>
+                                                                                            </td>
+
+                                                                                            <td class="align-middle text-center text-sm">
+                                                                                                <a>
+                                                                                                    {{$reuniao->local}}
+                                                                                                </a>
+                                                                                            </td>
+                                                                                    </tr>      
+                                                                                @empty
+                                                                                <h3>Sem registro de reuniões</h3>
+                                                                                @endforelse
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
                                                         </div>
 
@@ -322,38 +374,7 @@
 
                     <!-- FIM FORMULÁRIO -->
 
-                    <h1>Reuniões</h1>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Titulo</th>
-                                <th>Data</th>
-                                <th>Hora</th>
-                                <th>Local</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse ($unidade->reunioes() as $reuniao)
-                                <tr>
-                                    <td>
-                                        {{$reuniao->titulo}}
-                                    </td>
-                                    <td>
-                                        {{$reuniao->dia}}
-                                    </td>
-                                    <td>
-                                        {{$reuniao->hora}}
-                                    </td>
-                                    <td>
-                                        {{$reuniao->local}}
-                                    </td>
-                                </tr>
-                            @empty
-                                <h3>Sem registro de reuniões</h3>
-                            @endforelse
-                        </tbody>
-                    </table>
-
+ 
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
                                     <div class="row align-items-center justify-content-lg-between ">
@@ -367,6 +388,12 @@
                                     </div>
                         </div>
                     </footer>
+
+                    <script>
+                        $(document).ready(function($){
+                            $('.data').mask('00/00/0000');
+                        });
+                    </script>
 
             </div>
         </div>

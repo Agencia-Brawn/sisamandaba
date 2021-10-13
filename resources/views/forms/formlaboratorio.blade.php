@@ -639,70 +639,7 @@
                                                     </fieldset>
 
                                                     <div class="text-center">
-                                                        <button id="formlaboratorio" class="btn btn-primary mt-5" type="submit" > ENVIAR FORMULÁRIO </button>
-                                                    </div>
-                                                    
-                                                    <!-- <fieldset>
-                                                        <legend>Data de Nascimento</legend>
-                                                        <div class="form-group">
-                                                            <input type="date" name="pergunta2" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>Gênero</legend>
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta3" value="FEMININO" >
-                                                                    Feminino
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="pergunta3" value="MASCULINO" >
-                                                                    Masculino
-                                                                </label>
-                                                            </div>
-                            
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>ID Número</legend>
-                                                        <div class="form-group">
-                                                            <input type="number" name="pergunta4" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-  
-                                                    <!-- <fieldset>
-                                                        <legend>Equipe</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta5" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>Microárea</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta6" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>Família</legend>
-                                                        <div class="form-group">
-                                                            <input type="text" name="pergunta7" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
-                                                    <!-- <fieldset>
-                                                        <legend>Individual</legend>
-                                                        <div class="form-group">
-                                                            <input id="" type="text" name="laboratorio2" class="form-control" >
-                                                        </div>
-                                                    </fieldset> -->
-
+                                                        <button id="formlaboratorio" class="btn btn-primary mt-5" type="submit" > ENVIAR FORMULÁRIO </button>                                                    </div>
 
                                             </form>        
                                             <!-- FIM --> 
@@ -725,27 +662,11 @@
                                         </div>
                                     </div>
                         </div>
-                    </footer>   
-
-                    <script>
-                        $(document).ready(function($){
-                            $('#data').mask('00/00/0000');
-                            $('#data2').mask('00/00/0000');
-                            $('#data3').mask('00/00/0000');
-                            $('#data4').mask('00/00/0000');
-                            $('#data5').mask('00/00/0000');
-                            $('#data6').mask('00/00/0000');
-                            $('#data7').mask('00/00/0000');
-
-
-
-                            $('#hora').mask('00:00:00');
-                        });
-                    </script>
-
+                    </footer>           
 
                 </div>
         </div>
 
     </div>
+    
 @endsection

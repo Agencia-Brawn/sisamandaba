@@ -4512,6 +4512,15 @@
                     <script> 
                        $(document).ready(function() {
                             // SALTO 1 
+                            $('input:radio[name="respostaindividual6"]').on("change", function() {
+                                if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
+                                    $("#respostaindividual7").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
+                                } else {
+                                    $("#respostaindividual7").show(); // CASO NEGATIVO EXIBIR ESSAS 
+                                }
+                            });
+
+                            // SALTO 2
                             $('input:radio[id="respostaindividual4"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual5, #respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4520,7 +4529,7 @@
                                 }
                             });
 
-                            // SALTO 2
+                            // SALTO 3
                             $('input:radio[id="respostaindividual5"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4529,7 +4538,7 @@
                                 }
                             });
 
-                            // SALTO 3
+                            // SALTO 4
                             $('input:radio[id="respostaindividual8"]').on("change", function() {
                                 if (this.checked && this.value == '1 grau completo' || this.checked && this.value == '2 grau incompleto') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual9").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4538,7 +4547,7 @@
                                 }
                             });
 
-                            // SALTO 4
+                            // SALTO 5
                             $('input:radio[id="respostaindividual50"]').on("change", function() {
                                 if (this.checked && this.value == 'Não' || this.checked && this.value == 'Sim, só a primeira dose') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual51").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4547,7 +4556,7 @@
                                 }
                             });
 
-                            // SALTO 5
+                            // SALTO 6
                             $('input:radio[id="respostaindividual71"]').on("change", function() {
                                 if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual72, #respostaindividual73").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4556,7 +4565,7 @@
                                 }
                             });
 
-                            // SALTO 6
+                            // SALTO 7
                             $('input:radio[id="respostaindividual72"]').on("change", function() {
                                 if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual73").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4565,7 +4574,7 @@
                                 }
                             });
 
-                            // SALTO 7
+                            // SALTO 8
                             $('input:radio[id="respostaindividual74"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual75, #respostaindividual76").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4574,7 +4583,7 @@
                                 }
                             });
 
-                            // SALTO 8
+                            // SALTO 9
                             $('input:radio[id="respostaindividual84"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual85").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4583,7 +4592,7 @@
                                 }
                             });
 
-                            // SALTO 9
+                            // SALTO 10
                             $('input:radio[id="respostaindividual86"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual87, #respostaindividual88, #respostaindividual89, #respostaindividual90, #respostaindividual91, #respostaindividual92, #respostaindividual93, #respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4592,7 +4601,7 @@
                                 }
                             });
 
-                            // SALTO 10
+                            // SALTO 11
                             $('input:radio[id="respostaindividual88"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual89, #respostaindividual90").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4601,7 +4610,7 @@
                                 }
                             });
 
-                            // SALTO 11
+                            // SALTO 12
                             $('input:radio[id="respostaindividual93"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4610,7 +4619,7 @@
                                 }
                             });
 
-                            // SALTO 12
+                            // SALTO 13
                             $('input:radio[id="respostaindividual101"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual102, #respostaindividualsegundo116").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4619,7 +4628,7 @@
                                 }
                             });
 
-                            // SALTO 13
+                            // SALTO 14
                             $('input:radio[id="respostaindividual103"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual104, #respostaindividual105, #respostaindividual106, #respostaindividual107, #respostaindividual108, #respostaindividual109, #respostaindividual110, #respostaindividual111, #respostaindividual112, #respostaindividual113, #respostaindividual114, #respostaindividual115").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4628,7 +4637,7 @@
                                 }
                             });
 
-                            // SALTO 14 (CONDIÇÃO INVERSA)
+                            // SALTO 15 (CONDIÇÃO INVERSA)
                             $('input:radio[id="respostaindividual104"]').on("change", function() {
                                 if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual105, #respostaindividual106, #respostaindividual107, #respostaindividual108, #respostaindividual109, #respostaindividual110, #respostaindividual111, #respostaindividual112, #respostaindividual113, #respostaindividual114, #respostaindividual115").show(); // CASO NEGATIVO EXIBIR ESSAS 
@@ -4637,7 +4646,7 @@
                                 }
                             });
 
-                            // SALTO 15
+                            // SALTO 16
                             $('input:radio[id="respostaindividual105"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual106").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4646,7 +4655,7 @@
                                 }
                             });
 
-                            // SALTO 16
+                            // SALTO 17
                             $('input:radio[id="respostaindividual107"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual108").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4655,7 +4664,7 @@
                                 }
                             });
 
-                            // SALTO 17
+                            // SALTO 18
                             $('input:radio[id="respostaindividual109"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual110, #respostaindividual111").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4664,7 +4673,7 @@
                                 }
                             });
 
-                            // SALTO 18
+                            // SALTO 19
                             $('input:radio[id="respostaindividual112"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual113").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4673,7 +4682,7 @@
                                 }
                             });
 
-                            // SALTO 19
+                            // SALTO 20
                             $('input:radio[id="respostaindividual122"]').on("change", function() {
                                 if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual123, #respostaindividual124, #respostaindividual139").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
@@ -4682,7 +4691,7 @@
                                 }
                             });
 
-                            // SALTO 20
+                            // SALTO 21
                             $('input:radio[id="respostaindividual125"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual126, #respostaindividual127, #respostaindividual128, #respostaindividual129, #respostaindividual130, #respostaindividual131").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
