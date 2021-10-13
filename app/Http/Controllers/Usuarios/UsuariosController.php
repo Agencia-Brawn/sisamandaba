@@ -2227,6 +2227,8 @@ class UsuariosController extends Controller
         $usuario->telfamiliar=preg_replace('/[^0-9]/', '', $request->perfiltelefonefamiliar);
         // $usuario->altura=preg_replace('/[^0-9]/', '', $request->perfilaltura);
         $usuario->perfilnomefamiliar=$request->perfilnomefamiliar;
+        $usuario->perfilparentescofamiliar=$request->perfilparentescofamiliar;
+
        
 
 

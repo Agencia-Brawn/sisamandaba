@@ -536,11 +536,14 @@
                                                             <input class="form-control"  maxlength="15"  type="text" name="perfiltelefonefixo" id="telefonefixo" value="{{$usuario->telefonefixo}}" >
                                                         </div>
 
-
-
                                                         <div class="form-group">
                                                             <legend>Nome Familiar</legend>
                                                             <input class="form-control" value="{{$usuario->perfilnomefamiliar}}"  type="text" name="perfilnomefamiliar">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Grau de Parentesco</legend>
+                                                            <input class="form-control" value="{{$usuario->perfilparentescofamiliar}}"  type="text" name="perfilparentescofamiliar">
                                                         </div>
 
                                                         <div class="form-group">

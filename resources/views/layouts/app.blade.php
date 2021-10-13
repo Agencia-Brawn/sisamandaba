@@ -32,15 +32,14 @@
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <script async src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
 
     <!-- CSS Files -->
     <link  id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" />
 
     <!-- DATATABLES -->
-    <link  id="pagestyle" href="/css/datatables.min.css" rel="stylesheet" />
-    
+    <link id="pagestyle" href="/css/datatables.min.css" rel="stylesheet" />
 
     <!-- LIB JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -49,8 +48,6 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet' >
 
     <!-- =============== FIM BOOTSTRAP TEMPLATE  =============== -->
-
-
 
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
@@ -129,7 +126,8 @@
         </main>
     </div>
 
-    <script>
+    <!-- SCRIPT PARA LIMPAR CAMPOS -->
+    <!-- <script>
         function limpaCampos() {
             // LIMPAR CAMPOS
                 var campos = document.getElementsByClassName("form-control");
@@ -142,8 +140,7 @@
                 inputs[i].checked = false;
             }
         }
-
-    </script>
+    </script> -->
         
          <!-- MASK JQUERY -->
         <script src="/js/jquery.mask.js"></script>

@@ -25231,3 +25231,15 @@ pre[class*="language-"] {
 #tabelausuarios_length{
   font-size: 30px;
 }
+
+.apoio-login{
+  min-width: 650px;
+  min-height: 214px;
+}
+
+@media(max-width:500){
+  .apoio-login{
+    width: 400px;
+    height: 200px;
+  }
+}

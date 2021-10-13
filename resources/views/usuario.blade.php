@@ -518,6 +518,11 @@
                                         </li>  
 
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Grau de Parentesco do Familiar:</strong> 
+                                            <input type="text" value="{{$usuario->perfilparentescofamiliar?$usuario->perfilparentescofamiliar:''}}" class="form-control" disabled />
+                                        </li>  
+
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
                                             <strong class="text-dark">Telefone de Familiar:</strong> 
                                             <input type="text" id="telefone2" value="{{$usuario->telfamiliar}}" class="form-control" disabled />
                                         </li>  
