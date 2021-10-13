@@ -481,8 +481,7 @@
                                        
                                         <li class="list-group-item border-0 ps-0 text-md">
                                             <strong class="text-dark">Data de Nascimento:</strong> 
-                                               <input type="text" id="data" value="{{$usuario->datanasc?$usuario->datanasc:''}}" class="form-control" disabled />
-
+                                               <input type="text" value="{{date('d/m/Y', strtotime($usuario->datanasc?$usuario->datanasc:''))}}" class="form-control" disabled />
                                         </li>
                                         
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">

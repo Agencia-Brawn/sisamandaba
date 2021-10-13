@@ -1554,7 +1554,7 @@
                                                                                     </fieldset>
 
                                                                                     <div class="text-center">
-                                                                                        <button class="btn btn-primary mt-5" type="submit" id="nav-profile-tab" >ENVIAR FORMULÁRIO </button>
+                                                                                        <button class="btn btn-primary mt-5" type="submit" id="nav-profile-tab" >SALVAR E CONTINUAR </button>
                                                                                     </div>
                                                                     </form>
                                                                     <!-- FIM -->    
@@ -2784,7 +2784,7 @@
                                                                                 <!-- FIM 2 - FORMULÁRIO INDIVIDUAL  -->
 
                                                                                 <div class="text-center">
-                                                                                    <button class="btn btn-primary mt-5" type="submit" >ENVIAR FORMULÁRIO </button>
+                                                                                    <button class="btn btn-primary mt-5" type="submit" >SALVAR E CONTINUAR </button>
                                                                                 </div>
                                                                 </form>
                                                                 <!-- FIM FORMULÁRIO 2 -->
@@ -3957,7 +3957,7 @@
                                                                                 </fieldset>
 
                                                                                 <div class="text-center">
-                                                                                        <button class="btn btn-primary mt-5" type="submit" id="nav-profile-tab" >ENVIAR FORMULÁRIO </button>
+                                                                                        <button class="btn btn-primary mt-5" type="submit" id="nav-profile-tab" >SALVAR E CONTINUAR </button>
                                                                                 </div>
                                                                 </form>
                                                                 <!-- FIM 3 - FORMULARIO INDIVIDUAL -->                                                                    

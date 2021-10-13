@@ -303,7 +303,7 @@
                                                                 <!-- CPF -->
                                                                 <td style="text-align: center;" class="align-middle text-center text-sm">
                                                                     <a href="{{route('usuario',['usuario'=>$usuario->id])}}">
-                                                                        <p class="text-xs font-weight-bold mb-0 cpf">{{$usuario->cpf}}</p>
+                                                                        <p class="text-xs font-weight-bold mb-0 cpf" id="cpf">{{$usuario->cpf}}</p>
                                                                     </a>
                                                                 </td>
 
@@ -439,9 +439,16 @@
                             });
 
                             // MASKARA
-                            $('.cpf').mask('000.000.000-00');
+                           
                         } );
                     </script> 
+                    
+                    <script>
+                        $(document).ready(function($){
+                            $('.cpf').mask('000.000.000-00');
+                            $('#cpf').mask('000.000.000-00');
+                        });
+                    </script>
                 </div>
         </div>
 
