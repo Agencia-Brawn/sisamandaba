@@ -713,7 +713,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset>
+                                                                                    <fieldset id="respostaindividual10">
                                                                                         <br>
                                                                                         <h3>Questionário 14 - ITEMS HEALTH LITERACY SCALE (HLS-14)</h3>
                                                                                         <div class="form-group">
@@ -725,7 +725,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset>
+                                                                                    <fieldset id="respostaindividual10">
                                                                                         <br><br>
                                                                                         <div class="form-group">
                                                                                             <h4>
@@ -926,7 +926,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset>
+                                                                                    <fieldset id="respostaindividual15">
                                                                                         <br>
                                                                                         <div class="form-group">
                                                                                         <h4>
@@ -1132,7 +1132,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset>
+                                                                                    <fieldset id="respostaindividual20">
                                                                                         <br>
                                                                                         <h4>
                                                                                             Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com relação as seguintes perguntas:
@@ -1140,7 +1140,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset id="individual20">
+                                                                                    <fieldset id="respostaindividual20">
                                                                                         <legend class="mt-0">32. Se você for diagnosticado com uma doença e você pode conseguir mais informações 
                                                                                             sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação &quot;EU SEI QUANDO 
                                                                                             AS INFORMAÇÕES SÃO BOAS PARA O MEU CASO&quot;</legend>
@@ -1180,7 +1180,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset id="individual21">
+                                                                                    <fieldset id="respostaindividual21">
                                                                                         <legend>33. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU LEVO EM CONTA SE AS INFORMAÇÕES SÃO VERDADEIRAS&quot;</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
@@ -1218,7 +1218,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset id="individual22">
+                                                                                    <fieldset id="respostaindividual22">
                                                                                         <legend>34. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU TENHO CONHECIMENTO PARA JULGAR SE AS INFORMAÇÕES SÃO CONFIÁVEIS&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
@@ -1256,7 +1256,7 @@
                                                                                     </fieldset>
 
 
-                                                                                    <fieldset id="individual23">
+                                                                                    <fieldset id="respostaindividual23">
                                                                                         <legend>35. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU PEGO INFORMAÇÕES QUE ME AJUDAM A TOMAR DECISÕES DE COMO MELHORAR MINHA SAÚDE&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
@@ -4359,68 +4359,76 @@
                                                                                 </fieldset>
 
 
-                                                                                <fieldset id="individual134">
+                                                                                <fieldset>
                                                                                     <legend>127 Qual método anticoncepcional que a Sra. (ou seu marido/parceiro) usa ou usou? Se for o caso, escolha mais de uma opção de resposta. (MOSTRE A LISTA NO CELULAR)</legend>
                                                                                     <div class="form-group">
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                            <input hidden name="perguntaindividual137" type="text" value="127 Qual método anticoncepcional que a Sra. (ou seu marido/parceiro) usa ou usou? Se for o caso, escolha mais de uma opção de resposta. (MOSTRE A LISTA NO CELULAR):">
-
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="1. Pílula (comprimido oral)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='1. Pílula (comprimido oral)'?'checked':'':''}}>
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input hidden name="perguntaindividual137" type="text" value="Qual método anticoncepcional que a Sra. (ou seu marido/parceiro) usa ou usou? Se for o caso, escolha mais de uma opção de resposta. (MOSTRE A LISTA NO CELULAR):">
+                                                                                                <input type="checkbox" name="respostaindividual137" value="1. Pílula (comprimido oral)"  {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='1. Pílula (comprimido oral)'?'checked':'':''}}>
                                                                                                 1. Pílula (comprimido oral)
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="2. Injeções contraceptivas" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='2. Injeções contraceptivas'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137a" value="2. Injeções contraceptivas"   {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137a=='2. Injeções contraceptivas'?'checked':'':''}}>
                                                                                                 2. Injeções contraceptivas
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="3. Implante hormonal" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='3. Implante hormonal'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137b" value="3. Implante hormonal" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137b=='3. Implante hormonal'?'checked':'':''}}>
                                                                                                 3. Implante hormonal
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="4. Anel (contraceptivo hormonal intravaginal)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='4. Anel (contraceptivo hormonal intravaginal)'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137c" value="4. Anel (contraceptivo hormonal intravaginal)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137c=='4. Anel (contraceptivo hormonal intravaginal)'?'checked':'':''}}>
                                                                                                 4. Anel (contraceptivo hormonal intravaginal)
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="5. DIU com hormônio (Mirena)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='5. DIU com hormônio (Mirena)'?'checked':'':''}}>
+                                                                                        
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137d" value="5. DIU com hormônio (Mirena)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137d=='5. DIU com hormônio (Mirena)'?'checked':'':''}}>
                                                                                                 5. DIU com hormônio (Mirena)
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="6. DIU sem hormônio" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='6. DIU sem hormônio'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137e" value="6. DIU sem hormônio" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137e=='6. DIU sem hormônio'?'checked':'':''}}>
                                                                                                 6. DIU sem hormônio
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="7. DIU não especificado" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='7. DIU não especificado'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137f" value="7. DIU não especificado" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137f=='7. DIU não especificado'?'checked':'':''}}>
                                                                                                 7. DIU não especificado
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="8. Camisinha masculina (condom)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='8. Camisinha masculina (condom)'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137g" value="8. Camisinha masculina (condom)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137g=='8. Camisinha masculina (condom)'?'checked':'':''}}>
                                                                                                 8. Camisinha masculina (condom)
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="9. Camisinha feminina" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='9. Camisinha feminina'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137h" value="9. Camisinha feminina" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137h=='9. Camisinha feminina'?'checked':'':''}}>
                                                                                                 9. Camisinha feminina
                                                                                             </label>
                                                                                         </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
-                                                                                                <input type="radio" id="respostaindividual137" name="respostaindividual137" value="Outras (Especifique na proxíma pergunta)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137=='Outras (Especifique na proxíma pergunta)'?'checked':'':''}}>
+
+                                                                                        <div>
+                                                                                            <label class="radio-inline">
+                                                                                                <input type="checkbox" name="respostaindividual137i" value="Outras (Especifique na proxíma pergunta)" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual137i=='Outras (Especifique na proxíma pergunta)'?'checked':'':''}}>
                                                                                                 Outras (Especifique na proxíma pergunta)
                                                                                             </label>
                                                                                         </div>
@@ -4513,10 +4521,10 @@
                        $(document).ready(function() {
                             // SALTO 1 
                             $('input:radio[name="respostaindividual6"]').on("change", function() {
-                                if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
-                                    $("#respostaindividual7").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
+                                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
+                                    $("#respostaindividual10, #respostaindividual11, #respostaindividual12, #respostaindividual13, #respostaindividual14, #respostaindividual15, #respostaindividual16, #respostaindividual17, #respostaindividual18, #respostaindividual19, #respostaindividual20, #respostaindividual21, #respostaindividual22, #respostaindividual23").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
                                 } else {
-                                    $("#respostaindividual7").show(); // CASO NEGATIVO EXIBIR ESSAS 
+                                    $("#respostaindividual10, #respostaindividual11, #respostaindividual12, #respostaindividual13, #respostaindividual14, #respostaindividual15, #respostaindividual16, #respostaindividual17, #respostaindividual18, #respostaindividual19, #respostaindividual20, #respostaindividual21, #respostaindividual22, #respostaindividual23").show(); // CASO NEGATIVO EXIBIR ESSAS 
                                 }
                             });
 

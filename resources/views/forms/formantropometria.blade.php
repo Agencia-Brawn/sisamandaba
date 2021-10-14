@@ -483,13 +483,13 @@
                                                         </div>
                                                     </fieldset>
 
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Participante</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria3" type="text" value="Participante:">
                                                             <input  type="text" name="respostaantropometria3" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria3:''}}" class="form-control" >
                                                         </div>
-                                                    </fieldset>
+                                                    </fieldset> -->
 
                                                     <fieldset>
                                                         <legend>Data do Exame</legend>

@@ -1373,7 +1373,26 @@ class UsuariosController extends Controller
             $userform->respostaindividual136 = $request->respostaindividual136; 
 
             $userform->perguntaindividual137 = $request->perguntaindividual137;
-            $userform->respostaindividual137 = $request->respostaindividual137; 
+            $userform->respostaindividual137 = $request->respostaindividual137;
+
+            $userform->respostaindividual137a = $request->respostaindividual137a; 
+
+            $userform->respostaindividual137b = $request->respostaindividual137b; 
+
+            $userform->respostaindividual137c = $request->respostaindividual137c; 
+
+            $userform->respostaindividual137d = $request->respostaindividual137d; 
+
+            $userform->respostaindividual137e = $request->respostaindividual137e; 
+
+            $userform->respostaindividual137f = $request->respostaindividual137f; 
+
+            $userform->respostaindividual137g = $request->respostaindividual137g;
+
+            $userform->respostaindividual137h = $request->respostaindividual137h;
+
+            $userform->respostaindividual137i = $request->respostaindividual137i; 
+
 
             $userform->perguntaindividual138 = $request->perguntaindividual138;
             $userform->respostaindividual138 = $request->respostaindividual138;
@@ -1456,7 +1475,25 @@ class UsuariosController extends Controller
             $userform->respostaindividual136 = $request->respostaindividual136; 
 
             $userform->perguntaindividual137 = $request->perguntaindividual137;
-            $userform->respostaindividual137 = $request->respostaindividual137; 
+            $userform->respostaindividual137 = $request->respostaindividual137;
+
+            $userform->respostaindividual137a = $request->respostaindividual137a; 
+
+            $userform->respostaindividual137b = $request->respostaindividual137b; 
+
+            $userform->respostaindividual137c = $request->respostaindividual137c; 
+
+            $userform->respostaindividual137d = $request->respostaindividual137d; 
+
+            $userform->respostaindividual137e = $request->respostaindividual137e; 
+
+            $userform->respostaindividual137f = $request->respostaindividual137f; 
+
+            $userform->respostaindividual137g = $request->respostaindividual137g;
+
+            $userform->respostaindividual137h = $request->respostaindividual137h;
+
+            $userform->respostaindividual137i = $request->respostaindividual137i; 
 
             $userform->perguntaindividual138 = $request->perguntaindividual138;
             $userform->respostaindividual138 = $request->respostaindividual138;
