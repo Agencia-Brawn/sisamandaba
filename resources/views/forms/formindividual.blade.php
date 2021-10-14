@@ -3193,13 +3193,13 @@
                                                                                             <label>
                                                                                                 <input hidden name="perguntaindividual88" type="text" value="80. Você fuma cigarros atualmente:">
                                                                                                 <input type="radio" id="respostaindividual88" name="respostaindividual88" value="Não" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual88=='Não'?'checked':'':''}}>
-                                                                                                Não  (PULAR PARA QUESTÃO 83)
+                                                                                                Não  
                                                                                             </label>
                                                                                         </div>
                                                                                         <div class="radio">
                                                                                             <label>
                                                                                                 <input type="radio" id="respostaindividual88" name="respostaindividual88" value="Sim" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual88=='Sim'?'checked':'':''}}>
-                                                                                                Sim
+                                                                                                Sim (PULAR PARA QUESTÃO 83)
                                                                                             </label>
                                                                                         </div>
                                                                                     </div>
@@ -4609,9 +4609,18 @@
                                 }
                             });
 
+                            // SALTO EXTRA
+                            $('input:radio[id="respostaindividual88"]').on("change", function()  {
+                                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
+                                    $("#respostaindividual93, #respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
+                                } else {
+                                    $("#respostaindividual93, #respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").show(); // CASO NEGATIVO EXIBIR ESSAS 
+                                }
+                            });
+
                             // SALTO 11
                             $('input:radio[id="respostaindividual88"]').on("change", function() {
-                                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
+                                if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual89, #respostaindividual90").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
                                 } else {
                                     $("#respostaindividual89, #respostaindividual90").show(); // CASO NEGATIVO EXIBIR ESSAS 

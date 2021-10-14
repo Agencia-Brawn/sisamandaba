@@ -145,7 +145,6 @@
             
             
             <div class="col-md-9 col-lg-10 col-xl-10 col-12">
-
                     <!-- MODELO DE FORMULÁRIO -->
                     <div class="row justify-content-center row-painel-controle">
                         <div class="col-md-12 pt-5" >
