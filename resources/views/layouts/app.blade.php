@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,21 +25,21 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
 
     <!-- Nucleo Icons -->
-    <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link  href="/assets/css/nucleo-icons.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
+    <link href="/assets/css/nucleo-svg.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
 
     <!-- Font Awesome Icons -->
     <script async src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="/assets/css/nucleo-svg.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
 
     <!-- CSS Files -->
-    <link  id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" />
+    <link  id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
 
     <!-- DATATABLES -->
-    <link id="pagestyle" href="/css/datatables.min.css" rel="stylesheet" />
+    <link id="pagestyle" href="/css/datatables.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
 
     <!-- LIB JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -122,6 +122,20 @@
         </nav>
 
         <main>
+            <!-- Modal Em Breve -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title mx-auto" id="exampleModalLabel">Em Breve</h2>
+                            </button>
+                        </div>
+                        <div class="modal-footer mx-auto">
+                            <button type="button" class="btn bg-gradient-secondary " data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @yield('content')
         </main>
     </div>
@@ -148,7 +162,8 @@
         <!-- DATATABLE -->
         <script src="/css/datatables.min.js"></script>
 
-        
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>      
 
 </body>
    
