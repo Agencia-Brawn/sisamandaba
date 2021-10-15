@@ -36,7 +36,7 @@
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
 
     <!-- CSS Files -->
-    <link  id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
+    <link  id="pagestyle" href="/assets/css/soft-ui-dashboard.css" rel="stylesheet"/>
 
     <!-- DATATABLES -->
     <link id="pagestyle" href="/css/datatables.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
