@@ -115,7 +115,6 @@
                         <!-- <hr class="horizontal dark mt-0"> -->
                         <div class="collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
                             <ul class="navbar-nav navbar-menu-web" >
-
                                 <li class="nav-item">
 
                                     <a class="nav-link  active" href="{{route('home')}}">
@@ -140,7 +139,6 @@
                                     </a>
                                 </li>
 
-                                
                                 <li class="nav-item">
 
                                     <a class="nav-link" href="{{route('unidades')}}">
@@ -188,9 +186,6 @@
                                         <span class="nav-link-text ms-1">Novo Usuário</span>
                                     </a>
                                 </li>
-
-
-
                             </ul>
                         </div>
 
@@ -419,7 +414,102 @@
                         </div>
                     </footer>   
 
+                    <!-- VIEW DE CARDS DO PÉS -->
+                    <div hidden id="accordion">
+                        <div class="card">
+                            <div class="card-header-pes">
+                                <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                Semana 1
+                                </a>
+                            </div>
 
+                            <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    <h1 class="text-center">Semana 1</h1>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 card card-pes">
+                                            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                                                <a class="d-block">
+                                                    <img style="width: 150px;" src="img/ufpa.png" class="img-fluid border-radius-lg">
+                                                </a>
+                                            </div>
+                                            <div class="card-body pt-2">
+                                                <a class="card-title h5 d-block text-darker text-center">
+                                                Pé Direito de Cima
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 card card-pes">
+                                            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                                                <a class="d-block">
+                                                    <img style="width: 150px;" src="img/ufpa.png" class="img-fluid border-radius-lg">
+                                                </a>
+                                            </div>
+                                            <div class="card-body pt-2">
+                                                <a class="card-title h5 d-block text-darker text-center">
+                                                    Pé Esquerdo de Cima
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 card card-pes">
+                                            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                                                <a class="d-block">
+                                                    <img style="width: 150px;" src="img/ufpa.png" class="img-fluid border-radius-lg">
+                                                </a>
+                                            </div>
+                                            <div class="card-body pt-2">
+                                                <a class="card-title h5 d-block text-darker text-center">
+                                                    Pé Direito de baixo
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 card card-pes">
+                                            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                                                <a class="d-block">
+                                                    <img style="width: 150px;" src="img/ufpa.png" class="img-fluid border-radius-lg">
+                                                </a>
+                                            </div>
+                                            <div class="card-body pt-2">
+                                                <a class="card-title h5 d-block text-darker text-center">
+                                                    Pé Esquerdo de Baixo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header-pes">
+                                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                Semana 2
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                Lorem ipsum..
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header-pes">
+                                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                                Semana 3
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                Lorem ipsum..
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> 
 
                     <script>
                         $(document).ready(function() {

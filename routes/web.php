@@ -89,6 +89,5 @@ Route::group(['prefix' => 'unidades','namespace'=>'Unidades'], function () {
     // RECEBER UNIDADE
     Route::post('/{unidade}/reuniao', 'UnidadesController@postreuniao')->name('post.reuniao');
 
-
 });
 
