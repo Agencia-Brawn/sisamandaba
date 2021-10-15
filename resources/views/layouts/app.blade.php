@@ -22,7 +22,7 @@
     <!-- <link rel="icon" type="image/png" href="/assets/img/favicon.png"> -->
 
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"  media="print" onload="this.media='all'; this.onload=null;"/>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
@@ -45,7 +45,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <!-- ICONS -->
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet' >
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'  media="print" onload="this.media='all'; this.onload=null;">
 
     <!-- =============== FIM BOOTSTRAP TEMPLATE  =============== -->
 
@@ -157,7 +157,7 @@
     </script> -->
         
          <!-- MASK JQUERY -->
-        <script src="/js/jquery.mask.js"></script>
+        <script src="/js/jquery.mask.js"  media="print" onload="this.media='all'; this.onload=null;"></script>
 
         <!-- DATATABLE -->
         <script src="/css/datatables.min.js"></script>
