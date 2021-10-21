@@ -131,8 +131,6 @@
 
         <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
                 <div class="container painel-controle" >
-
-
                     <div class="row justify-content-center row-painel-controle">
                         <div class="col-md-12">
                             <div class="card">
@@ -145,16 +143,12 @@
                                         <div class="alert alert-success" role="alert">
                                             {{ session('status') }}
                                         </div>
-                                    @endif
-
-                                              
+                                    @endif         
 
                                     <fieldset>
                                        <h2>Questionário Individual<br><small></small></h2>
                                     </fieldset>                          
 
-
-                                    <!-- PARTES DOS FOMRMULÁRIIOS INDIVIDUAL -->
                                     <div class="accordion-1">
                                         <div class="container">
                                             <div class="row">
@@ -1253,6 +1247,7 @@
                                                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                                                 </button>
                                                             </h5>
+                                                            
                                                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
                                                             <div class="accordion-body text-sm opacity-8">
                                                                 <!-- 2 - FORMULARIO -->
@@ -4209,14 +4204,14 @@
                                 } else {
                                     $("#respostaindividual10, #respostaindividual11, #respostaindividual12, #respostaindividual13, #respostaindividual14, #respostaindividual15, #respostaindividual16, #respostaindividual17, #respostaindividual18, #respostaindividual19, #respostaindividual20, #respostaindividual21, #respostaindividual22, #respostaindividual23").show(); // CASO NEGATIVO EXIBIR ESSAS 
                                 }
-                            });
+                            });                           
 
                             // SALTO 2
                             $('input:radio[id="respostaindividual4"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
-                                    $("#respostaindividual5, #respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
+                                    $("#respostaindividual5, #respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9, #respostaindividual10, #respostaindividual11, #respostaindividual12, #respostaindividual13, #respostaindividual14, #respostaindividual15, #respostaindividual16, #respostaindividual17, #respostaindividual18, #respostaindividual19, #respostaindividual20, #respostaindividual21, #respostaindividual22, #respostaindividual23").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
                                 } else {
-                                    $("#respostaindividual5, #respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9").show(); // CASO NEGATIVO EXIBIR ESSAS 
+                                    $("#respostaindividual5, #respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9, #respostaindividual10, #respostaindividual11, #respostaindividual12, #respostaindividual13, #respostaindividual14, #respostaindividual15, #respostaindividual16, #respostaindividual17, #respostaindividual18, #respostaindividual19, #respostaindividual20, #respostaindividual21, #respostaindividual22, #respostaindividual23").show(); // CASO NEGATIVO EXIBIR ESSAS 
                                 }
                             });
 
@@ -4226,6 +4221,15 @@
                                     $("#respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
                                 } else {
                                     $("#respostaindividual6, #respostaindividual7, #respostaindividual8, #respostaindividual9").show(); // CASO NEGATIVO EXIBIR ESSAS 
+                                }
+                            });
+
+                            // SALTO
+                            $('input:radio[id="respostaindividual6"]').on("change", function() {
+                                if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
+                                    $("#respostaindividual7").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
+                                } else {
+                                    $("#respostaindividual7").show(); // CASO NEGATIVO EXIBIR ESSAS 
                                 }
                             });
 
@@ -4402,11 +4406,8 @@
 
                         });                                 
                     </script>
-
-
                 </div>
         </div>
-
     </div>
 
 

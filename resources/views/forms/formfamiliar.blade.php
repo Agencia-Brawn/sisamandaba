@@ -1025,7 +1025,7 @@
         $(document).ready(function() {
             // SALTO 1 
             $('input:radio[name="respostafamiliar8"]').on("change", function() {
-                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
+                if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
                     $("#salto1").hide(); // OCULTAR
                 } else {
                     $("#salto1").show(); // EXIBIR

@@ -241,21 +241,21 @@
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Estado </legend>
-                                                                <input class="form-control"  min="0" type="text" name="perfilestado" value="{{$usuario->estado}}">
+                                                                <input class="form-control"  type="text" name="perfilestado" value="{{$usuario->estado}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Cidade </legend>
-                                                                <input class="form-control"  min="t0" type="ext" name="perfilcidade" value="{{$usuario->cidade}}">
+                                                                <input class="form-control"  type="text" name="perfilcidade" value="{{$usuario->cidade}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Bairro </legend>
-                                                                <input class="form-control"  min="0" type="text" name="perfilbairro" value="{{$usuario->bairro}}">
+                                                                <input class="form-control"  type="text" name="perfilbairro" value="{{$usuario->bairro}}">
                                                             </div>
                                                         </fieldset>
 
@@ -269,14 +269,14 @@
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Nome da Rua </legend>
-                                                                <input class="form-control"  min="0" type="text" name="perfilrua" value="{{$usuario->rua}}">
+                                                                <input class="form-control"  type="text" name="perfilrua" value="{{$usuario->rua}}">
                                                             </div>
                                                         </fieldset>
 
                                                         <fieldset>
                                                             <div class="form-group">
                                                                 <legend>Número da Casa </legend>
-                                                                <input class="form-control"  min="0" type="text" name="perfilcasa" value="{{$usuario->numcasa}}">
+                                                                <input class="form-control"  type="text" name="perfilcasa" value="{{$usuario->numcasa}}">
                                                             </div>
                                                         </fieldset>
                                                         
