@@ -289,49 +289,49 @@
                                                                                             <div class="radio">
                                                                                                 <label>
                                                                                                     <input hidden name="perguntaindividual7" type="text" value="18. Qual a última série/ano cursada(o) com aprovação? (A PARTIR DE 2009 SÃO 9 ANOS INICIANDO COM 6 ANOS DE IDADE, ANTES DE 2009 ERAM 8 SERIES INICIANDO COM 7 ANOS - APÓS RESPONDER PULAR PARA O HLS-14):">
-                                                                                                    <input type="radio" name="respostaindividual7" value="1ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='1ª Série/ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="1ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='1ª Série/ano'?'checked':'':''}}>
                                                                                                     1ª Série/ano
                                                                                                 </label>
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" name="respostaindividual7" value="2ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='2ª Série/ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="2ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='2ª Série/ano'?'checked':'':''}}>
                                                                                                     2ª Série/ano
                                                                                                 </label>
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" name="respostaindividual7" value="3ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='3ª Série/ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="3ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='3ª Série/ano'?'checked':'':''}}>
                                                                                                     3ª Série/ano
                                                                                                 </label>
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" name="respostaindividual7" value="4ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='4ª Série/ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="4ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='4ª Série/ano'?'checked':'':''}}>
                                                                                                     4ª Série/ano
                                                                                                 </label>
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" name="respostaindividual7" value="5ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='5ª Série/ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="5ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='5ª Série/ano'?'checked':'':''}}>
                                                                                                     5ª Série/ano
                                                                                                 </label>
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" name="respostaindividual7" value="6ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='6ª Série/ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="6ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='6ª Série/ano'?'checked':'':''}}>
                                                                                                     6ª Série/ano
                                                                                                 </label>
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" name="respostaindividual7" value="7ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='7ª Série/ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="7ª Série/ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='7ª Série/ano'?'checked':'':''}}>
                                                                                                     7ª Série/ano
                                                                                                 </label>
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" name="respostaindividual7" value="8º ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='8ª ano'?'checked':'':''}}>
+                                                                                                    <input type="radio"  name="respostaindividual7" value="8º ano" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual7=='8ª ano'?'checked':'':''}}>
                                                                                                     8º ano
                                                                                                 </label>
                                                                                             </div>
@@ -4037,7 +4037,7 @@
                                                                                 </fieldset>
 
 
-                                                                                <fieldset>
+                                                                                <fieldset id="respostaindividual137">
                                                                                     <legend>127 Qual método anticoncepcional que a Sra. (ou seu marido/parceiro) usa ou usou? Se for o caso, escolha mais de uma opção de resposta. (MOSTRE A LISTA NO CELULAR)</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
@@ -4113,7 +4113,7 @@
                                                                                     </div>
                                                                                 </fieldset>
 
-                                                                                <fieldset>
+                                                                                <fieldset id="respostaindividual140">
                                                                                     <legend class="mt-0">Outras</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual140" type="text" value="Outras:">
@@ -4224,12 +4224,21 @@
                                 }
                             });
 
-                            // SALTO
+                            // SALTO 3.1
                             $('input:radio[id="respostaindividual6"]').on("change", function() {
                                 if (this.checked && this.value == 'Sim') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual7").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
                                 } else {
                                     $("#respostaindividual7").show(); // CASO NEGATIVO EXIBIR ESSAS 
+                                }
+                            });
+
+                            // SALTO 3.2
+                            $('input:radio[name="respostaindividual7"]').on("change", function() {
+                                if (this.checked && this.value == '') { 
+                                    $("#respostaindividual8, #respostaindividual9").show(); 
+                                } else {
+                                    $("#respostaindividual8, #respostaindividual9").hide(); 
                                 }
                             });
 
@@ -4403,6 +4412,17 @@
                                     $("#respostaindividual123, #respostaindividual127, #respostaindividual128, #respostaindividual129, #respostaindividual130, #respostaindividual131").show(); // CASO NEGATIVO EXIBIR ESSAS 
                                 }
                             });
+
+                            // SALTO 22
+                            
+                            $('input:radio[id="respostaindividual136"]').on("change", function() {
+                                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
+                                    $("#respostaindividual137, #respostaindividual140").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
+                                } else {
+                                    $("#respostaindividual137, #respostaindividual140").show(); // CASO NEGATIVO EXIBIR ESSAS 
+                                }
+                            });
+
 
                         });                                 
                     </script>
