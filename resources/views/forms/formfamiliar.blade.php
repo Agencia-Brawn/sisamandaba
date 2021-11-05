@@ -2,9 +2,7 @@
 
 @section('content')
 
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- MENU MOBILE (767PX) -->
+    <!-- MENU MOBILE -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -70,7 +68,7 @@
 
     <div class="row">
 
-        <!-- MENU MAIOR QUE 767PX -->
+        <!-- MENU WEB -->
         <div  class=" col-md-3 col-lg-3 col-xl-2 menu-web" >
             <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  ps--active-y" id="sidenav-main">
                 <div  class=" mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
@@ -123,14 +121,13 @@
                 </div>
             </aside>         
         </div>  
-        <!-- FIM MENU MAIOR QUE 767PX --> 
+        <!-- FIM MENU WEB --> 
             
 
-        <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+        <div class="col-md-9 col-lg-10 col-xl-10 col-12 col-painel-header">
                 <div class="container painel-controle" >
-
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-painel">
                             <div class="card">
                                 <div class="card-header"> 
                                     <h2>{{$usuario->name}}</h2>
@@ -151,7 +148,7 @@
                                                     </fieldset>   
 
                                                     <fieldset>
-                                                        <legend>Nome do entrevistador</legend>
+                                                        <legend>1. Nome do entrevistador</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar1" type="text" value="Nome do entrevistador:">
                                                             <input type="text" name="respostafamiliar1" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar1:''}}">
@@ -159,7 +156,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Data da entrevista</legend>
+                                                        <legend>2. Data da entrevista</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar2" type="text" value="Data da entrevista:">
                                                             <input type="date" name="respostafamiliar2" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar2:''}}">
@@ -178,7 +175,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Além de você, alguém mais mora em sua casa (inclua cônjuge/companheiro(a), filhos(as) e enteados, pais,irmãos (as), cunhado(a), sogro(a), outros parentes, amigos, agregados, pessoas ausentes temporariamente e empregados que durmam na casa)?</legend>
+                                                        <legend>3. Além de você, alguém mais mora em sua casa (inclua cônjuge/companheiro(a), filhos(as) e enteados, pais,irmãos (as), cunhado(a), sogro(a), outros parentes, amigos, agregados, pessoas ausentes temporariamente e empregados que durmam na casa)?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -198,7 +195,7 @@
 
 
                                                     <fieldset id="salto2">
-                                                        <legend>Quantas pessoas ao todo moram em sua casa?</legend>
+                                                        <legend>4. Quantas pessoas ao todo moram em sua casa?</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntafamiliar4" type="text" value="Quantas pessoas ao todo moram em sua casa:">
                                                             <input type="text" name="respostafamiliar4" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar4:''}}">
@@ -207,7 +204,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Alguma pessoa da sua família, que mora com você adoeceu de COVID-19? (SE INFORMAR SIM, PERGUNTE QUANTAS)</legend>
+                                                        <legend>5. Alguma pessoa da sua família, que mora com você adoeceu de COVID-19? (SE INFORMAR SIM, PERGUNTE QUANTAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -239,7 +236,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Alguma pessoa da sua família, que morava com você faleceu de COVID-19? (SE INFORMAR SIM, PERGUNTE QUANTAS)</legend>
+                                                        <legend>6. Alguma pessoa da sua família, que morava com você faleceu de COVID-19? (SE INFORMAR SIM, PERGUNTE QUANTAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -278,7 +275,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Há quantos anos você mora neste endereço? (SE MENOR DO QUE 01 MARQUE 00)</legend>
+                                                        <legend>7. Há quantos anos você mora neste endereço? (SE MENOR DO QUE 01 MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar7" type="text" value="Há quantos anos você mora neste endereço? (SE MENOR DO QUE 01 MARQUE 00):">
                                                             <input type="text" name="respostafamiliar7" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar7:''}}">
@@ -287,7 +284,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Morou sempre no mesmo município? </legend>
+                                                        <legend>8. Morou sempre no mesmo município? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -307,7 +304,7 @@
 
 
                                                     <fieldset id="salto1">
-                                                        <legend>Qual o município onde você morou antes?</legend>
+                                                        <legend>9. Qual o município onde você morou antes?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar9" type="text" value="Qual o município onde você morou antes:">
                                                             <input type="text" name="respostafamiliar9" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar9:''}}">
@@ -326,7 +323,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Em sua casa trabalha alguma empregada doméstica mensalista ou caseiro para o qual vocêpague salário? (SE NÃO TIVER MARQUE 00 SE TIVER INFORME A QUANTIDADE)</legend>
+                                                        <legend>10. Em sua casa trabalha alguma empregada doméstica mensalista ou caseiro para o qual vocêpague salário? (SE NÃO TIVER MARQUE 00 SE TIVER INFORME A QUANTIDADE)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar10" type="text" value="Em sua casa trabalha alguma empregada doméstica mensalista ou caseiro para o qual vocêpague salário? (SE NÃO TIVER MARQUE 00 SE TIVER INFORME A QUANTIDADE):">
                                                             <input type="text" name="respostafamiliar10" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar10:''}}">
@@ -335,7 +332,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Qual a situação do imóvel em que você mora? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>11. Qual a situação do imóvel em que você mora? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="checkbox">
                                                                 <label>
@@ -386,7 +383,7 @@
 
                                                     <!-- EXTRA -->
                                                     <fieldset>
-                                                        <legend>Especifique qual a situação do imóvel em que você mora (caso tenha marcado outros)</legend>
+                                                        <legend>12. Especifique qual a situação do imóvel em que você mora (caso tenha marcado outros)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar39" type="text" value="Quantos cômodos têm a casa:">
                                                             <input type="text" name="respostafamiliar39" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar39:''}}">
@@ -395,7 +392,7 @@
                                                     <!-- FIM EXTRA -->
 
                                                     <fieldset>
-                                                        <legend>Quantos cômodos têm a casa?</legend>
+                                                        <legend>13. Quantos cômodos têm a casa?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar12" type="text" value="Quantos cômodos têm a casa:">
                                                             <input type="text" name="respostafamiliar12" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar12:''}}">
@@ -404,7 +401,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A casa é feita de que material? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>14. A casa é feita de que material? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -448,7 +445,7 @@
                                                     
                                                     <!-- PERGUNTA EXTRA -->
                                                     <fieldset>
-                                                        <legend>Especifique o material utilizado </legend>
+                                                        <legend>14. Especifique o material utilizado </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar40" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
                                                             <input type="text" name="respostafamiliar40" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar40:''}}">
@@ -458,7 +455,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO)</legend>
+                                                        <legend>15. A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar14" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
                                                             <input type="text" name="respostafamiliar14" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar14:''}}">
@@ -467,7 +464,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>O sanitário é de uso apenas da sua família, ou seja, dos moradores da casa?</legend>
+                                                        <legend>16. O sanitário é de uso apenas da sua família, ou seja, dos moradores da casa?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -486,7 +483,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>De onde vem a água utilizada na casa? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>17. De onde vem a água utilizada na casa? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -518,7 +515,7 @@
 
                                                     <!-- PERGUNTA EXTRA -->
                                                     <fieldset>
-                                                        <legend>Especifique de onde vem a água utilizada na casa</legend>
+                                                        <legend>18. Especifique de onde vem a água utilizada na casa</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar41" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
                                                             <input type="text" name="respostafamiliar41" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar41:''}}">
@@ -528,7 +525,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A água de beber recebe algum tratamento? (SE INFORMAR SIM, LER AS ALTERNATIVAS)</legend>
+                                                        <legend>19. A água de beber recebe algum tratamento? (SE INFORMAR SIM, LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -572,7 +569,7 @@
 
                                                     <!-- PERGUNTA EXTRA -->
                                                     <fieldset>
-                                                        <legend>Especifique qual tipo de tratamento é realizado</legend>
+                                                        <legend>20. Especifique qual tipo de tratamento é realizado</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar42" type="text" value="A casa tem sanitário, ou seja, vaso sanitário com fossa ou escoadouro para a rede de esgoto?(SE NÃO TIVER MARQUE 00 E PULE PARA QUESTÃO 30. SE TIVER INFORME A QUANTIDADE, EM CASO DÚVIDA, SOLICITE VER O SANITÁRIO):">
                                                             <input type="text" name="respostafamiliar42" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar42:''}}">
@@ -581,7 +578,7 @@
                                                     <!-- FIM PERGUNTA EXTRA -->
 
                                                     <fieldset>
-                                                        <legend>Qual o destino do esgoto da casa? (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>21. Qual o destino do esgoto da casa? (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -613,7 +610,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>O trecho da rua de sua casa é: (LER AS ALTERNATIVAS)</legend>
+                                                        <legend>22. O trecho da rua de sua casa é: (LER AS ALTERNATIVAS)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -641,7 +638,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Vídeo-cassete/ DVD? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>23. Vídeo-cassete/ DVD? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar20" type="text" value="Vídeo-cassete/ DVD? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
                                                             <input type="text" name="respostafamiliar20" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar20:''}}">
@@ -650,7 +647,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Automóvel? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>24. Automóvel? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar20" type="text" value="Automóvel? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
                                                             <input type="text" name="respostafamiliar20" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar20:''}}">
@@ -659,7 +656,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Máquina de lavar louça? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>25. Máquina de lavar louça? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar21" type="text" value="Máquina de lavar louça? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
                                                             <input type="text" name="respostafamiliar21" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar21:''}}">
@@ -668,7 +665,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Microondas? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>26. Microondas? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar22" type="text" value="Microondas? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
                                                             <input type="text" name="respostafamiliar22" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar22:''}}">
@@ -677,7 +674,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Secadora de roupa? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>27. Secadora de roupa? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar23" type="text" value="Secadora de roupa? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
                                                             <input type="text" name="respostafamiliar23" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar23:''}}">
@@ -686,7 +683,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Moto? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>28. Moto? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar24" type="text" value="Moto? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
                                                             <input type="text" name="respostafamiliar24" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar24:''}}">
@@ -695,7 +692,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Máquina de lavar roupa (exceto tanquinho)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>29. Máquina de lavar roupa (exceto tanquinho)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar25" type="text" value="Máquina de lavar roupa (exceto tanquinho)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):">
                                                             <input type="text" name="respostafamiliar25" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar25:''}}">
@@ -704,7 +701,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Geladeira simples? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>30. Geladeira simples? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar26" type="text" value="Geladeira simples? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
                                                             <input type="text" name="respostafamiliar26" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar26:''}}">
@@ -713,7 +710,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Geladeira duplex (com freezer)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>31. Geladeira duplex (com freezer)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar27" type="text" value="Geladeira duplex (com freezer)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
                                                             <input type="text" name="respostafamiliar27" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar27:''}}">
@@ -722,7 +719,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Freezer?  (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>32. Freezer?  (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntafamiliar28" type="text" value="Freezer?  (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
                                                             <input type="text" name="respostafamiliar28" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar28:''}}">
@@ -731,7 +728,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Computador (incluindo notebook)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
+                                                        <legend>33. Computador (incluindo notebook)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar29" type="text" value="Computador (incluindo notebook)? (INFORME A QUANTIDADE, SE NÃO TIVER MARQUE 00):"> 
                                                             <input type="text" name="respostafamiliar29" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar29:''}}">
@@ -740,7 +737,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A família recebe Bolsa-Família? </legend>
+                                                        <legend>34. A família recebe Bolsa-Família? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -760,7 +757,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A família recebe aposentadoria?</legend>
+                                                        <legend>35. A família recebe aposentadoria?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -780,7 +777,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A família recebe pensão?</legend>
+                                                        <legend>36. A família recebe pensão?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -800,7 +797,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A família recebe auxílio defeso? </legend>
+                                                        <legend>37. A família recebe auxílio defeso? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -820,7 +817,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>A família recebe auxílio-doença?</legend>
+                                                        <legend>38. A família recebe auxílio-doença?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -840,7 +837,7 @@
 
                                                     <!-- EXTRA -->
                                                     <fieldset>
-                                                        <legend>O Morador solicitou auxílio emergencial?</legend>
+                                                        <legend>39. O Morador solicitou auxílio emergencial?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -859,7 +856,7 @@
                                                     </fieldset>
 
                                                     <fieldset >
-                                                        <legend>A família recebeu auxílio emergencial no início da epidemia de COVID-19?</legend>
+                                                        <legend>40. A família recebeu auxílio emergencial no início da epidemia de COVID-19?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -879,7 +876,7 @@
                                                    
                                                     <!-- EXTRA -->
                                                     <fieldset id="salto3">
-                                                        <legend>Se Sim, informar quantas vezes recebeu o auxílio: </legend>
+                                                        <legend>41. Se Sim, informar quantas vezes recebeu o auxílio: </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar44" type="text" value="Quantas vezes recebeu o auxílio:"> 
                                                             <input type="text" name="respostafamiliar44" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar44:''}}">
@@ -888,7 +885,7 @@
 
 
                                                     <fieldset id="salto5">
-                                                        <legend>A família está recebendo auxílio emergencial atualmente devido à COVID-19?</legend>
+                                                        <legend>42. A família está recebendo auxílio emergencial atualmente devido à COVID-19?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -908,7 +905,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>No MÊS PASSADO, qual foi aproximadamente sua renda familiar LÍQUIDA, isto é, a soma de rendimentos, já com descontos(por ex., INSS, Imposto de Renda etc.), de todas as pessoas que contribuem regularmente para as despesas de sua casa?(MOSTRAR A LISTA COM AS CATEGORIAS DE RENDA NO CELULAR)</legend>
+                                                        <legend>43. No MÊS PASSADO, qual foi aproximadamente sua renda familiar LÍQUIDA, isto é, a soma de rendimentos, já com descontos(por ex., INSS, Imposto de Renda etc.), de todas as pessoas que contribuem regularmente para as despesas de sua casa?(MOSTRAR A LISTA COM AS CATEGORIAS DE RENDA NO CELULAR)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -982,7 +979,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Quantas pessoas (adultos e crianças), INCLUINDO O(A) SR.(A), dependem dessa renda para viver?</legend>
+                                                        <legend>44. Quantas pessoas (adultos e crianças), INCLUINDO O(A) SR.(A), dependem dessa renda para viver?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntafamiliar38" type="text" value="Quantas pessoas (adultos e crianças), INCLUINDO O(A) SR.(A), dependem dessa renda para viver:"> 
                                                             <input type="text" name="respostafamiliar38" class="form-control" value="{{$usuario->formfamiliar()?$usuario->formfamiliar()->respostafamiliar38:''}}">
@@ -999,9 +996,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
                             <div class="row align-items-center justify-content-lg-between ">
@@ -1016,7 +1010,6 @@
                             </div>                           
                         </div>
                     </footer>   
-
                 </div>
         </div>
     </div>

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- VERSÃO MENOR QUE 767px -->
     <div class="menu-lateral">
@@ -238,14 +237,11 @@
         <!-- FIM MENU -->
 
 
-            <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+            <div class="col-md-9 col-lg-10 col-xl-10 col-12 ">
 
-                    <div class="row justify-content-center row-painel-controle ps-5">
+                    <div class="row justify-content-center row-painel-controle">
                         <div class="col-md-12 pt-5" >
                             <div class="card">
-                                <!-- <div class="card-header text-center">
-                                    <h2>Unidades </h2>
-                                </div> -->
 
                                 <div class="card-body">
                                     @if (session('status'))
@@ -255,9 +251,7 @@
                                     @endif
 
                                     <div class="container" style="padding: 0px;">
-
                                         <div class="row">
-
                                             <div class="col-xl-12 col-sm-12 mb-xl-0 mb-4">
                                                 @if ($errors->any())
                                                     <div class="alert alert-danger" style="background-image: none;">
@@ -268,7 +262,6 @@
 
                                                     </div>
                                                 @endif
-
 
                                                 <div class="row justify-content-center row-painel-controle">
                                                     <div class="container-fluid py-4">
@@ -356,17 +349,10 @@
 
                                                     </div>
                                                 </div>
-
-
-
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -394,9 +380,7 @@
                             $('.data').mask('00/00/0000');
                         });
                     </script>
-
             </div>
         </div>
-
     </div>
 @endsection

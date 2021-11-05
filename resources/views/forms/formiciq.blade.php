@@ -2,9 +2,7 @@
 
 @section('content')
 
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- MENU MOBILE (767PX) -->
+    <!-- MENU MOBILE -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -70,7 +68,7 @@
 
     <div class="row">
 
-        <!-- MENU MAIOR QUE 767PX -->
+        <!-- MENU WEB -->
         <div  class=" col-md-3 col-lg-3 col-xl-2 menu-web" >
             <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  ps--active-y" id="sidenav-main">
                 <div  class=" mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
@@ -123,14 +121,13 @@
                 </div>
             </aside>         
         </div>  
-        <!-- FIM MENU MAIOR QUE 767PX --> 
+        <!-- FIM MENU WEB --> 
             
 
-        <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+        <div class="col-md-9 col-lg-10 col-xl-10 col-12 col-painel-header">
                 <div class="container painel-controle" >
-
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-painel">
                             <div class="card">
                                 <div class="card-header"> 
                                     <h2>{{$usuario->name}}</h2>
@@ -151,7 +148,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Nome do Entrevistador</legend>
+                                                        <legend>1. Nome do Entrevistador</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaiciq1" type="text" value="Nome do Entrevistador">
                                                             <input type="text" name="respostaiciq1" value="{{$usuario->formiciq()?$usuario->formiciq()->respostaiciq1:''}}" class="form-control" >
@@ -160,7 +157,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Data da Entrevista</legend>
+                                                        <legend>2. Data da Entrevista</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaiciq2" type="text" value="Data da Entrevista">
                                                             <input type="date" name="respostaiciq2" value="{{$usuario->formiciq()?$usuario->formiciq()->respostaiciq2:''}}" class="form-control" >
@@ -182,7 +179,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>1. Com que frequência você perde urina? (assinale uma resposta)</legend>
+                                                        <legend>3. Com que frequência você perde urina? (assinale uma resposta)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -226,7 +223,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>2. Gostaríamos de saber a quantidade de urina que você pensa que perde(assinale uma resposta)</legend>
+                                                        <legend>4. Gostaríamos de saber a quantidade de urina que você pensa que perde(assinale uma resposta)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -258,7 +255,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Em geral, quanto que perder urina interfere em sua vida diária? Por favor, circuleum número entre 0 (não interfere) e 10 (interfere muito)</legend>
+                                                        <legend>5. Em geral, quanto que perder urina interfere em sua vida diária? Por favor, circuleum número entre 0 (não interfere) e 10 (interfere muito)</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntaiciq5" type="text" value="Em geral, quanto que perder urina interfere em sua vida diária? Por favor, circuleum número entre 0 (não interfere) e 10 (interfere muito)">
                                                             <select name="respostaiciq5" class="form-control">
@@ -279,7 +276,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>ICIQ Escore: soma dos resultados 1 + 2 + 3 &#x3D;</legend>
+                                                        <legend>6. ICIQ Escore: soma dos resultados 1 + 2 + 3 &#x3D;</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaiciq6" type="text" value="ICIQ Escore: soma dos resultados 1 + 2 + 3">
                                                             <input  type="text" name="respostaiciq6" value="{{$usuario->formiciq()?$usuario->formiciq()->respostaiciq6:''}}" class="form-control" >
@@ -288,7 +285,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Quando você perde urina? (Por favor assinale todas as alternativas que se aplicam a você)</legend>
+                                                        <legend>7. Quando você perde urina? (Por favor assinale todas as alternativas que se aplicam a você)</legend>
                                                         <div class="form-group">
                                                             <div class="checkbox">
                                                                 <label>
@@ -351,7 +348,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Como você avaliaria sua saúde hoje? </legend>
+                                                        <legend>8. Como você avaliaria sua saúde hoje? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -389,7 +386,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Quanto você acha que seu problema de bexiga atrapalha sua vida?</legend>
+                                                        <legend>9. Quanto você acha que seu problema de bexiga atrapalha sua vida?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -440,7 +437,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Com que intensidade seu problema de bexiga atrapalha suas tarefas de casa (ex., limpar, lavar, cozinhar, etc.)</legend>
+                                                        <legend>10. Com que intensidade seu problema de bexiga atrapalha suas tarefas de casa (ex., limpar, lavar, cozinhar, etc.)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -472,7 +469,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Com que intensidade seu problema de bexiga atrapalha seu trabalho, ou suas atividades diárias normais fora de casa como: fazer compra, levar filho à escola, etc.? </legend>
+                                                        <legend>11. Com que intensidade seu problema de bexiga atrapalha seu trabalho, ou suas atividades diárias normais fora de casa como: fazer compra, levar filho à escola, etc.? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -511,7 +508,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Seu problema de bexiga atrapalha suas atividades físicas como: fazer caminhada, correr, fazer algum esporte, etc.?</legend>
+                                                        <legend>12. Seu problema de bexiga atrapalha suas atividades físicas como: fazer caminhada, correr, fazer algum esporte, etc.?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -543,7 +540,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Seu problema de bexiga atrapalha quando você quer fazer uma viagem?</legend>
+                                                        <legend>13. Seu problema de bexiga atrapalha quando você quer fazer uma viagem?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -575,7 +572,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Seu problema de bexiga atrapalha quando você vai a igreja, reunião, festa?</legend>
+                                                        <legend>14. Seu problema de bexiga atrapalha quando você vai a igreja, reunião, festa?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -607,7 +604,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Você deixa de visitar seus amigos por causa do problema de bexiga?</legend>
+                                                        <legend>15. Você deixa de visitar seus amigos por causa do problema de bexiga?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -648,7 +645,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Seu problema de bexiga atrapalha sua vida sexual?</legend>
+                                                        <legend>16. Seu problema de bexiga atrapalha sua vida sexual?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -686,7 +683,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Seu problema de bexiga atrapalha sua vida com seu companheiro?</legend>
+                                                        <legend>17. Seu problema de bexiga atrapalha sua vida com seu companheiro?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -724,7 +721,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Seu problema de bexiga incomoda seus familiares? </legend>
+                                                        <legend>18. Seu problema de bexiga incomoda seus familiares? </legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -778,7 +775,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Frequência: Você vai muitas vezes ao banheiro?</legend>
+                                                        <legend>19. Frequência: Você vai muitas vezes ao banheiro?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -804,7 +801,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Noctúria: Você levanta a noite para urinar?</legend>
+                                                        <legend>20. Noctúria: Você levanta a noite para urinar?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -830,7 +827,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Urgência: Você tem vontade forte de urinar e muito difícil de controlar?</legend>
+                                                        <legend>21. Urgência: Você tem vontade forte de urinar e muito difícil de controlar?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -856,7 +853,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Bexiga hiperativa: Você perde urina quando você tem muita vontade de urinar?</legend>
+                                                        <legend>22. Bexiga hiperativa: Você perde urina quando você tem muita vontade de urinar?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -882,7 +879,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Incontinência urinária de esforço: Você perde urina com atividades físicas como: tossir, espirrar, correr?</legend>
+                                                        <legend>23. Incontinência urinária de esforço: Você perde urina com atividades físicas como: tossir, espirrar, correr?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -908,7 +905,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Enurese noturna: Você molha a cama à noite?</legend>
+                                                        <legend>24. Enurese noturna: Você molha a cama à noite?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -934,7 +931,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Incontinência no intercurso sexual: Você perde urina durante a relação sexual?</legend>
+                                                        <legend>25. Incontinência no intercurso sexual: Você perde urina durante a relação sexual?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -960,7 +957,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Infecções frequentes: Você tem muitas infecções urinárias?</legend>
+                                                        <legend>26. Infecções frequentes: Você tem muitas infecções urinárias?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -986,7 +983,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Dor na bexiga: Você tem dor na bexiga?</legend>
+                                                        <legend>27. Dor na bexiga: Você tem dor na bexiga?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1012,7 +1009,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Outros: Você tem algum outro problema relacionado a sua bexiga?</legend>
+                                                        <legend>28. Outros: Você tem algum outro problema relacionado a sua bexiga?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1038,7 +1035,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Emoções Você fica deprimida com seu problema de bexiga?</legend>
+                                                        <legend>29. Emoções Você fica deprimida com seu problema de bexiga?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1070,7 +1067,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Você fica ansiosa ou nervosa com seu problema de bexiga?</legend>
+                                                        <legend>30. Você fica ansiosa ou nervosa com seu problema de bexiga?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1102,7 +1099,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Você fica mal com você mesma por causa do seu problema de bexiga?</legend>
+                                                        <legend>31. Você fica mal com você mesma por causa do seu problema de bexiga?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1134,7 +1131,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Sono/Energia Seu problema de bexiga atrapalha seu sono?</legend>
+                                                        <legend>32. Sono/Energia Seu problema de bexiga atrapalha seu sono?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1166,7 +1163,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Você se sente desgastada ou cansada?</legend>
+                                                        <legend>33. Você se sente desgastada ou cansada?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1208,7 +1205,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Você usa algum tipo de protetor higiênico como: fralda, forro, absorvente tipo Modess para manter-se seca?</legend>
+                                                        <legend>34. Você usa algum tipo de protetor higiênico como: fralda, forro, absorvente tipo Modess para manter-se seca?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1240,7 +1237,7 @@
 
 
                                                     <fieldset>
-                                                        <legend >Você controla a quantidade de líquido que bebe?</legend>
+                                                        <legend>35. Você controla a quantidade de líquido que bebe?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1272,7 +1269,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Você precisa trocar sua roupa íntima (calcinha), quando fica molhadas?</legend>
+                                                        <legend>36. Você precisa trocar sua roupa íntima (calcinha), quando fica molhadas?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1304,7 +1301,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Você se preocupa em estar cheirando urina?</legend>
+                                                        <legend>37. Você se preocupa em estar cheirando urina?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -1346,9 +1343,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
                                     <div class="row align-items-center justify-content-lg-between ">
@@ -1362,10 +1356,8 @@
                                     </div>
                         </div>
                     </footer>   
-
-
                 </div>
         </div>
-
     </div>
+
 @endsection

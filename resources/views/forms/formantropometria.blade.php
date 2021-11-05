@@ -2,9 +2,7 @@
 
 @section('content')
 
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- MENU MOBILE (767PX) -->
+    <!-- MENU MOBILE  -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -69,11 +67,7 @@
     <!-- FIM MENU MOBILE -->
 
     <div class="row">
-
-
-
-
-        <!-- MENU MAIOR QUE 767PX -->
+        <!-- MENU  -->
         <div  class=" col-md-3 col-lg-3 col-xl-2 menu-web" >
             <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  ps--active-y" id="sidenav-main">
                 <div  class=" mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
@@ -126,14 +120,13 @@
                 </div>
             </aside>         
         </div>  
-        <!-- FIM MENU MAIOR QUE 767PX --> 
+        <!-- FIM MENU --> 
             
 
-        <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+        <div class="col-md-9 col-lg-10 col-xl-10 col-12 col-painel-header">
                 <div class="container painel-controle" >
-
                     <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-painel">
                             <div class="card">
                                 <div class="card-header"> 
                                     <h2>{{$usuario->name}}</h2>
@@ -163,7 +156,7 @@
                                                     </fieldset> -->
 
                                                     <fieldset>
-                                                        <legend>Nome do Aferidor</legend>
+                                                        <legend>1. Nome do Aferidor</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria2" type="text" value="Aferidor:">
                                                             <input  type="text" name="respostaantropometria2" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria2:''}}" class="form-control" >
@@ -179,7 +172,7 @@
                                                     </fieldset> -->
 
                                                     <fieldset>
-                                                        <legend>Data do Exame</legend>
+                                                        <legend>2. Data do Exame</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria4" type="text" value="Data do Exame:">
                                                             <input required type="date" name="respostaantropometria4"  value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria4:''}}" class="form-control" >
@@ -187,7 +180,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Altura</legend>
+                                                        <legend>3. Altura</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria8" type="text" value="Altura:">
                                                             <input type="text" min="0" name="respostaantropometria8" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria8:''}}" class="form-control" >
@@ -196,7 +189,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Peso</legend>
+                                                        <legend>4. Peso</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria5" type="text" value="Peso:">
                                                             <input type="text" min="0" name="respostaantropometria5" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria5:''}}" class="form-control" >
@@ -204,7 +197,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Circunferência abdominal</legend>
+                                                        <legend>5. Circunferência abdominal</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntaantropometria6" type="text" value="Participante:">
                                                             <input  type="text" name="respostaantropometria6" value="{{$usuario->formantropometria()?$usuario->formantropometria()->respostaantropometria6:''}}" class="form-control" >
@@ -212,7 +205,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Abdome em avental?</legend>
+                                                        <legend>6. Abdome em avental?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -243,9 +236,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
                                     <div class="row align-items-center justify-content-lg-between ">
@@ -259,7 +249,6 @@
                                     </div>
                         </div>
                     </footer>   
-
                     <script>
                         $(document).ready(function($){
                             $('#data').mask('00/00/0000');

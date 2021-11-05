@@ -2,8 +2,6 @@
 
 @section('content')
 
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
     <!-- MENU MOBILE (767PX) -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
@@ -126,11 +124,10 @@
         <!-- FIM MENU MAIOR QUE 767PX --> 
             
 
-        <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+        <div class="col-md-9 col-lg-10 col-xl-10 col-12 col-painel-header">
                 <div class="container painel-controle" >
-
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-painel">
                             <div class="card">
                                 <div class="card-header"> 
                                     <h2>{{$usuario->name}}</h2>
@@ -152,7 +149,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>Data do exame</legend>
+                                                        <legend>1. Data do exame</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntapressao2" type="text" value="Data do exame: ">
                                                             <input type="date" name="respostapressao2" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao2:''}}" class="form-control" >
@@ -161,7 +158,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Nome do aferidor</legend>
+                                                        <legend>2. Nome do aferidor</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntapressao3" type="text" value="Nome do aferidor: ">
                                                             <input type="text" name="respostapressao3" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao3:''}}" class="form-control" class="form-control" >
@@ -170,7 +167,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Comprimento do Braço Direito (EM CENTÍMETROS)</legend>
+                                                        <legend>3. Comprimento do Braço Direito (EM CENTÍMETROS)</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao4" type="text" value="Comprimento do Braço Direito (EM CENTÍMETROS): ">
 
@@ -180,7 +177,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Circunferência do braço direito (EM CENTÍMETROS)</legend>
+                                                        <legend>4. Circunferência do braço direito (EM CENTÍMETROS)</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao5" type="text" value="Circunferência do braço direito (EM CENTÍMETROS): ">
 
@@ -198,7 +195,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>1. Tipo de manguito?</legend>
+                                                        <legend>5. Tipo de manguito?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -224,7 +221,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>2. Marca manguito</legend>
+                                                        <legend>6. Marca manguito</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -244,7 +241,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>3. Pressão arterial sistólica 1:</legend>
+                                                        <legend>7. Pressão arterial sistólica 1:</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao8" type="text" value="3. Pressão arterial sistólica 1: ">
                                                             <input type="text" name="respostapressao8" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao8:''}}" class="form-control" class="form-control" >
@@ -253,7 +250,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>4. Pressão arterial diastólica 1:</legend>
+                                                        <legend>8. Pressão arterial diastólica 1:</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao9" type="text" value="4. Pressão arterial diastólica 1: ">
                                                             <input type="text" name="respostapressao9" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao9:''}}" class="form-control" class="form-control" >
@@ -262,7 +259,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>5. Pressão arterial sistólica 2: </legend>
+                                                        <legend>9. Pressão arterial sistólica 2: </legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao10" type="text" value="5. Pressão arterial sistólica 2: ">
                                                             <input type="text" name="respostapressao10" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao10:''}}" class="form-control" class="form-control" >
@@ -271,7 +268,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>6. Pressão arterial diastólica 2:</legend>
+                                                        <legend>10. Pressão arterial diastólica 2:</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao11" type="text" value="6. Pressão arterial diastólica 2: ">
                                                             <input type="text" name="respostapressao11" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao11:''}}" class="form-control" class="form-control" >
@@ -280,7 +277,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>7. Pressão arterial sistólica 3:</legend>
+                                                        <legend>11. Pressão arterial sistólica 3:</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao12" type="text" value="7. Pressão arterial sistólica 3: ">
                                                             <input type="text" name="respostapressao12" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao12:''}}" class="form-control" class="form-control" >
@@ -289,7 +286,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>8. Pressão arterial diastólica 3:</legend>
+                                                        <legend>12. Pressão arterial diastólica 3:</legend>
                                                         <div class="form-group">
                                                         <input hidden name="perguntapressao13" type="text" value="8. Pressão arterial diastólica 3:">
                                                             <input type="text" name="respostapressao13" value="{{$usuario->formpressao()?$usuario->formpressao()->respostapressao13:''}}" class="form-control" class="form-control" >
@@ -308,8 +305,6 @@
                             </div>
                         </div>
                     </div>
-
-
 
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
@@ -331,10 +326,7 @@
                             $('#pressao').mask('0.00');
                         });
                     </script>
-
-
                 </div>
         </div>
-
     </div>
 @endsection

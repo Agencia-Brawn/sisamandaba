@@ -2,9 +2,7 @@
 
 @section('content')
 
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- MENU MOBILE (767PX) -->
+    <!-- MENU MOBILE -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -70,7 +68,7 @@
 
     <div class="row">
 
-        <!-- MENU MAIOR QUE 767PX -->
+        <!-- MENU WEB -->
         <div  class=" col-md-3 col-lg-3 col-xl-2 menu-web" >
             <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  ps--active-y" id="sidenav-main">
                 <div  class=" mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
@@ -123,14 +121,13 @@
                 </div>
             </aside>         
         </div>  
-        <!-- FIM MENU MAIOR QUE 767PX --> 
+        <!-- FIM MENU WEB --> 
             
-
-        <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+        <div class="col-md-9 col-lg-10 col-xl-10 col-12 col-painel-header">
                 <div class="container painel-controle" >
 
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-painel">
                             <div class="card">
                                 <div class="card-header"> 
                                     <h2>{{$usuario->name}}</h2>
@@ -142,8 +139,6 @@
                                             {{ session('status') }}
                                         </div>
                                     @endif
-
-                                                
                                                 <!-- MSNI - Avaliação dos pés (names ok) -->
                                                 <form action="{{route('post.form.msni',['usuario'=>$usuario->id])}}" id="form4" method="POST">
                                                     @csrf
@@ -156,7 +151,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Nome do avaliador</legend>
+                                                        <legend>1. Nome do avaliador</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni1" type="text" value="Nome do avaliador:">
                                                             <input type="text" name="respostamsni1" class="form-control" value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni1:''}}">
@@ -165,7 +160,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Data da entrevista</legend>
+                                                        <legend>2. Data da entrevista</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni2" type="text" value="Data da entrevista:">
                                                             <input type="date" name="respostamsni2" class="form-control" value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni2:''}}">
@@ -186,7 +181,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>1. Você sente que suas pernas e/ou pés estão dormentes?</legend>
+                                                        <legend>3. Você sente que suas pernas e/ou pés estão dormentes?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -206,7 +201,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>2. Você já sentiu alguma dor em queimação em suas pernas e/ou pés?</legend>
+                                                        <legend>4. Você já sentiu alguma dor em queimação em suas pernas e/ou pés?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -226,7 +221,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>3. Os seus pés estão muito sensíveis ao toque?</legend>
+                                                        <legend>5. Os seus pés estão muito sensíveis ao toque?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -246,7 +241,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>4. Você tem câimbras nos músculos de suas pernas e/ou pés?</legend>
+                                                        <legend>6. Você tem câimbras nos músculos de suas pernas e/ou pés?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -266,7 +261,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>5. Você já teve sensações de formigamento em suas pernas e/ou pés?</legend>
+                                                        <legend>7. Você já teve sensações de formigamento em suas pernas e/ou pés?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -286,7 +281,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>6. Suas pernas e/ou pés doem quando o cobertor toca sua pele?</legend>
+                                                        <legend>8. Suas pernas e/ou pés doem quando o cobertor toca sua pele?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -306,7 +301,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>7. Quando você entra na banheira ou no chuveiro, você é capaz de dizer se a água está quente ou fria?</legend>
+                                                        <legend>9. Quando você entra na banheira ou no chuveiro, você é capaz de dizer se a água está quente ou fria?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -326,7 +321,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>8. Você já teve uma ferida aberta em seu pé?</legend>
+                                                        <legend>10. Você já teve uma ferida aberta em seu pé?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -346,7 +341,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>9. Seu médico já te disse que você tem neuropatia diabética?</legend>
+                                                        <legend>11. Seu médico já te disse que você tem neuropatia diabética?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -366,7 +361,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>10. Você se sente fraco a maior parte do tempo?</legend>
+                                                        <legend>12. Você se sente fraco a maior parte do tempo?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -386,7 +381,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>11. Seus sintomas pioram durante a noite?</legend>
+                                                        <legend>13. Seus sintomas pioram durante a noite?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -406,7 +401,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>12. Suas pernas doem quando você caminha?</legend>
+                                                        <legend>14. Suas pernas doem quando você caminha?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -426,7 +421,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>13. Você é capaz de sentir seus pés enquanto caminha?</legend>
+                                                        <legend>15. Você é capaz de sentir seus pés enquanto caminha?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -446,7 +441,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>14. A pele de seu pé fica seca que chega a rachar-se?</legend>
+                                                        <legend>16. A pele de seu pé fica seca que chega a rachar-se?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -466,7 +461,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>15. Você já fez uma amputação?</legend>
+                                                        <legend>17. Você já fez uma amputação?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -492,10 +487,10 @@
 
 
                                                     <fieldset>
-                                                        <legend>1. Aparência do pé direito</legend>
+                                                        <legend>18. Aparência do pé direito</legend>
                                                         <div class="form-group">
                                                             <div>
-                                                                <span>a. Normal: </span> <br>
+                                                                <legend>18 - a. Normal: </legend> <br>
                                                                 <label class="radio-inline">
                                                                 <input hidden name="perguntamsni18" type="text" value="Aparência do pé direito:">
 
@@ -512,7 +507,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>b. Se não, assinale todas que se aplicam:</legend>
+                                                        <legend>18 - b. Se não, assinale todas que se aplicam:</legend>
                                                         <div class="form-group">
                                                             <div>
                                                                 <span>Deformidades: </span>
@@ -555,7 +550,7 @@
 
                                                     <!-- PERGUNTA EXTRA -->
                                                     <fieldset>
-                                                        <legend>Outras:</legend>
+                                                        <legend>18 - Outras:</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni31" type="text" value="Outras:">
                                                             <input type="text" name="respostamsni31"  value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni31:''}}" class="form-control" >
@@ -565,10 +560,10 @@
 
 
                                                     <fieldset>
-                                                        <legend>1.1 Aparência do pé esquerdo</legend>
+                                                        <legend>19. Aparência do pé esquerdo</legend>
                                                         <div class="form-group">
                                                             <div>
-                                                                <span>a. normal: </span>
+                                                                <legend>19 - a. normal: </legend>  <br>
                                                                 <label class="radio-inline">
                                                                     <input hidden name="perguntamsni20" type="text" value="Aparência do pé esquerdo:">
                                                                     <input type="radio" name="respostamsni20" value="Sim" {{$usuario->formmsni()?$usuario->formmsni()->respostamsni20=='Sim'?'checked':'':''}}>
@@ -584,7 +579,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>b. Se não, assinale todas que se aplicam:</legend>
+                                                        <legend>19 - b. Se não, assinale todas que se aplicam:</legend>
                                                         <div class="form-group">
                                                             <div>
                                                                 <span>Deformidades: </span>
@@ -627,7 +622,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Outras:</legend>
+                                                        <legend>19 - Outras:</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni22" type="text" value="Outras:">
                                                             <input type="text" name="respostamsni22" value="{{$usuario->formmsni()?$usuario->formmsni()->respostamsni22:''}}" class="form-control" >
@@ -636,7 +631,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Ulceração</legend>
+                                                        <legend>20. Ulceração</legend>
                                                         
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni23a" type="text" value="Ulceração:">
@@ -671,7 +666,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Reflexos do tornozelo</legend>
+                                                        <legend>21. Reflexos do tornozelo</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni25a" type="text" value="Reflexos do tornozelo:">
                                                             <div>
@@ -711,7 +706,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Percepção de vibração no hálux</legend>
+                                                        <legend>22. Percepção de vibração no hálux</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni27a" type="text" value="Percepção de vibração no hálux:">
                                                             <div>
@@ -751,7 +746,7 @@
 
 
                                                     <fieldset>
-                                                        <legend>Monofilamentos</legend>
+                                                        <legend>23. Monofilamentos</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntamsni29a" type="text" value="Monofilamentos:">
                                                             <div>
@@ -800,8 +795,6 @@
                         </div>
                     </div>
 
-
-
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
                                     <div class="row align-items-center justify-content-lg-between ">
@@ -827,4 +820,5 @@
         </div>
 
     </div>
+
 @endsection

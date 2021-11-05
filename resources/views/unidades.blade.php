@@ -179,10 +179,10 @@
         <!-- FIM MENU --> 
             
             
-            <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+            <div class="col-md-9 col-lg-10 col-xl-10 col-12 col-painel-header">
 
-                    <div class="row justify-content-center row-painel-controle ps-5">
-                        <div class="col-md-12 pt-5" >
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 pt-5 col-painel" >
                             <div class="card">
                                 <!-- <div class="card-header text-center"> 
                                     <h2>Unidades </h2>
@@ -211,7 +211,7 @@
                                                 @endif
 
 
-                                                <div class="row justify-content-center row-painel-controle">
+                                                <div class="row justify-content-center">
                                                     <div class="container-fluid py-4">
                                                         <div class="row">
                                                             <div class="col-12">

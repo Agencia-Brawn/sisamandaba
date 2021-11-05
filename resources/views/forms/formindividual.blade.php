@@ -129,7 +129,7 @@
         <!-- FIM MENU MAIOR QUE 767PX --> 
             
 
-        <div class="col-md-9 col-lg-10 col-xl-10 col-12 ps-5">
+        <div class="col-md-9 col-lg-10 col-xl-10 col-12 col-painel-header">
                 <div class="container painel-controle" >
                     <div class="row justify-content-center row-painel-controle">
                         <div class="col-md-12">
@@ -226,7 +226,7 @@
                                 
                                                                                     
                                                                                     <fieldset id="respostaindividual4"> 
-                                                                                        <legend class="mt-0">16. Você sabe ler e escrever?</legend>
+                                                                                        <legend class="mt-0">4. Você sabe ler e escrever?</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -246,7 +246,7 @@
 
 
                                                                                     <fieldset id="respostaindividual5" >
-                                                                                        <legend>17. Você aprendeu a ler na escola?</legend>
+                                                                                        <legend>5. Você aprendeu a ler na escola?</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -265,7 +265,7 @@
                                                                                     </fieldset>
 
                                                                                     <fieldset id="respostaindividual6" >
-                                                                                        <legend>19. Você terminou o primeiro grau?</legend>
+                                                                                        <legend>6. Você terminou o primeiro grau?</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -284,7 +284,7 @@
                                                                                     </fieldset>
 
                                                                                     <fieldset id="respostaindividual7" >
-                                                                                        <legend>18. Qual a última série/ano cursada(o) com aprovação? (A PARTIR DE 2009 SÃO 9 ANOS INICIANDO COM 6 ANOS DE IDADE, ANTES DE 2009 ERAM 8 SERIES INICIANDO COM 7 ANOS - APÓS RESPONDER PULAR PARA O HLS-14)</legend>
+                                                                                        <legend>7. Qual a última série/ano cursada(o) com aprovação? (A PARTIR DE 2009 SÃO 9 ANOS INICIANDO COM 6 ANOS DE IDADE, ANTES DE 2009 ERAM 8 SERIES INICIANDO COM 7 ANOS - APÓS RESPONDER PULAR PARA O HLS-14)</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -339,7 +339,7 @@
                                                                                     </fieldset>
 
                                                                                     <fieldset id="respostaindividual8" >
-                                                                                        <legend>20. Qual seu grau de instrução?</legend>
+                                                                                        <legend>8. Qual seu grau de instrução?</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -382,13 +382,12 @@
                                                                                     </fieldset>
 
                                                                                     <fieldset id="respostaindividual9" >
-                                                                                        <legend>21. Com que idade você terminou o 2º grau (NÃO ACEITAR NÚMERO &lt; 14)</legend>
+                                                                                        <legend>9. Com que idade você terminou o 2º grau (NÃO ACEITAR NÚMERO &lt; 14)</legend>
                                                                                         <div class="form-group">
                                                                                             <input hidden name="perguntaindividual9" type="text" value="21. Com que idade você terminou o 2º grau (NÃO ACEITAR NÚMERO 14):">
                                                                                             <input type="text" id="respostaindividual9" name="respostaindividual9" value="{{$usuario->formindividual()?$usuario->formindividual()->respostaindividual9:''}}" class="form-control" >
                                                                                         </div>
                                                                                     </fieldset>
-
 
                                                                                     <fieldset id="respostaindividual10">
                                                                                         <br>
@@ -412,9 +411,8 @@
                                                                                         </div>
                                                                                     </fieldset>
 
-
                                                                                     <fieldset id="respostaindividual10">
-                                                                                        <legend class="mt-0">22. "EU ENCONTRO PALAVRAS QUE NÃO CONSIGO LER."</legend>
+                                                                                        <legend class="mt-0">10. "EU ENCONTRO PALAVRAS QUE NÃO CONSIGO LER."</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -450,9 +448,8 @@
                                                                                         </div>
                                                                                     </fieldset>
 
-
                                                                                     <fieldset id="respostaindividual11">
-                                                                                        <legend>23. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;O TAMANHO DA LETRA É MUITO PEQUENA PARA MIM&quot; (apesar de eu usar óculos).</legend>
+                                                                                        <legend>11. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;O TAMANHO DA LETRA É MUITO PEQUENA PARA MIM&quot; (apesar de eu usar óculos).</legend>
                                                                                         <div class="form-group">
                                                                                             <input hidden name="perguntaindividual11" type="text" value="23. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação):">
                                                                                             <div class="radio">
@@ -490,7 +487,7 @@
 
 
                                                                                     <fieldset id="respostaindividual12">
-                                                                                        <legend>24. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;O CONTEÚDO É MUITO DIFÍCIL DE ENTENDER.&quot;</legend>
+                                                                                        <legend>12. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;O CONTEÚDO É MUITO DIFÍCIL DE ENTENDER.&quot;</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -528,7 +525,7 @@
 
 
                                                                                     <fieldset id="respostaindividual13">
-                                                                                        <legend>25. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;DEMORO MUITO PARA LER AS INSTRUÇÕES&quot;.</legend>
+                                                                                        <legend>13. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;DEMORO MUITO PARA LER AS INSTRUÇÕES&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -566,7 +563,7 @@
 
 
                                                                                     <fieldset id="respostaindividual14">
-                                                                                        <legend>26. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;EU PRECISO QUE ALGUÉM ME AJUDE A LER&quot;.</legend>
+                                                                                        <legend>14. (Quando você lê receitas médicas ou bulas de remédio o quanto você concorda com a afirmação) &quot;EU PRECISO QUE ALGUÉM ME AJUDE A LER&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -616,7 +613,7 @@
 
 
                                                                                     <fieldset id="respostaindividual15">
-                                                                                        <legend>27. Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença 
+                                                                                        <legend>15. Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença 
                                                                                             e seu tratamento, de que maneira você concorda com a afirmação &quot;EU PROCURO INFORMAÇÕES 
                                                                                             EM VÁRIOS LUGARES&quot;.</legend>
                                                                                         <div class="form-group">
@@ -658,7 +655,7 @@
 
 
                                                                                     <fieldset id="respostaindividual16">
-                                                                                        <legend>28. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU ENCONTRO A INFORMAÇÃO QUE PRECISO&quot;.</legend>
+                                                                                        <legend>16. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU ENCONTRO A INFORMAÇÃO QUE PRECISO&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -696,7 +693,7 @@
 
 
                                                                                     <fieldset id="respostaindividual17">
-                                                                                        <legend>29. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU ENTENDO A INFORMAÇÃO ENCONTRADA&quot;.</legend>
+                                                                                        <legend>17. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU ENTENDO A INFORMAÇÃO ENCONTRADA&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -734,7 +731,7 @@
 
 
                                                                                     <fieldset id="respostaindividual18">
-                                                                                        <legend>30. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU FALO MINHA OPINIÃO SOBRE A DOENÇA AO MEU MÉDICO, FAMILIARES OU AMIGOS&quot;.</legend>
+                                                                                        <legend>18. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU FALO MINHA OPINIÃO SOBRE A DOENÇA AO MEU MÉDICO, FAMILIARES OU AMIGOS&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -772,7 +769,7 @@
 
 
                                                                                     <fieldset id="respostaindividual19">
-                                                                                        <legend>31. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU COLOCO EM PRÁTICA AS INFORMAÇÕES ENCONTRADAS NO MEU DIA A DIA.&quot;</legend>
+                                                                                        <legend>19. (Se você foi diagnosticado com uma doença, e não tem muitas informações sobre a doença e seu tratamento, de que maneira você concorda com a afirmação) &quot;EU COLOCO EM PRÁTICA AS INFORMAÇÕES ENCONTRADAS NO MEU DIA A DIA.&quot;</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -818,7 +815,7 @@
 
 
                                                                                     <fieldset id="respostaindividual20">
-                                                                                        <legend class="mt-0">32. Se você for diagnosticado com uma doença e você pode conseguir mais informações 
+                                                                                        <legend class="mt-0">20. Se você for diagnosticado com uma doença e você pode conseguir mais informações 
                                                                                             sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação &quot;EU SEI QUANDO 
                                                                                             AS INFORMAÇÕES SÃO BOAS PARA O MEU CASO&quot;</legend>
                                                                                         <div class="form-group">
@@ -858,7 +855,7 @@
 
 
                                                                                     <fieldset id="respostaindividual21">
-                                                                                        <legend>33. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU LEVO EM CONTA SE AS INFORMAÇÕES SÃO VERDADEIRAS&quot;</legend>
+                                                                                        <legend>21. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU LEVO EM CONTA SE AS INFORMAÇÕES SÃO VERDADEIRAS&quot;</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -896,7 +893,7 @@
 
 
                                                                                     <fieldset id="respostaindividual22">
-                                                                                        <legend>34. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU TENHO CONHECIMENTO PARA JULGAR SE AS INFORMAÇÕES SÃO CONFIÁVEIS&quot;.</legend>
+                                                                                        <legend>22. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU TENHO CONHECIMENTO PARA JULGAR SE AS INFORMAÇÕES SÃO CONFIÁVEIS&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -934,7 +931,7 @@
 
 
                                                                                     <fieldset id="respostaindividual23">
-                                                                                        <legend>35. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU PEGO INFORMAÇÕES QUE ME AJUDAM A TOMAR DECISÕES DE COMO MELHORAR MINHA SAÚDE&quot;.</legend>
+                                                                                        <legend>23. (Se você for diagnosticado com uma doença e você pode conseguir mais informações sobre a doença e seu tratamento, de que maneira você concorda com  a afirmação) &quot;EU PEGO INFORMAÇÕES QUE ME AJUDAM A TOMAR DECISÕES DE COMO MELHORAR MINHA SAÚDE&quot;.</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -981,7 +978,7 @@
 
 
                                                                                     <fieldset id="individual24">
-                                                                                        <legend class="mt-0">36. Você é um trabalhador ativo ou aposentado?</legend>
+                                                                                        <legend class="mt-0">24. Você é um trabalhador ativo ou aposentado?</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -1001,7 +998,7 @@
 
 
                                                                                     <fieldset id="individual25">
-                                                                                        <legend>37. Você é ou era: (LER AS ALTERNATIVAS)</legend>
+                                                                                        <legend>25. Você é ou era: (LER AS ALTERNATIVAS)</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -1063,7 +1060,7 @@
 
 
                                                                                     <fieldset id="individual26">
-                                                                                        <legend>38. Sua atividade principal na maior parte de sua vida é ou foi em que setor: (MOSTRAR AS ALTERNATIVAS NO CELULAR).</legend>
+                                                                                        <legend>26. Sua atividade principal na maior parte de sua vida é ou foi em que setor: (MOSTRAR AS ALTERNATIVAS NO CELULAR).</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -1185,7 +1182,7 @@
 
 
                                                                                     <fieldset id="individual27">
-                                                                                        <legend>39. Há quantos anos você tem essa atividade? (SE MENOR DO QUE 01 ANO MARQUE 00)</legend>
+                                                                                        <legend>27. Há quantos anos você tem essa atividade? (SE MENOR DO QUE 01 ANO MARQUE 00)</legend>
                                                                                         <div class="form-group">
                                                                                             <input hidden name="perguntaindividual27" type="text" value="39. Há quantos anos você tem essa atividade? (SE MENOR DO QUE 01 ANO MARQUE 00):">
                                                                                             <input type="text" name="respostaindividual27" value="{{$usuario->formindividual()?$usuario->formindividual()->respostaindividual27:''}}" class="form-control" >
@@ -1194,7 +1191,7 @@
 
 
                                                                                     <fieldset id="individual28">
-                                                                                        <legend>40. De um modo geral, em comparação a pessoas da sua idade, como você considera o seu estado de saúde? (LER AS ALTERNATIVAS)</legend>
+                                                                                        <legend>28. De um modo geral, em comparação a pessoas da sua idade, como você considera o seu estado de saúde? (LER AS ALTERNATIVAS)</legend>
                                                                                         <div class="form-group">
                                                                                             <div class="radio">
                                                                                                 <label>
@@ -1264,7 +1261,7 @@
 
 
                                                                                 <fieldset id="individual29">
-                                                                                    <legend class="mt-0">41. Hipertensão (Pressão alta?)</legend>
+                                                                                    <legend class="mt-0">29. Hipertensão (Pressão alta?)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1284,7 +1281,7 @@
 
 
                                                                                 <fieldset id="individual30">
-                                                                                    <legend>42. Infarto do miocárdio (ataque do coração)?</legend>
+                                                                                    <legend>30. Infarto do miocárdio (ataque do coração)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1304,7 +1301,7 @@
 
 
                                                                                 <fieldset id="individual31">
-                                                                                    <legend>43. Angina de peito (isquemia ou má circulação no coração)?</legend>
+                                                                                    <legend>31. Angina de peito (isquemia ou má circulação no coração)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1324,7 +1321,7 @@
 
 
                                                                                 <fieldset id="individual32">
-                                                                                    <legend>44. Insuficiência cardíaca (coração grande ou dilatado)?</legend>
+                                                                                    <legend>32. Insuficiência cardíaca (coração grande ou dilatado)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1344,7 +1341,7 @@
 
 
                                                                                 <fieldset id="individual33">
-                                                                                    <legend>45. Febre reumática? (válvula entupida ou sopro no coração que exige controle médico e, quando jovem, uso de antibiótico por muitos anos)?</legend>
+                                                                                    <legend>33. Febre reumática? (válvula entupida ou sopro no coração que exige controle médico e, quando jovem, uso de antibiótico por muitos anos)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1364,7 +1361,7 @@
 
 
                                                                                 <fieldset id="individual34">
-                                                                                    <legend>25. Doença de Chagas?</legend>
+                                                                                    <legend>34. Doença de Chagas?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1384,7 +1381,7 @@
 
 
                                                                                 <fieldset id="individual35">
-                                                                                    <legend>26. Acidente vascular cerebral (derrame)?</legend>
+                                                                                    <legend>35. Acidente vascular cerebral (derrame)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1404,7 +1401,7 @@
 
 
                                                                                 <fieldset id="individual36">
-                                                                                    <legend>27. Doença do rim (p. ex. insuficiência, pedra ou cálculo, nefrite, doença policística)?</legend>
+                                                                                    <legend>36. Doença do rim (p. ex. insuficiência, pedra ou cálculo, nefrite, doença policística)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1424,7 +1421,7 @@
 
 
                                                                                 <fieldset id="individual37">
-                                                                                    <legend>28. Hanseníase?</legend>
+                                                                                    <legend>37. Hanseníase?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1444,7 +1441,7 @@
 
 
                                                                                 <fieldset id="individual38">
-                                                                                    <legend>29. Tuberculose?</legend>
+                                                                                    <legend>38. Tuberculose?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1464,7 +1461,7 @@
 
 
                                                                                 <fieldset id="individual39">
-                                                                                    <legend>30. Malária?</legend>
+                                                                                    <legend>39. Malária?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1484,7 +1481,7 @@
 
 
                                                                                 <fieldset id="individual40">
-                                                                                    <legend>31. Dengue, Zica, Chikungunha?</legend>
+                                                                                    <legend>40. Dengue, Zica, Chikungunha?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1504,7 +1501,7 @@
 
 
                                                                                 <fieldset id="individual41">
-                                                                                    <legend>32. Febre amarela? </legend>
+                                                                                    <legend>41. Febre amarela? </legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1524,7 +1521,7 @@
 
 
                                                                                 <fieldset id="individual42">
-                                                                                    <legend>33. Leishmaniose? </legend>
+                                                                                    <legend>42. Leishmaniose? </legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1544,7 +1541,7 @@
 
 
                                                                                 <fieldset id="individual43">
-                                                                                    <legend>34. Trombose ou embolia?</legend>
+                                                                                    <legend>43. Trombose ou embolia?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1564,7 +1561,7 @@
 
 
                                                                                 <fieldset id="individual44">
-                                                                                    <legend>35. Enfisema, bronquite crônica ou doença pulmonar obstrutiva crônica (DPOC)?</legend>
+                                                                                    <legend>44. Enfisema, bronquite crônica ou doença pulmonar obstrutiva crônica (DPOC)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1584,7 +1581,7 @@
 
 
                                                                                 <fieldset id="individual45">
-                                                                                    <legend>36. Asma (bronquite asmática)?</legend>
+                                                                                    <legend>45. Asma (bronquite asmática)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1604,7 +1601,7 @@
 
 
                                                                                 <fieldset id="individual46">
-                                                                                    <legend>37. Artrite reumatóide ou lupus eritematoso?</legend>
+                                                                                    <legend>46. Artrite reumatóide ou lupus eritematoso?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1624,7 +1621,7 @@
 
 
                                                                                 <fieldset id="individual47">
-                                                                                    <legend>38. Cirrose do fígado, hepatite?</legend>
+                                                                                    <legend>47. Cirrose do fígado, hepatite?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1644,7 +1641,7 @@
 
 
                                                                                 <fieldset id="individual48">
-                                                                                    <legend>39. Câncer?</legend>
+                                                                                    <legend>48. Câncer?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1664,7 +1661,7 @@
 
 
                                                                                 <fieldset id="individual49">
-                                                                                    <legend>40. COVID-19?</legend>
+                                                                                    <legend>49. COVID-19?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1696,7 +1693,7 @@
 
 
                                                                                 <fieldset id="respostaindividual50"> 
-                                                                                    <legend>41. Você foi vacinado (a) contra COVID-19?</legend>
+                                                                                    <legend>50. Você foi vacinado (a) contra COVID-19?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1722,7 +1719,7 @@
 
 
                                                                                 <fieldset id="respostaindividual51">
-                                                                                    <legend>42. Você teve COVID-19 após a segunda dose da vacina? </legend>
+                                                                                    <legend>51. Você teve COVID-19 após a segunda dose da vacina? </legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1750,7 +1747,7 @@
 
 
                                                                                 <fieldset id="individual52">
-                                                                                    <legend class="mt-0">43. Há quantos anos você convive com o diabetes? (SE MENOR DO QUE 01 ANO MARQUE 00)</legend>
+                                                                                    <legend class="mt-0">52. Há quantos anos você convive com o diabetes? (SE MENOR DO QUE 01 ANO MARQUE 00)</legend>
                                                                                     <div class="form-group">
                                                                                     <input hidden name="perguntaindividual52" type="text" value="43. Há quantos anos você convive com o diabetes? (SE MENOR DO QUE 01 ANO MARQUE 00):">
                                                                                         <input type="text" name="respostaindividual52" class="form-control" value="{{$usuario->formindividualprimeiro()?$usuario->formindividualprimeiro()->respostaindividual52:''}}">
@@ -1759,7 +1756,7 @@
 
 
                                                                                 <fieldset id="individual53">
-                                                                                    <legend>44. Você já teve lesão ou ferida no pé provocada pelo Diabetes?</legend>
+                                                                                    <legend>53. Você já teve lesão ou ferida no pé provocada pelo Diabetes?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -1779,7 +1776,7 @@
 
 
                                                                                 <fieldset id="individual54">
-                                                                                    <legend>45. Em quantos dos últimos SETE DIAS seguiu uma dieta saudável?</legend>
+                                                                                    <legend>54. Em quantos dos últimos SETE DIAS seguiu uma dieta saudável?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -1821,7 +1818,7 @@
 
 
                                                                                 <fieldset id="individual55">
-                                                                                    <legend>46. Durante o último mês, QUANTOS DIAS POR SEMANA, seguiu a orientação alimentar, dada por um profissional de saúde?</legend>
+                                                                                    <legend>55. Durante o último mês, QUANTOS DIAS POR SEMANA, seguiu a orientação alimentar, dada por um profissional de saúde?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -1864,7 +1861,7 @@
 
 
                                                                                 <fieldset id="individual56">
-                                                                                    <legend>47. Em quantos dos últimos SETE DIAS comeu cinco ou mais porções de frutas e/ou vegetais?</legend>
+                                                                                    <legend>56. Em quantos dos últimos SETE DIAS comeu cinco ou mais porções de frutas e/ou vegetais?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -1907,7 +1904,7 @@
 
 
                                                                                 <fieldset id="individual57">
-                                                                                    <legend>48. Em quantos dos últimos SETE DIAS comeu alimentos ricos em gordura, como carnes vermelhas ou alimentos com leite integral ou derivados?</legend>
+                                                                                    <legend>57. Em quantos dos últimos SETE DIAS comeu alimentos ricos em gordura, como carnes vermelhas ou alimentos com leite integral ou derivados?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -1950,7 +1947,7 @@
 
 
                                                                                 <fieldset id="individual58">
-                                                                                    <legend>50. Em quantos dos últimos sete dias comeu doces?</legend>
+                                                                                    <legend>58. Em quantos dos últimos sete dias comeu doces?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -1993,7 +1990,7 @@
 
 
                                                                                 <fieldset id="individual59">
-                                                                                    <legend>51. Em quantos dos últimos SETE DIAS realizou atividade física durante pelo menos 30 minutos (minutos totais de atividade contínua, inclusive andar)</legend>
+                                                                                    <legend>59. Em quantos dos últimos SETE DIAS realizou atividade física durante pelo menos 30 minutos (minutos totais de atividade contínua, inclusive andar)</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2036,7 +2033,7 @@
 
 
                                                                                 <fieldset id="individual60">
-                                                                                    <legend>52. Em quantos dos últimos SETE DIAS praticou algum tipo de exercício físico específico (nadar, caminhar,andar de bicicleta), sem incluir suas atividades em casa ou em seu trabalho?</legend>
+                                                                                    <legend>60. Em quantos dos últimos SETE DIAS praticou algum tipo de exercício físico específico (nadar, caminhar,andar de bicicleta), sem incluir suas atividades em casa ou em seu trabalho?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2079,7 +2076,7 @@
 
 
                                                                                 <fieldset id="individual61">
-                                                                                    <legend>53. Em quantos dos últimos SETE DIAS examinou os seus pés?</legend>
+                                                                                    <legend>61. Em quantos dos últimos SETE DIAS examinou os seus pés?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2122,7 +2119,7 @@
 
 
                                                                                 <fieldset id="individual62">
-                                                                                    <legend>54. Em quantos dos últimos SETE DIAS examinou dentro dos sapatos antes de calçá-los?</legend>
+                                                                                    <legend>62. Em quantos dos últimos SETE DIAS examinou dentro dos sapatos antes de calçá-los?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2165,7 +2162,7 @@
 
 
                                                                                 <fieldset id="individual63">
-                                                                                    <legend>55. Em quantos dos últimos SETE DIAS secou os espaços entre os dedos dos pés depois de lavá-los?</legend>
+                                                                                    <legend>63. Em quantos dos últimos SETE DIAS secou os espaços entre os dedos dos pés depois de lavá-los?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2208,7 +2205,7 @@
 
 
                                                                                 <fieldset id="individual64">
-                                                                                    <legend>56. Em quantos dos últimos SETE DIAS tomou seus medicamentos do diabetes, conforme foi recomendado?</legend>
+                                                                                    <legend>64. Em quantos dos últimos SETE DIAS tomou seus medicamentos do diabetes, conforme foi recomendado?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2250,7 +2247,7 @@
 
 
                                                                                 <fieldset id="individual65">
-                                                                                    <legend>57. Em quantos dos últimos SETE DIAS tomou suas injeções de insulina, conforme foi recomendado?</legend>
+                                                                                    <legend>65. Em quantos dos últimos SETE DIAS tomou suas injeções de insulina, conforme foi recomendado?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2293,7 +2290,7 @@
 
 
                                                                                 <fieldset id="individual66">
-                                                                                    <legend>58. Em quantos dos últimos SETE DIAS tomou o número indicado de comprimidos do diabetes?</legend>
+                                                                                    <legend>66. Em quantos dos últimos SETE DIAS tomou o número indicado de comprimidos do diabetes?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2336,7 +2333,7 @@
 
 
                                                                                 <fieldset id="individual67">
-                                                                                    <legend>59. Algum médico ou enfermeiro solicitou que você realizasse em casa o exame de açúcar no sangue na pontado dedo</legend>
+                                                                                    <legend>67. Algum médico ou enfermeiro solicitou que você realizasse em casa o exame de açúcar no sangue na pontado dedo</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2356,7 +2353,7 @@
 
 
                                                                                 <fieldset id="individual68">
-                                                                                    <legend>60. Você tem o aparelho para realizar o exame de açúcar no sangue na ponta do dedo?</legend>
+                                                                                    <legend>68. Você tem o aparelho para realizar o exame de açúcar no sangue na ponta do dedo?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2376,7 +2373,7 @@
 
 
                                                                                 <fieldset id="individual69">
-                                                                                    <legend>61. Em quantos dos últimos SETE DIAS avaliou o açúcar no sangue?</legend>
+                                                                                    <legend>69. Em quantos dos últimos SETE DIAS avaliou o açúcar no sangue?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2419,7 +2416,7 @@
 
 
                                                                                 <fieldset id="individual70">
-                                                                                    <legend>62. Em quantos dos últimos SETE DIAS avaliou o açúcar no sangue o número de vezes recomendado pelo médico ou enfermeiro?</legend>
+                                                                                    <legend>70. Em quantos dos últimos SETE DIAS avaliou o açúcar no sangue o número de vezes recomendado pelo médico ou enfermeiro?</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                         <label class="radio-inline">
@@ -2488,7 +2485,7 @@
                                                                                 </fieldset>
 
                                                                                 <fieldset id="respostaindividual71">
-                                                                                    <legend>63. Você consegue subir um lance de escadas de 8 degraus carregando peso (± 10Kg) ou caminhar rápido no terreno plano ou subir ladeiras sem ter que parar por cansaço ou falta de ar?</legend>
+                                                                                    <legend>71. Você consegue subir um lance de escadas de 8 degraus carregando peso (± 10Kg) ou caminhar rápido no terreno plano ou subir ladeiras sem ter que parar por cansaço ou falta de ar?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2508,7 +2505,7 @@
 
 
                                                                                 <fieldset id="respostaindividual72">
-                                                                                    <legend>64. Você consegue caminhar devagar no terreno plano ou arrumar a casa ou tomar banho sem ter que parar por cansaço ou falta de ar?</legend>
+                                                                                    <legend>72. Você consegue caminhar devagar no terreno plano ou arrumar a casa ou tomar banho sem ter que parar por cansaço ou falta de ar?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2528,7 +2525,7 @@
 
 
                                                                                 <fieldset id="respostaindividual73" >
-                                                                                    <legend>65. Você tem cansaço ou falta de ar quando está comendo, sentado ou deitado?</legend>
+                                                                                    <legend>73. Você tem cansaço ou falta de ar quando está comendo, sentado ou deitado?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2548,7 +2545,7 @@
 
 
                                                                                 <fieldset id="respostaindividual74">
-                                                                                    <legend>66.  Você tem sentido dor ou desconforto no peito (tórax)?</legend>
+                                                                                    <legend>74.  Você tem sentido dor ou desconforto no peito (tórax)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2568,7 +2565,7 @@
 
 
                                                                                 <fieldset id="respostaindividual75">
-                                                                                    <legend>67. Você sente essa dor no peito quando você está andando no terreno plano?</legend>
+                                                                                    <legend>75. Você sente essa dor no peito quando você está andando no terreno plano?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2588,7 +2585,7 @@
 
 
                                                                                 <fieldset id="respostaindividual76">
-                                                                                    <legend>68. Você sente essa dor no peito quando você sobe uma ladeira, um lance de escadas ou caminha rápido no plano?</legend>
+                                                                                    <legend>76. Você sente essa dor no peito quando você sobe uma ladeira, um lance de escadas ou caminha rápido no plano?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2608,7 +2605,7 @@
 
 
                                                                                 <fieldset id="individual77">
-                                                                                    <legend>69. Você foi submetido à cirurgia de ponte safena ou mamária ou angioplastia ou implantação de stent na artéria coronária?</legend>
+                                                                                    <legend>77. Você foi submetido à cirurgia de ponte safena ou mamária ou angioplastia ou implantação de stent na artéria coronária?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2628,7 +2625,7 @@
 
 
                                                                                 <fieldset id="individual78">
-                                                                                    <legend>70. Você teve ou tem outra doença que não lhe foi perguntada? (ANOTAR O NOME DA DOENÇA, SE RESPOSTA NEGATIVA, INFORMAR 00)</legend>
+                                                                                    <legend>78. Você teve ou tem outra doença que não lhe foi perguntada? (ANOTAR O NOME DA DOENÇA, SE RESPOSTA NEGATIVA, INFORMAR 00)</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual78" type="text" value="70. Você teve ou tem outra doença que não lhe foi perguntada? (ANOTAR O NOME DA DOENÇA, SE RESPOSTA NEGATIVA, INFORMAR 00):">
                                                                                         <input type="text" name="respostaindividual78" class="form-control" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual78:''}}">
@@ -2645,7 +2642,7 @@
 
 
                                                                                 <fieldset id="individual79">
-                                                                                    <legend class="mt-0">71. Você possui plano de saúde?</legend>
+                                                                                    <legend class="mt-0">79. Você possui plano de saúde?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2665,7 +2662,7 @@
 
 
                                                                                 <fieldset>
-                                                                                    <legend >72. Qual o tipo de unidade de saúde na qual você faz tratamento? (LER AS ALTERNATIVAS)</legend>
+                                                                                    <legend >80. Qual o tipo de unidade de saúde na qual você faz tratamento? (LER AS ALTERNATIVAS)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2709,7 +2706,7 @@
 
 
                                                                                 <fieldset>
-                                                                                    <legend>73. Quantas vezes você fez consulta com o médico dessa unidade nos últimos 12 meses?</legend>
+                                                                                    <legend>81. Quantas vezes você fez consulta com o médico dessa unidade nos últimos 12 meses?</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual81" type="text" value="73. Quantas vezes você fez consulta com o médico dessa unidade nos últimos 12 meses:">
                                                                                         <input type="text" name="respostaindividual81" class="form-control" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual81:''}}">
@@ -2718,7 +2715,7 @@
 
 
                                                                                 <fieldset>
-                                                                                    <legend>74. O Censo Brasileiro (IBGE) usa os termos ‘preta’, ‘parda’, ‘branca’, ‘amarela’ e ‘indígena’ para classificara cor ou raça das pessoas. Se o(a) Sr.(a) tivesse que responder ao Censo do IBGE hoje, como se classificaria a respeito de sua cor ou raça? (LER AS ALTERNATIVAS)</legend>
+                                                                                    <legend>82. O Censo Brasileiro (IBGE) usa os termos ‘preta’, ‘parda’, ‘branca’, ‘amarela’ e ‘indígena’ para classificara cor ou raça das pessoas. Se o(a) Sr.(a) tivesse que responder ao Censo do IBGE hoje, como se classificaria a respeito de sua cor ou raça? (LER AS ALTERNATIVAS)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2764,7 +2761,7 @@
 
 
                                                                                 <fieldset>
-                                                                                    <legend class="mt-0">75. Qual é a sua situação conjugal atual? (LER AS ALTERNATIVAS)</legend>
+                                                                                    <legend class="mt-0">83. Qual é a sua situação conjugal atual? (LER AS ALTERNATIVAS)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2808,7 +2805,7 @@
 
 
                                                                                 <fieldset id="respostaindividual84">
-                                                                                    <legend>76. Você tem filhos (considere todos os filhos vivos naturais ou adotivos)?</legend>
+                                                                                    <legend>84. Você tem filhos (considere todos os filhos vivos naturais ou adotivos)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2828,15 +2825,16 @@
 
 
                                                                                 <fieldset id="respostaindividual85">
-                                                                                    <legend>77. Quantos filhos você tem? </legend>
+                                                                                    <legend>85. Quantos filhos você tem? </legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual85" type="text" value="77. Quantos filhos você tem:">
                                                                                         <input type="text" name="respostaindividual85" class="form-control" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual85:''}}">
                                                                                     </div>
                                                                                 </fieldset>
+                                                                                
 
                                                                                 <fieldset id="respostaindividual86">
-                                                                                    <legend >78. Você é ou já foi fumante, ou seja, já fumou pelo menos 100 cigarros (cinco maços de cigarros) ao longo da sua vida?</legend>
+                                                                                    <legend >86. Você é ou já foi fumante, ou seja, já fumou pelo menos 100 cigarros (cinco maços de cigarros) ao longo da sua vida?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2856,7 +2854,7 @@
 
 
                                                                                 <fieldset id="respostaindividual87">
-                                                                                    <legend >79. Com que idade você começou a fumar?</legend>
+                                                                                    <legend >87. Com que idade você começou a fumar?</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual87" type="text" value="79. Com que idade você começou a fumar:">
                                                                                         <input id="respostaindividual87" type="text" name="respostaindividual87" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual87:''}}" class="form-control" >
@@ -2865,7 +2863,7 @@
 
 
                                                                                 <fieldset id="respostaindividual88">
-                                                                                    <legend>80. Você fuma cigarros atualmente?</legend>
+                                                                                    <legend>88. Você fuma cigarros atualmente?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2885,7 +2883,7 @@
 
 
                                                                                 <fieldset id="respostaindividual89">
-                                                                                    <legend>81. Quando fumou o seu último cigarro?</legend>
+                                                                                    <legend>89. Quando fumou o seu último cigarro?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2929,7 +2927,7 @@
 
 
                                                                                 <fieldset id="respostaindividual90">
-                                                                                    <legend>82. Com que idade você parou de fumar pela última vez?</legend>
+                                                                                    <legend>90. Com que idade você parou de fumar pela última vez?</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual90" type="text" value="82. Com que idade você parou de fumar pela última vez:">
                                                                                         <input id="respostaindividual90" type="text" name="respostaindividual90" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual91:''}}" class="form-control" >
@@ -2938,7 +2936,7 @@
 
 
                                                                                 <fieldset id="respostaindividual91">
-                                                                                    <legend>83. Em geral, quantos cigarros por dia você fuma (ou fumava)? (SE &lt;01&#x3D;00)</legend>
+                                                                                    <legend>91. Em geral, quantos cigarros por dia você fuma (ou fumava)? (SE &lt;01&#x3D;00)</legend>
                                                                                     <div class="form-group">
                                                                                     <input hidden name="perguntaindividual91" type="text" value="83. Em geral, quantos cigarros por dia você fuma (ou fumava)? (SE &lt;01&#x3D;00):">
                                                                                         <input id="respostaindividual91" type="text" name="respostaindividual91" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual91:''}}" class="form-control">
@@ -2947,7 +2945,7 @@
 
 
                                                                                 <fieldset id="respostaindividual92">
-                                                                                    <legend>84. Ao todo, durante quantos anos você fumou ou fuma? (Desconte os períodos em que você deixou defumar) (SE &lt;01&#x3D; 00 -FAZER O CÁLCULO JUNTO COM O PARTICIPANTE)</legend>
+                                                                                    <legend>92. Ao todo, durante quantos anos você fumou ou fuma? (Desconte os períodos em que você deixou defumar) (SE &lt;01&#x3D; 00 -FAZER O CÁLCULO JUNTO COM O PARTICIPANTE)</legend>
                                                                                     <div class="form-group">
                                                                                     <input hidden name="perguntaindividual92" type="text" value="84. Ao todo, durante quantos anos você fumou ou fuma? (Desconte os períodos em que você deixou defumar) (SE &lt;01&#x3D; 00 -FAZER O CÁLCULO JUNTO COM O PARTICIPANTE):">
                                                                                         <input id="respostaindividual92" type="text" name="respostaindividual92" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual91:''}}" class="form-control" >
@@ -2956,7 +2954,7 @@
 
 
                                                                                 <fieldset id="respostaindividual93">
-                                                                                    <legend>85. Você fumou hoje? (SE O PARTICIPANTE PAROU DE FUMAR, NÃO FAÇA ESSA PERGUNTA, PULE PARA QUESTÃO 92)</legend>
+                                                                                    <legend>93. Você fumou hoje? (SE O PARTICIPANTE PAROU DE FUMAR, NÃO FAÇA ESSA PERGUNTA, PULE PARA QUESTÃO 92)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2976,7 +2974,7 @@
 
 
                                                                                 <fieldset id="respostaindividual94">
-                                                                                    <legend>86. Você fumou um cigarro − ainda que só uma tragada − durante os últimos sete dias?</legend>
+                                                                                    <legend>94. Você fumou um cigarro − ainda que só uma tragada − durante os últimos sete dias?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -2996,7 +2994,7 @@
 
 
                                                                                 <fieldset id="respostaindividual95">
-                                                                                    <legend>87. Quanto tempo você demora para fumar seu primeiro cigarro depois de se levantar pela manhã?</legend>
+                                                                                    <legend>95. Quanto tempo você demora para fumar seu primeiro cigarro depois de se levantar pela manhã?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3028,7 +3026,7 @@
 
 
                                                                                 <fieldset id="respostaindividual96">
-                                                                                    <legend>88. Para você é difícil abster-se e não fumar naqueles lugares onde está proibido (por exemplo: um hospital,biblioteca, igreja, ônibus etc.)?</legend>
+                                                                                    <legend>96. Para você é difícil abster-se e não fumar naqueles lugares onde está proibido (por exemplo: um hospital,biblioteca, igreja, ônibus etc.)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3049,7 +3047,7 @@
 
 
                                                                                 <fieldset id="respostaindividual97">
-                                                                                    <legend>89. Se tivesse de escolher, que cigarro lhe custaria mais deixar de fumar?</legend>
+                                                                                    <legend>97. Se tivesse de escolher, que cigarro lhe custaria mais deixar de fumar?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3070,7 +3068,7 @@
 
 
                                                                                 <fieldset id="respostaindividual98">
-                                                                                    <legend>90.Habitualmente você fuma mais durante as primeiras horas do dia que durante o resto do dia?</legend>
+                                                                                    <legend>98.Habitualmente você fuma mais durante as primeiras horas do dia que durante o resto do dia?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3091,7 +3089,7 @@
 
 
                                                                                 <fieldset id="respostaindividual99">
-                                                                                    <legend>91. Você fuma estando doente ou na cama?</legend>
+                                                                                    <legend>99. Você fuma estando doente ou na cama?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3118,7 +3116,7 @@
 
 
                                                                                 <fieldset id="respostaindividual100">
-                                                                                    <legend class="mt-0">92. De um modo geral, qual das alternativas define melhor os seus hábitos diários em relação à prática de atividade física ?</legend>
+                                                                                    <legend class="mt-0">100. De um modo geral, qual das alternativas define melhor os seus hábitos diários em relação à prática de atividade física ?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3165,7 +3163,7 @@
 
 
                                                                                 <fieldset id="respostaindividual101">
-                                                                                    <legend class="mt-0">93. Atualmente, você possui alguma religião ou culto? </legend>
+                                                                                    <legend class="mt-0">101. Atualmente, você possui alguma religião ou culto? </legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3185,7 +3183,7 @@
 
 
                                                                                 <fieldset id="respostaindividual102">
-                                                                                    <legend>94. Atualmente, qual é a sua religião ou culto? (aquela com que você mais se identifica) (MOSTRAR A LISTA NO CELULAR)</legend>
+                                                                                    <legend>102. Atualmente, qual é a sua religião ou culto? (aquela com que você mais se identifica) (MOSTRAR A LISTA NO CELULAR)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3313,7 +3311,7 @@
                                                                                 
                                                                                 <!-- EXTRA -->
                                                                                 <fieldset id="respostaindividualsegundo116">
-                                                                                    <legend class="mt-0">Outras</legend>
+                                                                                    <legend class="mt-0">102. Outras</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividualsegundo116" type="text" value="Outras:">
                                                                                         <input type="text" id="respostaindividualsegundo116" name="respostaindividualsegundo116" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividualsegundo116:''}}" class="form-control" >
@@ -3334,7 +3332,7 @@
 
 
                                                                                 <fieldset id="respostaindividual103">
-                                                                                    <legend class="mt-0">95. O(a) Sr(a) já consumiu bebidas alcoólicas? </legend>
+                                                                                    <legend class="mt-0">103. O(a) Sr(a) já consumiu bebidas alcoólicas? </legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3354,7 +3352,7 @@
 
 
                                                                                 <fieldset id="respostaindividual104">
-                                                                                    <legend>96. Atualmente, o(a) Sr(a) consome bebidas alcoólicas?</legend>
+                                                                                    <legend>104. Atualmente, o(a) Sr(a) consome bebidas alcoólicas?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3386,7 +3384,7 @@
 
 
                                                                                 <fieldset id="respostaindividual105">
-                                                                                    <legend>97. O Sr(a) consome VINHO TINTO?</legend>
+                                                                                    <legend>105. O Sr(a) consome VINHO TINTO?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3406,7 +3404,7 @@
 
 
                                                                                 <fieldset id="respostaindividual106">
-                                                                                    <legend>98. Quantas taças de VINHO TINTO o(a) Sr(a) consome POR SEMANA? (SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0)</legend>
+                                                                                    <legend>106. Quantas taças de VINHO TINTO o(a) Sr(a) consome POR SEMANA? (SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0)</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual106" type="text" value="98. Quantas taças de VINHO TINTO o(a) Sr(a) consome POR SEMANA? (SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0):">
                                                                                         <input id="respostaindividual106" type="text" name="respostaindividual106" class="form-control" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual98:''}}">
@@ -3415,7 +3413,7 @@
 
 
                                                                                 <fieldset id="respostaindividual107">
-                                                                                    <legend>99. O Sr(a) consome VINHO BRANCO?</legend>
+                                                                                    <legend>107. O Sr(a) consome VINHO BRANCO?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3435,7 +3433,7 @@
 
 
                                                                                 <fieldset id="respostaindividual108">
-                                                                                    <legend>100. Quantas taças de VINHO BRANCO o(a) Sr(a) consome POR SEMANA? (SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0)</legend>
+                                                                                    <legend>108. Quantas taças de VINHO BRANCO o(a) Sr(a) consome POR SEMANA? (SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0)</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual108" type="text" value="100. Quantas taças de VINHO BRANCO o(a) Sr(a) consome POR SEMANA? (SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0):">
                                                                                         <input id="respostaindividual108" type="text" name="respostaindividual108" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual100:''}}" class="form-control" >
@@ -3444,7 +3442,7 @@
 
 
                                                                                 <fieldset id="respostaindividual109">
-                                                                                    <legend>101. O Sr(a) consome CERVEJA ou CHOPP ?</legend>
+                                                                                    <legend>109. O Sr(a) consome CERVEJA ou CHOPP ?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3464,7 +3462,7 @@
 
 
                                                                                 <fieldset id="respostaindividual110">
-                                                                                    <legend>102. Quantas latas, garrafas ou copos de CERVEJA ou CHOPP o(a) Sr(a) consome POR SEMANA?(NÃO LEIA AS OPÇÕES, ADEQUE A RESPOSTA DADA ÀS ALTERNATIVAS. SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0 - INFORMAR QUANTIDADE E TIPO)</legend>
+                                                                                    <legend>110. Quantas latas, garrafas ou copos de CERVEJA ou CHOPP o(a) Sr(a) consome POR SEMANA?(NÃO LEIA AS OPÇÕES, ADEQUE A RESPOSTA DADA ÀS ALTERNATIVAS. SE O PARTICIPANTE DISSER QUE TOMA POUCO OU TOMA IRREGULARMENTE, MARQUE 0 - INFORMAR QUANTIDADE E TIPO)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3496,7 +3494,7 @@
 
 
                                                                                 <fieldset id="respostaindividual111">
-                                                                                    <legend>102. ENTREVISTADOR: escreva a quantidade referente à pergunta anterior</legend>
+                                                                                    <legend>111. ENTREVISTADOR: escreva a quantidade referente à pergunta anterior</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual111" type="text" value="102. ENTREVISTADOR: escreva a quantidade referente à pergunta anterior:">
                                                                                         <input id="respostaindividual111" type="text" name="respostaindividual111" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual111:''}}" class="form-control" >
@@ -3505,7 +3503,7 @@
 
 
                                                                                 <fieldset id="respostaindividual112">
-                                                                                    <legend>103. O Sr(a) consome DESTILADOS (tais como uísque, vodka, tequila, rum, aguardente ou cachaça) oubebidas misturadas preparadas com esses destilados (caipirinha, coquetéis, drinks)?</legend>
+                                                                                    <legend>112. O Sr(a) consome DESTILADOS (tais como uísque, vodka, tequila, rum, aguardente ou cachaça) oubebidas misturadas preparadas com esses destilados (caipirinha, coquetéis, drinks)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3526,7 +3524,7 @@
 
 
                                                                                 <fieldset id="respostaindividual113">
-                                                                                    <legend>104. Quantas doses (1 DOSE&#x3D; 50 mL &#x3D; 1 xícara de cafezinho) de DESTILADOS (tais como uísque, vodka, tequila, rum aguardente ou cachaça) ou bebidas misturadas preparadas com esses destilados (caipirinha,coquetéis, drinks), o(a) Sr(a) consome POR SEMANA?</legend>
+                                                                                    <legend>113. Quantas doses (1 DOSE&#x3D; 50 mL &#x3D; 1 xícara de cafezinho) de DESTILADOS (tais como uísque, vodka, tequila, rum aguardente ou cachaça) ou bebidas misturadas preparadas com esses destilados (caipirinha,coquetéis, drinks), o(a) Sr(a) consome POR SEMANA?</legend>
                                                                                     <div class="form-group">
                                                                                     <input hidden name="perguntaindividual113" type="text" value="Quantas doses (1 DOSE= 50 mL = 1 xícara de cafezinho) de DESTILADOS (tais como uísque, vodka, tequila, rum aguardente ou cachaça) ou bebidas misturadas preparadas com esses destilados (caipirinha,coquetéis, drinks), o(a) Sr(a) consome POR SEMANA:">
                                                                                         <input id="respostaindividual113" type="text" name="respostaindividual113" value="{{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual113:''}}" class="form-control" >
@@ -3554,7 +3552,7 @@
 
 
                                                                                 <fieldset id="respostaindividual114">
-                                                                                    <legend>105. Nos ÚLTIMOS 12 MESES, com que frequência o(a) Sr(a) consumiu 5 ou mais doses* de qualquer tipo de bebida alcoólica em um período de 2 horas? (LER AS ALTERNATIVAS)</legend>
+                                                                                    <legend>114. Nos ÚLTIMOS 12 MESES, com que frequência o(a) Sr(a) consumiu 5 ou mais doses* de qualquer tipo de bebida alcoólica em um período de 2 horas? (LER AS ALTERNATIVAS)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3598,7 +3596,7 @@
 
 
                                                                                 <fieldset id="respostaindividual115">
-                                                                                    <legend>106. Do total de bebidas alcoólicas que o(a) Sr(a) consome, com que frequência o(a) Sr(a) ingere junto às refeições?</legend>
+                                                                                    <legend>115. Do total de bebidas alcoólicas que o(a) Sr(a) consome, com que frequência o(a) Sr(a) ingere junto às refeições?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3665,7 +3663,7 @@
                                                                                 </fieldset>
 
                                                                                 <fieldset >
-                                                                                    <legend class="mt-0">107. O(a) Sr(a) toma medicamentos para Diabetes ou açúcar alto no sangue?: (SE O PARTICIPANTE NÃO SOUBER SOLICITE A RECEITA OU A CAIXA DO MEDICAMENTO)</legend>
+                                                                                    <legend class="mt-0">116. O(a) Sr(a) toma medicamentos para Diabetes ou açúcar alto no sangue?: (SE O PARTICIPANTE NÃO SOUBER SOLICITE A RECEITA OU A CAIXA DO MEDICAMENTO)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3685,7 +3683,7 @@
 
 
                                                                                 <fieldset id="individual116">
-                                                                                    <legend>108. O(a) Sr(a) toma comprimido para o Diabetes?</legend>
+                                                                                    <legend>117. O(a) Sr(a) toma comprimido para o Diabetes?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3706,7 +3704,7 @@
 
 
                                                                                 <fieldset id="individual117">
-                                                                                    <legend>109. O(a) Sr(a) utiliza insulina para o Diabetes?</legend>
+                                                                                    <legend>118. O(a) Sr(a) utiliza insulina para o Diabetes?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3727,7 +3725,7 @@
 
 
                                                                                 <fieldset id="individual118">
-                                                                                    <legend>110. O(a) Sr(a) toma medicamentos para Hipertensão ou pressão alta?: (SE O PARTICIPANTE NÃO SOUBER SOLICITE A RECEITA OU A CAIXA DO MEDICAMENTO)</legend>
+                                                                                    <legend>119. O(a) Sr(a) toma medicamentos para Hipertensão ou pressão alta?: (SE O PARTICIPANTE NÃO SOUBER SOLICITE A RECEITA OU A CAIXA DO MEDICAMENTO)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3760,7 +3758,7 @@
 
                                                                                 <!-- EXTRA -->
                                                                                 <fieldset id="extra1">
-                                                                                    <legend class="mt-0">111. Que idade a Sra. tinha quando menstruou pela primeira vez?</legend>
+                                                                                    <legend class="mt-0">120. Que idade a Sra. tinha quando menstruou pela primeira vez?</legend>
                                                                                     <div class="form-group">
                                                                                     <input hidden name="perguntaindividual121" type="text" value="111. Que idade a Sra. tinha quando menstruou pela primeira vez:">
                                                                                         <input type="text" id="respostaindividual121" name="respostaindividual121" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual121:''}}" class="form-control" >
@@ -3769,7 +3767,7 @@
 
 
                                                                                 <fieldset id="respostaindividual122">
-                                                                                    <legend>112. A Sra. ainda menstrua?</legend>
+                                                                                    <legend>121. A Sra. ainda menstrua?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3790,7 +3788,7 @@
 
 
                                                                                 <fieldset id="respostaindividual123">
-                                                                                    <legend>113. Que idade a Sra. tinha quando sua menstruação parou definitivamente?</legend>
+                                                                                    <legend>122. Que idade a Sra. tinha quando sua menstruação parou definitivamente?</legend>
                                                                                     <div class="form-group">
                                                                                     <input hidden name="perguntaindividual123" type="text" value="113. Que idade a Sra. tinha quando sua menstruação parou definitivamente:">
                                                                                         <input id="respostaindividual123" type="text" name="respostaindividual123" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual123:''}}" class="form-control" >
@@ -3799,7 +3797,7 @@
 
 
                                                                                 <fieldset  id="respostaindividual124">
-                                                                                    <legend>114. Por que não menstrua mais? (LEIA AS ALTERNATIVAS)</legend>
+                                                                                    <legend>123. Por que não menstrua mais? (LEIA AS ALTERNATIVAS)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3842,7 +3840,7 @@
                                                                                 </fieldset>
 
                                                                                 <fieldset id="respostaindividual139">
-                                                                                    <legend class="mt-0">Outras</legend>
+                                                                                    <legend class="mt-0">123. Outras</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual139" type="text" value="Outras:">
                                                                                         <input id="respostaindividual139" type="text" name="respostaindividual139" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual139:''}}" class="form-control" >
@@ -3858,7 +3856,7 @@
 
 
                                                                                 <fieldset id="respostaindividual125">
-                                                                                    <legend class="mt-0">115. A Sra. já esteve grávida? Considere todas as gestações, incluindo aquelas que resultaram em filho nascido vivo ou morto, em aborto espontâneo/perda, aborto provocado e gravidez ectópica/nas trompas.</legend>
+                                                                                    <legend class="mt-0">124. A Sra. já esteve grávida? Considere todas as gestações, incluindo aquelas que resultaram em filho nascido vivo ou morto, em aborto espontâneo/perda, aborto provocado e gravidez ectópica/nas trompas.</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3878,7 +3876,7 @@
 
 
                                                                                 <fieldset id="respostaindividual126">
-                                                                                    <legend>116. Que idade a Sra. tinha quando engravidou pela primeira vez?</legend>
+                                                                                    <legend>125. Que idade a Sra. tinha quando engravidou pela primeira vez?</legend>
                                                                                     <div class="form-group">
                                                                                     <input hidden name="perguntaindividual126" type="text" value="116. Que idade a Sra. tinha quando engravidou pela primeira vez:">
                                                                                         <input type="text" id="respostaindividual126" name="respostaindividual126" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual126:''}}" class="form-control" >
@@ -3887,7 +3885,7 @@
 
 
                                                                                 <fieldset id="respostaindividual127">
-                                                                                    <legend>117. Considerando todas as suas gestações, quantas terminaram com Nascidos-vivos:</legend>
+                                                                                    <legend>126. Considerando todas as suas gestações, quantas terminaram com Nascidos-vivos:</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual127" type="text" value="117. Considerando todas as suas gestações, quantas terminaram com Nascidos-vivos:">
                                                                                         <input type="text" id="respostaindividual127" name="respostaindividual127" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual127:''}}" class="form-control" >
@@ -3896,7 +3894,7 @@
 
 
                                                                                 <fieldset id="respostaindividual128">
-                                                                                    <legend>118. Considerando todas as suas gestações, quantas terminaram com Nascidos-mortos:</legend>
+                                                                                    <legend>127. Considerando todas as suas gestações, quantas terminaram com Nascidos-mortos:</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual128" type="text" value="118. Considerando todas as suas gestações, quantas terminaram com Nascidos-mortos:">
                                                                                         <input type="text" id="respostaindividual128" name="respostaindividual128" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual128:''}}" class="form-control" >
@@ -3905,7 +3903,7 @@
 
 
                                                                                 <fieldset id="respostaindividual129">
-                                                                                    <legend>119. Considerando todas as suas gestações, quantas terminaram com Abortos:</legend>
+                                                                                    <legend>128. Considerando todas as suas gestações, quantas terminaram com Abortos:</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual129" type="text" value="119. Considerando todas as suas gestações, quantas terminaram com Abortos:">
                                                                                         <input type="text" id="respostaindividual129" name="respostaindividual129" class="form-control" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual129:''}}">
@@ -3914,7 +3912,7 @@
 
 
                                                                                 <fieldset id="respostaindividual130">
-                                                                                    <legend>120. Considerando todas as suas gestações, quantas terminaram com outras ocorrências como gravidez tubária (nas trompas), mola, etc.)</legend>
+                                                                                    <legend>129. Considerando todas as suas gestações, quantas terminaram com outras ocorrências como gravidez tubária (nas trompas), mola, etc.)</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual130" type="text" value="120. Considerando todas as suas gestações, quantas terminaram com outras ocorrências como gravidez tubária (nas trompas), mola, etc.):">
                                                                                         <input type="text" id="respostaindividual130" name="respostaindividual130" class="form-control" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual130:''}}">
@@ -3923,7 +3921,7 @@
 
 
                                                                                 <fieldset id="respostaindividual131">
-                                                                                    <legend>121. Apenas confirmando o número total de vezes que a Sra. engravidou foi  |_| _| gestações</legend>
+                                                                                    <legend>130. Apenas confirmando o número total de vezes que a Sra. engravidou foi  |_| _| gestações</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual131" type="text" value="121. Apenas confirmando o número total de vezes que a Sra. engravidou foi  |_| _| gestações:">
                                                                                         <input type="text" id="respostaindividual131" name="respostaindividual131" class="form-control" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual131:''}}">
@@ -3932,7 +3930,7 @@
 
 
                                                                                 <fieldset id="individual129">
-                                                                                    <legend>122. Mantendo relações sexuais com frequência, alguma vez a Sra. já tentou engravidar durante um ano completo ou mais e não conseguiu?</legend>
+                                                                                    <legend>131. Mantendo relações sexuais com frequência, alguma vez a Sra. já tentou engravidar durante um ano completo ou mais e não conseguiu?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3952,7 +3950,7 @@
 
 
                                                                                 <fieldset id="individual130">
-                                                                                    <legend>123. Algum médico já lhe deu o diagnóstico de síndrome de ovários policísticos? (LER AS ALTERNATIVAS)</legend>
+                                                                                    <legend>132. Algum médico já lhe deu o diagnóstico de síndrome de ovários policísticos? (LER AS ALTERNATIVAS)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3978,7 +3976,7 @@
 
 
                                                                                 <fieldset id="individual131">
-                                                                                    <legend>124. A Sra. fez Ligadura/laqueadura de trompas (esterilização feminina)</legend>
+                                                                                    <legend>133. A Sra. fez Ligadura/laqueadura de trompas (esterilização feminina)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -3998,7 +3996,7 @@
 
 
                                                                                 <fieldset id="individual132">
-                                                                                    <legend>125. O seu parceiro fez vasectomia (esterilização masculina)?</legend>
+                                                                                    <legend>134. O seu parceiro fez vasectomia (esterilização masculina)?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -4018,7 +4016,7 @@
 
 
                                                                                 <fieldset id="individual133">
-                                                                                    <legend>126. A Sra. (ou seu marido/parceiro) usa ou já usou algum outro método para evitar a gravidez?</legend>
+                                                                                    <legend>135. A Sra. (ou seu marido/parceiro) usa ou já usou algum outro método para evitar a gravidez?</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -4038,7 +4036,7 @@
 
 
                                                                                 <fieldset id="respostaindividual137">
-                                                                                    <legend>127 Qual método anticoncepcional que a Sra. (ou seu marido/parceiro) usa ou usou? Se for o caso, escolha mais de uma opção de resposta. (MOSTRE A LISTA NO CELULAR)</legend>
+                                                                                    <legend>136. Qual método anticoncepcional que a Sra. (ou seu marido/parceiro) usa ou usou? Se for o caso, escolha mais de uma opção de resposta. (MOSTRE A LISTA NO CELULAR)</legend>
                                                                                     <div class="form-group">
                                                                                         <div>
                                                                                             <label class="radio-inline">
@@ -4114,7 +4112,7 @@
                                                                                 </fieldset>
 
                                                                                 <fieldset id="respostaindividual140">
-                                                                                    <legend class="mt-0">Outras</legend>
+                                                                                    <legend class="mt-0">136. Outras</legend>
                                                                                     <div class="form-group">
                                                                                         <input hidden name="perguntaindividual140" type="text" value="Outras:">
                                                                                         <input type="text" name="respostaindividual140" value="{{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual140:''}}" class="form-control">
@@ -4123,7 +4121,7 @@
 
 
                                                                                 <fieldset id="individual135">
-                                                                                    <legend>128. A Sra. apresentou perda urinária semanal nos últimos três meses? </legend>
+                                                                                    <legend>137. A Sra. apresentou perda urinária semanal nos últimos três meses? </legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
@@ -4157,8 +4155,6 @@
                                                                                 
                                                                     </form>
                                                                     <!-- 4 - FIM FORMULARIO INDIVIDUAL -->
-
-
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -4414,7 +4410,6 @@
                             });
 
                             // SALTO 22
-                            
                             $('input:radio[id="respostaindividual136"]').on("change", function() {
                                 if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
                                     $("#respostaindividual137, #respostaindividual140").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO

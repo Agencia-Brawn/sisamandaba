@@ -2,9 +2,7 @@
 
 @section('content')
 
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- MENU MOBILE (767PX) -->
+    <!-- MENU MOBILE -->
     <div class="menu-lateral">
                 <input type="checkbox" id="check">
                 <label id="iconebar" for="check">
@@ -70,7 +68,7 @@
 
     <div class="row">
 
-        <!-- MENU MAIOR QUE 767PX -->
+        <!-- MENU WEB -->
         <div  class=" col-md-3 col-lg-3 col-xl-2 menu-web" >
             <aside class=" sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3  ps--active-y" id="sidenav-main">
                 <div  class=" mt-5 collapse navbar-collapse w-auto max-height-vh-100 h-100 ps" id="sidenav-collapse-main">
@@ -123,27 +121,23 @@
                 </div>
             </aside>         
         </div>  
-        <!-- FIM MENU MAIOR QUE 767PX --> 
+        <!-- FIM MENU WEB --> 
             
 
-        <div class="col-md-9 col-lg-9 col-xl-10 col-12 ps-5">
+        <div class="col-md-9 col-lg-9 col-xl-10 col-12 col-painel-header">
                 <div class="container painel-controle" >
-
-                    <div class="row justify-content-center row-painel-controle">
-                        <div class="col-md-12">
+                    <div class="row justify-content-center ">
+                        <div class="col-md-12 col-painel">
                             <div class="card">
                                 <div class="card-header"> 
                                     <h2>{{$usuario->name}}</h2>
                                 </div>
-
                                 <div class="card-body">
                                     @if (session('status'))
                                         <div class="alert alert-success" role="alert">
                                             {{ session('status') }}
                                         </div>
                                     @endif
-
-
                                             <!-- QUEST. LABORATÓRIO (names ok)-->
                                             <form action="{{route('post.form.laboratorio',['usuario'=>$usuario->id])}}" id="form6" method="POST">
                                                 @csrf
@@ -153,7 +147,7 @@
 
                                                     <!-- EXTRA 1 -->
                                                     <fieldset>
-                                                        <legend >Nome do Entrevistador</legend>
+                                                        <legend >1. Nome do Entrevistador</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio16" type="text" value="Nome do Entrevistador:">
                                                             <input name="respostalaboratorio16" type="text" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio16:''}}"  class="form-control" >
@@ -161,7 +155,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend >1. Data do Exame</legend>
+                                                        <legend >2. Data do Exame</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio1" type="text" value="1. Data do Exame:">
                                                             <input name="respostalaboratorio1" type="date" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio1:''}}"  class="form-control" >
@@ -174,7 +168,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>2. O participante está ou esteve doente com febre ou vômitos nos últimos 7 dias? (SE SIM, REAGENDAR A COLETA)</legend>
+                                                        <legend>3. O participante está ou esteve doente com febre ou vômitos nos últimos 7 dias? (SE SIM, REAGENDAR A COLETA)</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -194,7 +188,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>3. Fez atividade física moderada ou pesada durante as últimas 12 horas?</legend>
+                                                        <legend>4. Fez atividade física moderada ou pesada durante as últimas 12 horas?</legend>
                                                         <div class="form-group">
                                                             <div class="radio">
                                                                 <label>
@@ -214,7 +208,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>4. Qual o horário da última ingestão de alimentos? (SE MENOS DO QUE 12 HORAS, AGUARDAR COMPLETAR O TEMPO PARA A COLETA, SE MAIS DE 14 HORAS, INFORMAR COORDENAÇÃO) </legend>
+                                                        <legend>5. Qual o horário da última ingestão de alimentos? (SE MENOS DO QUE 12 HORAS, AGUARDAR COMPLETAR O TEMPO PARA A COLETA, SE MAIS DE 14 HORAS, INFORMAR COORDENAÇÃO) </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio4" type="text" value="4. Qual o horário da última ingestão de alimentos? (SE MENOS DO QUE 12 HORAS, AGUARDAR COMPLETAR O TEMPO PARA A COLETA, SE MAIS DE 14 HORAS, INFORMAR COORDENAÇÃO):">
                                                             <input required type="time" name="respostalaboratorio4" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio4:''}}" class="form-control">
@@ -222,7 +216,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>5. Qual o horário da ingestão de líquidos, incluindo café?</legend>
+                                                        <legend>6. Qual o horário da ingestão de líquidos, incluindo café?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio5" type="text" value="5. Qual o horário da ingestão de líquidos, incluindo café:">
                                                             <input required type="time" name="respostalaboratorio5" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio5:''}}" class="form-control">
@@ -230,7 +224,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>6. Qual o horário do último cigarro? (SE MENOS DO QUE 1 HORA, AGUARDAR COMPLETAR 1 HORA PARA INICIAR COLETA)</legend>
+                                                        <legend>7. Qual o horário do último cigarro? (SE MENOS DO QUE 1 HORA, AGUARDAR COMPLETAR 1 HORA PARA INICIAR COLETA)</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio6" type="text" value="6. Qual o horário do último cigarro? (SE MENOS DO QUE 1 HORA, AGUARDAR COMPLETAR 1 HORA PARA INICIAR COLETA):">
                                                             <input required type="time" name="respostalaboratorio6" id="" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio6:''}}" class="form-control">
@@ -238,7 +232,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>7. Qual o horário da primeira urina da manhã?</legend>
+                                                        <legend>8. Qual o horário da primeira urina da manhã?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio7" type="text" value="7. Qual o horário da primeira urina da manhã:">
                                                             <input required type="time" name="respostalaboratorio7" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio7:''}}" class="form-control">
@@ -246,7 +240,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>8. Qual o horário da coleta de urina para o projeto?</legend>
+                                                        <legend>9. Qual o horário da coleta de urina para o projeto?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio8" type="text" value="8. Qual o horário da coleta de urina para o projeto:">
                                                             <input required type="time" name="respostalaboratorio8" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio8:''}}" class="form-control">
@@ -254,7 +248,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>9. INÍCIO DA COLETA ÀS:</legend>
+                                                        <legend>10. INÍCIO DA COLETA ÀS:</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio9" type="text" value="9. INÍCIO DA COLETA ÀS:">
                                                             <input required type="time" name="respostalaboratorio9" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio9:''}}" class="form-control">
@@ -262,7 +256,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>10. FIM DA COLETA ÀS:</legend>
+                                                        <legend>11. FIM DA COLETA ÀS:</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio10" type="text" value="10. FIM DA COLETA ÀS:">
                                                             <input required type="time" name="respostalaboratorio10" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio10:''}}" class="form-control">
@@ -270,7 +264,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>11. Colheu as amostras em jejum? </legend>
+                                                        <legend>12. Colheu as amostras em jejum? </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio11" type="text" value="11. Colheu as amostras em jejum:">
                                                             <div clrequired ass="radio">
@@ -290,7 +284,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>12. Nome do técnico que coletou:</legend>
+                                                        <legend>13. Nome do técnico que coletou:</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio12" type="text" value="12. Nome do técnico que coletou:">
                                                             <input required type="text" name="respostalaboratorio12" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio12:''}}" class="form-control" >
@@ -298,7 +292,7 @@
                                                     </fieldset>
                                                     
                                                     <fieldset>
-                                                        <legend>13. Impressão do resultado, data:</legend>
+                                                        <legend>14. Impressão do resultado, data:</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio13" type="text" value="13. Impressão do resultado, data:">
                                                             <input type="date" name="respostalaboratorio13" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio13:''}}" class="form-control">
@@ -306,7 +300,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>14. Entrega do resultado ao participante, data: </legend>
+                                                        <legend>15. Entrega do resultado ao participante, data: </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio14" type="text" value="14. Entrega do resultado ao participante, data:">
                                                             <input type="date" name="respostalaboratorio14" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio14:''}}" class="form-control">
@@ -314,7 +308,7 @@
                                                     </fieldset>
 
                                                     <fieldset>
-                                                        <legend>15. Entrega do resultado na ESF, data: </legend>
+                                                        <legend>16. Entrega do resultado na ESF, data: </legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio15" type="text" value="15. Entrega do resultado na ESF, data:">
                                                             <input type="date" name="respostalaboratorio15" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio15:''}}" class="form-control">
@@ -327,8 +321,6 @@
 
                                             </form>        
                                             <!-- FIM --> 
-
-
                                 </div>
                             </div>
                         </div>

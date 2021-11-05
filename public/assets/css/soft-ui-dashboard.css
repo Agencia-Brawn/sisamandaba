@@ -2618,6 +2618,7 @@ progress {
 }
 
 @media (max-width: 767.98px) {
+
   .table-responsive-md {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -6640,7 +6641,7 @@ fieldset:disabled .btn {
   .modal-sm {
     max-width: 300px;
   }
-  .painel-controle .row-painel-controle {
+  .painel-controle .col-painel {
     padding-right: 0px;
   }
 }
@@ -25050,9 +25051,11 @@ pre[class*="language-"] {
   margin-top: 60px;
 }
 
-.painel-controle .row-painel-controle {
+.painel-controle .col-painel {
   width: 100%; 
   margin-top: 25px;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+
 }
 
 .painel-controle .card-header h2{
@@ -25275,10 +25278,27 @@ pre[class*="language-"] {
   min-height: 214px;
 }
 
+.col-painel-header{
+  margin-left: 15rem;
+}
+
+@media(max-width: 767px){
+  .col-painel-header{
+    margin-left: 0rem;
+  }
+}
+
 @media(max-width:500){
+  .col-painel-header{
+    margin-left: 0;
+  }
+
   .apoio-login{
     width: 400px;
     height: 200px;
   }
 }
+
+
+
 
