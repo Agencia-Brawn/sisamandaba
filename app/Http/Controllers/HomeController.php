@@ -29,5 +29,10 @@ class HomeController extends Controller
         $usuarios = Usuarios::all();
         return view('home', ['usuarios'=>$usuarios]);
     }
+
+    public function exportar()
+    {
+        return view('arquivos');
+    }
 }
  

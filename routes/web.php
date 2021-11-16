@@ -16,7 +16,23 @@ Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
- 
+
+Route::get('/exportar', 'HomeController@exportar')->name('exportacao');
+
+
+// EXPORTAR EM EXCEL 
+Route::get('formantropometria/export/', 'FormatoexcelController@formularioantropometria')->name('formprimeiro');
+Route::get('formfamiliar/export/', 'FormatoexcelController@formulariofamiliar')->name('formsegundo');
+Route::get('formiciq/export/', 'FormatoexcelController@formularioiciq')->name('formterceiro');
+Route::get('formindividual/export/', 'FormatoexcelController@formularioindividual')->name('formquarto');
+Route::get('formindividualprimeiro/export/', 'FormatoexcelController@formularioindividualprimeiro')->name('formquinto');
+Route::get('formindividualsegundo/export/', 'FormatoexcelController@formularioindividualsegundo')->name('formsexto');
+Route::get('formindividualterceiro/export/', 'FormatoexcelController@formularioindividualterceiro')->name('formsetimo');
+Route::get('formlaboratorio/export/', 'FormatoexcelController@formulariolaboratorio')->name('formoitavo');
+Route::get('formmsni/export/', 'FormatoexcelController@formulariomsni')->name('formnono');
+Route::get('formpressao/export/', 'FormatoexcelController@formulariopressao')->name('formdecimo');
+Route::get('formperfil/export/', 'FormatoexcelController@formularioperfil')->name('formperfil');
+
 
 Route::group(['prefix' => 'usuarios/','namespace'=>'Usuarios'], function () {
      

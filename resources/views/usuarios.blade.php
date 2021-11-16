@@ -169,7 +169,7 @@
 
                                                  
 
-                                                <!-- DADOS PESSOAIS -->
+                                                <!-- CADASTRO DE USUÁRIO -->
                                                 <form action="{{route('formulario.usuarios')}}" method="post">
                                                     @csrf 
                                                         <div class="form-group">

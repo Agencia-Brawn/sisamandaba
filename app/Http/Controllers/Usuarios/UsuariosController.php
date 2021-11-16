@@ -2266,8 +2266,8 @@ class UsuariosController extends Controller
         $usuario->perfilnomefamiliar=$request->perfilnomefamiliar;
         $usuario->perfilparentescofamiliar=$request->perfilparentescofamiliar;
 
-       
-
+        $usuario->diareuniao=$request->diareuniao;
+        $usuario->horareuniao=$request->horareuniao;
 
         $usuario->cep=preg_replace('/[^0-9]/', '', $request->perfilcep);        
         $usuario->estado=$request->perfilestado;

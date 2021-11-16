@@ -279,12 +279,64 @@
                                                                 <input class="form-control"  type="text" name="perfilcasa" value="{{$usuario->numcasa}}">
                                                             </div>
                                                         </fieldset>
+
+                                                        <!-- HORÁRIO CIRCULO DE CULTURA -->
+                                                        <h3 class="text-left mt-5">Preferências para o Circulo de Cultura</h3>
                                                         
+                                                        <br><br>
+                                                        <!-- <select onchange="verifica(this.value)">
+                                                            <option name="status" id="status" value="0">Selecione o Horário</option>
+                                                            <option name="manha" id="manha" value="1">Das 9h as 11h</option>
+                                                            <option name="tarde" id="tarde" value="2">Das 15h as 18h</option>
+                                                            <option name="noite" id="noite" value="3">Das 17h as 19h</option>
+                                                        </select> -->
 
+                                                        <!-- SCRIPT OPTIONS -->
+                                                        
+                                                        
+                                                        <fieldset>
+                                                            <div class="form-group">
+                                                            <legend>Escolha o melhor horário para você participar das reuniões (Círculos de Cultura):</legend>
+                                                                <select onchange="verifica(this.value)" class="form-control" name="horareuniao" id="exampleFormControlSelect2">
+                                                                    <option name="status" id="status" value="0">Selecione sua 1º preferência de horário</option>
+                                                                    <option name="manha" id="manha" value="1">Das 9h as 11h</option>
+                                                                    <option name="tarde" id="tarde" value="2">Das 15h as 18h</option>
+                                                                    <option name="noite" id="noite" value="3">Das 17h as 19h</option>
+                                                                </select>
+                                                                <br>
+                                                                <select onchange="verifica(this.value)" class="form-control" name="horareuniao" id="exampleFormControlSelect2">
+                                                                    <option name="status" id="status" value="0">Selecione sua 2º preferência de horário</option>
+                                                                    <option name="manha" id="manha" value="1">Das 9h as 11h</option>
+                                                                    <option name="tarde" id="tarde" value="2">Das 15h as 18h</option>
+                                                                    <option name="noite" id="noite" value="3">Das 17h as 19h</option>
+                                                                </select>
+                                                                <br>
+                                                                <select onchange="verifica(this.value)" class="form-control" name="horareuniao" id="exampleFormControlSelect2">
+                                                                    <option name="status" id="status" value="0">Selecione sua 3º preferência de horário</option>
+                                                                    <option name="manha" id="manha" value="1">Das 9h as 11h</option>
+                                                                    <option name="tarde" id="tarde" value="2">Das 15h as 18h</option>
+                                                                    <option name="noite" id="noite" value="3">Das 17h as 19h</option>
+                                                                </select>
+                                                            </div>                                                            
+                                                        </fieldset>
 
+                                                        <fieldset>
+                                                            <div class="form-group">
+                                                            <legend>Escolha o melhor dia da semana para participar das reuniões (Círculos de Cultura) de acordo com a sua preferência:</legend>
+                                                                <select class="form-control" name="diareuniao" id="exampleFormControlSelect2">
+                                                                    <option>Selecionar Dia</option>                                                                        
+                                                                    <option>Segunda-Feira</option>
+                                                                    <option>Terça-Feira</option>
+                                                                    <option>Quarta-Feira</option>
+                                                                    <option>Quinta-Feira</option>
+                                                                    <option>Sexta-Feira</option>
+                                                                    <option>Sabádo</option>
+                                                                    <option>Domingo</option>
+                                                                </select>
+                                                            </div>                                                            
+                                                        </fieldset>
 
                                                         <h3 class="text-left mt-5">Outros dados para localização</h3>
-
 
                                                         <div class="form-group">
                                                             <legend>ID Número</legend>
@@ -324,9 +376,6 @@
                                     
                                                             </div>
                                                         </fieldset>
-
-
-
 
                                                         <fieldset>
                                                             <div class="form-group">
@@ -495,6 +544,30 @@
                     </footer>
                     
                     <script>
+                        function verifica(value)
+                        {
+                            var manha = document.getElementById("manha");
+                            var tarde = document.getElementById("tarde");
+                            var noite = document.getElementById("noite");
+
+                            if(value == 1){
+                                manha.disabled = true;
+                                tarde.disabled = false;
+                                noite.disabled = false;
+                            }else if(value == 2){
+                                manha.disabled = false;
+                                tarde.disabled = true;
+                                noite.disabled = false;
+                            }else if(value == 3){
+                                manha.disabled = false;
+                                tarde.disabled = false;
+                                noite.disabled = true;
+                            }else if(value == 0){
+                                manha.disabled = false;
+                                tarde.disabled = false;
+                                noite.disabled = false;
+                            }
+                        };
                         $(document).ready(function($){
                             $('#cpf').mask('000.000.000-00', {reverse: true});
                             $('#datanasc').mask('00/00/0000');

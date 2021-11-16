@@ -1265,7 +1265,7 @@
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                            <input hidden name="perguntaindividual29" type="text" value="41. Hipertensão (Pressão alta?):">
+                                                                                                <input hidden name="perguntaindividual29" type="text" value="41. Hipertensão (Pressão alta?):">
                                                                                                 <input type="radio" name="respostaindividual29" value="Não" {{$usuario->formindividualprimeiro()?$usuario->formindividualprimeiro()->respostaindividual29=='Não'?'checked':'':''}}>
                                                                                                 Não
                                                                                             </label>
