@@ -220,6 +220,11 @@
                                                         </div>
 
                                                         <div class="form-group">
+                                                            <legend>Telefone de um Familiar</legend>
+                                                            <input class="form-control" value="{{$usuario->telfamiliar}}"  type="text" name="perfiltelefonefamiliar" id="telefonefamiliar" >
+                                                        </div>
+
+                                                        <div class="form-group">
                                                             <legend>Nome Familiar</legend>
                                                             <input class="form-control" value="{{$usuario->perfilnomefamiliar}}"  type="text" name="perfilnomefamiliar">
                                                         </div>
@@ -228,12 +233,6 @@
                                                             <legend>Grau de Parentesco</legend>
                                                             <input class="form-control" value="{{$usuario->perfilparentescofamiliar}}"  type="text" name="perfilparentescofamiliar">
                                                         </div>
-
-                                                        <div class="form-group">
-                                                            <legend>Telefone Familiar</legend>
-                                                            <input class="form-control" value="{{$usuario->telfamiliar}}"  type="text" name="perfiltelefonefamiliar" id="telefonefamiliar" >
-                                                        </div>
-
                                                         
                                                         <h3 class="text-left mt-5">Dados de Endereço (SOLICITE UM COMPROVANTE DE ENDEREÇO)</h3>
                                                         

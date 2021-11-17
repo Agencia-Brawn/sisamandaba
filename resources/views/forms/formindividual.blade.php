@@ -2887,13 +2887,6 @@
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                                <input hidden name="perguntaindividual89" type="text" value="81. Quando fumou o seu último cigarro:">
-                                                                                                <input type="radio" id="respostaindividual89" name="respostaindividual89" value="Hoje" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual89=='Hoje'?'checked':'':''}}>
-                                                                                                Hoje
-                                                                                            </label>
-                                                                                        </div>
-                                                                                        <div class="radio">
-                                                                                            <label>
                                                                                                 <input type="radio" id="respostaindividual89" name="respostaindividual89" value="No último mês" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual89=='No último mês'?'checked':'':''}}>
                                                                                                 No último mês
                                                                                             </label>
@@ -2954,11 +2947,11 @@
 
 
                                                                                 <fieldset id="respostaindividual93">
-                                                                                    <legend>93. Você fumou hoje? (SE O PARTICIPANTE PAROU DE FUMAR, NÃO FAÇA ESSA PERGUNTA, PULE PARA QUESTÃO 92)</legend>
+                                                                                    <legend>93. Você fumou hoje? (SE O PARTICIPANTE PAROU DE FUMAR, NÃO FAÇA ESSA PERGUNTA)</legend>
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                            <input hidden name="perguntaindividual93" type="text" value="85. Você fumou hoje? (SE O PARTICIPANTE PAROU DE FUMAR, NÃO FAÇA ESSA PERGUNTA, PULE PARA QUESTÃO 92):">
+                                                                                            <input hidden name="perguntaindividual93" type="text" value="85. Você fumou hoje? (SE O PARTICIPANTE PAROU DE FUMAR, NÃO FAÇA ESSA PERGUNTA):">
                                                                                                 <input type="radio" id="respostaindividual93" name="respostaindividual93" value="Sim" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual93=='Sim'?'checked':'':''}}>
                                                                                                 Sim
                                                                                             </label>
@@ -2966,7 +2959,7 @@
                                                                                         <div class="radio">
                                                                                             <label>
                                                                                                 <input type="radio" id="respostaindividual93" name="respostaindividual93" value="Não" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual93=='Não'?'checked':'':''}}>
-                                                                                                Não (PULE PARA QUESTÃO 92)
+                                                                                                Não
                                                                                             </label>
                                                                                         </div>
                                                                                     </div>
@@ -4320,13 +4313,13 @@
                             });
 
                             // SALTO 12
-                            $('input:radio[id="respostaindividual93"]').on("change", function() {
-                                if (this.checked && this.value == 'Não') { // CONDIÇÃO PARA O SALTO
-                                    $("#respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").hide(); // QUESTÕES QUE SERÃO OCULTAS CASO POSITIVO PARA SALTO
-                                } else {
-                                    $("#respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").show(); // CASO NEGATIVO EXIBIR ESSAS 
-                                }
-                            });
+                            // $('input:radio[id="respostaindividual93"]').on("change", function() {
+                            //     if (this.checked && this.value == 'Não') { 
+                            //         $("#respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").hide(); 
+                            //     } else {
+                            //         $("#respostaindividual94, #respostaindividual95, #respostaindividual96, #respostaindividual97, #respostaindividual98, #respostaindividual99").show(); 
+                            //     }
+                            // });
 
                             // SALTO 13
                             $('input:radio[id="respostaindividual101"]').on("change", function() {
