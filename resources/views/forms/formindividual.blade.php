@@ -350,7 +350,7 @@
                                                                                             </div>
                                                                                             <div class="radio">
                                                                                                 <label>
-                                                                                                    <input type="radio" id="respostaindividual8" name="respostaindividual8" value="2 grau incompleto" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual8=='2 grau completo'?'checked':'':''}}>
+                                                                                                    <input type="radio" id="respostaindividual8" name="respostaindividual8" value="2 grau incompleto" {{$usuario->formindividual()?$usuario->formindividual()->respostaindividual8=='2 grau incompleto'?'checked':'':''}}>
                                                                                                     2º grau incompleto (PULE PARA O HLS-14)
                                                                                                 </label>
                                                                                             </div>
