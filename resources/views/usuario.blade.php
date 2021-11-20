@@ -186,17 +186,17 @@
                                         </li>
 
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
-                                            <strong class="text-dark">Telefone de um Familiar:</strong> 
+                                            <strong class="text-dark">Telefone do Familiar Mais Próximo:</strong> 
                                             <input type="text" id="telefone2" value="{{$usuario->telfamiliar}}" class="form-control" disabled />
                                         </li>
 
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
-                                            <strong class="text-dark">Nome do Familiar:</strong> 
+                                            <strong class="text-dark">Nome do Familiar do Telefone Informado:</strong> 
                                             <input type="text" value="{{$usuario->perfilnomefamiliar?$usuario->perfilnomefamiliar:''}}" class="form-control" disabled />
                                         </li>  
 
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
-                                            <strong class="text-dark">Grau de Parentesco do Familiar:</strong> 
+                                            <strong class="text-dark">Grau de Parentesco de Familiar do Telefone Informado:</strong> 
                                             <input type="text" value="{{$usuario->perfilparentescofamiliar?$usuario->perfilparentescofamiliar:''}}" class="form-control" disabled />
                                         </li>  
   
@@ -230,7 +230,7 @@
                                         </li>
 
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
-                                            <strong class="text-dark">Nome da Casa:</strong>
+                                            <strong class="text-dark">Número da Casa:</strong>
                                             <input type="text" value="{{$usuario->numcasa?$usuario->numcasa:''}}" class="form-control" disabled />
                                         </li>
                                     </ul>
