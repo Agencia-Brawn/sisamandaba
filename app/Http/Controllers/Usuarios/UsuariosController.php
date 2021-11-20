@@ -588,6 +588,9 @@ class UsuariosController extends Controller
             $userform->perguntaindividual26 = $request->perguntaindividual26;
             $userform->respostaindividual26 = $request->respostaindividual26;  
 
+            $userform->perguntaespecifique26 = $request->perguntaespecifique26;
+            $userform->respostaespecifique26 = $request->respostaespecifique26;  
+
             $userform->perguntaindividual27 = $request->perguntaindividual27;
             $userform->respostaindividual27 = $request->respostaindividual27;  
 
@@ -680,47 +683,14 @@ class UsuariosController extends Controller
             $userform->perguntaindividual26 = $request->perguntaindividual26;
             $userform->respostaindividual26 = $request->respostaindividual26;  
 
+            $userform->perguntaespecifique26 = $request->perguntaespecifique26;
+            $userform->respostaespecifique26 = $request->respostaespecifique26; 
+
             $userform->perguntaindividual27 = $request->perguntaindividual27;
             $userform->respostaindividual27 = $request->respostaindividual27;  
 
             $userform->perguntaindividual28 = $request->perguntaindividual28;
             $userform->respostaindividual28 = $request->respostaindividual28;  
-
-            // $userform->perguntaindividual29 = $request->perguntaindividual29;
-            // $userform->respostaindividual29 = $request->respostaindividual29;  
-
-            // $userform->perguntaindividual30 = $request->perguntaindividual30;
-            // $userform->respostaindividual30 = $request->respostaindividual30;  
-
-            // $userform->perguntaindividual31 = $request->perguntaindividual31;
-            // $userform->respostaindividual31 = $request->respostaindividual31;  
-
-            // $userform->perguntaindividual32 = $request->perguntaindividual32;
-            // $userform->respostaindividual32 = $request->respostaindividual32;  
-
-            // $userform->perguntaindividual33 = $request->perguntaindividual33;
-            // $userform->respostaindividual33 = $request->respostaindividual33;  
-
-            // $userform->perguntaindividual34 = $request->perguntaindividual34;
-            // $userform->respostaindividual34 = $request->respostaindividual34;  
-
-            // $userform->perguntaindividual35 = $request->perguntaindividual35;
-            // $userform->respostaindividual35 = $request->respostaindividual35;  
-
-            // $userform->perguntaindividual36 = $request->perguntaindividual36;
-            // $userform->respostaindividual36 = $request->respostaindividual36;  
-
-            // $userform->perguntaindividual37 = $request->perguntaindividual37;
-            // $userform->respostaindividual37 = $request->respostaindividual37;  
-
-            // $userform->perguntaindividual38 = $request->perguntaindividual38;
-            // $userform->respostaindividual38 = $request->respostaindividual38;  
-
-            // $userform->perguntaindividual39 = $request->perguntaindividual39;
-            // $userform->respostaindividual39 = $request->respostaindividual39;  
-
-            // $userform->perguntaindividual40 = $request->perguntaindividual40;
-            // $userform->respostaindividual40 = $request->respostaindividual40; 
 
             $userform->save();
 
@@ -1146,8 +1116,17 @@ class UsuariosController extends Controller
             $userform->perguntaindividual115 = $request->perguntaindividual115;
             $userform->respostaindividual115 = $request->respostaindividual115;
 
-            $userform->perguntaindividualsegundo116 = $request->perguntaindividualsegundo116;
-            $userform->respostaindividualsegundo116 = $request->respostaindividualsegundo116;
+            $userform->perguntaindividual116 = $request->perguntaindividual116;
+            $userform->respostaindividual116 = $request->respostaindividual116;
+
+            $userform->perguntaindividual117 = $request->perguntaindividual117;
+            $userform->respostaindividual117 = $request->respostaindividual117;
+
+            $userform->perguntaindividual118 = $request->perguntaindividual118;
+            $userform->respostaindividual118 = $request->respostaindividual118;
+
+            $userform->perguntaindividual119 = $request->perguntaindividual119;
+            $userform->respostaindividual119 = $request->respostaindividual119;
 
             $userform->update();
 
@@ -1292,6 +1271,18 @@ class UsuariosController extends Controller
 
             $userform->perguntaindividual115 = $request->perguntaindividual115;
             $userform->respostaindividual115 = $request->respostaindividual115;
+
+            $userform->perguntaindividual116 = $request->perguntaindividual116;
+            $userform->respostaindividual116 = $request->respostaindividual116;
+
+            $userform->perguntaindividual117 = $request->perguntaindividual117;
+            $userform->respostaindividual117 = $request->respostaindividual117;
+
+            $userform->perguntaindividual118 = $request->perguntaindividual118;
+            $userform->respostaindividual118 = $request->respostaindividual118;
+
+            $userform->perguntaindividual119 = $request->perguntaindividual119;
+            $userform->respostaindividual119 = $request->respostaindividual119;
 
             $userform->save();
 

@@ -157,7 +157,7 @@
 
                                                         <div class="accordion-item mb-3">
                                                             <h5 class="accordion-header" id="headingOne">
-                                                                <button class="accordion-button border-bottom font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                                <button class="accordion-button border font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                                     PARTE 1
                                                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
@@ -191,6 +191,7 @@
                                                                                         <br>
                                                                                         <div class="form-group">
                                                                                             <h4>Vamos começar com alguns de seus dados pessoais</h4>
+                                                                                            {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual79=='Sim'?'checked':'':''}}
                                                                                         </div>
                                                                                     </fieldset>
 
@@ -1180,6 +1181,14 @@
                                                                                         </div>
                                                                                     </fieldset>
 
+                                                                                    <fieldset id="individual27">
+                                                                                        <legend class="mt-0">26 - Especifique</legend>
+                                                                                        <div class="form-group">
+                                                                                            <input hidden name="perguntaespecifique26" type="text" value="26 - Especifique:">
+                                                                                            <input type="text" name="respostaespecifique26" value="{{$usuario->formindividual()?$usuario->formindividual()->respostaespecifique26:''}}" class="form-control" >
+                                                                                        </div>
+                                                                                    </fieldset>
+
 
                                                                                     <fieldset id="individual27">
                                                                                         <legend>27. Há quantos anos você tem essa atividade? (SE MENOR DO QUE 01 ANO MARQUE 00)</legend>
@@ -1238,7 +1247,7 @@
 
                                                         <div class="accordion-item mb-3">
                                                             <h5 class="accordion-header" id="headingTwo">
-                                                                <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                <button class="accordion-button border font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                                     PARTE 2
                                                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
@@ -2469,7 +2478,7 @@
 
                                                         <div class="accordion-item mb-3">
                                                             <h5 class="accordion-header" id="headingThree">
-                                                                <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                <button class="accordion-button border font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                                     PARTE 3
                                                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
@@ -3625,30 +3634,6 @@
                                                                                     </div>
                                                                                 </fieldset>
 
-                                                                                <div class="text-center">
-                                                                                        <button class="btn btn-primary mt-5" type="submit" id="nav-profile-tab" >SALVAR E CONTINUAR </button>
-                                                                                </div>
-                                                                </form>
-                                                                <!-- FIM 3 - FORMULARIO INDIVIDUAL -->                                                                    
-
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <div class="accordion-item mb-3">
-                                                            <h5 class="accordion-header" id="headingFour">
-                                                                <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                                    PARTE 4
-                                                                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                                                                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                                                                </button>
-                                                            </h5>
-                                                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
-                                                                <div class="accordion-body text-sm opacity-8">
-                                                                    <!-- 4 - FORMULARIO INDIVIDUAL -->
-                                                                    <form action="{{route('post.form.individual.terceiro',['usuario'=>$usuario->id])}}" id="form2" method="POST">
-                                                                            @csrf
-
                                                                                 <fieldset>
                                                                                     <div class="form-group">
                                                                                         <h4>Vamos falar agora sobre os medicamentos que o(a) Sr(a) usa.</h4>
@@ -3660,14 +3645,14 @@
                                                                                     <div class="form-group">
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                                <input hidden name="perguntaindividual116" type="text" value="107. O(a) Sr(a) toma medicamentos para Diabetes ou açúcar alto no sangue:">
-                                                                                                <input type="radio" id="respostaindividual116" name="respostaindividual116" value="Sim" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual116=='Sim'?'checked':'':''}}>
+                                                                                                <input hidden name="perguntaindividual117" type="text" value="107. O(a) Sr(a) toma medicamentos para Diabetes ou açúcar alto no sangue:">
+                                                                                                <input type="radio" id="respostaindividual116" name="respostaindividual116" value="Sim" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual116=='Sim'?'checked':'':''}}>
                                                                                                 Sim
                                                                                             </label>
                                                                                         </div>
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                                <input type="radio" id="respostaindividual116" name="respostaindividual116" value="Não" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual116=='Não'?'checked':'':''}}>
+                                                                                                <input type="radio" id="respostaindividual116" name="respostaindividual116" value="Não" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual116=='Não'?'checked':'':''}}>
                                                                                                 Não
                                                                                             </label>
                                                                                         </div>
@@ -3682,13 +3667,13 @@
                                                                                             <label>
                                                                                                 <input hidden name="perguntaindividual117" type="text" value="108. O(a) Sr(a) toma comprimido para o Diabetes:">
 
-                                                                                                <input type="radio" id="respostaindividual117" name="respostaindividual117" value="Sim" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual117=='Sim'?'checked':'':''}}>
+                                                                                                <input type="radio" id="respostaindividual117" name="respostaindividual117" value="Sim" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual117=='Sim'?'checked':'':''}}>
                                                                                                 Sim
                                                                                             </label>
                                                                                         </div>
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                                <input type="radio" id="respostaindividual117" name="respostaindividual117" value="Não" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual117=='Não'?'checked':'':''}}>
+                                                                                                <input type="radio" id="respostaindividual117" name="respostaindividual117" value="Não" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual117=='Não'?'checked':'':''}}>
                                                                                                 Não
                                                                                             </label>
                                                                                         </div>
@@ -3703,13 +3688,13 @@
                                                                                             <label>
                                                                                             <input hidden name="perguntaindividual118" type="text" value="109. O(a) Sr(a) utiliza insulina para o Diabetes:">
 
-                                                                                                <input type="radio" id="respostaindividual118" name="respostaindividual118" value="Sim" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual118=='Sim'?'checked':'':''}}>
+                                                                                                <input type="radio" id="respostaindividual118" name="respostaindividual118" value="Sim" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual118=='Sim'?'checked':'':''}}>
                                                                                                 Sim
                                                                                             </label>
                                                                                         </div>
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                                <input type="radio" id="respostaindividual118" name="respostaindividual118" value="Não" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual118=='Não'?'checked':'':''}}>
+                                                                                                <input type="radio" id="respostaindividual118" name="respostaindividual118" value="Não" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual118=='Não'?'checked':'':''}}>
                                                                                                 Não
                                                                                             </label>
                                                                                         </div>
@@ -3724,20 +3709,43 @@
                                                                                             <label>
                                                                                             <input hidden name="perguntaindividual119" type="text" value="110. O(a) Sr(a) toma medicamentos para Hipertensão ou pressão alta?: (SE O PARTICIPANTE NÃO SOUBER SOLICITE A RECEITA OU A CAIXA DO MEDICAMENTO):">
 
-                                                                                                <input type="radio" id="respostaindividual119" name="respostaindividual119" value="Sim" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual119=='Sim'?'checked':'':''}}>
+                                                                                                <input type="radio" id="respostaindividual119" name="respostaindividual119" value="Sim" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual119=='Sim'?'checked':'':''}}>
                                                                                                 Sim
                                                                                             </label>
                                                                                         </div>
                                                                                         <div class="radio">
                                                                                             <label>
-                                                                                                <input type="radio" id="respostaindividual119" name="respostaindividual119" value="Não" {{$usuario->formindividualterceiro()?$usuario->formindividualterceiro()->respostaindividual119=='Não'?'checked':'':''}}>
+                                                                                                <input type="radio" id="respostaindividual119" name="respostaindividual119" value="Não" {{$usuario->formindividualsegundo()?$usuario->formindividualsegundo()->respostaindividual119=='Não'?'checked':'':''}}>
                                                                                                 Não
                                                                                             </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </fieldset>
 
-                                                                                <!--  -->
+                                                                                <div class="text-center">
+                                                                                        <button class="btn btn-primary mt-5" type="submit" id="nav-profile-tab" >SALVAR E CONTINUAR </button>
+                                                                                </div>
+                                                                </form>
+                                                                <!-- FIM 3 - FORMULARIO INDIVIDUAL -->                                                                    
+
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="accordion-item mb-3" {{$usuario->genero == 2 ? 'hidden' : ''}}>
+                                                            <h5 class="accordion-header" id="headingFour">
+                                                                <button class="accordion-button border font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                    PARTE 4
+                                                                    <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                                                    <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
+                                                                </button>
+                                                            </h5>
+                                                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
+                                                                <div class="accordion-body text-sm opacity-8">
+                                                                    <!-- 4 - FORMULARIO INDIVIDUAL -->
+                                                                    <form action="{{route('post.form.individual.terceiro',['usuario'=>$usuario->id])}}" id="form2" method="POST">
+                                                                            @csrf
+
                                                                                 <fieldset>
                                                                                     <br>
                                                                                     <h4>SE A PARTICIPANTE FOR MULHER PREENCHA O QUESTIONÁRIO PARA MULHERES.</h4>
