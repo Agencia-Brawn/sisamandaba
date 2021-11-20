@@ -552,9 +552,9 @@
 
                     </div> 
 
+                    <!-- DATA TABLE -->
                     <script>
                         $(document).ready(function() {
-                            // DATA TABLE
                             $.noConflict();
                             $('#tabelausuarios').DataTable({
                                 "language": {
@@ -566,14 +566,20 @@
                                     "search": "Procurar: ",
                                     "Previous": "Anterior",
                                     "Next": "Proxímo"
-                                }
-                            });
-
-                            // MASKARA
-                           
+                                },
+                                dom: 'Bfrtip',
+                                buttons: [
+                                    'excel',
+                                    {
+                                        extend: 'print', text: 'PDF',
+                                    }
+                                   
+                                ]
+                            });                           
                         } );
                     </script> 
                     
+                    <!-- MASKARÁ -->
                     <script>
                         $(document).ready(function($){
                             $('.cpf').mask('000.000.000-00');
