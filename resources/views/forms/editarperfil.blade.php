@@ -168,7 +168,12 @@
 
                                                         <div class="form-group">
                                                             <legend>Qual o seu CPF ? (SOLICITE O CPF OU OUTRO DOCUMENTO COM O CPF)</legend>
-                                                            <input class="form-control"  type="text"  id="cpf" name="perfilcpf" value="{{$usuario->cpf}}">
+                                                            <input class="form-control"  type="text"  id="cpf" name="cpf" value="{{$usuario->cpf}}">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Qual o seu RG ? (SOLICITE O RG OU OUTRO DOCUMENTO COM O RG)</legend>
+                                                            <input class="form-control"  type="text"  name="rg" value="{{$usuario->rg}}">
                                                         </div>
 
                                                         <div class="form-group">
@@ -191,7 +196,7 @@
                                                                             Masculino
                                                                         </label>
                                                                     </div>
-                                    
+
                                                             </div>
                                                         </fieldset>
                                                         
@@ -376,7 +381,31 @@
                                                             </div>
                                                         </fieldset>
 
-                                                        <fieldset>
+                                                       
+                                                        <fieldset id="bengui" >
+                                                            <div class="form-group" id="bloquear">
+                                                            <legend>Selecionar Unidade da Estratégia de Saúde da Família do Distrito Bengui (selecione um distrito primeiro)</legend>
+                                                                <select class="form-control" name="unidadeestrategia" id="opcao1">
+                                                                    <option value="" {{$usuario->unidadeestrategia==''?'selected':''}}>Selecione unidades do Distrito Bengui</option>
+                                                                    <option value="1" {{$usuario->unidadeestrategia=='1'?'selected':''}}>1</option>
+                                                                    <option value="2" {{$usuario->unidadeestrategia=='2'?'selected':''}}>2</option>
+                                                                </select>
+                                                            </div>                                                            
+                                                        </fieldset>
+
+                                                        <fieldset id="guama">
+                                                            <div class="form-group" >
+                                                            <legend>Selecionar Unidade da Estratégia de Saúde da Família do Distrito Guamá  (selecione um distrito primeiro)</legend>
+                                                                <select class="form-control" name="unidadeestrategia2" id="opcao2">
+                                                                    <option value="" {{$usuario->unidadeestrategia2==''?'selected':''}}>Selecione unidades do Distrito Guamá</option>
+                                                                    <option value="1" {{$usuario->unidadeestrategia2=='1'?'selected':''}}>1</option>
+                                                                    <option value="2" {{$usuario->unidadeestrategia2=='2'?'selected':''}}>2</option>
+                                                                </select>
+                                                            </div>                                                            
+                                                        </fieldset>
+
+                                                        <!-- CONEXÃO COM UNIDADES -->
+                                                        <!-- <fieldset>
                                                             <div class="form-group">
                                                             <legend>Unidade:</legend>
                                                                 <select class="form-control" name="perfilunidade" id="exampleFormControlSelect2">
@@ -386,7 +415,7 @@
                                                                     @endforeach
                                                                 </select>
                                                             </div>                                                            
-                                                        </fieldset>
+                                                        </fieldset> -->
 
                                                     <!-- <fieldset>
                                                         <legend>Unidade da Estratégia de Saúde da Família</legend>
@@ -527,7 +556,6 @@
 
 
                     <!-- FIM FORMULÁRIO -->
-
                     <footer class="footer pt-3  ">
                         <div class="container-fluid">
                                     <div class="row align-items-center justify-content-lg-between ">
@@ -578,6 +606,26 @@
                             $('#telefonefixo').mask('(00) 0000-0000');
 
                             $('#cep').mask('00000-000');
+                        });
+
+                        
+                    </script>
+
+                    <script>
+                        $(document).ready(function($){
+                            $('input:radio[name="perfildistrito"]').on("change", function() {
+                                if (this.checked && this.value == 'Guamá') { 
+                                    $("#bengui").hide();
+                                    $("#guama").show();
+                                } else if (this.checked && this.value == 'Bengui') {
+                                    $("#guama").hide();
+                                    $("#bengui").show();
+                                } 
+                                else {
+                                    $("#guama").hide();
+                                    $("#bengui").hide();
+                                }
+                            });  
                         });
                     </script>
 

@@ -21,11 +21,8 @@ use App\Models\FormMsni;
 
 class UsuariosController extends Controller
 {
-
-
     public function novo(Request $request)
-    {
-     
+    {    
         return view ('usuarios'); 
     }
 
@@ -33,32 +30,101 @@ class UsuariosController extends Controller
     {
         
         $messages = [
-            'name.required' => 'Nome é obrigatório.',
-            'email.unique' => "Email já registrado",
             'string' => "Formato invalido para o campo :attribute",
             'name.min' => "Nome deve tem no minimo 3 caracteres",
+            'name.required' => 'Nome é obrigatório',
+            'email.unique' => "Email já registrado",
+            'email.required' => 'Email é obrigatório',
+            'cpf.unique'=>"CPF já registrado",
+            'cpf.required' => 'CPF é obrigatório',
+            'rg.required' => 'RG é obrigatório',
+            'datanasc.required' => 'A Data de Nascimeto é obrigatória',
+            'mae.required' => 'Nome da Mãe é obrigatório',
+            'mae.min' => 'Nome da Mãe deve ter pelo menos 5 caracteres',
+            'genero.required' => 'O Gênero é obrigatório',
+            'telefone.required'=> "Telefone é obrigatório",
+            'telefonefixo.required' => 'Telefone Fixo é obrigatório',
+            'telfamiliar.required' => 'Telefone Familiar é obrigatório',
+            'perfilnomefamiliar.required' => 'Nome do Familiar é obrigatório',
+            'perfilparentescofamiliar.required' => 'Grau de Parentesco é obrigatório',
+            'estado.required' => 'O Estado é obrigatório',
+            'cidade.required' => 'A Cidade é obrigatório',
+            'bairro.required' => 'Bairro é obrigatório',
+            'cep.required' => 'CEP é obrigatório',
+            'rua.required' => 'Rua é obrigatório',
+            'sus.required' => 'Número do SUS é obrigatório',
+            'idnumero.required' => 'ID Número é obrigatório',
+            'numcasa.required' => 'Número da Casa é obrigatório',
+            'numequipe.required' => 'Número da Equipe é obrigatório',
+            'microarea.required' => 'Microarea é obrigatório',
+            'numfamilia.required' => 'Número da Familia é obrigatório',
+            'perfildistrito.required' => 'O Distrito é obrigatório',
+            'unidadeestrategia.required'=> 'A Unidade da Estratégia de Saúde da Família  é obrigatório',
             'password.min' => "Senha deve tem no minimo 8 caracteres",
             'password.confirmed' => "Senha não corresponde",
             'password.required' => "Senha é necessária",
-            'email.required' => 'Email é obrigatório.',
-            'telefone.required'=> "Telefone Obrigatorio"
         ];
 
         $validator = Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:255', 'min:3'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            // 'password' => ['required', 'numeric', 'min:8', 'confirmed'],
+            'cpf' => ['required', 'unique:users'],
+            'rg' => ['required'],
+            'datanasc' => ['required'],
+            'mae' => ['required', 'string', 'max:500', 'min:5'],
+            'genero'=> ['required'],
             'telefone' => ['required', 'string'],
-            'cpf' => ['required'],
-            'datanasc' => ['required']
+            'telefonefixo'=> ['required'],
+            'telfamiliar'=> ['required'],
+            'perfilnomefamiliar'=> ['required'],
+            'perfilparentescofamiliar'=>['required'],
+            'estado'=> ['required'],
+            'cidade'=> ['required'],
+            'bairro'=> ['required'],
+            'cep'=> ['required'],
+            'rua'=> ['required'],
+            'sus'=> ['required'],
+            'idnumero'=> ['required'],
+            'numcasa'=> ['required'],
+            'numequipe'=> ['required'],
+            'microarea'=> ['required'],
+            'numfamilia'=> ['required'],
+            'perfildistrito'=> ['required'],
+            'unidadeestrategia' => ['required'],
+            'unidadeestrategia2' => ['required']
+            // 'password' => ['required', 'numeric', 'min:8', 'confirmed'],
+            
         ], $messages)->validate();
 
         $user = new Usuarios();
         $user->name = $request->name;
+        $user->email = $request->email;  
         $user->cpf = $request->cpf;
+        $user->rg = $request->rg;
         $user->datanasc = $request->datanasc;
-        $user->email = $request->email;       
+        $user->mae = $request->mae;
+        $user->genero = $request->genero;
         $user->telefone = $request->telefone;
+        $user->telefonefixo = $request->telefonefixo;
+        $user->telfamiliar = $request->telfamiliar;
+        $user->perfilnomefamiliar = $request->perfilnomefamiliar;
+        $user->perfilparentescofamiliar = $request->perfilparentescofamiliar;
+        $user->estado = $request->estado;
+        $user->cidade = $request->cidade;
+        $user->bairro = $request->bairro;
+        $user->cep = $request->cep;
+        $user->rua = $request->rua;
+        $user->numcasa = $request->numcasa;
+        $user->sus = $request->sus;
+        $user->idnumero = $request->idnumero;
+        $user->numequipe = $request->numequipe;
+        $user->microarea = $request->microarea;
+        $user->numfamilia = $request->numfamilia;
+        $user->perfildistrito = $request->perfildistrito;
+        $user->unidadeestrategia = $request->unidadeestrategia;
+        $user->unidadeestrategia2 = $request->unidadeestrategia2;
+
+       
         $user->password = preg_replace('/[^0-9]/', '', $request->datanasc);
 
         $user->save();

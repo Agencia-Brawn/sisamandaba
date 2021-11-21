@@ -148,9 +148,14 @@
                                         </li>
                                         
                                         <li class="list-group-item border-0 ps-0 text-md">
-                                            <strong class="text-dark">
-                                                CPF:
+                                            <strong class="text-dark">CPF:
                                                 <input type="text" id="cpf" value="{{$usuario->cpf?$usuario->cpf:''}}" class="form-control" disabled />
+                                            </strong>
+                                        </li>
+
+                                        <li class="list-group-item border-0 ps-0 text-md">
+                                            <strong class="text-dark">RG:
+                                                <input type="text" id="rg" value="{{$usuario->rg?$usuario->rg:''}}" class="form-control" disabled />
                                             </strong>
                                         </li>
                                        
@@ -249,9 +254,7 @@
                                         
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
                                             <strong class="text-dark">Número da Microárea:</strong>
-                                            <input type="text" value="{{$usuario->microarea?$usuario->microarea:''}}" class="form-control" disabled />
-
-                                            
+                                            <input type="text" value="{{$usuario->microarea?$usuario->microarea:''}}" class="form-control" disabled />                                            
                                         </li>
                                         
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
@@ -263,12 +266,12 @@
                                             <strong class="text-dark">Distrito:</strong>
                                             <input type="text" value="{{$usuario->perfildistrito?$usuario->perfildistrito:''}}" class="form-control" disabled />
                                         </li>  
-                                        
+
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
                                             <strong class="text-dark">Unidade da Estratégia de Saúde da Família:</strong>
-                                            <input type="text" value="{{$usuario->unidade?$usuario->unidade:''}}" class="form-control" disabled />
-                                        </li>
-                                        
+                                            <input type="text" value="{{$usuario->unidadeestrategia?$usuario->unidadeestrategia:''}}" class="form-control" disabled />
+                                        </li>  
+                                                                               
 
                                     </ul>
 

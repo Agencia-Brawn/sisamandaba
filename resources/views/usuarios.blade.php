@@ -124,12 +124,8 @@
                                             <span class="nav-link-text ms-1">Cadastro</span>
                                         </a>
                                     </li>
-
-
-                                    
                                 </ul>
                             </div>
-
                 </aside>
             </div>  
         <!-- FIM MENU --> 
@@ -173,29 +169,181 @@
                                                 <form action="{{route('formulario.usuarios')}}" method="post">
                                                     @csrf 
                                                         <div class="form-group">
-                                                            <label for="example-text-input" class="form-control-label">Nome Completo</label>
+                                                            <legend>Qual o seu nome completo (nome do entrevistado - responsável pela família)? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
                                                             <input class="form-control" type="text" name="name" id="example-text-input">
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label for="example-number-input" class="form-control-label">CPF</label>
+                                                            <legend>Qual o seu CPF ? (SOLICITE O CPF OU OUTRO DOCUMENTO COM O CPF)</legend>
                                                             <input class="form-control" type="text" name="cpf" id="cpf">
                                                         </div>
 
+                                                        
                                                         <div class="form-group">
-                                                            <label for="example-date-input" class="form-control-label">Data de Nascimento</label>
-                                                            <input class="form-control" type="date" name="datanasc"  id="example-date-input">
+                                                            <legend>Qual o seu RG ? (SOLICITE O RG OU OUTRO DOCUMENTO COM O RG)</legend>
+                                                            <input class="form-control" type="text" name="rg" id="rg">
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label for="example-email-input" class="form-control-label">E-mail</label>
+                                                            <legend>Qual a data do seu nascimento? (SOLICITE O RG OU OUTRO DOCUMENTO COM A DATA DO NASCIMENTO)</legend>
+                                                            <input class="form-control" type="date" name="datanasc"  id="example-date-input">
+                                                        </div>
+                                                        
+                                                        <legend>Gênero</legend>
+                                                        <div class="form-group">
+                                                                    <div class="radio">
+                                                                        <label>
+                                                                            <input type="radio" name="genero" value="1" >
+                                                                            Feminino
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio">
+                                                                        <label>
+                                                                            <input type="radio" name="genero" value="2" >
+                                                                            Masculino
+                                                                        </label>
+                                                                    </div>
+
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Qual o nome da sua mãe? (SOLICITE O RG OU OUTRO DOCUMENTO COM O NOME)</legend>
+                                                            <input class="form-control" type="text" name="mae"  id="example-date-input">
+                                                        </div>
+
+
+                                                        <h2>Informações Para Contato</h2>
+
+                                                        <div class="form-group">
+                                                            <legend>E-mail</legend>
                                                             <input class="form-control" type="email" name="email"  id="example-email-input">
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label for="example-number-input" class="form-control-label">Telefone</label>
+                                                            <legend>Telefone</legend>
                                                             <input class="form-control" type="text" name="telefone" id="telefone">
                                                         </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Telefone Fixo</legend>
+                                                            <input class="form-control" type="text" name="telefonefixo" id="telefone2">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Telefone do Familiar Mais Próximo </legend>
+                                                            <input class="form-control" type="text" name="telfamiliar" id="telefone3">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Nome do Familiar do Telefone Informado </legend>
+                                                            <input class="form-control" type="text" name="perfilnomefamiliar">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Grau de Parentesco de Familiar do Telefone Informado </legend>
+                                                            <input class="form-control" type="text" name="perfilparentescofamiliar">
+                                                        </div>
+
+                                                        <h2>Informações de Endereço</h2>
+                                                        
+                                                        <div class="form-group">
+                                                            <legend>Estado </legend>
+                                                            <input class="form-control" type="text" name="estado">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Cidade </legend>
+                                                            <input class="form-control" type="text" name="cidade">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Bairro </legend>
+                                                            <input class="form-control" type="text" name="bairro">
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <legend>CEP </legend>
+                                                            <input class="form-control" type="text" name="cep" id="cep">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Nome da Rua </legend>
+                                                            <input class="form-control" type="text" name="rua">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend>Número da Casa </legend>
+                                                            <input class="form-control" type="text" name="numcasa">
+                                                        </div>
+
+
+                                                        <h2>Outras Informações Para Localização</h2>
+
+                                                        <div class="form-group">
+                                                            <legend> Número SUS </legend>
+                                                            <input class="form-control" type="text" name="sus">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend> ID Número </legend>
+                                                            <input class="form-control" type="text" name="idnumero">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend> Número da Equipe  </legend>
+                                                            <input class="form-control" type="text" name="numequipe">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend> Número da Microárea  </legend>
+                                                            <input class="form-control" type="text" name="microarea">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <legend> Número da Familía/Casa </legend>
+                                                            <input class="form-control" type="text" name="numfamilia">
+                                                        </div>
+                                                        
+                                                        <fieldset>
+                                                            <legend for="example-date-input" class="form-control-legend">Distrito: </legend>
+                                                            <div class="form-group">
+                                                                    <div class="radio">
+                                                                        <label>
+                                                                            <input type="radio" name="perfildistrito" id="perfildistrito" value="Bengui" >
+                                                                            Bengui
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio">
+                                                                        <label>
+                                                                            <input type="radio" name="perfildistrito" id="perfildistrito" value="Guamá" >
+                                                                            Guamá
+                                                                        </label>
+                                                                    </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset id="bengui">
+                                                            <div class="form-group" id="bloquear">
+                                                            <legend>Selecionar Unidade da Estratégia de Saúde da Família do Distrito Bengui (selecione um distrito primeiro)</legend>
+                                                                <select class="form-control" name="unidadeestrategia" >
+                                                                    <option value="">Selecione unidades do Distrito Bengui</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                </select>
+                                                            </div>                                                            
+                                                        </fieldset>
+
+                                                        <fieldset id="guama">
+                                                            <div class="form-group">
+                                                            <legend>Selecionar Unidade da Estratégia de Saúde da Família do Distrito Guamá  (selecione um distrito primeiro)</legend>
+                                                                <select class="form-control" name="unidadeestrategia2" >
+                                                                    <option value="">Selecione unidades do Distrito Guamá</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                </select>
+                                                            </div>                                                            
+                                                        </fieldset>
+                                                        
                                                         
                                                         <div class="text-center">
                                                             <button class="btn btn-primary" type="submit">Enviar</button>
@@ -231,10 +379,26 @@
                     <script>
                         $(document).ready(function($){
                             $('#cpf').mask('000.000.000-00', {reverse: true});
+                            $('#rg').mask('0000-000');
+                            $('#cep').mask('00000-000');
                             $('#datanasc').mask('00/00/0000');
-                            $('#altura').mask('0.00');
                             $('#telefone').mask('(00) 00000-0000');
+                            $('#telefone2').mask('(00) 0000-0000');
+                            $('#telefone3').mask('(00) 00000-0000');
 
+                            $('input:radio[name="perfildistrito"]').on("change", function() {
+                                if (this.value == 'Guamá') { 
+                                    $("#bengui").hide();
+                                    $("#guama").show();
+                                } else if (this.value == 'Bengui') {
+                                    $("#guama").hide();
+                                    $("#bengui").show();
+                                } 
+                                else {
+                                    $("#guama").show();
+                                    $("#bengui").show();
+                                }
+                            });  
                         });
                     </script>
             </div>
