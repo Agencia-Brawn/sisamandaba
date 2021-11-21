@@ -219,7 +219,7 @@
                                                         <legend>6. Qual o horário da ingestão de líquidos, incluindo café?</legend>
                                                         <div class="form-group">
                                                             <input hidden name="perguntalaboratorio5" type="text" value="5. Qual o horário da ingestão de líquidos, incluindo café:">
-                                                            <input required type="time" name="respostalaboratorio5" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio5:''}}" class="form-control">
+                                                            <input type="time" name="respostalaboratorio5" value="{{$usuario->formlaboratorio()?$usuario->formlaboratorio()->respostalaboratorio5:''}}" class="form-control">
                                                         </div>
                                                     </fieldset>
 
