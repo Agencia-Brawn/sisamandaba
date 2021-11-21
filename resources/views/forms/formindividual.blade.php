@@ -156,14 +156,29 @@
                                                     <div class="accordion" id="accordionRental">
 
                                                         <div class="accordion-item mb-3">
+                                                                <div class="progress-wrapper">
+                                                                    <div class="progress-info">
+                                                                        <div class="progress-percentage">
+                                                                            <span class="text-md font-weight-bold">
+                                                                                Quatidade de Perguntas Respondidas:
+                                                                              
+                                                                                {{number_format($formindividual?$contadorformulario1/$formindividual->qtdperguntas*100:0)}}%
+
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="{{$contadorformulario1}}" aria-valuemin="0" aria-valuemax="{{$formindividual?$formindividual->qtdperguntas:0}}" style="width: {{$formindividual?$contadorformulario1/$formindividual->qtdperguntas*100:0}}%;"></div>
+                                                                    </div>
+                                                                </div>
                                                             <h5 class="accordion-header" id="headingOne">
-                                                                <button class="accordion-button border font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                                <button class="accordion-button border font-weight-bold collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                                     PARTE 1
                                                                     <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                                                     <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                                                 </button>
                                                             </h5>
-
+                                                            
                                                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionRental" style="">
                                                                 <div class="accordion-body text-sm opacity-8">
                                                                     <!-- 1 - FORMULARIO -->
@@ -1246,6 +1261,21 @@
                                                         </div>
 
                                                         <div class="accordion-item mb-3">
+                                                                <div class="progress-wrapper">
+                                                                    <div class="progress-info">
+                                                                        <div class="progress-percentage">
+                                                                            <span class="text-md font-weight-bold">
+                                                                                Quatidade de Perguntas Respondidas:
+                                                                              
+                                                                                {{number_format($formindividual2?$contadorformulario2/$formindividual2->qtdperguntas*100:0)}}%
+
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="{{$contadorformulario2}}" aria-valuemin="0" aria-valuemax="{{$formindividual2?$formindividual2->qtdperguntas:0}}" style="width: {{$formindividual2?$contadorformulario2/$formindividual2->qtdperguntas*100:0}}%;"></div>
+                                                                    </div>
+                                                                </div>
                                                             <h5 class="accordion-header" id="headingTwo">
                                                                 <button class="accordion-button border font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                                     PARTE 2
@@ -1708,13 +1738,13 @@
                                                                                             <label>
                                                                                                 <input hidden name="perguntaindividual50" type="text" value="41. Você foi vacinado (a) contra COVID-19:">
                                                                                                 <input type="radio" id="respostaindividual50" name="respostaindividual50" value="Não" {{$usuario->formindividualprimeiro()?$usuario->formindividualprimeiro()->respostaindividual50=='Não'?'checked':'':''}}>
-                                                                                                Não ( PULAR PARA 43)
+                                                                                                Não ( PULAR PARA 52)
                                                                                             </label>
                                                                                         </div>
                                                                                         <div class="radio">
                                                                                             <label>
                                                                                                 <input type="radio" id="respostaindividual50" name="respostaindividual50" value="Sim, só a primeira dose" {{$usuario->formindividualprimeiro()?$usuario->formindividualprimeiro()->respostaindividual50=='Sim, só a primeira dose'?'checked':'':''}}>
-                                                                                                Sim, só a primeira dose ( PULAR PARA 43)
+                                                                                                Sim, só a primeira dose ( PULAR PARA 52)
                                                                                             </label>
                                                                                         </div>
                                                                                         <div class="radio">
@@ -2477,6 +2507,21 @@
                                                         </div>
 
                                                         <div class="accordion-item mb-3">
+                                                                <div class="progress-wrapper">
+                                                                    <div class="progress-info">
+                                                                        <div class="progress-percentage">
+                                                                            <span class="text-md font-weight-bold">
+                                                                                Quatidade de Perguntas Respondidas:
+                                                                              
+                                                                                {{number_format($formindividual3?$contadorformulario3/$formindividual3->qtdperguntas*100:0)}}%
+
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="{{$contadorformulario3}}" aria-valuemin="0" aria-valuemax="{{$formindividual3?$formindividual3->qtdperguntas:0}}" style="width: {{$formindividual3?$contadorformulario3/$formindividual3->qtdperguntas*100:0}}%;"></div>
+                                                                    </div>
+                                                                </div>
                                                             <h5 class="accordion-header" id="headingThree">
                                                                 <button class="accordion-button border font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                                     PARTE 3
@@ -3733,6 +3778,21 @@
                                                         </div>
                                                         
                                                         <div class="accordion-item mb-3" {{$usuario->genero == 2 ? 'hidden' : ''}}>
+                                                                <div class="progress-wrapper">
+                                                                    <div class="progress-info">
+                                                                        <div class="progress-percentage">
+                                                                            <span class="text-md font-weight-bold">
+                                                                                Quatidade de Perguntas Respondidas:
+                                                                              
+                                                                                {{number_format($formindividual4?$contadorformulario4/$formindividual4->qtdperguntas*100:0)}}%
+
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="{{$contadorformulario4}}" aria-valuemin="0" aria-valuemax="{{$formindividual4?$formindividual4->qtdperguntas:0}}" style="width: {{$formindividual4?$contadorformulario4/$formindividual4->qtdperguntas*100:0}}%;"></div>
+                                                                    </div>
+                                                                </div>
                                                             <h5 class="accordion-header" id="headingFour">
                                                                 <button class="accordion-button border font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                                                     PARTE 4

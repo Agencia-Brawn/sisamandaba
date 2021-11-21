@@ -497,9 +497,47 @@ class UsuariosController extends Controller
 
     // FORM INDIVIDUAL
     public function formindividual(Request $request, Usuarios $usuario)
-    {   
-        // dd($usuario);
-        return view ('forms.formindividual', ['usuario'=>$usuario]);
+    {  
+        //dd($usuario->formindividual()); 
+        $contadorformulario1 = 0;
+        $formindividual = $usuario->formindividual();
+        if ($formindividual) {
+            $contadorformulario1 = $formindividual->formulario1prenchido();
+        }
+
+       
+        $contadorformulario2 = 0;
+        $formindividual2 = $usuario->formindividualprimeiro();
+        if ($formindividual2) {
+            $contadorformulario2 = $formindividual2->formulario2prenchido();
+        }
+
+        $contadorformulario3 = 0;
+        $formindividual3 = $usuario->formindividualsegundo();
+        if ($formindividual3) {
+            $contadorformulario3 = $formindividual3->formulario3prenchido();
+        }
+
+        $contadorformulario4 = 0;
+        $formindividual4 = $usuario->formindividualterceiro();
+        if ($formindividual4) {
+            $contadorformulario4 = $formindividual4->formulario4prenchido();
+        }
+
+        $view = view ('forms.formindividual', 
+                    [
+                    'usuario'=>$usuario, 
+                    'contadorformulario1'=>$contadorformulario1, 
+                    'formindividual'=>$formindividual,
+                    'contadorformulario2'=>$contadorformulario2, 
+                    'formindividual2'=>$formindividual2,
+                    'contadorformulario3'=>$contadorformulario3, 
+                    'formindividual3'=>$formindividual3,
+                    'contadorformulario4'=>$contadorformulario4, 
+                    'formindividual4'=>$formindividual4
+                    ]);
+
+        return $view;
         
     }
 
