@@ -567,14 +567,6 @@
                                     "Previous": "Anterior",
                                     "Next": "Proxímo"
                                 },
-                                dom: 'Bfrtip',
-                                buttons: [
-                                    'excel',
-                                    {
-                                        extend: 'print', text: 'PDF',
-                                    }
-                                   
-                                ]
                             });                           
                         } );
                     </script> 
