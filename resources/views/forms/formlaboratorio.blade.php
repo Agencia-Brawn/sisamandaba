@@ -40,6 +40,15 @@
                                             <span class="nav-link-text ms-1">Cuidado <br> dos Pés</span>
                                         </a>
                                     </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('laboratorio.impressao',['usuario'=>$usuario->id])}}">
+                                            <div class="shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                                                <i class='bx bx-user-circle p-2'></i>
+                                            </div>
+                                            <span class="nav-link-text ms-1">Ficha <br> Para Impressão</span>
+                                        </a>
+                                    </li> 
                                     
                                     <li class="nav-item dropdown">
                                         <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -99,6 +108,15 @@
                                 <span class="nav-link-text ms-1">Cuidado <br> dos Pés</span>
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('laboratorio.impressao',['usuario'=>$usuario->id])}}">
+                                <div class="shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class='bx bx-user-circle p-2'></i>
+                                </div>
+                                <span class="nav-link-text ms-1">Ficha <br> Para Impressão</span>
+                            </a>
+                        </li> 
                         
                         <li class="nav-item dropdown">
                             <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

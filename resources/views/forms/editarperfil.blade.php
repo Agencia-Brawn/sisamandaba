@@ -168,12 +168,12 @@
 
                                                         <div class="form-group">
                                                             <legend>Qual o seu CPF ? (SOLICITE O CPF OU OUTRO DOCUMENTO COM O CPF)</legend>
-                                                            <input class="form-control"  type="text"  id="cpf" name="cpf" value="{{$usuario->cpf}}">
+                                                            <input class="form-control"  type="text"  id="cpf" name="cpf" value="{{$usuario->cpf?$usuario->cpf:''}}">
                                                         </div>
 
                                                         <div class="form-group">
                                                             <legend>Qual o seu RG ? (SOLICITE O RG OU OUTRO DOCUMENTO COM O RG)</legend>
-                                                            <input class="form-control"  type="text"  name="rg" value="{{$usuario->rg}}">
+                                                            <input class="form-control"  type="text"  name="rg" value="{{$usuario->rg?$usuario->rg:''}}">
                                                         </div>
 
                                                         <div class="form-group">
@@ -341,6 +341,11 @@
                                                         </fieldset>
 
                                                         <h3 class="text-left mt-5">Outros dados para localização</h3>
+
+                                                        <div class="form-group">
+                                                            <legend>Número do SUS</legend>
+                                                            <input class="form-control"  min="0" type="number" name="perfilsus" value="{{$usuario->sus}}">
+                                                        </div>
 
                                                         <div class="form-group">
                                                             <legend>ID Número</legend>

@@ -35,7 +35,6 @@ class UsuariosController extends Controller
             'name.required' => 'Nome é obrigatório',
             'email.unique' => "Email já registrado",
             'email.required' => 'Email é obrigatório',
-            'cpf.unique'=>"CPF já registrado",
             'cpf.required' => 'CPF é obrigatório',
             'rg.required' => 'RG é obrigatório',
             'datanasc.required' => 'A Data de Nascimeto é obrigatória',
@@ -68,7 +67,7 @@ class UsuariosController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:255', 'min:3'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'cpf' => ['required', 'unique:users'],
+            'cpf' => ['required'],
             'rg' => ['required'],
             'datanasc' => ['required'],
             'mae' => ['required', 'string', 'max:500', 'min:5'],
@@ -151,7 +150,6 @@ class UsuariosController extends Controller
         $user = Usuarios::find($usuario);
         return view ('forms.formlaboratorio', ['usuario'=>$user]);
     }
-
     
     public function postformlaboratorio(Request $request, Usuarios $usuario)
     {
@@ -270,6 +268,12 @@ class UsuariosController extends Controller
 
         return redirect()->back();
         
+    }
+
+    public function laboratorioimpressao(Request $request,$usuario)
+    {
+        $user = Usuarios::find($usuario);
+        return view('laboratorioimpressao', ['usuario'=>$user]);
     }
 
 
@@ -2346,9 +2350,10 @@ class UsuariosController extends Controller
     public function posteditarperfil(Request $request, Usuarios $usuario)
     {
         //dd($request->perfilnasc);
-        $usuario->cpf=preg_replace('/[^0-9]/', '', $request->perfilcpf);
-        $usuario->datanasc=preg_replace('/[^0-9]/', '', $request->perfilnasc);
         $usuario->name=$request->perfilnome;
+        $usuario->cpf==preg_replace('/[^0-9]/', '',$request->cpf);
+        $usuario->rg=$request->rg;
+        $usuario->datanasc=preg_replace('/[^0-9]/', '', $request->perfilnasc);
         $usuario->genero=$request->perfilgenero;
         $usuario->mae=$request->perfilmae;
 
@@ -2357,21 +2362,22 @@ class UsuariosController extends Controller
         $usuario->telefone=preg_replace('/[^0-9]/', '', $request->perfiltelefone);
         $usuario->telefonefixo=preg_replace('/[^0-9]/', '', $request->perfiltelefonefixo);
         $usuario->telfamiliar=preg_replace('/[^0-9]/', '', $request->perfiltelefonefamiliar);
-        // $usuario->altura=preg_replace('/[^0-9]/', '', $request->perfilaltura);
         $usuario->perfilnomefamiliar=$request->perfilnomefamiliar;
         $usuario->perfilparentescofamiliar=$request->perfilparentescofamiliar;
+        // $usuario->altura=preg_replace('/[^0-9]/', '', $request->perfilaltura);
 
-        $usuario->diareuniao=$request->diareuniao;
-        $usuario->horareuniao=$request->horareuniao;
-
-        $usuario->cep=preg_replace('/[^0-9]/', '', $request->perfilcep);        
         $usuario->estado=$request->perfilestado;
         $usuario->cidade=$request->perfilcidade;
         $usuario->bairro=$request->perfilbairro;
+        $usuario->cep=preg_replace('/[^0-9]/', '', $request->perfilcep);        
         $usuario->rua=$request->perfilrua;
         $usuario->numcasa=$request->perfilcasa;
+
+        $usuario->diareuniao=$request->diareuniao;
+        $usuario->horareuniao=$request->horareuniao;
         
 
+        $usuario->sus=$request->perfilsus;
         $usuario->idnumero=$request->perfilid;
         $usuario->numequipe=$request->perfilequipe;
         $usuario->microarea=$request->perfilmircoarea;

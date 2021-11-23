@@ -242,6 +242,12 @@
                                     
                                     <ul class="ps-5 list-group ficha-usuario" >  
                                         <h4 class="pb-2 pt-5 text-left"><b>Outros Informações Para Localização</b></h4>
+                                        
+                                        <li class="list-group-item border-0 ps-0 pt-0 text-md">
+                                            <strong class="text-dark">Número SUS:</strong>
+                                            <input type="text" value="{{$usuario->sus?$usuario->sus:''}}" class="form-control" disabled />
+                                        </li>
+
                                         <li class="list-group-item border-0 ps-0 pt-0 text-md">
                                             <strong class="text-dark">ID Número:</strong>
                                             <input type="text" value="{{$usuario->idnumero?$usuario->idnumero:''}}" class="form-control" disabled />

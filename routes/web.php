@@ -45,6 +45,7 @@ Route::group(['prefix' => 'usuarios/','namespace'=>'Usuarios'], function () {
     // FORMULÁRIO LABORATORIO
     Route::get('{usuario}/formlaboratorio', 'UsuariosController@formlaboratorio')->name('form.laboratorio');
     Route::post('{usuario}/formlaboratorio', 'UsuariosController@postformlaboratorio')->name('post.form.laboratorio');
+    Route::get('{usuario}/laboratorioimpressao', 'UsuariosController@laboratorioimpressao')->name('laboratorio.impressao');
     
     
     // FORMULÁRIO ICIQ-KHQ
